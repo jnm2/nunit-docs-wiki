@@ -1,0 +1,12 @@
+####Usage Notes
+ * [[Runtime Selection]]
+ * [[Platform Selection]]
+ * [[Assembly Isolation]]
+ * [[Configuration Files]]
+ * [[XML Formats]]
+ * [[Visual Studio Support]]
+ * [[SetUp and TearDown]]
+ * [[Parameterized Tests]]
+ * [[Addin Replacement in the Framework]]
+ * [[Counting Tests]]
+ * [[Parallel Test Execution]]
