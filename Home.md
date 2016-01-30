@@ -1,3 +1,9 @@
+##UNDER CONSTRUCTION
+
+> This site is still being developed. When complete, it will be the new location for all nunit docs.
+
+> The original documentation site at https://github.com/nunit/nunit/wiki is still current and available.
+
 ###NUnit 3.0 Documentation
 
 This documentation covers the NUnit 3.0 release, 
