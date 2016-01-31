@@ -20,3 +20,6 @@ The new NUnit 3.0 gui.
 
 The NUnit Visual Studio test adapters, supporting both NUnit V2 and V3.
 
+####[[NUnit Project Editor]]
+
+Windows program for creating and editing `.nunit` project files.
