@@ -1,12 +1,6 @@
-##UNDER CONSTRUCTION
-
-> This site is still being developed. When complete, it will be the new location for all nunit docs.
-
-> The original documentation site at https://github.com/nunit/nunit/wiki is still current and available.
-
 ###NUnit Documentation
 
-This wiki contains the documentation for all active NUnit projects.
+This wiki contains the documentation for all active NUnit projects. Some sections are not yet complete.
 
 ####[[NUnit]]
 
