@@ -45,7 +45,7 @@ to provide test cases. It has the following characteristics:
 ```C#
 public class MyTestClass
 {
-    [TestCaseSource(typeof(AnotherClass), "DivideCases)]
+    [TestCaseSource(typeof(AnotherClass), "DivideCases")]
     public void DivideTest(int n, int d, int q)
     {
         Assert.AreEqual( q, n / d );
