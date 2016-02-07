@@ -1,3 +1,4 @@
+##Page Under Development
 
 You can implement your own custom constraints by creating a class that 
 inherits from the `Constraint` abstract class, which supports performing a 
@@ -31,11 +32,11 @@ namespace NUnit.Framework.Constraints
 
 #### `Constraint` Constructor
 
-The `Constraint` constructor accepts any number of arguments and saves them to be used
-in the printed description later. Generally at least one "expected" value is provided
-when instantiating the concrete constraint. Optionally multiple values can be provided.
-The abstract base class makes these available through the public read-only `Arguments`
-property and uses them when creating a string representation of the constraint.
+The `Constraint` constructor accepts zero or more arguments and saves them to be used
+in the printed description later. Constraints like `NullConstraint` or `UniqueItemsConstraint`
+take no arguments and simply state some condition about the actual value supplied. Constraints
+with a single argument usually treat it as the expected value resulting from some operation.
+Multiple arguments can be provided where the semantics of the constraint call for it.
 
 #### `ApplyTo` Implementation
 
@@ -151,13 +152,13 @@ any generic suffixes.
 Having written a custom constraint class, you can use it directly through its constructor:
 
 ```C#
-Expect(myObject, new CustomConstraint());
+Assert.That(myObject, new CustomConstraint());
 ```
 
 You may also use it in expressions through NUnit's `Matches` syntax element:
 
 ```C#
-Expect(myObject, Is.Not.Null.And.Matches(new CustomConstraint());
+Assert.That(myObject, Is.Not.Null.And.Matches(new CustomConstraint());
 ```
 
 The direct construction approach is not very convenient or easy to read.
@@ -165,7 +166,7 @@ For its built-in constraints, NUnit includes classes that implement a special
 constraint syntax, allowing you to write things like...
 
 ```C#
-Expect(actual, Is.All.InRange(1,100) );
+Assert.That(actual, Is.All.InRange(1,100) );
 ```
 
 Custom constraints can support this syntax by providing a static helper class and
@@ -193,7 +194,7 @@ for each custom constraint).
    any conflicts. This allows you to write things like:
 
    ```C#
-   Expect(actual, Is.Custom(x,y) );
+   Assert.That(actual, Is.Custom(x,y) );
    ```
    
    with this sample implementation:
@@ -212,7 +213,7 @@ for each custom constraint).
    you to write things like:
 
    ```C#
-   Expect(actual, Is.Not.Custom(x,y) );
+   Assert.That(actual, Is.Not.Custom(x,y) );
    ```
 
     with this sample implementation:
@@ -229,7 +230,7 @@ for each custom constraint).
     }    
     ```
     
-3. Provide your own base class that inherits from `AssertionHelper` that additionally
+3. Optionally, provide your own base class that inherits from `AssertionHelper`* that additionally
    provides helpers for your custom constraints.
    
    ```C#
@@ -246,3 +247,4 @@ for each custom constraint).
     }
     ```
    
+   \* Note that AssertionHelper is currently being evaluated for possible removal from the NUnit framework.
