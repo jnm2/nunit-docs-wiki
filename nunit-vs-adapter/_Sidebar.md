@@ -2,7 +2,7 @@
 
 [[NUnit-VS-Adapter]]
 
-* [[Installation]]
+* [[Adapter Installation]]
 
 * [[Usage]]
 
@@ -12,9 +12,9 @@
 
 * [[Tips and Tricks]]
 
-* [[Release Notes]]
+* [[Adapter Release Notes]]
 
-* [[License]]
+* [[Adapter License]]
 
 Developer Notes
 
