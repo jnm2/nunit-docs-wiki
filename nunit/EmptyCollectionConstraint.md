@@ -1,4 +1,4 @@
-The **EmptyCollectionConstraint** tests if a Collection is empty. An `ArgumentException` is thrown if the collection is null. 
+The **EmptyCollectionConstraint** tests if a Collection or other `IEnumerable` is empty. An `ArgumentException` is thrown if the actual value is not an `IEnumerable` or is null. 
 
 <h4>Constructor</h4>
 ```C#
