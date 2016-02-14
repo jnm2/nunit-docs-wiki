@@ -39,6 +39,6 @@ pass the entire array a second time.</p>
 <p>Generally, the constructor for the <b>asserter</b> will include any required
 parameters, the actual value and an optional user message. You may invoke
 the asserter directly, using <b>Assert.DoAssert</b>, but it is generally more 
-convenient and readable to create an class similar to NUNit's <b>Assert</b> class,
+convenient and readable to create an class similar to NUnit's <b>Assert</b> class,
 which contains static methods that wrap the object creation. For an example of 
 how to do this, see the <b>StringAssert</b> class in the NUnit source.</p>
