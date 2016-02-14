@@ -17,13 +17,12 @@ Assert.That( dirInfo, Is.Empty );
 Assert.That( collection, Is.Empty );
 ```
 
-<h4>Notes</h4>
-<ol>
-<li><b>EmptyConstraint</b> creates and uses either an [[EmptyStringConstraint]],
-[[EmptyDirectoryConstraint]] or [[EmptyCollectionConstraint]] depending on 
-the argument tested.
-<li>A `DirectoryInfo` argument is required in order to test for an empty directory.
-To test whether a string represents a directory path, you must first construct
-a <b>DirectoryInfo</b>.
-</ol>
+####Notes:
+
+ * **EmptyConstraint** creates and uses either an [[EmptyStringConstraint]],
+   [[EmptyDirectoryConstraint]] or [[EmptyCollectionConstraint]] depending on 
+   the argument tested.
+ * A `DirectoryInfo` argument is required in order to test for an empty directory.
+   To test whether a string represents a directory path, you must first construct
+   a `DirectoryInfo`.
 
