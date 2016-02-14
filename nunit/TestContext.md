@@ -79,7 +79,7 @@ Gets a representation of the test result, with the following properties:
      * Skipped
      * Passed
      * Failed
-   * **Label** - An optional string value, which can provide sub-categories for each Status. See below for a list of common outcomes supported internally by NUNit.
+   * **Label** - An optional string value, which can provide sub-categories for each Status. See below for a list of common outcomes supported internally by NUnit.
    * **Site** - A `FailureSite` value, indicating the stage of execution in which the test generated its result. Possible values are
      * Test
      * SetUp
@@ -95,7 +95,7 @@ The following is a list of outcomes currently produced by NUnit. Others may be a
    * Success: the test passed. (Status=Passed)
    * Inconclusive: the test was inconclusive. (Status=Inconclusive)
    * Failure: a test assertion failed. (Status=Failed, Label=empty)
-   * Error = an unexpected exception occurred. (Status=Failed, Label=Error)
+   * Error: an unexpected exception occurred. (Status=Failed, Label=Error)
    * NotRunnable: the test was invalid and could not be run. (Status=Failed, Label=Invalid)
    * Cancelled: the user cancelled while this test was running. (Status=Failed, Label=Cancelled)
    * Ignored: the test was ignored. (Status=Skipped, Label=Ignored)
