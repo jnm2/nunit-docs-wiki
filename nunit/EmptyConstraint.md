@@ -13,7 +13,7 @@ Is.Empty
 <h4>Examples of Use</h4>
 ```C#
 Assert.That( aString, Is.Empty );
-Assert.Thst( dirInfo, Is.Empty );
+Assert.That( dirInfo, Is.Empty );
 Assert.That( collection, Is.Empty );
 ```
 
