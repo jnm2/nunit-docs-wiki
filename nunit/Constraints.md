@@ -64,6 +64,7 @@ This page lists all the constraints available in NUnit.
 * [[CollectionOrderedConstraint]]
 * [[CollectionSubsetConstraint]]
 * [[CollectionSupersetConstraint]]
+* [[EmptyCollectionConstraint]]
 * [[ExactCountConstraint]]
 * [[NoItemConstraint]]
 * [[SomeItemsConstraint]]
@@ -82,12 +83,13 @@ This page lists all the constraints available in NUnit.
 * [[OrConstraint]]
 
 #####String Constraints
+* [[EmptyStringConstraint]]
 * [[EndsWithConstraint]]
 * [[RegexConstraint]]
 * [[StartsWithConstraint]]
 * [[SubstringConstraint]]
 
-######Type Constraints
+#####Type Constraints
 * [[AssignableFromConstraint]]
 * [[AssignableToConstraint]]
 * [[ExactTypeConstraint]]
