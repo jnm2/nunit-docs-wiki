@@ -18,8 +18,8 @@ Is.Ordered
 ...Descending
 ...By(string propertyName)
 ...Using(IComparer comparer)
-...Using&lt;T&gt;(IComparer&lt;T&gt; comparer)
-...Using&lt;T&gt;(Comparison&lt;T&gt; comparer)
+...Using<T>(IComparer<T> comparer)
+...Using<T>(Comparison<T> comparer)
 ```
 
 <h4>Examples of Use</h4>
@@ -28,9 +28,9 @@ Is.Ordered
 int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { "c", "b", "a" };
 string[] sarray2 = new string[] ( "a", "aa", "aaa" );
-Assert.That( iarray, Is.Ordered );
-Assert.That( sarray, Is.Ordered.Descending );
-Assert.That( sarray2, Is.Ordered.By("Length");
+Assert.That(iarray, Is.Ordered);
+Assert.That(sarray, Is.Ordered.Descending);
+Assert.That(sarray2, Is.Ordered.By("Length"));
 ```
 
 <h4>Notes</h4>
