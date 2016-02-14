@@ -25,7 +25,7 @@ This page lists features present in NUnit 2.6, which are either removed in NUnit
 |          Feature                 |          Notes                                        |
 |----------------------------------|-------------------------------------------------------|
 | Assert.IsNullOrEmpty             | No longer supported. Use `Assert.That(..., Is.Null.Or.Empty)` |
-| Assert.IsNotNullOrEmpty          | No longer supported. Use `Assert.That(..., Is.Not.Null.Or.Empty)` |
+| Assert.IsNotNullOrEmpty          | No longer supported. Use `Assert.That(..., Is.Not.Null.And.Not.Empty)` |
 | Is.InstanceOfType                | No longer supported. Use `Is.InstanceOf`                    |
 | Is.StringStarting                | Deprecated. Use `Does.StartWith` |
 | Is.StringContaining              | Deprecated. Use `Does.Contain` |
