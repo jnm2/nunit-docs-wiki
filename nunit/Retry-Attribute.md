@@ -6,5 +6,5 @@ Notes:
 
 2. Since a parameterized test method represents a suite, RetryAttribute is ignored when it appears on such a method.
 
-3. If a test has an unexpected exception, an error result is returned and it is not retried. Only assertion failures can trigger a retry.
+3. If a test has an unexpected exception, an error result is returned and it is not retried. Only assertion failures can trigger a retry. To convert an unexpected exception into an assertion failure, see the [[ThrowsConstraint]].
 
