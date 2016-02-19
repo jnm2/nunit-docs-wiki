@@ -4,7 +4,7 @@ This table lists all the attributes supported by NUnit.
 
 |   Attribute                       |    Usage    |
 |-----------------------------------|-------------|
-| [[Apartment Attribute]]           ||
+| [[Apartment Attribute]]           | Indicates that the test should run in a particular apartment, either STA or MTA. |
 | [[Author Attribute]]              ||
 | [[Category Attribute]]            ||
 | [[Combinatorial Attribute]]       ||
