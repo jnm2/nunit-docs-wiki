@@ -87,7 +87,7 @@ public class UsingConstraint
   [Test]
   public void TestException()
   {
-    Assert.Throws( Is.Typeof<MyException>()
+    Assert.Throws( Is.TypeOf<MyException>()
                  .And.Message.EqualTo( "message" )
                  .And.Property( "MyParam" ).EqualTo( 42 ),
       delegate { throw new MyException( "message", 42 ); } );
