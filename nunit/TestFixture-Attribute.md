@@ -130,7 +130,7 @@ public class ParameterizedTestFixture
     public void TestEquality()
     {
         Assert.AreEqual(eq1, eq2);
-        if (eq1 != null &amp;&amp; eq2 != null)
+        if (eq1 != null && eq2 != null)
             Assert.AreEqual(eq1.GetHashCode(), eq2.GetHashCode());
     }
 
@@ -138,7 +138,7 @@ public class ParameterizedTestFixture
     public void TestInequality()
     {
         Assert.AreNotEqual(eq1, neq);
-        if (eq1 != null &amp;&amp; neq != null)
+        if (eq1 != null && neq != null)
             Assert.AreNotEqual(eq1.GetHashCode(), neq.GetHashCode());
     }
 }
@@ -160,8 +160,8 @@ once using an ArrayList and once using a List&lt;int&gt;.
    
 ```C#
 [TestFixture(typeof(ArrayList))]
-[TestFixture(typeof(List&lt;int&gt;))]
-public class IList_Tests&lt;TList&gt; where TList : IList, new()
+[TestFixture(typeof(List<int>))]
+public class IList_Tests<TList> where TList : IList, new()
 {
   private IList list;
 
