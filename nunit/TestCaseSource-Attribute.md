@@ -19,7 +19,7 @@ public class MyTestClass
         Assert.AreEqual( q, n / d );
     }
 
-    static object [] DivideCases {
+    static object[] DivideCases = {
         new object[] { 12, 3, 4 },
         new object[] { 12, 2, 6 },
         new object[] { 12, 4, 3 }
@@ -54,7 +54,7 @@ public class MyTestClass
 
 class AnotherClass
 {
-    static object [] DivideCases {
+    static object[] DivideCases = {
         new object[] { 12, 3, 4 },
         new object[] { 12, 2, 6 },
         new object[] { 12, 4, 3 }
