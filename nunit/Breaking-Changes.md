@@ -13,9 +13,9 @@ This page lists features present in NUnit 2.6, which are either removed in NUnit
 | System.MTAThreadAttribute    | No longer treated as `RequiresMTAAttribute`             |
 | System.STAThreadAttribute    | No longer treated as `RequiresSTAAttribute`             | 
 | TearDown and OneTimeTearDown | There is a change to the logic by which teardown methods are called. See [[SetUp and TearDown Changes]] for details. |
-| TestCaseAttribute            | Named parameter `Result=` is no longer supported. Use `ExpectedResult=`. Named parameter Ignore= now takes a string, giving the reason for ignoring the test.|
+| TestCaseAttribute            | Named parameter `Result=` is no longer supported. Use `ExpectedResult=`. Named parameter `Ignore=` now takes a string, giving the reason for ignoring the test.|
 | TestCaseSourceAttribute      | The attribute forms using a string argument to refer to the data source must now use only static fields, properties or methods. |
-| TestFixtureAttribute         | Named parameter Ignore= now takes a string, giving the reason for ignoring the test. |
+| TestFixtureAttribute         | Named parameter `Ignore=` now takes a string, giving the reason for ignoring the test. |
 | TestFixtureSetUpAttribute    | Deprecated. Use `OneTimeSetUpAttribute`.  |
 | TestFixtureTearDownAttribute | Deprecated. Use `OneTimeTearDownAttribute`.  |
 | ValueSourceAttribute         | The source name of the data source must now use only static fields, properties or  methods. |
