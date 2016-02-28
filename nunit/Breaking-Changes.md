@@ -16,8 +16,8 @@ This page lists features present in NUnit 2.6, which are either removed in NUnit
 | TestCaseAttribute            | Named parameter `Result=` is no longer supported. Use `ExpectedResult=`. Named parameter Ignore= now takes a string, giving the reason for ignoring the test.|
 | TestCaseSourceAttribute      | The attribute forms using a string argument to refer to the data source must now use only static fields, properties or methods. |
 | TestFixtureAttribute         | Named parameter Ignore= now takes a string, giving the reason for ignoring the test. |
-| TestFixtureSetUpAttribute    | Deprecated. Use `OneTimeSetUpAttribute'.  |
-| TestFixtureTearDownAttribute | Deprecated. Use `OneTimeTearDownAttribute'.  |
+| TestFixtureSetUpAttribute    | Deprecated. Use `OneTimeSetUpAttribute`.  |
+| TestFixtureTearDownAttribute | Deprecated. Use `OneTimeTearDownAttribute`.  |
 | ValueSourceAttribute         | The source name of the data source must now use only static fields, properties or  methods. |
 
 ######Assertions and Constraints
