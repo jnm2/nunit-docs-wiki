@@ -18,8 +18,8 @@ Does.Contain( object )
 
 ```C#
 ...Using(IComparer comparer)
-...Using&lt;t&gt;(IComparer&lt;T&gt; comparer)
-...Using&lt;t&gt;(Comparison&lt;T&gt; comparer)
+...Using<T>(IComparer<T> comparer)
+...Using<T>(Comparison<T> comparer)
 ```
 
 <h4>Examples of Use</h4>
