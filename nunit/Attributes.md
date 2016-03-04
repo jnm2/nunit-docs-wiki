@@ -18,7 +18,7 @@ This table lists all the attributes supported by NUnit.
 | [[Maxtime Attribute]]             ||
 | [[OneTimeSetUp Attribute]]        ||
 | [[OneTimeTearDown Attribute]]     ||
-| [[OrderAttribute]]                ||
+| [[Order Attribute]]               ||
 | [[Pairwise Attribute]]            ||
 | [[Parallelizable Attribute]]      ||
 | [[Platform Attribute]]            ||
