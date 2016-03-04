@@ -1,4 +1,4 @@
-The **OrderAttribute** is specified on a test method to specify the order in which tests are run. Ordering is given by the `int` argument to the attribute, which is required.
+The **OrderAttribute** may be placed on a test method to specify the order in which tests are run. Ordering is given by the required `order` argument to the attribute, an `int`.
 
 ####Example
 
@@ -30,4 +30,4 @@ public class MyFixture
 
 3. Among tests with the same `order` value or without the attribute, execution order is indeterminate.
 
-4. Tests to not wait for prior tests to finish. If multiple threads are in use, a test may be started while some earlier tests are still being run.
+4. Tests do not wait for prior tests to finish. If multiple threads are in use, a test may be started while some earlier tests are still being run.
