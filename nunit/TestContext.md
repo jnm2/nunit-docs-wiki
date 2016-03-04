@@ -14,6 +14,10 @@ Gets a TextWriter used for sending output to the current test result.
 
 ###Static Methods
 
+####Write
+
+Writes text to the current test result.
+
 ```C#
     Write(bool value)
     Write(char value)
@@ -32,8 +36,9 @@ Gets a TextWriter used for sending output to the current test result.
     Write(string format, object arg1, object arg2, object arg3)
     Write(string format, params object[] args)
 ```
+####WriteLine
 
-Writes text to the current test result.
+Writes text to the current test result, followed by a newline.
 
 ```C#
     WriteLine()
@@ -54,8 +59,16 @@ Writes text to the current test result.
     WriteLine(string format, object arg1, object arg2, object arg3)
     WriteLine(string format, params object[] args)
 ```
+####AddFormatter
 
-Writes text to the current test result, followed by a newline.
+Adds a formatter for values based on some criterion, such as the Type of the value. The provided formatter will be used when an expected or actual value needs to be displayed as part of a message from a constraint.
+
+```C#
+    AddFormatter(ValueFormatter formatter);
+    AddFormatter(ValueFormatterFactory formatterFactory);
+```
+
+Both `ValueFormatter` and `ValueFormatterFactory` are delegates. `ValueFormatter` takes a single object as an argument and returns it's string representation. The `AddFormatter` overload that takes a ValueFormatter is intended for use in most cases that arise.
 
 ###Properties of the CurrentContext
 
