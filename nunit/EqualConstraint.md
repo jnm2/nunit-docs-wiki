@@ -12,6 +12,7 @@ EqualConstraint(object expected )
 
 ```C#
 Is.EqualTo( object expected )
+Is.Zero // Equivalent to Is.EqualTo(0)
 ```
 
 <h4>Modifiers</h4>
