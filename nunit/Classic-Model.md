@@ -33,6 +33,7 @@ The Assert class provides the most common assertions in NUnit:
  * [[Assert.DoesNotThrow]]
  * [[Assert.DoesNotThrowAsync]]
  * [[Assert.Catch]]
+ * [[Assert.CatchAsync]]
  * [[Assert.Pass]]
  * [[Assert.Fail]]
  * [[Assert.Ignore]]
