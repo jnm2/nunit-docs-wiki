@@ -1,6 +1,6 @@
-###NUnit 3.0 Documentation
+###NUnit 3.2 Documentation
 
-This documentation covers the NUnit 3.0 release, 
+This documentation covers the NUnit 3.2 release, 
 introducing a large set of new features to NUnit, particularly in
 the area of parameterized or data-driven testing.
 
