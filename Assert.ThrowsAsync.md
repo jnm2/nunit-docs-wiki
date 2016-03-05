@@ -62,4 +62,4 @@ public class UsingReturnValue
  * [[Assert.Catch]]
  * [[Assert.CatchAsync]]
  * [[Assert.Throws]]
- * [[Throws Constraint]]
+ * [[ThrowsConstraint]]
