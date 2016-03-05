@@ -6,9 +6,11 @@ It's also in a class by itself in that it returns an Exception, rather
 than void, if the Assert is successful. See the example below for
 a few ways to use this.
 
-<b>Assert.Throws</b> may be used with a constraint argument, which is applied
+**Assert.Throws** may be used with a constraint argument, which is applied
 to the actual exception thrown, or with the Type of exception expected.
 The Type format is available in both both a non-generic and generic form.
+
+If the code under test is async, you must use [[Assert.ThrowsAsync]].
 
 ```C#
 Exception Assert.Throws( Type expectedExceptionType, TestDelegate code );
