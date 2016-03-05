@@ -1,4 +1,4 @@
-This is an index of internal version numbers used  by each of the NUnit 3 releases. The version is displayed by the nunit-console program. You can use this if you are uncertain about which release you have installed.
+This is an index of internal version numbers used  by each of the NUnit 3.0 releases. The version is displayed by the nunit-console program. You can use this if you are uncertain about which release you have installed. As of NUnit 3.2, the version numbers match the release number. For example, for the NUnit 3.2 release, the console will report 3.2.0.
 
 |  Version  |  Release   |
 |-----------|------------|
