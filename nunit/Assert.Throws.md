@@ -126,4 +126,6 @@ Assert.Catch( code );
 
 <h4>See also...</h4>
  * [[Assert.Catch]]
+ * [[Assert.CatchAsync]]
+ * [[Assert.ThrowsAsync]]
  * [[Throws Constraint]]
