@@ -8,4 +8,4 @@ Assert.Contains( object anObject, ICollection collection,
 ```
 
 ####See also...
- * [[Collection Constraints]]
+ * [[CollectionContainsConstraint]]
