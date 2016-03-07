@@ -34,9 +34,6 @@ Assert.That( sarray, Has.No.Member("x") );
 Assert.That( iarray, Does.Contain(3) );
 ```
 
-<h4>Notes</h4>
+<h4>Note</h4>
 
-1. For references, <b>Has.Member</b> uses object equality to find a member in a
-   collection. To check for an object equal to an item the collection, use
-   <b>Has.Some.EqualTo(...)</b>.
-
+`Has.Member()`, `Contains.Item()` and `Does.Contain()` work the same as `Has.Some.EqualTo()`. The last statement generates a [[SomeItemsConstraint]] based on an [[EqualConstraint]] and offers additional options such as ignoring case or specifying a tolerance. The syntax on this page may be viewed as a shortcut for specifying simpler cases.
