@@ -26,8 +26,8 @@ namespace NUnit.Tests
 
 The PropertyAttribute is not currently used for any purpose by NUnit itself, other
 than to display them in the XML output file and in the Test Properties
-dialog of the gui. In a future release, you will be able to select tests to run
-based on the values of Properties.
+dialog of the gui. You may also use use properties with the `--where` option on the
+command-line in order to select tests to run. See [[Test Selection Language]].
 
 User tests may access properties through the [[TestContext]] or by reflection.
    
