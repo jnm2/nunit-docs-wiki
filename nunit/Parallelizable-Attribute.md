@@ -18,7 +18,7 @@ public enum ParallelScope
 }
 ```
 
-> **Note:** In the 3.0 release, parallel execution of methods within a class is not yet implemented. Parallel execution only applies down to the TestFixture level. `ParallelScope.Children` works as `ParallelScope.Fixtures` and any `ParallelizableAttribute` placed on a method is ignored.
+> **Note:** Parallel execution of methods within a class is not yet implemented. Parallel execution only applies down to the TestFixture level. `ParallelScope.Children` works as `ParallelScope.Fixtures` and any `ParallelizableAttribute` placed on a method is ignored.
 
 Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
 
