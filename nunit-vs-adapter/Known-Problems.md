@@ -4,9 +4,11 @@
 
 2. Theories are reported as individual cases, rather as a single unit.
 
-3. Startup performance is substantially improved but is still slower than using NUnit directly.
+3. In NUnit, tests have names, which are not necessarily unique. Visual Studio wants the names to be unique. So if two tests have the same name, VS displays a warning message in the output window. The message may be ignored. Two separate results will be shown under the single test in the explorer pane.
 
-4. A VSIX adapter of older version will be used regardless of version of NuGet adapter.
+4. Startup performance is substantially improved but is still slower than using NUnit directly.
+
+5. A VSIX adapter of older version will be used regardless of version of NuGet adapter.
 
    Workaround: Make sure you have upgraded VSIX adapter to latest version, or uninstalled it if you have the NuGet adapter in a solution. The adapter will display its version number in the Output window under Tests.
 
