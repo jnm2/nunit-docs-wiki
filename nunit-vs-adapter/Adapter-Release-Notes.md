@@ -1,3 +1,25 @@
+#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 8 - December 2, 2015
+
+#####Features
+
+ * The adapter now uses the 3.0.1 release of the NUnit TestEngine.
+
+#####Resolved Issues
+
+ * 81 Cannot run tests with '>' in name
+ * 86 Generic Test Fixtures are not getting triggered
+ * 88 Upgrade adapter to use NUnit 3.0.1
+
+#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 7 - November 16, 2015
+
+#####Features
+
+ * The adapter now uses the released NUnit 3.0 TestEngine.
+
+#####Resolved Issues
+
+ * 75 Update adapter to use final release of NUnit 3.0 
+
 #####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 6 - November 10, 2015
 
 #####Features
@@ -7,7 +29,9 @@
 #####Resolved Issues
 
  * 14 NUnit Adapter throws System.Reflection.TargetInvocationException, even if the solution build is OK
+ * 56 Exception System.Reflection.TargetInvocationException after NUnit 3.0.0-beta-5 upgrade
  * 68 NUnit3TestExecutor.MakeTestFilter does not create valid xml
+ * 69 Nunit 3.0.0-rc-2 : System.Reflection.TargetInvocationException
  * 70 NUnit3TestExecutor.MakeTestFilter creates element not handled by NUnit.Framework.Internal.TestFilter 
 
 #####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 5 - November 9, 2015
