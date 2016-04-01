@@ -1,3 +1,26 @@
+#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - Not Yet Released
+
+#####Features
+
+ * The adapter continues to use the 3.0.1 release of the NUnit TestEngine.
+
+#####Resolved Issues
+
+ * 2 CI Build
+ * 34 Identifying Non-Primitive Parameterized Inputs in Adapter vs Console
+ * 50 Nuget version install script doesn't work with VS 2015
+ * 66 Build the adapter in AppVeyor
+ * 84 CopyLocal=False is an issue in a specific use case
+ * 94 More Information Link in Adapter Broken
+ * 96 Working directory is set to VS TestWindow extension directory
+ * 102 Package VS2012 assemblies as a private NuGet Package
+ * 104 Can't overload async/await methods with NUnit Test Adapter
+ * 106 Explicit tests appear as warnings in NUnit 3.0
+ * 109 NUnit 2 tests are detected as errors
+ * 112 Test adapter fails to load an assembly that references a class from NUnit.Framework but contains no tests
+ * 117 Version 3.0.8.0 as nuget package only. No tests detected in Visual Studio 2015
+ * 118 Corrupted ignore.addins file in installation
+
 #####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 8 - December 2, 2015
 
 #####Features
