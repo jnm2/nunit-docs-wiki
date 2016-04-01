@@ -110,9 +110,9 @@ TestCaseSourceAttribute supports one named parameter:
 In constructing tests, NUnit uses each item returned by
 the enumerator as follows:
 
-1. If it is an object implementing `NUnit.Framework.ITestCaseData`, 
+1. If it is an object implementing `ITestFixtureData`, 
    its properties are used to provide the test case. NUnit provides
-   the [[TestCaseData]] type for this purpose.
+   the [[TestFixtureData]] type for this purpose.
 
 3. If it is an <b>object[]</b>, its members are used to provide
    the arguments for the method. This is the approach taken in
