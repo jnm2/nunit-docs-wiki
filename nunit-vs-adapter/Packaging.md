@@ -26,7 +26,7 @@ The version numbers have to be edited in the following files, and should match:
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
 -- change Version tag
 * **nunit-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
-* **license.rtf**, found under the NUNitTestAdapterInstall project.  If the major/minor number has changed, update that here, 2nd line. If year is changed, update copyright years accordingly. 
+* **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the major/minor number has changed, update that here, 2nd line. If year is changed, update copyright years accordingly. 
 
 
 Build
@@ -45,11 +45,11 @@ Run this from the solution root folder
 
 The resulting files can be found in the "package" folder:
 
-  * **NUnitVisualStudioTestAdapter-[VERSION].vsix**  This is the extension for Visual Studio, which is uploaded to the [Visual Studio Gallery]. 
+  * **NUnit3TestAdapter-[VERSION].vsix**  This is the extension for Visual Studio, which is uploaded to the [Visual Studio Gallery]. 
 
-  * **NUnitVisualStudioTestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
+  * **NUnit3TestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
-  * **NUnitVisualStudioTestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+  * **NUnit3TestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
 
 ####Publishing the Release
 
