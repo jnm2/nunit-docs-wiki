@@ -31,8 +31,7 @@ The version numbers have to be edited in the following files, and should match:
 
 Build
 -----
-Build a release version, AnyCPU.
-
+Build a release version, AnyCPU. Be sure to use the `Rebuild Solution` menu item in VS. Otherwise, the `.vsix` file may not be regenerated.
 
 
 Packaging
