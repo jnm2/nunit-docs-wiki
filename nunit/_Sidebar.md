@@ -17,6 +17,7 @@
   * [[Assumptions]]
   * [[Constraints]]
   * [[TestCaseData]]
+  * [[TestFixtureData]]
   * [[TestContext]]
   * [[AssertionHelper]]
   * [[ListMapper]]
