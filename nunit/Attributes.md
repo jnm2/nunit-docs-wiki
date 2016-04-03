@@ -9,15 +9,15 @@ This table lists all the attributes supported by NUnit.
 | [[Category Attribute]]            | Specifies one or more categories for the test. |
 | [[Combinatorial Attribute]]       | Generates test cases for all combinations of individual data items provided. |
 | [[Culture Attribute]]             | Specifies cultures for which a test or fixture should be run. |
-| [[Datapoint Attribute]]           | Provides data for Theories. [obsolete?] |
+| [[Datapoint Attribute]]           | Provides data for Theories. |
 | [[DatapointSource Attribute]]     | Provides data for Theories. |
 | [[Description Attribute]]         | Applies descriptive text to a Test, TestFixture or Assembly. |
-| [[Explicit Attribute]]            | Flags decorated test to be skipped unless explicitly run. |
+| [[Explicit Attribute]]            | Indicates that a test should be skipped unless explicitly run. |
 | [[Ignore Attribute]]              | Indicates that a test shouldn't be run for some reason. |
 | [[LevelOfParallelism Attribute]]  | Specifies the level of parallelism at assembly level. |
-| [[Maxtime Attribute]]             | Specifies the maximum time in milliseconds for a test case. |
-| [[OneTimeSetUp Attribute]]        | Identifies methods to be called once prior to any test in fixture. |
-| [[OneTimeTearDown Attribute]]     | Identifies methods to be called once after all tests in fixture. |
+| [[Maxtime Attribute]]             | Specifies the maximum time in milliseconds for a test case to succeed. |
+| [[OneTimeSetUp Attribute]]        | Identifies methods to be called once prior to any child tests. |
+| [[OneTimeTearDown Attribute]]     | Identifies methods to be called once after all child tests. |
 | [[Order Attribute]]               | Specifies the order in which decorated test should be run (against others). |
 | [[Pairwise Attribute]]            ||
 | [[Parallelizable Attribute]]      | Indicates whether test and/or its descendants can be run in parallel. |
