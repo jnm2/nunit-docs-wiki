@@ -23,10 +23,10 @@ This table lists all the attributes supported by NUnit.
 | [[Parallelizable Attribute]]      | Indicates whether test and/or its descendants can be run in parallel. |
 | [[Platform Attribute]]            | Specifies platforms for which a test or fixture should be run. |
 | [[Property Attribute]]            ||
-| [[Random Attribute]]              | Specifies that the decorated method should be executed multiple times. |
-| [[Range Attribute]]               | Indicates that a test method, class or assembly should be run on a separate thread. |
-| [[Repeat Attribute]]              ||
-| [[RequiresThread Attribute]]      ||
+| [[Random Attribute]]              ||
+| [[Range Attribute]]               ||
+| [[Repeat Attribute]]              | Specifies that the decorated method should be executed multiple times. |
+| [[RequiresThread Attribute]]      | Indicates that a test method, class or assembly should be run on a separate thread. |
 | [[Retry Attribute]]               ||
 | [[Sequential Attribute]]          ||
 | [[SetCulture Attribute]]          ||
