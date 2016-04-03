@@ -1,4 +1,4 @@
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - April 2, 2016
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - April 2, 2016
 
 #####Features
 
@@ -21,7 +21,7 @@
  * 117 Version 3.0.8.0 as nuget package only. No tests detected in Visual Studio 2015
  * 118 Corrupted ignore.addins file in installation
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 8 - December 2, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 8 - December 2, 2015
 
 #####Features
 
@@ -33,7 +33,7 @@
  * 86 Generic Test Fixtures are not getting triggered
  * 88 Upgrade adapter to use NUnit 3.0.1
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 7 - November 16, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 7 - November 16, 2015
 
 #####Features
 
@@ -43,7 +43,7 @@
 
  * 75 Update adapter to use final release of NUnit 3.0 
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 6 - November 10, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 6 - November 10, 2015
 
 #####Features
 
@@ -57,7 +57,7 @@
  * 69 Nunit 3.0.0-rc-2 : System.Reflection.TargetInvocationException
  * 70 NUnit3TestExecutor.MakeTestFilter creates element not handled by NUnit.Framework.Internal.TestFilter 
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 5 - November 9, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 5 - November 9, 2015
 
 #####Features
 
@@ -71,7 +71,7 @@
  * 53 Replace core engine
  * 57 Confusing message when an NUnit V2 test is detected
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 4 - July 20, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 4 - July 20, 2015
 
 #####Features
 
@@ -88,7 +88,7 @@
  * 33 Inconsistent display behavior in Test Explorer
  * 36 Option to set number of worker threads
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 3 - May 22, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 3 - May 22, 2015
 
 #####Features
 
@@ -98,7 +98,7 @@ This release was issued to correct a problem with locking of assemblies in ctp-2
 
  * 29 Latest test adapter locking dlls
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 2 - May 16, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 2 - May 16, 2015
 
 #####Features
 
@@ -114,7 +114,7 @@ This release was issued to correct a problem with locking of assemblies in ctp-2
  * 19 Use core engine
  * 20 Upgrade NUnit to beta-2
 
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 1 - April 6, 2015
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 1 - April 6, 2015
 
 #####Features
 
