@@ -91,7 +91,7 @@ You might need to fix up these references if the locations don't match what has 
 
 
 [semantic versioning]:http://semver.org/
-[Visual Studio Gallery]:http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d
+[Visual Studio Gallery]:https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d
 [Nuget for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
 [Nuget for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
 [nunit.org repository]:http://github.com/nunit/nunit.org
