@@ -1,6 +1,6 @@
 [[Home]]
 
-[[NUnit-VS-Adapter Documentation]]
+[[VS Adapter Documentation]]
 
 * [[Installation|Adapter Installation]]
 

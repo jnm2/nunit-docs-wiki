@@ -1,9 +1,9 @@
 ###Projects
 
-* **[[NUnit|NUnit-Documentation]]**
-* **[[NUnit Gui]]**
-* **[[NUnit VS Adapter|NUnit-VS-Adapter-Documentation]]**
-* **[[NUnit Project Editor]]**
+* **[[NUnit Core|NUnit-Documentation]]**
+* **[[NUnit Gui|GUI Documentation]]**
+* **[[VS Adapter|VS-Adapter-Documentation]]**
+* **[[Project Editor|Project-Editor-Documentation]]**
 
 ###Sample Code
   * **[[C# Samples]]**
