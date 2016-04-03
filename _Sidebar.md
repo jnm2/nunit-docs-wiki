@@ -1,7 +1,7 @@
 ###Projects
 
 * **[[NUnit Core|NUnit-Documentation]]**
-* **[[NUnit Gui|GUI Documentation]]**
+* **[[NUnit Gui|GUI-Documentation]]**
 * **[[VS Adapter|VS-Adapter-Documentation]]**
 * **[[Project Editor|Project-Editor-Documentation]]**
 
