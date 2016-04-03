@@ -1,4 +1,4 @@
-#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - Not Yet Released
+#####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - April 2, 2016
 
 #####Features
 
