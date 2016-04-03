@@ -8,4 +8,4 @@ This wiki contains the documentation for all active NUnit projects as well as de
  * [[Project Editor|Project-Editor-Documentation]] covers the Windows program for creating and editing `.nunit` project files.
 
 ####[[Developer Documentation]]
-Documentation for use by those working on NUnit development.
+ * Documentation for use by those working on NUnit development.
