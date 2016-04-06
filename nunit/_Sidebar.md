@@ -27,7 +27,7 @@
     * [[Console Command Line]]
     * [[NUnit Test Projects]]
   * [[NUnitLite Runner]]
-  * [Visual Studio Test Adapter](https://github.com/nunit/nunit3-vs-adapter/wiki) (Separate site)
+  * [Visual Studio Test Adapter](https://github.com/nunit/docs/wiki/VS-Adapter-Documentation) (Separate site)
 
 **Extending NUnit**
   * [[Framework Extensibility]]
