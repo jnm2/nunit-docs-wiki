@@ -1,12 +1,12 @@
-﻿NUnit-Gui 0.1 - April 8, 2016
+﻿###NUnit-Gui 0.1 - April 8, 2016
 
-General
+####General
 
 This is the initial release of the NUnit GUI runner. This is pre-alpha code we are releasing
 primarily for the purpose of getting feedback on the user interface itself. It is not suitable
 for use in production.
 
-Features
+####Features
 
  * The left-hand panel displays the tests in a variety of ways.
    * As a traditional NUnit tree
@@ -21,7 +21,7 @@ Features
    * Properties - shows the information about the test (upper pane) and it's result (lower pane)
    * XML - shows the XML representation for the test or test result
 
-Issues Resolved
+####Issues Resolved
 
  * 17 Gui should highlight not-runnable and ignored tests immediately upon load
  * 19 CI Server for nunit-gui
