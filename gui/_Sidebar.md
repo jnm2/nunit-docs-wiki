@@ -2,5 +2,5 @@
 
 **[[GUI Documentation]]**
 
-**[[Release Notes|Gui-Release-Notes]]
+**[[Release Notes|Gui-Release-Notes]]**
 
