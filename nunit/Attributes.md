@@ -41,8 +41,8 @@ This table lists all the attributes supported by NUnit.
 | [[TestFixtureSetup Attribute]]    | Deprecated synonym for [[OneTimeSetUp Attribute]]. |
 | [[TestFixtureSource Attribute]]   | Marks a class as a test fixture and provides a source for constructor arguments. |
 | [[TestFixtureTeardown Attribute]] | Deprecated synonym for [[OneTimeTearDown Attribute]]. |
-| [[TestOf Attribute]]              ||
-| [[Theory Attribute]]              ||
-| [[Timeout Attribute]]             ||
-| [[Values Attribute]]              ||
-| [[ValueSource Attribute]]         ||
+| [[TestOf Attribute]]              | Indicates the name or Type of the class being tested. |
+| [[Theory Attribute]]              | Marks a test method as a Theory, a special kind of test in NUnit. |
+| [[Timeout Attribute]]             | Provides a timeout value in milliseconds for test cases. |
+| [[Values Attribute]]              | Provides a set of inline values for a parameter of a test method. |
+| [[ValueSource Attribute]]         | Provides a source of values for a parameter of a test method. |
