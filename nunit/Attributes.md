@@ -31,16 +31,16 @@ This table lists all the attributes supported by NUnit.
 | [[Sequential Attribute]]          | Generates test cases using values in the order provided, without additional combinations. |
 | [[SetCulture Attribute]]          | Sets the current Culture for the duration of a test. |
 | [[SetUICulture Attribute]]        | Sets the current UI Culture for the duration of a test. |
-| [[Setup Attribute]]               | Indicates a method within inside a TestFixture to be called just before each test method is run. |
+| [[Setup Attribute]]               | Indicates a method of a TestFixture called just before each test method. |
 | [[SetupFixture Attribute]]        | Marks a class with one-time setup or teardown methods for all the test fixtures in a namespace. |
-| [[Teardown Attribute]]            ||
-| [[Test Attribute]]                ||
-| [[TestCase Attribute]]            ||
-| [[TestCaseSource Attribute]]      ||
-| [[TestFixture Attribute]]         ||
-| [[TestFixtureSetup Attribute]]    ||
-| [[TestFixtureSource Attribute]]   ||
-| [[TestFixtureTeardown Attribute]] ||
+| [[Teardown Attribute]]            | Indicates a method of a TestFixture called just after each test method. |
+| [[Test Attribute]]                | Marks a method of a TestFixture that represents a test. |
+| [[TestCase Attribute]]            | Marks a method with parameters as a test and provides inline arguments. |
+| [[TestCaseSource Attribute]]      | Marks a method with parameters as a test and provides a source of arguments. |
+| [[TestFixture Attribute]]         | Marks a class as a test fixture and may provide inline constructor arguments. |
+| [[TestFixtureSetup Attribute]]    | Deprecated synonym for [[OneTimeSetUp Attribute]]. |
+| [[TestFixtureSource Attribute]]   | Marks a class as a test fixture and provides a source for constructor arguments. |
+| [[TestFixtureTeardown Attribute]] | Deprecated synonym for [[OneTimeTearDown Attribute]]. |
 | [[TestOf Attribute]]              ||
 | [[Theory Attribute]]              ||
 | [[Timeout Attribute]]             ||
