@@ -67,11 +67,14 @@ Again, `Description` is the only named property for this attribute.
 
 ####Supported Extension Points
 
-As of NUnit 3.0 beta 5, the following extension types are supported:
+As of NUnit 3.2, the following extension types are supported:
 
 * [[Project Loaders]]
 * [[Result Writers]]
 * [[Framework Drivers]]
+
+An additional extension point is avalable when building NUnit from source and will be included in the next release:
+* [[Event Listeners]]
 
 ##Extensions
 
