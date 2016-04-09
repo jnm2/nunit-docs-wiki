@@ -7,10 +7,10 @@ This table lists all the attributes supported by NUnit.
 | [[Apartment Attribute]]           | Indicates that the test should run in a particular apartment. |
 | [[Author Attribute]]              | Provides the name of the test author. |
 | [[Category Attribute]]            | Specifies one or more categories for the test. |
-| [[Combinatorial Attribute]]       | Generates test cases for all combinations of individual data items provided. |
+| [[Combinatorial Attribute]]       | Generates test cases for all possible combinations of the values provided. |
 | [[Culture Attribute]]             | Specifies cultures for which a test or fixture should be run. |
-| [[Datapoint Attribute]]           | Provides data for Theories. |
-| [[DatapointSource Attribute]]     | Provides data for Theories. |
+| [[Datapoint Attribute]]           | Provides data for [[Theories|Theory-Attribute]]. |
+| [[DatapointSource Attribute]]     | Provides data for [[Theories|Theory-Attribute]]. |
 | [[Description Attribute]]         | Applies descriptive text to a Test, TestFixture or Assembly. |
 | [[Explicit Attribute]]            | Indicates that a test should be skipped unless explicitly run. |
 | [[Ignore Attribute]]              | Indicates that a test shouldn't be run for some reason. |
@@ -19,16 +19,16 @@ This table lists all the attributes supported by NUnit.
 | [[OneTimeSetUp Attribute]]        | Identifies methods to be called once prior to any child tests. |
 | [[OneTimeTearDown Attribute]]     | Identifies methods to be called once after all child tests. |
 | [[Order Attribute]]               | Specifies the order in which decorated test should be run (against others). |
-| [[Pairwise Attribute]]            ||
+| [[Pairwise Attribute]]            | Generate test cases for all possible pairs of the values provided. |
 | [[Parallelizable Attribute]]      | Indicates whether test and/or its descendants can be run in parallel. |
 | [[Platform Attribute]]            | Specifies platforms for which a test or fixture should be run. |
-| [[Property Attribute]]            ||
-| [[Random Attribute]]              ||
-| [[Range Attribute]]               ||
+| [[Property Attribute]]            | Allows setting named properties on any test case or fixture. |
+| [[Random Attribute]]              | Specifies generation of random values as arguments to a parameterized test. |
+| [[Range Attribute]]               | Specifies a range of values as arguments to a parameterized test. |
 | [[Repeat Attribute]]              | Specifies that the decorated method should be executed multiple times. |
 | [[RequiresThread Attribute]]      | Indicates that a test method, class or assembly should be run on a separate thread. |
 | [[Retry Attribute]]               ||
-| [[Sequential Attribute]]          ||
+| [[Sequential Attribute]]          | Generates test cases using values in the order provided, without additional combinations. |
 | [[SetCulture Attribute]]          ||
 | [[SetUICulture Attribute]]        ||
 | [[Setup Attribute]]               ||
