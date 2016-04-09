@@ -27,12 +27,12 @@ This table lists all the attributes supported by NUnit.
 | [[Range Attribute]]               | Specifies a range of values as arguments to a parameterized test. |
 | [[Repeat Attribute]]              | Specifies that the decorated method should be executed multiple times. |
 | [[RequiresThread Attribute]]      | Indicates that a test method, class or assembly should be run on a separate thread. |
-| [[Retry Attribute]]               ||
+| [[Retry Attribute]]               | Causes a test to be rerun if it fails, up to a maximum number of times. |
 | [[Sequential Attribute]]          | Generates test cases using values in the order provided, without additional combinations. |
-| [[SetCulture Attribute]]          ||
-| [[SetUICulture Attribute]]        ||
-| [[Setup Attribute]]               ||
-| [[SetupFixture Attribute]]        ||
+| [[SetCulture Attribute]]          | Sets the current Culture for the duration of a test. |
+| [[SetUICulture Attribute]]        | Sets the current UI Culture for the duration of a test. |
+| [[Setup Attribute]]               | Indicates a method within inside a TestFixture to be called just before each test method is run. |
+| [[SetupFixture Attribute]]        | Marks a class with one-time setup or teardown methods for all the test fixtures in a namespace. |
 | [[Teardown Attribute]]            ||
 | [[Test Attribute]]                ||
 | [[TestCase Attribute]]            ||
