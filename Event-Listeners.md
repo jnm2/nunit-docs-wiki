@@ -31,3 +31,14 @@ public interface ITestEventListener
     void OnTestEvent(string report);
 }
 ```
+
+The argument to `OnTestEvent` is an XML-formatted string, with a different top-level element for each potential event.
+
+ * Start of run - `<start-run...>`
+ * End of run - `<test-run...>`
+ * Start of a test suite - `<start-suite...>`
+ * End of a test suite - `<test-suite...>`
+ * Start of a test case - `<start-test...>`
+ * End of a test case - `<test-case...>`
+
+The XML report signalling the end of a test case contains all available information, including the result. The start events only provide basic identifying information. See [[XML Formats]] for a full description of each report.
