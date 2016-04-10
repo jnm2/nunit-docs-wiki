@@ -106,6 +106,10 @@ It must have a default constructor and implement <b>IEnumerable</b>. The enumera
 should return test case data compatible with the signature of the test on which the attribute appears.
 See the **Test Case Construction** section below for details.
 
+#####Notes: 
+
+1. Historically, the **TestCaseSource** attribute required the **Test** attribute to be specified alongside it. This is no longer required, although third-party runners may still expect the **Test** attribute to be present.
+
 ####Named Parameters
 
 TestCaseSourceAttribute supports one named parameter:
