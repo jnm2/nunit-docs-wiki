@@ -32,7 +32,7 @@
 
 <p>The NUnitLite approach provides a way to run NUnit tests without a full install of the NUnit runner and test engine assemblies. Only the framework and a small runner program are installed. Note that this is currently the only way to run tests under Silverlight 5.0 or the compact framework.
 
-<p>In VisualStudio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
+<p>In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
 
 <p>Scroll or use search to locate the <b>NUnitLite Version 3</b> and install it. The package should be referenced by each of your test assemblies, but not by any others.</p>
 
