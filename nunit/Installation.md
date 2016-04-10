@@ -1,4 +1,4 @@
-<p>To get a copy of the NUnit 3.0 Alpha release, you can use various installation approaches.
+<p>To get a copy of the NUnit 3, you can use various installation approaches.
 
 <ol>
   <li>Zip file download.
@@ -11,22 +11,22 @@
 
 <p>Download the latest binary zip from our <a href="http://nunit.org/index.php?p=download">Download</a> page or from <a href="https://github.com/nunit/nunit/releases">GitHub</a>. Unzip the file into any convenient directory.</p>
 
-<p>If you would like be able to run nunit3-console from the commandline, put the bin directory, containing nunit3-console.exe on your path.</p>
+<p>If you would like be able to run nunit3-console from the command line, put the bin directory, containing nunit3-console.exe on your path.</p>
 
 <p>In your test assemblies, add a reference to nunit.framework.dll, using the copy in the subdirectory for the appropriate runtime version. For example, if you are targeting .NET 4.0, you should reference the framework assembly in the net-4.0 subdirectory.</p>
 
-<p>Run nunit3-console from the  command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter</p>
+<p>Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:</p>
 <pre>
      nunit3-console net-2.0/nunit.framework.tests.dll
 </pre>
 
 <h3>Using NuGet Packages</h3>
 
-<p>In VisualStudio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
+<p>In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
 
-<p>Since NUnit 3.0 Alpha is a prerelease, ensure that the lefthand combobox at the top of the Manage NuGet Packages dialog indicates "Include Prerelease." Scroll or use search to locate the <b>NUnit Version 3</b> and <b>NUnit.Console</b> packages. Install both packages. The <b>NUnit Version 3</b> package should be referenced by each of your test assemblies, but not by any others.</p>
+<p>Scroll or use search to locate the <b>NUnit Version 3</b> and <b>NUnit.Console</b> packages. Install both packages. The <b>NUnit Version 3</b> package should be referenced by each of your test assemblies, but not by any others.</p>
 
-<p>Locate nunit3-console in the <b>packages\NUnit.3.0.0-alpha\tools</b> directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.</p>
+<p>Locate nunit3-console in the <b>packages\NUnit.3.X.X\tools</b> directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.</p>
 
 <h3>Using NuGet NUnitLite Package</h3>
 
@@ -34,7 +34,7 @@
 
 <p>In VisualStudio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
 
-<p>Since NUnit 3.0 Alpha is a prerelease, ensure that the lefthand combobox at the top of the Manage NuGet Packages dialog indicates "Include Prerelease." Scroll or use search to locate the <b>NUnitLite Version 3</b> and install it. The package should be referenced by each of your test assemblies, but not by any others.</p>
+<p>Scroll or use search to locate the <b>NUnitLite Version 3</b> and install it. The package should be referenced by each of your test assemblies, but not by any others.</p>
 
 <p>As a result of your installation, a file named "Program.cs" will have been copied into each of your test projects. NUnitLite test projects are console applications and this file contains the Main() program for your tests. If you already have a Main() in some other class, you may delete the file. This file also contains comments describing how the main should call the NUnitLite runner.</p>
 
