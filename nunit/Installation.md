@@ -24,7 +24,7 @@
 
 <p>In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
 
-<p>Scroll or use search to locate the <b>NUnit Version 3</b> and <b>NUnit.Console</b> packages. Install both packages. The <b>NUnit Version 3</b> package should be referenced by each of your test assemblies, but not by any others.</p>
+<p>Scroll or use search to locate the <b>NUnit</b> and <b>NUnit.Console</b> packages. Install both packages. The <b>NUnit</b> package should be referenced by each of your test assemblies, but not by any others.</p>
 
 <p>Locate nunit3-console in the <b>packages\NUnit.3.X.X\tools</b> directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.</p>
 
