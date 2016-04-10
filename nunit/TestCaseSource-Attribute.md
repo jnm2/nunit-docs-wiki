@@ -108,7 +108,7 @@ See the **Test Case Construction** section below for details.
 
 #####Notes: 
 
-1. Historically, the **TestCaseSource** attribute required the **Test** attribute to be specified alongside it. This is no longer required, although third-party runners may still expect the **Test** attribute to be present.
+1. Historically, the **TestCaseSource** attribute required the **Test** attribute to be specified alongside it. This is no longer the case, however, third-party runners may still expect the **Test** attribute to be present.
 
 ####Named Parameters
 
