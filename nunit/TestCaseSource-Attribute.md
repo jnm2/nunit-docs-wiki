@@ -2,7 +2,7 @@
 identify the source from which the required arguments will be provided.
 The data is kept separate from the test itself and may be used by multiple
 test methods. See [[Parameterized Tests]] for a general introduction to
-tests with arguments. The method may optionally be marked with the [Test Attribute] 
+tests with arguments. The method may optionally be marked with the [[Test Attribute]]
 as well, although this is not necessary
 
 ####Usage
