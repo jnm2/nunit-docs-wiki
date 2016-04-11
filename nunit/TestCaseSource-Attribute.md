@@ -1,9 +1,9 @@
 **TestCaseSourceAttribute** is used on a parameterized test method to
-identify the source from which the required arguments will be provided.
+identify the source from which the required arguments will be provided. 
+The attribute additionally identifies the method as a test method.
 The data is kept separate from the test itself and may be used by multiple
 test methods. See [[Parameterized Tests]] for a general introduction to
-tests with arguments. The method may optionally be marked with the [[Test Attribute]]
-as well, although this is not necessary.
+tests with arguments.
 
 ####Usage
 
