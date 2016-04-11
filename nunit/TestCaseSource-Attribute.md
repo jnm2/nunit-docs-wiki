@@ -2,7 +2,8 @@
 identify the source from which the required arguments will be provided.
 The data is kept separate from the test itself and may be used by multiple
 test methods. See [[Parameterized Tests]] for a general introduction to
-tests with arguments.
+tests with arguments. The method may optionally be marked with the [Test Attribute] 
+as well, although this is not necessary
 
 ####Usage
 
@@ -105,10 +106,6 @@ The Type argument in this form represents the class that provides test cases.
 It must have a default constructor and implement <b>IEnumerable</b>. The enumerator
 should return test case data compatible with the signature of the test on which the attribute appears.
 See the **Test Case Construction** section below for details.
-
-#####Notes: 
-
-1. Historically, the **TestCaseSource** attribute required the **Test** attribute to be specified alongside it. This is no longer the case, however, third-party runners may still expect the **Test** attribute to be present.
 
 ####Named Parameters
 
