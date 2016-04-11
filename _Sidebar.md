@@ -1,7 +1,7 @@
 ###Projects
 
 * **[[Framework, Engine and Console Runner|NUnit-Documentation]]**
-* **[[Gui|GUI-Documentation]]**
+* **[[NUnit Gui|GUI-Documentation]]**
 * **[[VS Adapter|VS-Adapter-Documentation]]**
 * **[[Project Editor|Project-Editor-Documentation]]**
 
