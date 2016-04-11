@@ -1,47 +1,45 @@
-<p>To get a copy of the NUnit 3, you can use various installation approaches.
+To get a copy of the NUnit 3, you can use various installation approaches.
 
-<ol>
-  <li>Zip file download.
-  <li>Full NUnit install via NuGet.
-  <li>NUnitLite install via NuGet.
-  <li>Combined Approach
-</ol>
+1.  Zip file download.
+2.  Full NUnit install via NuGet.
+3.  NUnitLite install via NuGet.
+4.  Combined Approach
 
-<h3>Downloading the Zip File</h3>
+### Downloading the Zip File
 
-<p>Download the latest binary zip from our <a href="http://nunit.org/index.php?p=download">Download</a> page or from <a href="https://github.com/nunit/nunit/releases">GitHub</a>. Unzip the file into any convenient directory.</p>
+Download the latest binary zip from our [Download](http://nunit.org/index.php?p=download) page or from [GitHub](https://github.com/nunit/nunit/releases). Unzip the file into any convenient directory.
 
-<p>If you would like be able to run nunit3-console from the command line, put the bin directory, containing nunit3-console.exe on your path.</p>
+If you would like be able to run nunit3-console from the command line, put the bin directory, containing nunit3-console.exe on your path.
 
-<p>In your test assemblies, add a reference to nunit.framework.dll, using the copy in the subdirectory for the appropriate runtime version. For example, if you are targeting .NET 4.0, you should reference the framework assembly in the net-4.0 subdirectory.</p>
+In your test assemblies, add a reference to nunit.framework.dll, using the copy in the subdirectory for the appropriate runtime version. For example, if you are targeting .NET 4.0, you should reference the framework assembly in the net-4.0 subdirectory.
 
-<p>Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:</p>
-<pre>
-     nunit3-console net-2.0/nunit.framework.tests.dll
+Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:
+
+<pre>     nunit3-console net-2.0/nunit.framework.tests.dll
 </pre>
 
-<h3>Using NuGet Packages</h3>
+### Using NuGet Packages
 
-<p>In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
+In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...
 
-<p>Scroll or use search to locate the <b>NUnit</b> and <b>NUnit.Console</b> packages. Install both packages. The <b>NUnit</b> package should be referenced by each of your test assemblies, but not by any others.</p>
+Scroll or use search to locate the **NUnit** and **NUnit.Console** packages. Install both packages. The **NUnit** package should be referenced by each of your test assemblies, but not by any others.
 
-<p>Locate nunit3-console in the <b>packages\NUnit.3.X.X\tools</b> directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.</p>
+Locate nunit3-console in the **packages\NUnit.3.X.X\tools** directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.
 
-<h3>Using NuGet NUnitLite Package</h3>
+### Using NuGet NUnitLite Package
 
-<p>The NUnitLite approach provides a way to run NUnit tests without a full install of the NUnit runner and test engine assemblies. Only the framework and a small runner program are installed. Note that this is currently the only way to run tests under Silverlight 5.0 or the compact framework.
+The NUnitLite approach provides a way to run NUnit tests without a full install of the NUnit runner and test engine assemblies. Only the framework and a small runner program are installed. Note that this is currently the only way to run tests under Silverlight 5.0 or the compact framework.
 
-<p>In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...</p>
+In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...
 
-<p>Scroll or use search to locate the <b>NUnitLite Version 3</b> and install it. The package should be referenced by each of your test assemblies, but not by any others.</p>
+Scroll or use search to locate the **NUnitLite Version 3** and install it. The package should be referenced by each of your test assemblies, but not by any others.
 
-<p>As a result of your installation, a file named "Program.cs" will have been copied into each of your test projects. NUnitLite test projects are console applications and this file contains the Main() program for your tests. If you already have a Main() in some other class, you may delete the file. This file also contains comments describing how the main should call the NUnitLite runner.</p>
+As a result of your installation, a file named "Program.cs" will have been copied into each of your test projects. NUnitLite test projects are console applications and this file contains the Main() program for your tests. If you already have a Main() in some other class, you may delete the file. This file also contains comments describing how the main should call the NUnitLite runner.
 
-<p>To run your tests, simply run your executable test assembly. No other runner is needed.</p>
+To run your tests, simply run your executable test assembly. No other runner is needed.
 
-<h3>Combined Approach</h3>
+### Combined Approach
 
-<p>This approach is useful if you would like to use a single copy of nunit3-console with individual copies of the framework in each project.</p>
+This approach is useful if you would like to use a single copy of nunit3-console with individual copies of the framework in each project.
 
-<p>Simply follow the zip file procedure to get a central copy of NUnit on your system. Then install the <b>NUnit Version 3</b> NuGet package in each of your test assemblies. For desktop use by developers, this approach may give you the best of both worlds.</p>
+Simply follow the zip file procedure to get a central copy of NUnit on your system. Then install the **NUnit Version 3** NuGet package in each of your test assemblies. For desktop use by developers, this approach may give you the best of both worlds.
