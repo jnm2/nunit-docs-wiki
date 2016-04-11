@@ -1,7 +1,6 @@
 **[[Home]]**
 
 **[[NUnit Documentation]]**<br/>
-**[[Summary]]**<br/>
 **[[Release Notes]]**<br/>
 **[[License]]**<br/>
 **[[Version Index]]**<br/>
