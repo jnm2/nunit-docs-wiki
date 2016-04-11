@@ -15,8 +15,9 @@ In your test assemblies, add a reference to nunit.framework.dll, using the copy 
 
 Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:
 
-<pre>     nunit3-console net-2.0/nunit.framework.tests.dll
-</pre>
+```
+     nunit3-console net-2.0/nunit.framework.tests.dll
+```
 
 ### Using NuGet Packages
 
