@@ -15,7 +15,6 @@ To install the NUnit Test Adapter using the Extension Manager, follow these step
 Use the Extension Manager to ensure that the NUnit 3.0 Test Adapter is enabled.
 
 #####Installing the Nuget Package
-(As 12/11/2015, "NUnit 3.0 Test Adapter" is not found in Nuget. It is only available as Extension)
 
 To add it is a Nuget package, you must have an active solution, then follow these steps:
 
