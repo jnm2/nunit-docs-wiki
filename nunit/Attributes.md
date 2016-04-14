@@ -32,8 +32,8 @@ This table lists all the attributes supported by NUnit.
 | [[SetCulture Attribute]]          | Sets the current Culture for the duration of a test. |
 | [[SetUICulture Attribute]]        | Sets the current UI Culture for the duration of a test. |
 | [[SetUp Attribute]]               | Indicates a method of a TestFixture called just before each test method. |
-| [[SetupFixture Attribute]]        | Marks a class with one-time setup or teardown methods for all the test fixtures in a namespace. |
-| [[Teardown Attribute]]            | Indicates a method of a TestFixture called just after each test method. |
+| [[SetUpFixture Attribute]]        | Marks a class with one-time setup or teardown methods for all the test fixtures in a namespace. |
+| [[TearDown Attribute]]            | Indicates a method of a TestFixture called just after each test method. |
 | [[Test Attribute]]                | Marks a method of a TestFixture that represents a test. |
 | [[TestCase Attribute]]            | Marks a method with parameters as a test and provides inline arguments. |
 | [[TestCaseSource Attribute]]      | Marks a method with parameters as a test and provides a source of arguments. |
