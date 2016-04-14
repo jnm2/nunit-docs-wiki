@@ -48,7 +48,7 @@ This page lists features present in NUnit 2.6, which are either removed in NUnit
 |      Feature       |          Notes                                        |
 |--------------------|-------------------------------------------------------|
 | Addins             | No longer supported. See [[Addin Replacement in the Framework]]. |
-| CurrentDirectory   | No longer set to the directory containing the test assembly. Use `TestContext.TestDirectory` to locate that directory. |
+| CurrentDirectory   | No longer set to the directory containing the test assembly. Use `TestContext.CurrentContext.TestDirectory` to locate that directory. |
 | NUnitLite          | NUnitLite executable tests must now reference nunit.framework in addition to nunitlite. |
 | SetUpFixture       | Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed. |
 | TestCaseData       | The `Throws` Named Property is no longer available. Use `Assert.Throws` or `Assert.That` in your test case. |
