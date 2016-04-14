@@ -31,7 +31,7 @@ This table lists all the attributes supported by NUnit.
 | [[Sequential Attribute]]          | Generates test cases using values in the order provided, without additional combinations. |
 | [[SetCulture Attribute]]          | Sets the current Culture for the duration of a test. |
 | [[SetUICulture Attribute]]        | Sets the current UI Culture for the duration of a test. |
-| [[Setup Attribute]]               | Indicates a method of a TestFixture called just before each test method. |
+| [[SetUp Attribute]]               | Indicates a method of a TestFixture called just before each test method. |
 | [[SetupFixture Attribute]]        | Marks a class with one-time setup or teardown methods for all the test fixtures in a namespace. |
 | [[Teardown Attribute]]            | Indicates a method of a TestFixture called just after each test method. |
 | [[Test Attribute]]                | Marks a method of a TestFixture that represents a test. |
