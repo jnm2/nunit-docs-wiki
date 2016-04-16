@@ -8,6 +8,7 @@
 **Getting Started**
   * [[Installation]]
   * [[Upgrading]]
+  * [[Samples]]
   * [[Breaking Changes]]
 
 **Writing Tests**
