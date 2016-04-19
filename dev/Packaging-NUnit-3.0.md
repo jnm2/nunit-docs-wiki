@@ -177,7 +177,7 @@ nunit3-console.exe net-2.0\nunit.framework.tests.dll
 nunit3-console.exe net-3.5\nunit.framework.tests.dll
 nunit3-console.exe net-4.0\nunit.framework.tests.dll
 nunit3-console.exe net-4.5\nunit.framework.tests.dll
-portable\nunit.portable.tests.exe
+portable\nunitlite-runner.exe portable\nunit.framework.tests.dll
 portable\nunitlite.tests.exe
 ```
 
