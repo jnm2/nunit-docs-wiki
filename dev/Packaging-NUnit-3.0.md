@@ -174,6 +174,7 @@ The degree to which each package needs testing may vary depending on what has be
 nunit3-console.exe ConsoleTests.nunit
 nunit3-console.exe EngineTests.nunit
 nunit3-console.exe net-2.0\nunit.framework.tests.dll
+nunit3-console.exe net-3.5\nunit.framework.tests.dll
 nunit3-console.exe net-4.0\nunit.framework.tests.dll
 nunit3-console.exe net-4.5\nunit.framework.tests.dll
 portable\nunit.portable.tests.exe
