@@ -1,4 +1,6 @@
-﻿
+> ﻿####NOTE:
+> As of the 3.0 final releae, these registry settings are no longer recognized. Instead, use settings in the `.runsettings` file. This page will be updated soon.
+
 ###Registry Settings
 
 Certain settings in the registry affect how the adapter runs. All these settings are added by using RegEdit under the key **HKCU\Software\nunit.org\VSAdapter**.
