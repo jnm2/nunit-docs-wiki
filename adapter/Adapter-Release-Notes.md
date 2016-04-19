@@ -2,6 +2,23 @@
 
 #####Features
 
+ * This is the final production release of the 3.0 adapter. It continues to use the 3.0.1 release of the NUnit TestEngine.
+
+ * The adapter now uses a `.runsettings` file for all optional settings. Registry entries used in the CTP releases are no longer used.
+
+#####Resolved Issues
+
+ * 49 Need a way to specify test settings
+ * 52 Having ApartmentAttribute on both classes and methods causes test runner to hang
+ * 85 Failure to run tests under vstest.console from VS2015
+ * 92 Provide option to run in parallel for paralellized tests
+ * 120 The ability to set the LevelOfParallelism attribute through the VS adapter
+ * 153 TFS Filter that matches no names runs all tests
+
+####NUnit 3.0 Test Adapter for Visual Studio - Version 3.0 CTP 9 - April 2, 2016
+
+#####Features
+
  * The adapter continues to use the 3.0.1 release of the NUnit TestEngine.
 
 #####Resolved Issues
