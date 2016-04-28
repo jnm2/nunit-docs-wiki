@@ -36,7 +36,7 @@ public class AnotherFixture
   [Test, RequiresThread(ApartmentState.STA)]
   public void TestRequiringSTAThread()
   {
-    // A separate STA thread will be created for tnis test.
+    // A separate STA thread will be created for this test.
   }
 }
 ```
