@@ -56,11 +56,11 @@ Existing methods would be functionally replaced as follows:
 
 ###### AreEqual / AreNotEqual
 
-- [x] Use Assert.AreEqual() or Assert.That(..., Is.EqualTo()) with DirectoryInfo arguments. The new [[Extended Constraint Syntax]] should handle this as well.
+- [x] Use Assert.AreEqual() or Assert.That(..., Is.EqualTo()) with DirectoryInfo arguments. The new [[Extended Constraint Syntax Spec]] should handle this as well.
 
 ###### IsEmpty / IsNotEmpty
 
-- [x] Extend Is.Empty syntax, which now works for strings and collections to also handle DirectoryInfos. Add support to the new [[Extended Constraint syntax]] to handle this.
+- [x] Extend Is.Empty syntax, which now works for strings and collections to also handle DirectoryInfos. Add support to the new [[Extended Constraint Syntax Spec]] to handle this.
 
 ###### IsWithin / IsNotWithin
 
@@ -73,7 +73,7 @@ Existing methods would be functionally replaced as follows:
 
 #### FileAssert
 
-- [x] Continue to support FileAssert and add an Exists method. Investigate ways to support this using the new [[Extended Constraint Syntax]].
+- [x] Continue to support FileAssert and add an Exists method. Investigate ways to support this using the new [[Extended Constraint Syntax Spec]].
 
 #### Path Constraints
 
@@ -81,7 +81,7 @@ Existing methods would be functionally replaced as follows:
 
 #### Status
 
-All of the above Planned Changes are complete except for extending them to support the [[Extended Constraint Syntax]] because that project has not been started.
+All of the above Planned Changes are complete except for extending them to support the [[Extended Constraint Syntax Spec]] because that project has not been started.
 
 You can now write asserts like the following
 
