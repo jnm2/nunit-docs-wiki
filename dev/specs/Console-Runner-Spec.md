@@ -41,12 +41,12 @@ nunit-console [inputfiles] [options]
 Input files may be of any file type that NUnit is able to load. This includes assemblies,
 nunit projects, VS projects and solutions and any other project types for which an addin has been installed. Unlike NUnit 2.5, which was allowed multiple assemblies but only a single project on the command line, the 3.0 runner will support any mix of projects and assemblies.
 
-See [[Command Line Options]] for details of available options.
+See [[Command Line Options Spec]] for details of available options.
 
 #### Communication with the Test Engine
 
 The console runner does not actually load or run tests itself. This service is 
-provided by the [[Test Engine]]. In addition, the [[test engine]] interprets
+provided by the [[Test Engine Spec]]. In addition, the [[test engine Spec]] interprets
 parameters passed from the console runner to filter tests and to determine
 where and how they are to be run.
 
