@@ -9,13 +9,13 @@
 
   * [[I want to get involved with NUnit Development. Where do I start?]]
   * [[What tools are needed to build NUnit?]]
-  * [[What areas need work]]?
-  * [[How do I become a committer]]?
+  * [[What areas need work?]]
+  * [[How do I become a committer?]]
 
 #### Development Process
 
-  * [[How can I manage my working copy of NUnit?|FAQ:Working-Copy]]
-  * [[I just have one change to submit. Is there an easy way?|FAQ:Casual-Contributor]]
+  * [[How can I manage my working copy of NUnit?]]
+  * [[I just have one change to submit. Is there an easy way?]]
   * [[Coding Standards|Coding-Standards]]
   * [[How can I publish my branch on GitHub?]]
   * [[How do I request merging of my branch into the NUnit trunk?]]
