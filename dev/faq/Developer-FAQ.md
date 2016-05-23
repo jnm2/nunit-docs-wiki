@@ -1,7 +1,7 @@
 ### General Information
 
   * [[Who should read this FAQ]]?
-  * [Who should read this FAQ?](#Who-should-read-this-FAQ?)
+  * [Who should read this FAQ?](#Who-should-read-this-FAQ)
   * [[How does the NUnit 3.0 project structure differ from earlier versions]]?
   * [[Where can I get the source code for a release of NUnit]]?
   * [[Will building from source interfere with my production copy of NUnit]]?
@@ -38,7 +38,7 @@
   * [[How to build NUnit from source using SharpDevelop]]
   * [[How to build NUnit from source using MonoDevelop]]
 
-### Who should read this FAQ?
+### Who should read this FAQ
 
 This FAQ is aimed at NUnit developers and contributors, authors of addins and anyone else who needs to build NUnit from source.
 
