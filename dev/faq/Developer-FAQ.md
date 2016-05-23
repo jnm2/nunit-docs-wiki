@@ -1,17 +1,17 @@
 ### General Information
 
-  * [[Who should read this FAQ?]]
-  * [[How does the NUnit 3.0 project structure differ from earlier versions?]]
-  * [[Where can I get the source code for a release of NUnit?]]
-  * [[Will building from source interfere with my production copy of NUnit?]]
-  * [[Where is NUnit development hosted?]]
+  * [[Who should read this FAQ]]?
+  * [[How does the NUnit 3.0 project structure differ from earlier versions]]?
+  * [[Where can I get the source code for a release of NUnit]]?
+  * [[Will building from source interfere with my production copy of NUnit]]?
+  * [[Where is NUnit development hosted]]?
 
 ### Getting Started
 
   * [[I want to get involved with NUnit Development. Where do I start?|FAQ:Getting-Started]]
   * [[What tools are needed to build NUnit?|FAQ:Tools-Needed]]
-  * [[What areas need work?]]
-  * [[How do I become a committer?]]
+  * [[What areas need work]]?
+  * [[How do I become a committer]]?
 
 ### Development Process
 
