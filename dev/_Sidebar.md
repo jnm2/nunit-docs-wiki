@@ -1,6 +1,6 @@
 **[[Home]]**
 
-**[[Developer Documentation]]**
+**Developer Documentation**
   * [[NUnit Vision]]
   * [[NUnit Roadmap]]
   * [[Tech Notes]]
