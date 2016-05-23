@@ -1,5 +1,3 @@
-### I want to get involved with NUnit development. Where do I start?
-
 #### Discussing NUnit
 
 Most likely, you want to do more than just talk about NUnit, but
