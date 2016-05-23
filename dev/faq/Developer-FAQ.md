@@ -1,19 +1,18 @@
-### General Information
-
+#### General Information
   * [Who should read this FAQ?](#who-should-read-this-faq)
   * [How does the NUnit 3.0 project structure differ from earlier versions?](#how-does-the-nunit-30-project-structure-differ-from-earlier-versions)
   * [Where can I get the source code for a release of NUnit?](#where-can-i-get-the-source-code-for-a-release-of-nunit)
   * [Will building from source interfere with my production copy of NUnit?](#will-building-from-source-interfere-with-my-production-copy-of-nunit)
   * [Where is NUnit development hosted](#where-is-nunit-development-hosted)
 
-### Getting Started
+#### Getting Started
 
   * [[I want to get involved with NUnit Development. Where do I start?|FAQ:Getting-Started]]
   * [[What tools are needed to build NUnit?|FAQ:Tools-Needed]]
   * [[What areas need work]]?
   * [[How do I become a committer]]?
 
-### Development Process
+#### Development Process
 
   * [[How can I manage my working copy of NUnit?|FAQ:Working-Copy]]
   * [[I just have one change to submit. Is there an easy way?|FAQ:Casual-Contributor]]
@@ -22,13 +21,13 @@
   * [[How do I request merging of my branch into the NUnit trunk?]]
   * [[How can I submit a merge request by email?]]
 
-### Version Control
+#### Version Control
 
   * [[How to update your copy of the source]]
   * [[How to create a patch with your changes]]
   * [[How to apply a patch from someone else]]
 
-### Building NUnit
+#### Building NUnit
 
   * [[Building NUnit on Windows 8.1]]
   * [[How to build NUnit from source using MsBuild]]
@@ -37,7 +36,7 @@
   * [[How to build NUnit from source using SharpDevelop]]
   * [[How to build NUnit from source using MonoDevelop]]
 
-### Who should read this FAQ?
+## Who should read this FAQ?
 
 This FAQ is aimed at NUnit developers and contributors, authors of addins and anyone else who needs to build NUnit from source.
 
@@ -109,3 +108,37 @@ development, GitHub seems to be an ideal host for us.  See
 
 **Note:** *Versions through 2.5.2 were maintained on [[Sourceforge|http://sourceforge.net/projects/nunit]],
 where you can still find the code for older releases.*
+
+### I want to get involved with NUnit development. Where do I start?
+
+#### Discussing NUnit
+
+Most likely, you want to do more than just talk about NUnit, but
+discussing future directions and options is one of the key things
+we do as a community.
+
+Currently, such discussions take place on the [[nunit-discuss group|http://groups.google.com/group/nunit-discuss]] on Google groups. This is where both developers and users get together and it's usually the first place where new ideas are brought up, discussed and either accepted or passed over.
+
+If you join us there and participate in the discussions, we'll get to know you and your contributions.
+
+#### Joining GitHub
+
+NUnit is maintained on [[GitHub|https://github.com]] so your next step will be to 
+[[set up your GitHub account|https://github.com/signup/free]].
+
+GitHub provides a handy list of the steps you should follow after setting up your account
+at [[Bootcamp|https://help.github.com/categories/54/articles]]. We won't repeat the instructions here.
+
+**Note:** *While we're in transition, it's still possible to work on some NUnit projects
+on Launchpad. We don't recommend this for new contributors. All code will be on GitHub soon.*
+
+#### Clone and Build NUnit
+
+You should clone the NUnit project you want to work on and make sure you are able to build it
+from source and run tests successfully. Ask us for help if you run into problems.
+
+#### Joining the Developer List
+
+Discussion of the actual development of NUnit takes place on the [[nunit developer list|https://groups.google.com/forum/#!forum/nunit-developer]]. You should join the
+list and introduce yourself. Tell us a bit about your background and what you would
+like to work on.
