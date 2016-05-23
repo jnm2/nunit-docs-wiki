@@ -7,8 +7,8 @@
 
 #### Getting Started
 
-  * [[I want to get involved with NUnit Development. Where do I start?|FAQ:Getting-Started]]
-  * [[What tools are needed to build NUnit?|FAQ:Tools-Needed]]
+  * [[I want to get involved with NUnit Development. Where do I start?|FAQ:Getting-Started#i-want-to-get-involved-with-nunit-development-where-do-i-start]]
+  * [[What tools are needed to build NUnit?|FAQ:Getting-Started#what-tools-are-needed-to-build-nunit]]
   * [[What areas need work]]?
   * [[How do I become a committer]]?
 
