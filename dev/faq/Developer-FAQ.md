@@ -1,10 +1,10 @@
 ### General Information
 
   * [Who should read this FAQ?](#who-should-read-this-faq)
-  * [How does the NUnit 3.0 project structure differ from earlier versions?](#how-does-the-nunit-3.0-project-structure-differ-from-earlier-versions)
-  * [[Where can I get the source code for a release of NUnit?|FAQ:General Information]]
-  * [[Will building from source interfere with my production copy of NUnit?|FAQ:General Information]]
-  * [[Where is NUnit development hosted|FAQ:General Information]]
+  * [How does the NUnit 3.0 project structure differ from earlier versions?](#how-does-the-nunit-30-project-structure-differ-from-earlier-versions)
+  * [Where can I get the source code for a release of NUnit?](#where-can-i-get-the-source-code-for-a-release-of-nunit)
+  * [Will building from source interfere with my production copy of NUnit?](#will-building-from-source-interfere-with-my-production-copy-of-nunit)
+  * [Where is NUnit development hosted](#where-is-nunit-development-hosted)
 
 ### Getting Started
 
