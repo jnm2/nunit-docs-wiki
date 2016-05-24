@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 The NUnit 3.0 framework can run tests in parallel within an assembly. This is a completely separate facility from [[Engine Parallel Test Execution]], although it is possible to use both in the same test run.
 
 By default, no parallel execution takes place. Attributes are used to indicate which tests may run in parallel and how they relate to other tests. The names of some attributes and properties are adapted from MbUnit, since those names are familiar to many users. However, the semantics may be slightly different in some cases.
