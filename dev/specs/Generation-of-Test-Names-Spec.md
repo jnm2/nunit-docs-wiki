@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 Test Names are generated in the framework and used in the other layers. There are four key issues around naming of tests.
 
 1. NUnit test names often "look like" method names but in principal they are arbitrary strings. Since we allow the user to change the name in many cases - using the TestCase attribute for example - they can be arbitrary in practice as well. This issue is essentially the underlying cause of the remaining three issues.
