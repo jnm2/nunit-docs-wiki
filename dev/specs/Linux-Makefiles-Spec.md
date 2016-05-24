@@ -1,4 +1,4 @@
-###DRAFT
+###DRAFT - Not Yet Implemented
 Create a makefile that can be used to build and install the framework under Linux. A user can install the framework from source by typing "./configure", "make" and "make install" (as root).
 
 Open source software can be installed usually by using [[Automake|http://www.gnu.org/software/automake/]] and [[Autoconf|http://www.gnu.org/software/autoconf/autoconf.html]] under Linux.
