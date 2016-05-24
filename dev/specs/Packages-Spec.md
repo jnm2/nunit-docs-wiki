@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 This specification will try to address how NUnit will be packaged. The first section deals with the logical content of each package we want to make available and how they relate to one another. A second section, to be added at a later point will deal with the format of packages, what software will be used to create them and how they will be distributed.
 
 ####NUnit Package Breakdown
