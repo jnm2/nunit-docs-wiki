@@ -1,4 +1,5 @@
-###DRAFT
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 This page lists all attributes to be supported by the NUnit 3.0 framework. Not all attributes are supported equally by the various framework distributions. See [[Attribute Support|Framework-Distributions#attribute-support]] for details of where each attribute is supported.
 
 ### Existing (2.6.3) Attributes
