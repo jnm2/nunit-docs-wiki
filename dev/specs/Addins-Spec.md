@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 The NUnit 2.x framework was extensible through the use of NUnit addins. As originally envisioned, NUnit 3.0 was planned to replace our own addin implementation by using Mono.Addins. We expected to support addins for runners, the engine and the framework. See the [[Original Architectural Overview Document | NUnit-3.0-Architecture-(2009)]] for details.
 
 As we worked on NUnit 3.0, we determined that extensibility in the framework layer was better handled by use of custom attributes, as described by the specification [[Addin Replacement in the Framework]]. Consequently, we are supporting addins only in the Engine and Runner layers of NUnit 3.0.
