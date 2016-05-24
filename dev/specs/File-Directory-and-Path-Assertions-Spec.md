@@ -1,4 +1,5 @@
-###DRAFT
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 NUnit 2.6 has a number of Asserts and Constraints that deal with files, directories and/or paths. There are a number of gaps and inconsistencies in this set of features. This specification attempts to more clearly define what each of them should do in NUnit 3.0.
 
 ### Existing Asserts and Constraints
