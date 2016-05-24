@@ -1,4 +1,5 @@
-###DRAFT
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 This specification recommends implementing a command line tool for running NUnit tests.
 
 The NUnit console runner is a text-based runner and is useful for automation of tests in build scripts and for integration into other systems, e.g. Continuous Integration server.
