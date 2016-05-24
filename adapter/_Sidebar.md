@@ -1,4 +1,4 @@
-###Projects
+###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui|GUI-Documentation]]**
@@ -10,14 +10,9 @@
   * [[Tips and Tricks]]
   * [[Release Notes|Adapter Release Notes]]
   * [[License|Adapter License]]
-  * Adapter Developer Notes
-    * [[Roadmap|Adapter-Roadmap]]
-    * [[Usage of Labels]]
-    * [[VS Integration]]
-    * [[Packaging]]
 * **[[Project Editor|Project-Editor-Documentation]]**
 
-###Development
+###Developer Docs
 
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**

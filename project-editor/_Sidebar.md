@@ -1,4 +1,4 @@
-###Projects
+###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui|GUI-Documentation]]**
@@ -7,7 +7,7 @@
   * [[Main Dialog|Project-Editor-Documentation]]
   * [[Configuration Editor]]
   
-###Development
+###Developer Docs
 
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**

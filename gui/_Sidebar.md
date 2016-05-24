@@ -1,4 +1,4 @@
-###Projects
+###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
 * **NUnit Gui**
@@ -6,7 +6,7 @@
 * **[[VS Adapter|VS-Adapter-Documentation]]**
 * **[[Project Editor|Project-Editor-Documentation]]**
 
-###Development
+###Developer  Docs
 
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**

@@ -6,6 +6,7 @@
 <tr><td>[[Contributions]]</td><td>Explains how to review and merge code submitted by other developers.</td></tr>
 <tr><td>[[GitHub Issue Labels]]</td><td>Standard labels we use on GitHub and what they mean.</td></tr>
 <tr><td>[[Adding New Projects]]</td><td>How to add new projects to the NUnit solutions.</td></tr>
-<tr><td>[[Packaging NUnit 3.0]]</td><td>How to create the packages for a new NUnit release.</td></tr>
+<tr><td>[[Packaging NUnit]]</td><td>How to create the packages for a new NUnit release.</td></tr>
+<tr><td>[[Packaging the Adapter]]</td><td>How to create the packages for a new VS Adapter release.</td></tr>
 </td></tr>
 </table>
