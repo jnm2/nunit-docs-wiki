@@ -10,12 +10,11 @@
   * [[Tips and Tricks]]
   * [[Release Notes|Adapter Release Notes]]
   * [[License|Adapter License]]
-  
   * Adapter Developer Notes
     * [[Roadmap|Adapter-Roadmap]]
     * [[Usage of Labels]]
     * [[VS Integration]]
-    * [[Packaging]]*
+    * [[Packaging]]
 * **[[Project Editor|Project-Editor-Documentation]]**
 
 ###Development
