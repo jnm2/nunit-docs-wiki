@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 ##Background
 
 NUnitLite originated in 2007 as a lightweight version of the NUnit framework. The code was developed from scratch with the intention of providing a test framework that would use minimal resources and run on resource-restricted platforms such as those used in embedded and mobile development.
