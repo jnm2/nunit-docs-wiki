@@ -10,5 +10,5 @@
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**
  * **[[Tech Notes]]**
- * **[[Specifications]]**
+ * **Specifications**
  * **[[Developer FAQ]]**

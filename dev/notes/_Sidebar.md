@@ -9,6 +9,6 @@
 
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**
- * **[[Tech Notes]]**
+ * **Tech Notes**
  * **[[Specifications]]**
  * **[[Developer FAQ]]**
