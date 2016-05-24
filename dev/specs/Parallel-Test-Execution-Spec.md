@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 NUnit 2.6.3 was able to run tests in parallel only through use of pNUnit, which is not suitable for casual parallelization for the purpose of reducing test execution time.
 
 NUnit 3.0 will offer three forms of parallel execution...
