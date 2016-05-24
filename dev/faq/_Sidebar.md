@@ -12,7 +12,8 @@
  * **[[Tech Notes]]**
  * **[[Specifications]]**
  * **[[Developer FAQ]]**
- </p>
+ 
+ <br/>
  [[Who should read this FAQ]]?<br/>
  [[How does the NUnit 3.0 project structure differ from earlier versions]]?<br/>
  [[Where can I get the source code for a release of NUnit]]?<br/>
