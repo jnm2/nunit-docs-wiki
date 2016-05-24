@@ -1,3 +1,5 @@
+###DRAFT - Not Yet Implemented
+
 This feature is inspired by MbUnit's **Assert.Multiple** and **MultipleAssertsAttribute**. It allows the user to review multiple failures in one run of the test and is useful for testing things like object initialization and UI appearance. It is likely to have the greatest use in extremely simple unit tests and in integration testing.
 
 We would implement the same syntax, but not necessarily identical semantics, because there are some issues of how it would interact with other NUnit features. The implementation itself would be different, since the underlying structure of the NUnit framework differs from that of MbUnit.
