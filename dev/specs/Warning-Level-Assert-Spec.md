@@ -1,3 +1,5 @@
+###DRAFT - Not Yet Implemented
+
 Sometimes - especially in integration testing - it's desirable to give a warning message but continue execution. This feature will provide the ability to do so.
 
 ### Check.That
