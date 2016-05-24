@@ -1,5 +1,3 @@
-**Tech Notes** are descriptions of how some part of NUnit works or of how we do things on the NUnit project. They are different from specifications in that they apply to existing code or practice.
-
 ####How We Work As a Team
 
 <table>
