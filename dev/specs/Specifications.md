@@ -30,10 +30,7 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[Test Engine Api Spec]]                   |                         |
 |                 | [[Engine Driver Api Spec]]                 |                         |
 |                 | [[Engine Parallel Test Execution Spec]]    | Implemented - need docs |
-|                 | [[Mini-Engine Spec]]                       |                         |
 |                 | [[Engine Addins Spec]]                     |                         |
-| **Console Runner** | [[Console Runner Spec]]                 | Update                  |
-|                 | [[Command Line Options Spec]]              | Review                  |
 |                 | [[TeamCity Service Messages Spec]]         | Draft                   |
 
 #####Notes:
