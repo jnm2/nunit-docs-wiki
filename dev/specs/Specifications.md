@@ -7,7 +7,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |  **General**    | [[Test Discovery and Execution API Spec]]  | Draft                   |
 |                 | [[Parallel Test Execution Spec]]           | Implemented - need docs |
 |                 | [[Linux Makefiles Spec]]                   | Draft                   |
-|                 | [[Addins Spec]]                            | Implemented - need docs |
 |                 | [[NUnit Settings Spec]]                    | Draft                   |
 |                 | [[Packages Spec]]                          | Draft                   |
 |  **Framework**  | [[Framework Api Spec]]                     | Review                  |
