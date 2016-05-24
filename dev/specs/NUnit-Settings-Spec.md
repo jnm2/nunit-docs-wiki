@@ -1,4 +1,5 @@
-###DRAFT SPECIFICATION
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 NUnit makes use of various settings, some built in and others set
 by the user. Those set by the user may be set for a single run, for 
 a single project or as defaults for all projects.
