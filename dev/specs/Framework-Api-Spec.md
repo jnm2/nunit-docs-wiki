@@ -1,3 +1,5 @@
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
+
 The NUnit 3.0 Framework API consists of a number of related classes with well-known names contained in the framework. The 3.0 Framework Driver, which is part of the engine, performs actions by creating these classes. All required actions are performed in the constructor. The driver only needs to know the names of the classes and the arguments each one accepts.
 
 This specification describes the interface between the 3.0 driver and framework and the rules that must be followed to provide continued backward compatibility as new versions of the framework are created.
