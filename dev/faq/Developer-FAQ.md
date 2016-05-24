@@ -15,7 +15,7 @@
 #### Development Process
 
   * [[How can I manage my working copy of NUnit]]?
-  * [[I just have one change to submit. Is there an easy way]]?
+  * [[I have just one change to submit. Is there an easy way]]?
   * [[Coding Standards|Coding-Standards]]
   * [[How can I publish my branch on GitHub]]?
   * [[How do I request merging of my branch into the NUnit trunk]]?
