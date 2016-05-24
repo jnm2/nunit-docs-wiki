@@ -1,3 +1,5 @@
+> **NOTE:** This page is completely out of date. We need to decide whether to continue maintaining it or remove it.
+
 This page is a first draft of a roadmap taking us to an NUnit 3.0 release. 
 
 ####NUnit 3.0 Initial Alpha Release
