@@ -1,4 +1,4 @@
-###DRAFT
+> **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
 
 This spec summarizes the three levels of APIs provided by NUnit for discovering and running tests. Note that only one of them - the highest level - is supported for general usage. The others have very specific purposes and should only be used for those purposes.
 
