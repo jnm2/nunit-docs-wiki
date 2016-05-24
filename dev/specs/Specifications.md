@@ -1,38 +1,38 @@
 Specifications are descriptions of work we are doing or plan to do. They may vary in degree of specificity and the actual code may sometimes deviate from the spec as work progresses, without necessarily going back to change the spec. When the work is done, the spec is removed from the wiki or incorporated into a tech note as needed.
 
-|  Component      |  Title                                     |  Status      |  Notes  |
-|-----------------|--------------------------------------------|--------------|---------|
-|  **General**    | [[Test Discovery and Execution API Spec]]  | Draft        ||
-|                 | [[Parallel Test Execution Spec]]           | Complete     ||
-|                 | [[Linux Makefiles Spec]]                   | Draft        ||
-|                 | [[Addins Spec]]                            | Implemented  ||
-|                 | [[NUnit Settings Spec]]                    | Draft        ||
-|                 | [[Packages Spec]]                          | Draft        ||
-|  **Framework**  | [[Framework Api Spec]]                     | Review       ||
-|                 | [[Framework Attribute Support Spec]]       | Review       ||
-|                 | [[Framework Distributions Spec]]           | Revise       ||
-|                 | [[NUnitLite Unification Spec]]             | Review       ||
-|                 | [[NUnitLite Portable Spec]]                | Review       ||
-|                 | [[Include and Exclude Attributes Spec]]    | Review       ||
-|                 | [[Warning Level Assert Spec]]              | Review       ||
-|                 | [[Multiple Asserts Spec]]                  | Review       ||
-|                 | [[File Directory and Path Assertions Spec]]| Ongoing      ||
-|                 | [[Extended Constraint Syntax Spec]]        | Revise       ||
-|                 | [[Dynamic Test Cases Spec]]                | Revise       ||
-|                 | [[Framework Parallel Test Execution Spec]] | Implementing ||
-|                 | [[Text Output from Tests Spec]]            | Draft        ||
-|                 | [[Generation of Test Names Spec]]          | Draft        ||
-|                 | [[Parameterized Test Fixtures Spec]]       | Draft        ||
-|                 | [[Test Dependency Attribute Spec]]         | Draft        ||
-| **Test Engine** | [[Test Engine Spec]]                       |||
-|                 | [[Test Engine Api Spec]]                   |||
-|                 | [[Engine Driver Api Spec]]                 |||
-|                 | [[Engine Parallel Test Execution Spec]]    | Complete     ||
-|                 | [[Mini-Engine Spec]]                       |||
-|                 | [[Engine Addins Spec]]                     |||
-| **Console Runner** | [[Console Runner Spec]]                 | Update       ||
-|                 | [[Command Line Options Spec]]              | Review       ||
-|                 | [[TeamCity Service Messages Spec]]         | Draft        ||
+|  Component      |  Title                                     |  Status                 |
+|-----------------|--------------------------------------------|-------------------------|
+|  **General**    | [[Test Discovery and Execution API Spec]]  | Draft                   |
+|                 | [[Parallel Test Execution Spec]]           | Implemented - need docs |
+|                 | [[Linux Makefiles Spec]]                   | Draft                   |
+|                 | [[Addins Spec]]                            | Implemented - need docs |
+|                 | [[NUnit Settings Spec]]                    | Draft                   |
+|                 | [[Packages Spec]]                          | Draft                   |
+|  **Framework**  | [[Framework Api Spec]]                     | Review                  |
+|                 | [[Framework Attribute Support Spec]]       | Review                  |
+|                 | [[Framework Distributions Spec]]           | Revise                  |
+|                 | [[NUnitLite Unification Spec]]             | Review                  |
+|                 | [[NUnitLite Portable Spec]]                | Review                  |
+|                 | [[Include and Exclude Attributes Spec]]    | Review                  |
+|                 | [[Warning Level Assert Spec]]              | Review                  |
+|                 | [[Multiple Asserts Spec]]                  | Review                  |
+|                 | [[File Directory and Path Assertions Spec]]| Ongoing                 |
+|                 | [[Extended Constraint Syntax Spec]]        | Revise                  |
+|                 | [[Dynamic Test Cases Spec]]                | Revise                  |
+|                 | [[Framework Parallel Test Execution Spec]] | Implementing            |
+|                 | [[Text Output from Tests Spec]]            | Draft                   |
+|                 | [[Generation of Test Names Spec]]          | Draft                   |
+|                 | [[Parameterized Test Fixtures Spec]]       | Draft                   |
+|                 | [[Test Dependency Attribute Spec]]         | Draft                   |
+| **Test Engine** | [[Test Engine Spec]]                       |                         |
+|                 | [[Test Engine Api Spec]]                   |                         |
+|                 | [[Engine Driver Api Spec]]                 |                         |
+|                 | [[Engine Parallel Test Execution Spec]]    | Implemented - need docs |
+|                 | [[Mini-Engine Spec]]                       |                         |
+|                 | [[Engine Addins Spec]]                     |                         |
+| **Console Runner** | [[Console Runner Spec]]                 | Update                  |
+|                 | [[Command Line Options Spec]]              | Review                  |
+|                 | [[TeamCity Service Messages Spec]]         | Draft                   |
 
 #####Notes:
 * **Rewrite** means an old version is available but it needs to be rewritten, possibly completely.
