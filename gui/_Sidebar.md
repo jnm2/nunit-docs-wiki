@@ -5,7 +5,7 @@
   * [[Release Notes|Gui-Release-Notes]]
 * **[[VS Adapter|VS-Adapter-Documentation]]**
 * **[[Project Editor|Project-Editor-Documentation]]**
-* **[[Frequently Asked Questions]]**
+* **[[User FAQ]]**
 
 ###Developer  Docs
 
@@ -13,5 +13,5 @@
  * **[[NUnit Roadmap]]**
  * **[[Team Practices]]**
  * **[[Specifications]]**
- * **[[Developer FAQ]]****[[Home]]**
+ * **[[Developer FAQ]]**
 

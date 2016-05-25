@@ -33,7 +33,7 @@
 * **[[NUnit Gui|GUI-Documentation]]**
 * **[[VS Adapter|VS-Adapter-Documentation]]**
 * **[[Project Editor|Project-Editor-Documentation]]**
-* **[[Frequently Asked Questions]]**
+* **[[User FAQ]]**
 
 ###Developer Docs
 

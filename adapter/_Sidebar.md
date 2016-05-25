@@ -11,7 +11,7 @@
   * [[Release Notes|Adapter Release Notes]]
   * [[License|Adapter License]]
 * **[[Project Editor|Project-Editor-Documentation]]**
-* **[[Frequently Asked Questions]]**
+* **[[User FAQ]]**
 
 ###Developer Docs
 
