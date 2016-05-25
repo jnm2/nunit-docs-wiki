@@ -6,6 +6,7 @@
 * **Project Editor**
   * [[Main Dialog|Project-Editor-Documentation]]
   * [[Configuration Editor]]
+* **[[Frequently Asked Questions]]**
   
 ###Developer Docs
 
