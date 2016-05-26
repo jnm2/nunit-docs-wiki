@@ -3,7 +3,6 @@
 * **[[NUnit|NUnit-Documentation]]**
   * **[[Release Notes]]**<br/>
   * **[[License]]**<br/>
-  * **[[Version Index]]**<br/>
   * **Getting Started**
     * [[Installation]]
     * [[Upgrading]]
