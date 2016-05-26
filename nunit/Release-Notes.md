@@ -108,7 +108,7 @@
  * 1297 NUnit.Engine nuget package improvements
  * 1301 Assert.AreNotSame evaluates ToString unnecessarily
 
-###NUnit 3.0.1 - December 1, 2015
+###NUnit 3.0.1 (3.0.5813) - December 1, 2015
 
 ####Console Runner
 
@@ -136,13 +136,13 @@
  * 1062 Console.WriteLine statements in "OneTimeSetUp" and "OneTimeTearDown" annotated methods are not directed to the console when using nunit3-console.exe runner
  * 1063 Error in Random Test
 
-###NUnit 3.0.0 Final Release - November 15, 2015
+###NUnit 3.0.0 Final Release (3.0.5797) - November 15, 2015
 
 ####Issues Resolved
 
  * 635 Mono 4.0 Support
 
-###NUnit 3.0.0 Release Candidate 3 - November 13, 2015
+###NUnit 3.0.0 Release Candidate 3 (3.0.5795) - November 13, 2015
 
 ####Engine
 
@@ -157,7 +157,7 @@
  * 1015 Specifying .nunit project and --framework on command line causes crash
  * 1017 Remove Assert.Multiple from framework
 
-###NUnit 3.0.0 Release Candidate 2 - November 8, 2015
+###NUnit 3.0.0 Release Candidate 2 (3.0.5790) - November 8, 2015
 
 ####Engine
 
@@ -176,7 +176,7 @@
  * 997  Add missing XML Documentation
  * 1008 NUnitLite namespace not updated in the NuGet Packages
 
-###NUnit 3.0.0 Release Candidate - November 1, 2015
+###NUnit 3.0.0 Release Candidate (3.0.5783) - November 1, 2015
 
 ####Framework
 
@@ -232,7 +232,7 @@
  * 960 Intermittent failure of CategoryFilterTests
  * 967 Run Settings Report is not being displayed.
 
-###NUnit 3.0.0 Beta 5 - October 16, 2015
+###NUnit 3.0.0 Beta 5 (3.0.5767) - October 16, 2015
 
 ####Framework
 
@@ -297,7 +297,7 @@
  * 894	Give nunit.engine and nunit.engine.api assemblies strong names
  * 896	NUnit 3.0 console runner not placing test result xml in --work directory
 
-###NUnit 3.0.0 Beta 4 - August 25, 2015
+###NUnit 3.0.0 Beta 4 (3.0.5715) - August 25, 2015
 
 ####Framework
 
@@ -335,7 +335,7 @@
  * 780 Teamcity fix
  * 782 No sources for 2.6.4
 
-###NUnit 3.0.0 Beta 3 - July 15, 2015
+###NUnit 3.0.0 Beta 3 (3.0.5674) - July 15, 2015
 
 ####Framework
 
@@ -397,7 +397,7 @@
  * 724 Adds support for Nullable<bool> to Assert.IsTrue and Assert.IsFalse
  * 734 Console without parameters doesn't show help
 
-###NUnit 3.0.0 Beta 2 - May 12, 2015
+###NUnit 3.0.0 Beta 2 (3.0.5610) - May 12, 2015
 
 ####Framework
 
@@ -461,7 +461,7 @@
  * 631  Separate packaging for the compact framework
  * 646  ConfigurationManager.AppSettings Params Return Null under Beta 1
 
-###NUnit 3.0.0 Beta 1 - March 25, 2015
+###NUnit 3.0.0 Beta 1 (3.0.5562) - March 25, 2015
 
 ####General
 
@@ -512,7 +512,7 @@
  * 534	Add classname and methodname to test result xml
  * 541	Console help doesn't indicate defaults
 
-<h3>NUnit 3.0.0 Alpha 5 - January 30, 2015</h3>
+<h3>NUnit 3.0.0 Alpha 5 (3.0.5509) - January 30, 2015</h3>
 
 <h4>General</h4>
 
@@ -573,7 +573,7 @@
 <li>469  Truncate string arguments in test names in order to limit the length.
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 4 - December 30, 2014</h3>
+<h3>NUnit 3.0.0 Alpha 4 (3.0.5476) - December 30, 2014</h3>
 
 <h4>Framework</h4>
 
@@ -633,7 +633,7 @@
 <li>420	Create Settings file in proper location
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 3 - November 29, 2014</h3>
+<h3>NUnit 3.0.0 Alpha 3 (3.0.5446) - November 29, 2014</h3>
 
 <h4>Breaking Changes</h4>
 
@@ -712,7 +712,7 @@
  <li>386  Console Output Improvements
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 2 - November 2, 2014</h3>
+<h3>NUnit 3.0.0 Alpha 2 (3.0.5419) - November 2, 2014</h3>
 
 <h4>Breaking Changes</h4>
 
@@ -769,7 +769,7 @@
  <li>322	Remove Stopwatch tests where they test the real .NET Stopwatch
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 1 - September 22, 2014</h3>
+<h3>NUnit 3.0.0 Alpha 1 (3.0.5378) - September 22, 2014</h3>
 
 <h4>Breaking Changes</h4>
 
