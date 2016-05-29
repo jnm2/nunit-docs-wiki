@@ -7,7 +7,7 @@ The NUnit Test Engine API is our first published API for discovering, exploring 
 The API was developed with a number of objectives in mind:
 
 * To provide a public, published API for discovering and executing NUnit tests, suitable for use by the NUnit console and Gui runners as well as by third parties.
-* To allow discovery and execution of NUnit (and NUnitLite) tests independent of the particular build or version of the framework used and without the need to reference the framework itself.
+* To allow discovery and execution of NUnit tests independent of the particular build or version of the framework used and without the need to reference the framework itself.
 * To allow future development of drivers for other frameworks and for those tests to be discovered and executed in the same way as NUnit tests.
 * To provide specific features beyond the frameworks, including
   * Determining how and where each test assembly is loaded and executed.
@@ -27,24 +27,21 @@ The actual engine is contained in the `nunit.engine` assembly. This assembly is 
 The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member currently has the first overload listed. The added overloads are proposed enhancements. Additional overloads used for testing are found in the code itself.
 
 ```C#
-public static ITestEngine CreateInstance();
-
-public static ITestEngine CreateInstance(Version minVersion);
-public static ITestEngine CreateInstance(Version minVersion, Version maxVersion);
+public static ITestEngine CreateInstance(bool privateCopy = false);
+public static ITestEngine CreateInstance(Version minVersion bool privateCopy = false);
 ```
-We will search for the engine in a standard set of locations, starting with the current ApplicationBase. If no engine is found that satisfies the minimum and maximum requirements, an exception is thrown.
 
-While we encourage authors of runners to **not** include a copy of the engine with their distribution, we suspect many will do so, not wanting to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
+We search for the engine in a standard set of locations, starting with the current ApplicationBase. If `privateCopy` is true, then only the ApplicationBase is examined. If no engine is found that satisfies the minimum version requirement, an exception is thrown.
 
-In any case, a knowledgeable user may simply delete the local engine copy, forcing the runner to use a different version installed elsewhere.
+We encourage authors of runners to **not** use the private copy feature, but they may use it if they do not want to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
 
 #####Test Engine Search Order
 
-To be defined. In the current Alpha, the engine must be in the same directory as the runner exe.
+[REWRITE] To be defined. In the current Alpha, the engine must be in the same directory as the runner exe.
 
 ####Key Interfaces
 
-The runner deals with the engine through a set of interfaces. These are quite general because we hope to avoid many changes to the API once it is stable.
+The runner deals with the engine through a set of interfaces. These are quite general because we hope to avoid many changes to this API.
 
 #####[ITestEngine](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestEngine.cs)
 
