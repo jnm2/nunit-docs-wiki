@@ -3,8 +3,8 @@
 * **[[NUnit|NUnit-Documentation]]**
 * **NUnit Gui**
   * [[Release Notes|Gui-Release-Notes]]
-* **[[VS Adapter|VS-Adapter-Documentation]]**
-* **[[Project Editor|Project-Editor-Documentation]]**
+* **[[VS Adapter]]**
+* **[[Project Editor]]**
 * **[[User FAQ]]**
 
 ###Developer  Docs

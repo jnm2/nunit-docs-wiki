@@ -1,8 +1,8 @@
 ###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
-* **[[NUnit Gui|GUI-Documentation]]**
-* **[[VS Adapter|VS-Adapter-Documentation]]**
+* **[[NUnit Gui]]**
+* **[[VS Adapter]]**
   * [[Installation|Adapter Installation]]
   * [[Usage]]
   * [[Resources]]
@@ -10,7 +10,7 @@
   * [[Tips and Tricks]]
   * [[Release Notes|Adapter Release Notes]]
   * [[License|Adapter License]]
-* **[[Project Editor|Project-Editor-Documentation]]**
+* **[[Project Editor]]**
 * **[[User FAQ]]**
 
 ###Developer Docs

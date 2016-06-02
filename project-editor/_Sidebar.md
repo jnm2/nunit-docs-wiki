@@ -1,10 +1,10 @@
 ###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
-* **[[NUnit Gui|GUI-Documentation]]**
-* **[[VS Adapter|VS-Adapter-Documentation]]**
+* **[[NUnit Gui]]**
+* **[[VS Adapter]]**
 * **Project Editor**
-  * [[Main Dialog|Project-Editor-Documentation]]
+  * [[Main Dialog|Project-Editor]]
   * [[Configuration Editor]]
 * **[[User FAQ]]**
   

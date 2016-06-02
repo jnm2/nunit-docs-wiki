@@ -29,9 +29,9 @@
   * **Technical Notes**
     * [[Usage Notes]]
     * [[NUnit Internals]]
-* **[[NUnit Gui|GUI-Documentation]]**
-* **[[VS Adapter|VS-Adapter-Documentation]]**
-* **[[Project Editor|Project-Editor-Documentation]]**
+* **[[NUnit Gui]]**
+* **[[VS Adapter]]**
+* **[[Project Editor]]**
 * **[[User FAQ]]**
 
 ###Developer Docs
