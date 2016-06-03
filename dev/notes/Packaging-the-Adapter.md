@@ -1,3 +1,5 @@
+> NOTE: These instructions are for the NUnit 3 Adapter. The NUnit 2 Adapter instructions are currently in the adapter wiki and will be integrated here at a later time.
+
 Introduction
 ------------
 There are two purposes for building the adapter, one is for creating the packages for a  release - which is what this page is about, the other is for creating whatever you need for debugging or testing purposes.  For the latter, see [How to build and debug the adapter]
@@ -11,9 +13,20 @@ Preparing the source code
 
 This may not be necessary for all releases. However, if the NUnit version used by the adapter is being updated, it is important to do it correctly.
 
-* The NUnit3TestAdapter, NUnit3TestAdapterInstall and NUnit3TestAdapterTests projects should all reference the same version of NUnit Core Engine package, normally the most recent.
+* The NUnit3TestAdapter, NUnit3TestAdapterInstall and NUnit3TestAdapterTests projects should all reference the same versions of the NUnit Engine package, normally the most recent.
 
-* The NUnit3TestAdapterTests and NUnitTestDemo projects should reference the same version of the NUnit framework package, normally the most recent. Note that this is currently the same version as the core engine package, but this may not continue to be the case if the frequency of release of the two packages differs.
+* The NUnit3TestAdapterTests and NUnitTestDemo projects should reference the same version of the NUnit framework package, also normally the most recent. Note that this is currently the same version as the engine package, but this may not continue to be the case if the frequency of release of the two packages differs.
+
+#### Assembly References
+
+At this time, after upgrading the NUnit engine package, you have to manually adjust the references, removing several that are added automatically by the package and adding an Alias. We will try to eliminate this manual step in the future.
+
+* **NUnit3TestAdapter** - Remove references to Mono.Cecil, nunit-agent and nunit-agent-x86, leaving only nunit.engine and nunit.engine.api. Modify the properties for nunit-engine by entering "ENG" for Aliases.
+
+* **NUnit3TestAdapterTests** - Remove  references to nunit-agent and nunit-agent-x86, leaving only Mono.Cecil, nunit.engine and nunit.engine.api.
+
+* **NUnit3TestAdapterInstall** - Remove  references to nunit-agent and nunit-agent-x86, leaving only Mono.Cecil, nunit.engine and nunit.engine.api.
+
 
 #### Versioning
 The version numbers follow the basic principles of [semantic versioning]. 
@@ -25,8 +38,8 @@ The version numbers have to be edited in the following files, and should match:
 -- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
 -- change Version tag
-* **nunit-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
-* **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the major/minor number has changed, update that here, 2nd line. If year is changed, update copyright years accordingly. 
+* **nunit3-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
+* **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the copyright year has changed, update accordingly. 
 
 
 Build
@@ -50,6 +63,10 @@ The resulting files can be found in the "package" folder:
   * **NUnit3TestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
   * **NUnit3TestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+
+####Testing the Packages
+
+Test both the vsix and nuget packages using each version of Visual Studio you have available, from 2012 through 2015.
 
 ####Publishing the Release
 
