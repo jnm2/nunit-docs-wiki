@@ -2,16 +2,17 @@
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui]]**
-* **[[VS Adapter]]**
-  * [[Installation|Adapter Installation]]
-  * [[Usage]]
-  * [[Resources]]
-  * [[Known Problems]]
-  * [[Tips and Tricks]]
-  * [[Release Notes|Adapter Release Notes]]
-  * [[License|Adapter License]]
-* **[[VS Test Generator]]**
 * **[[Project Editor]]**
+**Visual Studio**
+  * **[[Test Adapter]]**
+    * [[Installation|Adapter Installation]]
+    * [[Usage]]
+    * [[Resources]]
+    * [[Known Problems]]
+    * [[Tips and Tricks]]
+    * [[Release Notes|Adapter Release Notes]]
+    * [[License|Adapter License]]
+  * **[[Test Generator]]**
 * **[[User FAQ]]**
 
 ###Developer Docs

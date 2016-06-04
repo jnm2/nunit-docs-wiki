@@ -2,11 +2,12 @@
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui]]**
-* **[[VS Adapter]]**
-* **[[VS Test Generator]]**
 * **Project Editor**
   * [[Main Dialog|Project-Editor]]
   * [[Configuration Editor]]
+**Visual Studio**
+  * **[[Test Adapter]]**
+  * **[[Test Generator]]**
 * **[[User FAQ]]**
   
 ###Developer Docs
