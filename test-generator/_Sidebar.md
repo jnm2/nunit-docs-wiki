@@ -5,7 +5,7 @@
 * **[[Project Editor]]**
 * **Visual Studio**
   * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
-  * **Visual-Studio-Test Generator**
+  * **Test Generator**
 * **[[User FAQ]]**
   
 ###Developer Docs
