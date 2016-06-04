@@ -5,16 +5,16 @@
 * **Project Editor**
   * [[Main Dialog|Project-Editor]]
   * [[Configuration Editor]]
-**Visual Studio**
-  * **[[Test Adapter]]**
-  * **[[Test Generator]]**
+* **Visual Studio**
+  * **[[Test Adapter|VS-Test-Adapter]]**
+  * **[[Test Generator|VS-Test-Generator]]**
 * **[[User FAQ]]**
   
 ###Developer Docs
 
- * **[[NUnit Vision]]**
- * **[[NUnit Roadmap]]**
- * **[[Team Practices]]**
- * **[[Specifications]]**
- * **[[Developer FAQ]]**
+* **[[NUnit Vision]]**
+* **[[NUnit Roadmap]]**
+* **[[Team Practices]]**
+* **[[Specifications]]**
+* **[[Developer FAQ]]**
 

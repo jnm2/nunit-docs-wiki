@@ -1,15 +1,14 @@
 ###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
-* **NUnit Gui**
-  * [[Release Notes|Gui-Release-Notes]]
+* **[[NUnit Gui]]**
 * **[[Project Editor]]**
 * **Visual Studio**
   * **[[Test Adapter|VS-Test-Adapter]]**
-  * **[[Test Generator|VS-Test-Generator]]**
+  * **Test Generator**
 * **[[User FAQ]]**
-
-###Developer  Docs
+  
+###Developer Docs
 
 * **[[NUnit Vision]]**
 * **[[NUnit Roadmap]]**

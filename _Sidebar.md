@@ -3,9 +3,9 @@
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui]]**
 * **[[Project Editor]]**
-* **Visual Studio Extensions**
-  * **[[VS Adapter]]**
-  * **[[VS Test Generator]]**
+* **Visual Studio**
+  * **[[Test Adapter|VS-Test-Adapter]]**
+  * **[[Test Generator|VS-Test-Generator]]**
 * **[[User FAQ]]**
 
 ###Developer Docs
