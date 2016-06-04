@@ -4,6 +4,7 @@
 * **NUnit Gui**
   * [[Release Notes|Gui-Release-Notes]]
 * **[[VS Adapter]]**
+* **[[VS Test Generator]]**
 * **[[Project Editor]]**
 * **[[User FAQ]]**
 

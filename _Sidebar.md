@@ -1,10 +1,12 @@
 ###User Docs
 
-* **[[NUnit|NUnit-Documentation]]**
-* **[[NUnit Gui]]**
-* **[[VS Adapter]]**
-* **[[Project Editor]]**
-* **[[User FAQ]]**
+ * **[[NUnit|NUnit-Documentation]]**
+ * **[[NUnit Gui]]**
+ * **[[Project Editor]]**
+ * **Visual Studio Extensions**
+   * **[[VS Adapter]]**
+   * **[[VS Test Generator]]**
+ * **[[User FAQ]]**
 
 ###Developer Docs
 

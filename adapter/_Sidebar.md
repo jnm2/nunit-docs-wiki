@@ -10,6 +10,7 @@
   * [[Tips and Tricks]]
   * [[Release Notes|Adapter Release Notes]]
   * [[License|Adapter License]]
+* **[[VS Test Generator]]**
 * **[[Project Editor]]**
 * **[[User FAQ]]**
 

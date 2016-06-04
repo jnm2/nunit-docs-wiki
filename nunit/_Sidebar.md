@@ -30,8 +30,10 @@
     * [[Usage Notes]]
     * [[NUnit Internals]]
 * **[[NUnit Gui]]**
-* **[[VS Adapter]]**
 * **[[Project Editor]]**
+* **Visual Studio Extensions**
+  * **[[VS Adapter]]**
+  * **[[VS Test Generator]]**
 * **[[User FAQ]]**
 
 ###Developer Docs
