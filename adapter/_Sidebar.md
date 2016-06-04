@@ -4,7 +4,7 @@
 * **[[NUnit Gui]]**
 * **[[Project Editor]]**
 * **Visual Studio**
-  * **[[Test Adapter|VS-Test-Adapter]]**
+  * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
     * [[Installation|Adapter Installation]]
     * [[Usage]]
     * [[Resources]]
@@ -12,7 +12,7 @@
     * [[Tips and Tricks]]
     * [[Release Notes|Adapter Release Notes]]
     * [[License|Adapter License]]
-  * **[[Test Generator|VS-Test-Generator]]**
+  * **[[Test Generator|Visual-Studio-Test-Generator]]**
 * **[[User FAQ]]**
 
 ###Developer Docs

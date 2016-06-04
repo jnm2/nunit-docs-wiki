@@ -6,8 +6,8 @@
   * [[Main Dialog|Project-Editor]]
   * [[Configuration Editor]]
 * **Visual Studio**
-  * **[[Test Adapter|VS-Test-Adapter]]**
-  * **[[Test Generator|VS-Test-Generator]]**
+  * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
+  * **[[Test Generator|Visual-Studio-Test-Generator]]**
 * **[[User FAQ]]**
   
 ###Developer Docs

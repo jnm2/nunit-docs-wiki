@@ -4,8 +4,8 @@
 * **[[NUnit Gui]]**
 * **[[Project Editor]]**
 * **Visual Studio**
-  * **[[Test Adapter|VS-Test-Adapter]]**
-  * **Test Generator**
+  * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
+  * **Visual-Studio-Test Generator**
 * **[[User FAQ]]**
   
 ###Developer Docs
