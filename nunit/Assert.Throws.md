@@ -50,7 +50,7 @@ public class AssertThrowsTests
 
     // Using a Lambda expression
     Assert.Throws<ArgumentException>(
-      () => throw new ArgumentException(); } );
+      () => { throw new ArgumentException(); } );
   }
   
   void MethodThatThrows()
