@@ -21,8 +21,9 @@ configuration is currently active. By default, the assemblies will be loaded usi
 containing this file as the ApplicationBase. The PrivateBinPath will be set automatically to
 `LibraryCore\bin\Debug;LibraryUI\bin\Debug` or to the corresonding release path.
 XML attributes are used to specify non-default values for the ApplicationBase, Configuration
-File and PrivateBinPath. Since the format of NUnit projects has not changed from that of NUnit V2, the [[NUnit V2 Project Editor|http://nunit.org/index.php?p=projectEditor&r=2.6.4]] may
-be used to create or modify NUnit projects. If you edit the XML manually, you should make sure to
+File and PrivateBinPath. 
+
+The `Project-Editor` may be used to create or modify NUnit projects. If you edit the XML manually, you should make sure to
 use a path relative to the directory containing the project file as the location of any assemblies.
 
 For details, see [[NUnit Project XML Format]]
