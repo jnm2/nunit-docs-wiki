@@ -12,6 +12,22 @@ See below for properties of the current context.
 
 Gets a TextWriter used for sending output to the current test result.
 
+####TestParameters
+
+Test parameters may be supplied to a run in various ways, depending on the runner used. For example, the console runner provides a command-line argument and v3.4 of the NUnit 3 VS Adapter will supports specifying them in a .runsettings file. The static TestParameters property returns an object representing those passed-in parameters.
+
+The TestParameters object supports the following properties:
+
+ * **Count** - The number of parameters.
+ * **Names** - A collection of the names of the supplied parameters.
+ * **this[string name]** - The value of a parameter. In Vb, use **Item**.
+
+The TestParameters object supports the following methods:
+
+ * **Exists(string name)** - Returns true if a parameter of that name exists.
+ * **Get(string name)** - Returns the same value as the indexer.
+ * **Get(string name, T defaultValue)** - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
+
 ###Static Methods
 
 ####Write
