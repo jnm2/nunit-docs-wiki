@@ -32,6 +32,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 
 <tr><th>--where=EXPRESSION</th>
     <td>An expression indicating which tests to run. It may specify test names, classes, methods, catgories or properties comparing them to actual values with the operators ==, !=, =~ and !~. See [[Test Selection Language]] for a full description of the syntax.</td></tr>
+
+<tr><th>--params|p=PARAMETER</th>
+    <td>A test PARAMETER specified in the form NAME=VALUE. Multiple parameters may be specified, separated by semicolons or by repeating the --params option multiple times.</td></tr>
     
 <tr><th>--config=NAME</th>
     <td>NAME of a project configuration to load (e.g.: Debug).</td></tr>
@@ -107,6 +110,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     
 <tr><th>--teamcity</th>
     <td>Turns on use of TeamCity service messages.</td></tr>
+
+<tr><th>--loaduserprofile</th>
+    <td>Causes the user profile to be loaded in any separate test processes.</td></tr>
     
 <tr><th>--noheader, --noh</th>
     <td>Suppress display of program information at start of run.</td></tr>
