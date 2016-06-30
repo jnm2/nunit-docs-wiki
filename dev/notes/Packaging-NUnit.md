@@ -50,18 +50,23 @@ All work on releases should be done on a branch.
 
 3. Check all future open milestones for completed issues. Anything that is completed will be included in this release so change its milestone to the current release.
 
-#### Check Assembly Versions
+#### Check Assembly Versioning
 
-Assembly versions are maintained separately for the framework, engine, engine api and console runner. Each is kept in a separate file and they may be updated separately. For the 3.2 release, version information is as follows:
+AssemblyVersion and AssemblyFileVersion are set separately for the framework, engine, engine api and console runner. Each is kept in a separate file and they may be updated separately. Using the 3.4.1 release as an example, version information was set as follows:
 
-      Component  | File to Update      | Version 
-      ---------- | ------------------- | -------
-      Framework  | FrameworkVersion.cs | 3.2.0.0
-      Engine     | EngineVersion.cs    | 3.2.0.0
-      Engine API | EngineApiVersion.cs | 3.0.0.0
-      Console    | ConsoleVersion.cs   | 3.2.0.0
+      Component             | File to Update      | AssemblyVersion | AssemblyFileVersion 
+      --------------------- | ------------------- | --------------- | -------------------
+      Framework             | FrameworkVersion.cs |     3.4.1.0     |      3.4.1.0
+      Engine                | EngineVersion.cs    |     3.4.1.0     |      3.4.1.0
+      Engine API            | EngineApiVersion.cs |     3.0.0.0     |      3.4.1.0
+      Console               | ConsoleVersion.cs   |     3.4.1.0     |      3.4.1.0
+      TeamCityEventListener | AssemblyInfo.cs     |     1.0.1.0     |      1.0.1.0
 
-Note that the Engine API assembly uses a fixed version, which will not be changed unless it becomes necessary to modify the API in a non-additive manner. The remaining versions will be updated for major and minor version changes. You should not change these unless you are making a minor version upgrade at the package level or when we do a major upgrade to NUnit 4.0.
+#####Notes:
+
+1. The Engine API AssemblyVersion is fixed and will not be changed unless it becomes necessary to modify the API in a non-additive manner.
+
+2. The TeamCityEventListener maintains it's own version numbering and will be unbundled in the next release. Other bundled extensions automatically use the same version as the engine.
 
 #### Update Copyright Year
 
@@ -73,14 +78,18 @@ Notices at the top of each source code file are only updated when copyrightable 
 
 #### Update Package Versions
 
-The package version is updated in the `build.cake` file. The following line appears near the beginning of the file.
+The package version is updated in the `build.cake` file. The following lines appear near the beginning of the file. Update the versions and modifiers as necessary.
 
 ```
-var version="3.2.0";
+var version="3.4.1";
 var modifier=""
+
+// For now, set teamcity extension version and modifier separately
+var tcVersion = "1.0.1";
+var tcModifier = "";
 ```
 
-The version variable is a three-part version number that follows basic principles of [semantic versioning]. Since we publish a number of nuget packages, we use the nuget implementation of semantic versioning. 
+The version variables are three-part version numbers that follow the basic principles of [semantic versioning]. Since we publish a number of nuget packages, we use the nuget implementation of semantic versioning. 
 
 For NUnit, the major version is updated only rarely. Normal releases will update the minor version and set the third component to zero. The third component is incremented when "hot fixes" are made to a production release or for builds created for a special purpose. 
 
@@ -93,6 +102,8 @@ For pre-release versions, a non-empty modifier is specified. This is a suffix ad
 The CHANGES.txt file in the project root contains all relevant changes for each release. It contains the same information as the release notes in the project documentation, in text format. Because the CHANGES file includes the **date** of the release, you must know when the release is coming out in order to edit it. Otherwise, it will be necessary to make a final change to the file at the point of making the release.
 
 Create new sections in the CHANGES file to match those for prior releases. To ensure that all changes are included, review closed issues in the current and any future milestones. If an issue for a previous milestone was actually completed and closed, move it to the current milestone, since that's where it is being released. Include all issues resolved as closed:done in the issues section of the file. Significant feature additions and changes should be documented, even if they are also listed with issue numbers. Reviewing commits and merged pull requests may help in catching additional changes.
+
+You should commit the CHANGES file separately from the version number changes since that commit will be merged back into master while the version changes will not.
 
 #### Update the Documentation
 
