@@ -113,6 +113,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 
 <tr><th>--loaduserprofile</th>
     <td>Causes the user profile to be loaded in any separate test processes.</td></tr>
+
+<tr><th>--list-extensions</th>
+    <td>Lists all extension points and the extensions installed on each of them.</td></tr>
     
 <tr><th>--noheader, --noh</th>
     <td>Suppress display of program information at start of run.</td></tr>
