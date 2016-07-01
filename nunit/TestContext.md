@@ -26,7 +26,7 @@ The TestParameters object supports the following methods:
 
  * **Exists(string name)** - Returns true if a parameter of that name exists.
  * **Get(string name)** - Returns the same value as the indexer.
- * **Get<T>(string name, T defaultValue)** - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
+ * **Get&lt;T&gt;(string name, T defaultValue)** - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
 
 ###Static Methods
 
