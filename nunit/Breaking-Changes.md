@@ -1,4 +1,16 @@
-This page lists features present in NUnit 2.6, which are either removed in NUnit 3.0 or have had their behavior modified in a way that will break existing code.
+## NUnit 3.4
+
+Breaking changes introduced in NUnit 3.4
+
+ * The `--teamcity` comsole command-line option now requires the TeamCityEventListener extension to be intalled. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.
+
+ * String arguments in the names of test cases are no longer truncated to 40 characters.
+
+ * The .NET 2.0 build of the nunit framework uses a private implementation of System.Linq. NUnit installs the NUnit.System.Linq assembly alongside the nunit.framework assembly. If you copy the framework to another location, you must ensure that both are copied. The extra assembly is not used in other builds because System.Linq is already supported in those environments.
+
+## NUnit 3.0
+
+A relatively large number of features present in NUnit 2.6, were either removed in NUnit 3.0 or had their behavior modified in a way that will break existing code. They are grouped in the following tables.
 
 ######Attributes
 
