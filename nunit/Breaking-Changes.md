@@ -10,7 +10,11 @@ Breaking changes introduced in NUnit 3.4
 
 ## NUnit 3.0
 
-A relatively large number of features present in NUnit 2.6, were either removed in NUnit 3.0 or had their behavior modified in a way that will break existing code. They are grouped in the following tables.
+A relatively large number of features present in NUnit 2.6, were either removed in NUnit 3.0 or had their behavior modified in a way that will break existing code.
+
+A key change is that the NUnit Test Engine will not recognize a test assembly that does not reference the NUnit framework directly. Normally, test assemblies use NUnit Asserts, attributes and other Types and methods. However, certain third-party frameworks are designed to completely isolate the user from the details of NUnit. They mediate between the test assembly and the NUnit framework in order to run tests. In such a case, NUnit will indicate that the assembly either contains no tests or the proper driver could not be found. To resolve this situation, simply add one NUnit attribute or other reference. An assembly-level `ParallelizableAttribute` is useful for this purpose.
+
+Other breaking changes are grouped in the following tables.
 
 ######Attributes
 
