@@ -21,23 +21,21 @@ This may not be necessary for all releases. However, if the NUnit version used b
 
 At this time, after upgrading the NUnit engine package, you have to manually adjust the references, removing several that are added automatically by the package and adding an Alias. We will try to eliminate this manual step in the future.
 
-* **NUnit3TestAdapter** - Remove references to Mono.Cecil, nunit-agent and nunit-agent-x86, leaving only nunit.engine and nunit.engine.api. Modify the properties for nunit-engine by entering "ENG" for Aliases.
+For each of the **NUnit3TestAdapter**, **NUnit3TestAdapterTests** and NUnit3TestAdapter install projects, remove references to nunit-agent and nunit-agent-x86, leaving only the four Mono.Cecil references, nunit.engine and nunit.engine.api. 
 
-* **NUnit3TestAdapterTests** - Remove  references to nunit-agent and nunit-agent-x86, leaving only Mono.Cecil, nunit.engine and nunit.engine.api.
-
-* **NUnit3TestAdapterInstall** - Remove  references to nunit-agent and nunit-agent-x86, leaving only Mono.Cecil, nunit.engine and nunit.engine.api.
-
+For the **NUnit3TestAdapter** project, modify the properties for nunit-engine by entering "ENG" for Aliases.
 
 #### Versioning
+
 The version numbers follow the basic principles of [semantic versioning]. 
 (The fourth number is used for debug versions under development, and will always be 0 for release versions.)
 
 The version numbers have to be edited in the following files, and should match:
 
 * **Assemblyinfo.cs**,  found in the NUnitTestAdapter project
--- change both file and assembly version number
+   -- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
--- change Version tag
+   -- change Version tag
 * **nunit3-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
 * **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the copyright year has changed, update accordingly. 
 
@@ -70,7 +68,7 @@ Test both the vsix and nuget packages using each version of Visual Studio you ha
 
 ####Publishing the Release
 
-1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all four packages created above as a part of the release.
+1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all three packages created above as a part of the release.
 
 2. Upload the vsix package to the [Visual Studio Gallery] using the NUnitDeveloper account. If you don't have access to that account, ask one of the committers with access to do the upload for you.
 
