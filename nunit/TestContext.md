@@ -12,6 +12,14 @@ See below for properties of the current context.
 
 Gets a TextWriter used for sending output to the current test result.
 
+####Error
+
+Gets a TextWriter used for sending error output intended for immediate display.
+
+####Progress
+
+Gets a TextWriter used for  sending normal (non-error) output intended for immediate display.
+
 ####TestParameters
 
 Test parameters may be supplied to a run in various ways, depending on the runner used. For example, the console runner provides a command-line argument and v3.4 of the NUnit 3 VS Adapter will supports specifying them in a .runsettings file. The static TestParameters property returns an object representing those passed-in parameters.
