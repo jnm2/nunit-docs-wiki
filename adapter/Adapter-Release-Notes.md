@@ -4,6 +4,7 @@
 
  * The adapter now uses the NUnit 3.4.1 TestEngine.
  * TestRunParameters may now be provided in the `.runsettings` file.
+ * Immediate text output from tests now displays in the Output window. This includes any output produced through Console.Error, TestContext.Error or TestContext.Progress.
 
 #####Resolved Issues
 
