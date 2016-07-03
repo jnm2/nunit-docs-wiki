@@ -1,3 +1,21 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.4 - July 2, 2016
+
+#####Features
+
+ * The adapter now uses the NUnit 3.4.1 TestEngine.
+ * TestRunParameters may now be provided in the `.runsettings` file.
+
+#####Resolved Issues
+
+ * 132 Print to console not shown with v3 of adapter
+ * 138 Cannot run navigation tests under the console runner
+ * 145 Implement TestRunParameters inside .runsettings for runtime parameters
+ * 180 Upgrade to NUnit 3.4.1
+ * 181 Can't run requring a 32-bit process
+ * 183 Use Mono.Cecil to retrieve source code locations
+ * 190 Nunit30Settings.xml is used by other process leads to hidden tests
+ * 192 Corrupt NUnit3Settings.xml causes crash
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.2 - June 3, 2016
 
 #####Features
