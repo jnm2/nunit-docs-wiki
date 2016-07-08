@@ -24,5 +24,5 @@ Assert.That( new int[] { 1, 2, 2 }, Is.Not.EquivalentTo( iarray ) );
 
 <h4>Notes</h4>
 
-1. To compare collections for equality, use Is.EqualTo().
+1. To compare items in order, use Is.EqualTo().
 
