@@ -42,15 +42,18 @@ The version numbers have to be edited in the following files, and should match:
 
 Build
 -----
-Build a release version, AnyCPU. Be sure to use the `Rebuild Solution` menu item in VS. Otherwise, the `.vsix` file may not be regenerated.
+Use the build command to build and test a release version.
 
-
+```
+build -t Test
+```
 Packaging
 ------
 
-Use NAnt and use the package target
+Use the build command to create packages
+
 ```
-NAnt package
+build -t Package
 ```
 Run this from the solution root folder
 
