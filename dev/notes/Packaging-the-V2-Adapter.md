@@ -1,5 +1,3 @@
-> NOTE: These instructions are for the NUnit 3 Adapter. The NUnit 2 Adapter instructions are currently in the adapter wiki and will be integrated here at a later time.
-
 Introduction
 ------------
 There are two purposes for building the adapter, one is for creating the packages for a  release - which is what this page is about, the other is for creating whatever you need for debugging or testing purposes.  For the latter, see [How to build and debug the adapter]
@@ -9,80 +7,63 @@ The procedure described here is for those people who need to release a new versi
 Preparing the source code
 -------------------------
 
-#### Update to the latest version of NUnit
-
-This may not be necessary for all releases. However, if the NUnit version used by the adapter is being updated, it is important to do it correctly.
-
-* The NUnit3TestAdapter, NUnit3TestAdapterInstall and NUnit3TestAdapterTests projects should all reference the same versions of the NUnit Engine package, normally the most recent.
-
-* The NUnit3TestAdapterTests and NUnitTestDemo projects should reference the same version of the NUnit framework package, also normally the most recent. Note that this is currently the same version as the engine package, but this may not continue to be the case if the frequency of release of the two packages differs.
-
-#### Assembly References
-
-At this time, after upgrading the NUnit engine package, you have to manually adjust the references, removing several that are added automatically by the package and adding an Alias. We will try to eliminate this manual step in the future.
-
-For each of the **NUnit3TestAdapter**, **NUnit3TestAdapterTests** and NUnit3TestAdapter install projects, remove references to nunit-agent and nunit-agent-x86, leaving only the four Mono.Cecil references, nunit.engine and nunit.engine.api. 
-
-For the **NUnit3TestAdapter** project, modify the properties for nunit-engine by entering "ENG" for Aliases.
-
 #### Versioning
-
 The version numbers follow the basic principles of [semantic versioning]. 
 (The fourth number is used for debug versions under development, and will always be 0 for release versions.)
 
 The version numbers have to be edited in the following files, and should match:
 
 * **Assemblyinfo.cs**,  found in the NUnitTestAdapter project
-   -- change both file and assembly version number
+-- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
-   -- change Version tag
-* **nunit3-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
-* **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the copyright year has changed, update accordingly. 
+-- change Version tag
+* **nunit-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the two first digits.
+* **license.rtf**, found under the NUNitTestAdapterInstall project.  If the major/minor number has changed, update that here, 2nd line. If year is changed, update copyright years accordingly. 
 
 
 Build
 -----
-Use the build command to build and test a release version.
+Build a release version, AnyCPU.
 
-```
-build -t Test
-```
+
+
 Packaging
 ------
 
-Use the build command to create packages
-
+Use NAnt and use the package target
 ```
-build -t Package
+NAnt package
 ```
 Run this from the solution root folder
 
 The resulting files can be found in the "package" folder:
 
-  * **NUnit3TestAdapter-[VERSION].vsix**  This is the extension for Visual Studio, which is uploaded to the [Visual Studio Gallery]. 
+  * **NUnitVisualStudioTestAdapter-[VERSION].vsix**  This is the extension for Visual Studio, which is uploaded to the [Visual Studio Gallery]. 
 
-  * **NUnit3TestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
+  * **NUnitVisualStudioTestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
-  * **NUnit3TestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+  * **NUnitVisualStudioTestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
 
-####Testing the Packages
-
-Test both the vsix and nuget packages using each version of Visual Studio you have available, from 2012 through 2015.
+  * **NUnitVisualStudioTestAdapterAndFramework-[VERSION].nupkg** This is a NuGet package which includes the NUnit 2.6.3 framework, uploaded to [Nuget for the adapter with framework]   
 
 ####Publishing the Release
 
-1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all three packages created above as a part of the release.
+1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all four packages created above as a part of the release.
 
 2. Upload the vsix package to the [Visual Studio Gallery] using the NUnitDeveloper account. If you don't have access to that account, ask one of the committers with access to do the upload for you.
 
-3. Upload the nuget package to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
+3. Upload the two nuget packages to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
 
-4. Update the documentation pages in the wiki as needed. Be sure to update the Release Notes page. In order to perform the update quickly after publishing the packages, you may want to clone the wiki repository and prepare the update in advance.
+4. Update the documentation pages in this wiki as needed. This will usually affect the [[VS Adapter Introduction|NUnit-Test-Adapter-for-Visual-Studio-2012-and-2013]] page. In order to do this quickly after publishing the packages, you may want to clone the wiki repository and prepare the update in advance.
 
-5. Publicize the release, first announcing it on the nunit-developer and nunit-discuss lists and then more widely as appropriate. [We should develop a list of places.]
+5. Update the website as needed. The website is maintained in the [nunit.org repository] to which all committers have access. You should create a branch like 'release-n.n' and make the necessary changes there. There are three vsAdapterXxxxx files that will probably require updating. Add an announcement to the home page and remove any announcement for an older version of the adapter.Create a pull request to merge your changes into the master branch. For rapid publication, you should create the PR and have it reviewed in advance, performing the merge after the packages are published.
 
-#####Note:
+6. Publicize the release, first announcing it on the nunit-developer and nunit-discuss lists and then more widely as appropriate. [We should develop a list of places.]
+
+#####Notes:
   * Publishing the release requires access to various online accounts, which are mentioned above. For obvious reasons, the passwords are not provided. Contact Charlie or Terje if you need this access.
+  * The website and wiki contain duplicate information at this time. In future, the duplication will be eliminated.
+  * When a change is merged into the nunit.org master branch, one of the project leaders uploads it manually to the web site. This will be automated in the future.
 
 Prerequisites
 -----
@@ -100,8 +81,26 @@ You need the nuget.exe in your path.  Download the exe from <http://nuget.codepl
 
 1. **VS2012 Testplatform object model**
 You need to have this around, the adapter and the testproject refers to this.  The easist way to get it, is to have VS2012 installed and get it from there. 
-It is located at a location similar to "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow" and is named Microsoft.VisualStudio.TestPlatform.ObjectModel.dll.
-You might need to fix up these references if the locations don't match what has been used.
+It is located at a location similar to "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow" and is named Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+1. 1. You might need to fix up these references if the locations doesn't match what has been used.
+
+
+Github
+------
+1) Close the Milestone
+
+2) Draft and publish a Release, named like "Version 2.0".  Add all the binaries to the same release.  Tag the release like V2.0
+
+Documentation
+------
+The adapter release notes should be updated.  
+
+The file is named **vsTestAdapterReleaseNotes.html**, and is found under Docs/2.6.4 in the nunit.org repository, branch "vs-adapter-2.0"
+
+Also check that the files **vsTestAdapterLicense.html** and **vsTestAdapterReleaseNotes.html** is up to date.
+
+
+
 
 
 
@@ -109,7 +108,7 @@ You might need to fix up these references if the locations don't match what has 
 
 
 [semantic versioning]:http://semver.org/
-[Visual Studio Gallery]:https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d
+[Visual Studio Gallery]:http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d
 [Nuget for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
 [Nuget for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
 [nunit.org repository]:http://github.com/nunit/nunit.org
