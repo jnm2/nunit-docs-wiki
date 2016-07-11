@@ -1,5 +1,3 @@
-> NOTE: These instructions are for the NUnit 3 Adapter. The NUnit 2 Adapter instructions are currently in the adapter wiki and will be integrated here at a later time.
-
 Introduction
 ------------
 There are two purposes for building the adapter, one is for creating the packages for a  release - which is what this page is about, the other is for creating whatever you need for debugging or testing purposes.  For the latter, see [How to build and debug the adapter]
