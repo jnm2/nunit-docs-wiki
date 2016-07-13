@@ -68,4 +68,4 @@ CollectionAssert.IsOrdered( IEnumerable collection,
 ```
 
 ####See also...
- * [[Collection Constraints]]
+ * [Collection Constraints](https://github.com/nunit/docs/wiki/Constraints#collection-constraints)
