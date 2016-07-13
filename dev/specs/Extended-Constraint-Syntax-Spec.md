@@ -53,8 +53,8 @@ Taking syntax shown on the [[SharpTestsEx homepage|http://sharptestex.codeplex.c
 | SharpTestsEx                                              | NUnit 3.0 proposal              |
 |-----------------------------------------------------------|---------------------------------|
 | ''true.Should().Be.True(); ''                             | ''Assert.That(true).Is.True''   | 
-| ''"somethig".Should().Contain("some");''                  | ''Assert.That("something").Contains("some") '' |
-| ''"somethig".Should().StartWith("so").And.EndWith("ing")''| ''Assert.That("something").StartsWith("so").And.EndsWith("ing") ''  |
+| ''"something".Should().Contain("some");''                  | ''Assert.That("something").Contains("some") '' |
+| ''"something".Should().StartWith("so").And.EndWith("ing")''| ''Assert.That("something").StartsWith("so").And.EndsWith("ing") ''  |
 | ''new[] {1, 2, 3}.Should().Have.SameSequenceAs(new[] { 1, 2, 3 });'' | ''Assert.That(new[] {1, 2, 3}).Is.EquivalentTo(new[] {1, 2, 3})'' |
 | ''%%ActionAssert.Throws<ArgumentException>(() => new SillyClass(null))%% ''| ''%%Assert.That(() => new SillyClass(null)).Throws<ArgumentException>()%%'' |
 
