@@ -83,7 +83,7 @@ Writes text to the current test result, followed by a newline.
     WriteLine(string format, object arg1, object arg2, object arg3)
     WriteLine(string format, params object[] args)
 ```
-####AddFormatter
+####AddFormatter (3.2+)
 
 Adds a formatter for values based on some criterion, such as the Type of the value. The provided formatter will be used when an expected or actual value needs to be displayed as part of a message from a constraint.
 
