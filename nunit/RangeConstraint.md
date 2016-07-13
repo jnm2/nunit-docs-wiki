@@ -13,8 +13,8 @@ Is.InRange(IComparable from, IComparable to)
 <h4>Modifiers</h4>
 ```C#
 ...Using(IComparer comparer)
-...Using<T>(IComparer&lt;T&gt; comparer)
-...Using<T>(Comparison&lt;T&gt; comparer)
+...Using<T>(IComparer<T> comparer)
+...Using<T>(Comparison<T> comparer)
 ```
 
 <h4>Examples of Use</h4>
