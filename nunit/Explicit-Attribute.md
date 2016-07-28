@@ -11,6 +11,9 @@ If a test or fixture with the Explicit attribute is encountered in the course of
 running tests, it is skipped unless it has been specifically selected by one
 of the above means. The test does not affect the overall result of the test run.
 Explicit tests are displayed in the gui as skipped.
+
+> **Warning:** While the C# syntax allows you to place an Explicit attribute on a
+SetUpFixture class, the attribute is ignored by NUnit and has no effect.
 	
 <h4>Test Fixture Syntax</h4>
 #####C\# #####
