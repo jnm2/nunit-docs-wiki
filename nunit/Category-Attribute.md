@@ -8,6 +8,10 @@
 	console runner and through a separate "Categories" tab in the gui. The gui 
 	provides a visual indication of which categories are selected at any time.</p>
 
+> **Warning:** While the C# syntax allows you to place a Category attribute on a
+SetUpFixture class, the attribute is ignored by NUnit and has no effect in 
+current releases.
+	
 <h4>Test Fixture Syntax</h4>
 
 ```C#
