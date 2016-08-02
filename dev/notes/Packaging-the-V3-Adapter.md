@@ -85,25 +85,11 @@ Test both the vsix and nuget packages using each version of Visual Studio you ha
 
 Prerequisites
 -----
-1. **Visual Studio 2013**
-You need Visual Studio 2013.  We use the ultimate edition, but it should be enough with the premium edition.  (I will probably work with both the Pro or the Express editions too, but we haven't tried them).  The latest 1.1 version is built using Update 2 RC. 
+1. **Visual Studio**
+You need Visual Studio 2013 or 2015.
 
-1. **Visual Studio 2013 SDK**  
-You need this to work with the vsix.  Download from <http://www.microsoft.com/en-us/download/details.aspx?id=40758>
-
-1. **NAnt**
-Download from <http://nant.sourceforge.net/>.  We use the 0.92 version.
-
-1. **Nuget**
-You need the nuget.exe in your path.  Download the exe from <http://nuget.codeplex.com/downloads/get/784779>.  We use the 2.8 version
-
-1. **VS2012 Testplatform object model**
-You need to have this around, the adapter and the testproject refers to this.  The easist way to get it, is to have VS2012 installed and get it from there. 
-It is located at a location similar to "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow" and is named Microsoft.VisualStudio.TestPlatform.ObjectModel.dll.
-You might need to fix up these references if the locations don't match what has been used.
-
-
-
+1. **Visual Studio SDK**  
+You need this to work with the vsix.
 
 
 
