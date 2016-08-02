@@ -19,7 +19,7 @@ This may not be necessary for all releases. However, if the NUnit version used b
 
 At this time, after upgrading the NUnit engine package, you have to manually adjust the references, removing several that are added automatically by the package and adding an Alias. We will try to eliminate this manual step in the future.
 
-For each of the **NUnit3TestAdapter**, **NUnit3TestAdapterTests** and NUnit3TestAdapter install projects, remove references to nunit-agent and nunit-agent-x86, leaving only the four Mono.Cecil references, nunit.engine and nunit.engine.api. 
+For each of the **NUnit3TestAdapter**, **NUnit3TestAdapterTests** and **NUnit3TestAdapterInstall** projects, remove references to nunit-agent and nunit-agent-x86, leaving only the four Mono.Cecil references, nunit.engine and nunit.engine.api. 
 
 For the **NUnit3TestAdapter** project, modify the properties for nunit-engine by entering "ENG" for Aliases.
 
@@ -34,7 +34,8 @@ The version numbers have to be edited in the following files, and should match:
    -- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
    -- change Version tag
-* **nunit3-vs-adapter.build**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
+* **appveyor.yml**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
+* **build.cake**, found under the Solution Items folder. -- change the version number, but only use the three first digits.
 * **license.rtf**, found under the NUnit3TestAdapterInstall project.  If the copyright year has changed, update accordingly. 
 
 
