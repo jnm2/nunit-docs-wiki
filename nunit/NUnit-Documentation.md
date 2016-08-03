@@ -1,4 +1,4 @@
-This documentation covers NUnit 3.0 through 3.2.
+This documentation covers NUnit 3.0 and higher.
 
 Where applicable, we have marked sections with the version in which a feature 
 first appeared.
