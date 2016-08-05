@@ -1,3 +1,15 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.4.1 - August 5, 2016
+
+#####Features
+
+ * We now use Cake to build and package the adapter.
+
+#####Resolved Issues
+
+ * 198 Create Cake script for build
+ * 202 NUnit3 Test Adapter not running all tests in Visual Studio 2015
+ * 205 Adapter fails to find Mono.Cecil when targeting .NET 3.5
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.4 - July 2, 2016
 
 #####Features
