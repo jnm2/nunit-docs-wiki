@@ -1167,7 +1167,7 @@
 <h3>Earlier Releases</h3>
 
 <ul>
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.3">NUnit 2.6 through 2.6.3</a>
+<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.2.10">NUnit 2.0 through 2.2.10</a>
