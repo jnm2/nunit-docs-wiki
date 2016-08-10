@@ -1,7 +1,7 @@
 ##&lt;NUnitProject&gt;
 The required root element for any NUnit project file.
  * **Containing Element:** None
- * **Contained Elements:** [&lt;Settings&gt;](#settings), [&lt;Config&gt;](#Config)
+ * **Contained Elements:** [&lt;Settings&gt;](#settings), [&lt;Config&gt;](#config)
  * **Attributes:**   None
 
 ##&lt;Settings&gt;
