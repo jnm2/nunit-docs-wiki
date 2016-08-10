@@ -6,7 +6,7 @@ The required root element for any NUnit project file.
 
 ##&lt;Settings&gt;
 Contains global settings that apply to all configurations in the project. May be empty or absent.
- * **Containing Element:** [&lt;NUnitProject&gt;](#NUnitProject)
+ * **Containing Element:** [&lt;NUnitProject&gt;](#nUnitProject)
  * **Contained Elements:** None
  * **Attributes:**
     * **activeConfig** The name of the config to use if none is specified by the user. Using `nunit-console`, you may override this through the `--config` command-line option.
@@ -16,7 +16,7 @@ Contains global settings that apply to all configurations in the project. May be
 
 ##&lt;Config&gt;
 Describes a specific configuration of the project. This may map to traditional compiler configs like `Debug` or `Release` or may be used to specify any arbitrary collection of assemblies to be tested together. At least one configuration should be specified or the project will not be usable.
- * **Containing Element:** [&lt;NUnitProject&gt;](#NUnitProject)
+ * **Containing Element:** [&lt;NUnitProject&gt;](#nUnitProject)
  * **Contained Elements:** [&lt;assembly&gt;](#assembly)
  * **Attributes:**
     * **name** The name of this configuration. (Required)
@@ -30,7 +30,7 @@ Describes a specific configuration of the project. This may map to traditional c
 
 ##&lt;assembly&gt;
 Specifies a single assembly containing tests.
- * **Containing Element:** [&lt;Config&gt;](#Config)
+ * **Containing Element:** [&lt;Config&gt;](#config)
  * **Contained Elements:** None
  * **Attributes:**
     * **path** The path to the test assembly, relative to the application base for its configuration.
