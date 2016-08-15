@@ -15,9 +15,12 @@ If the programmer marks a test method that does not have the correct signature
 it will be considered as not runnable and be indicated as such by the console
 or gui runner. In the Gui, such tests are marked in red.
   
-If the test method returns a value, you must pass in the expected result as
-a named parameter to the Test attribute. This expected return value will be
+If the test method returns a value, you must pass in the `ExpectedResult`
+named parameter to the Test attribute. This expected return value will be
 checked for equality with the return value of the test method.
+
+The test `Description` may be specified as a named parameter. This is exactly equivalent
+to using the `DescriptionAttribute` on the test.
    
 ####Examples:
 
@@ -32,6 +35,16 @@ namespace NUnit.Tests
   {
     // A simple test
     [Test]
+    public void Add()
+    { /* ... */ }
+
+    // A test with a descripton property
+    [Test(Description="My really cool test")]
+    public void Add()
+    { /* ... */ }
+
+    // Alternate way to specify description as a separate attribute
+    [Test, Description("My really really cool test")]
     public void Add()
     { /* ... */ }
 
