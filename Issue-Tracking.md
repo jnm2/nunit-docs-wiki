@@ -1,3 +1,6 @@
+We use the GitHub issue tracker to keep track of our ongoing work. We supplement GitHub's native issue handling by using [ZenHub](www.zenhub.com), which provides a number of additional features.
+
+###Issue Labels
 We try to use a standard set of labels across all the NUnit repositories. In some cases, an individual project may not yet have been converted to use these labels, but we expect to do so soon.
 
 That said, don't stress about whether something is a bug or an enhancement, normal versus low priority, etc. Just pick one. If things change later, the label can be changed as well. This is only intended to help us organize a relatively large number of issues, not to give us extra work.
