@@ -9,11 +9,13 @@ We use a [ZenHub](www.zenhub.com) Board with a standard set of piplelines to tra
 
 * **Backlog** This is our product backlog consisting of all the issues we want to get done now or in the future. In the past, we have often put things we didn't really want to do in our Backlog, assigning them a low priority. While this avoids having to say no to the requestor, it doesn't do them any real service. Putting an issue into the Backlog should mean that it will eventually make it to a release.
 
-* **To Do** These are things we are ready to get working on right now. Most but not all of them will be scheduled for the next milestone. This column represents our immediate (next week or month) priorities.
+* **To Do** These are things we are ready to get working on right now and represent a suggestion to developers as to what to choose to work on next. Most but not all of them will be scheduled for the next milestone. This is a good place to keep issues that are blocking other work, so as to encourage developers to get the issue done.
+
+  **Note:** Since the number of people actively working on a given project varies, we can't establish a fixed number of items to keep in this column. The project lead should try to keep it to a reasonable size, generally no more than twice the number of active developers. If it seems to be growing too rapidly, some of the issues should be moved to the backlog.
 
 * **In Progress** These are issues that somebody is already working on. That person should be shown as assigned to the issue and would normally be the one to move the issue into this column.
 
-* **Done** When all work is done with a PR that is ready to be merged, the person doing the work should move it to this column.
+* **Done** When all work is done and the person doing it feels it is ready to be merged, the issue should be moved to this column. It remains there while comments are discussed and small changes are made. If the comments will lead to significant rework, then move the issue back to In Progress. 
 
 * **Closed** Issues go here automatically when they are closed.
 
