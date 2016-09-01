@@ -1,9 +1,9 @@
 ####How We Work As a Team
 
 <table>
-<tr><td>[[Contributions]]</td><td>Explains how to review and merge code submitted by other developers.</td></tr>
 <tr><td>[[Issue Tracking]]</td><td>How we track bugs, enhancements and features on GitHub.</td></tr>
-</td></tr>
+<tr><td>[[Pull Requests]]</td><td>How we use Pull Requests on GitHub to manage what gets into master.</td></tr>
+<tr><td>[[Contributions]]</td><td>Explains how to review and merge code submitted by other developers.</td></tr>
 </table>
 
 ####Technical Practices
