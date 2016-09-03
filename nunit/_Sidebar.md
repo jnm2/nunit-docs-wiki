@@ -25,7 +25,7 @@
     * [[NUnitLite Runner]]
   * **Extending NUnit**
     * [[Framework Extensibility]]
-    * [[Engine Extensibility]]
+    * [[Writing Engine Extensions]]
   * **Technical Notes**
     * [[Usage Notes]]
     * [[NUnit Internals]]
