@@ -24,6 +24,8 @@ Extensions are classes implementing a specified interface, depending on the exte
 
 Extension classes must have a default constructor, which is used by NUnit to create the object. NUnit creates an instance of the extension only at the time it is actually needed. For example, if the NUnit project loader is installed but no NUnit project is ever loaded, the extension itself is never loaded in memory.
 
+Extensions are usually created each in their own assembly for efficiency. It's possible to have several related extensions in the same assembly, but they will all be loaded into memory as soon as one is used.
+
 ####ExtensionAttribute
 
 The `ExtensionAttribute` marks an extension:
@@ -156,3 +158,9 @@ public class MyEventListener : ITestEventListener
     ...
 }
    ```
+
+##Install Extensions
+
+Once an extension is written and compiled, it has to be placed somewhere such that NUnit will find it.
+
+ > This section is under construction. For now see https://github.com/nunit/docs/wiki/Engine-Extensibility#locating-addins
