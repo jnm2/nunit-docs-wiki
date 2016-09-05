@@ -91,6 +91,13 @@ Constraint Name                      | Purpose
 [[NotConstraint]]                    |
 [[OrConstraint]]                     |
 
+#####Condition Constraints
+Constraint Name                      | Purpose
+-------------------------------------|--------
+[[TrueConstraint]]                   |
+[[FalseConstraint]]                  |
+[[NullConstraint]]                   |
+
 #####String Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
