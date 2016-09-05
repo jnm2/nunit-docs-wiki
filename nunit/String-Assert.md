@@ -1,7 +1,5 @@
-<p>
-    The StringAssert class provides a number of methods that are useful
-    when examining string values.
-</p>
+The StringAssert class provides a number of methods that are useful
+when examining string values.
 
 ```C#
 StringAssert.Contains( string expected, string actual );
@@ -45,5 +43,5 @@ StringAssert.DoesNotMatch( string regexPattern, string actual,
                 string message, params object[] args );
 ```
 
-<h4>See also...</h4>
-* [[String Constraints]]
+####See also...
+* [String Constraints](constraints#string-constraints)
