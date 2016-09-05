@@ -1,7 +1,7 @@
 **Assert.GreaterOrEqual** tests whether one object is greater than or equal to another.
 Contrary to the normal order of Asserts, these methods are designed to be
 read in the "natural" English-language or mathematical order. Thus
-**Assert.GreaterOrEqual( x, y )** asserts that x is greater than or equal to y ( x &gt;= y ).
+**Assert.GreaterOrEqual( x, y )** asserts that x is greater than or equal to y ( x >= y ).
 
 ```C#
 Assert.GreaterOrEqual( int arg1, int arg2 );
@@ -41,4 +41,4 @@ Assert.GreaterOrEqual( IComparable arg1, IComparable arg2,
  * [[Assert.Greater]]
  * [[Assert.Less]]
  * [[Assert.LessOrEqual]]
- * [[Comparison Constraints]]
+ * [Comparison Constraints](constraints#comparison-constraints)

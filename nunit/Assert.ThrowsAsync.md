@@ -1,4 +1,4 @@
-The <b>Assert.ThrowsAsync</b> is the async equivalent to [[Assert.Throws]]
+The **Assert.ThrowsAsync** is the async equivalent to [[Assert.Throws]]
 for asynchronous code. See [[Assert.Throws]] for more information.
 
 ```C#
@@ -15,8 +15,8 @@ TActual Assert.ThrowsAsync<TActual>( AsyncTestDelegate code,
                   string message, params object[] parms);
 ```
 
-In the above code <b>AsyncTestDelegate</b> is a delegate of the form
-<b>Task AsyncTestDelegate()</b>, which is used to execute the code
+In the above code **AsyncTestDelegate** is a delegate of the form
+**Task AsyncTestDelegate()**, which is used to execute the code
 in question. This will likely be a lambda expression.
 
 The following example shows the most common way of writing tests.
@@ -58,7 +58,7 @@ public class UsingReturnValue
 }
 ```
 
-<h4>See also...</h4>
+####See also...
  * [[Assert.Catch]]
  * [[Assert.CatchAsync]]
  * [[Assert.Throws]]

@@ -1,9 +1,7 @@
-
-
 **Assert.LessOrEqual** tests whether one object is less than or equal to another.
 Contrary to the normal order of Asserts, these methods are designed to be
 read in the "natural" English-language or mathematical order. Thus
-**Assert.LessOrEqual( x, y )** asserts that x is less than or equal to y ( x &lt;= y ).
+**Assert.LessOrEqual( x, y )** asserts that x is less than or equal to y ( x <= y ).
 
 ```C#
 Assert.LessOrEqual( int arg1, int arg2 );
@@ -43,4 +41,4 @@ Assert.LessOrEqual( IComparable arg1, IComparable arg2,
  * [[Assert.Greater]]
  * [[Assert.GreaterOrEqual]]
  * [[Assert.Less]]
- * [[Comparison Constraints]]
+ * [Comparison Constraints](constraints#comparison-constraints)

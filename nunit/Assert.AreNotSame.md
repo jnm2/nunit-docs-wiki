@@ -1,4 +1,4 @@
-<b>Assert.AreNotSame</b> tests that the two arguments do not reference the same object.
+**Assert.AreNotSame** tests that the two arguments do not reference the same object.
 
 ```C#
 Assert.AreNotSame( object expected, object actual );
@@ -7,4 +7,4 @@ Assert.AreNotSame( object expected, object actual,
 ```
 
 ####See also...
- * [[SameAs Constraint]]
+ * [SameAs Constraint](SameAsConstraint)

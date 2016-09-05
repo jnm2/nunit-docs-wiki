@@ -1,7 +1,7 @@
 **Assert.Less** tests whether one object is less than than another.
 Contrary to the normal order of Asserts, these methods are designed to be
 read in the "natural" English-language or mathematical order. Thus
-**Assert.Less( x, y )** asserts that x is less than y ( x &lt; y ).
+**Assert.Less( x, y )** asserts that x is less than y ( x < y ).
 
 ```C#
 Assert.Less( int arg1, int arg2 );
@@ -36,4 +36,4 @@ Assert.Less( IComparable arg1, IComparable arg2,
  * [[Assert.Greater]]
  * [[Assert.GreaterOrEqual]]
  * [[Assert.LessOrEqual]]
- * [[Comparison Constraints]]
+ * [Comparison Constraints](constraints#comparison-constraints)

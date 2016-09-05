@@ -1,4 +1,4 @@
-The <b>Assert.Throws</b> method is pretty much in a class by itself. Rather than
+The **Assert.Throws** method is pretty much in a class by itself. Rather than
 comparing values, it attempts to invoke a code snippet, represented as
 a delegate, in order to verify that it throws a particular exception.
 
@@ -26,8 +26,8 @@ Assert.Throws<T>( TestDelegate code,
                   string message, params object[] parms);
 ```
 
-In the above code <b>TestDelegate</b> is a delegate of the form
-<b>void TestDelegate()</b>, which is used to execute the code
+In the above code **TestDelegate** is a delegate of the form
+**void TestDelegate()**, which is used to execute the code
 in question. This may be an anonymous delegate or, when compiling
 under C# 3.0 or greater, a lambda expression.
 
@@ -101,11 +101,11 @@ Use the form that matches your style of coding.
 
 ###Exact Versus Derived Types
 
-When used with a Type argument, <b>Assert.Throws</b> requires
+When used with a Type argument, **Assert.Throws** requires
 that exact type to be thrown. If you want to test for any
 derived Type, use one of the forms that allows specifying
 a constraint. Alternatively, you may use [[Assert.Catch]],
-which differs from <b>Assert.Throws</b> in allowing derived
+which differs from **Assert.Throws** in allowing derived
 types. See the following code for examples:
 
 ```C#
@@ -124,7 +124,7 @@ Assert.Catch<ApplicationException>( code );
 Assert.Catch( code );
 ```
 
-<h4>See also...</h4>
+####See also...
  * [[Assert.Catch]]
  * [[Assert.CatchAsync]]
  * [[Assert.ThrowsAsync]]

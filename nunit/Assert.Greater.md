@@ -1,7 +1,7 @@
 **Assert.Greater** tests whether one object is greater than than another.
 Contrary to the normal order of Asserts, these methods are designed to be
 read in the "natural" English-language or mathematical order. Thus
-**Assert.Greater( x, y )** asserts that x is greater than y ( x &gt; y ).
+**Assert.Greater( x, y )** asserts that x is greater than y ( x > y ).
 
 ```C#
 Assert.Greater( int arg1, int arg2 );
@@ -41,4 +41,4 @@ Assert.Greater( IComparable arg1, IComparable arg2,
  * [[Assert.GreaterOrEqual]]
  * [[Assert.Less]]
  * [[Assert.LessOrEqual]]
- * [[Comparison Constraints]]
+ * [Comparison Constraints](constraints#comparison-constraints)

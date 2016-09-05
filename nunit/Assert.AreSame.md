@@ -1,4 +1,4 @@
-<b>Assert.AreSame</b> tests that the two arguments reference the same object.
+**Assert.AreSame** tests that the two arguments reference the same object.
 
 ```C#
 Assert.AreSame( object expected, object actual );
@@ -7,4 +7,4 @@ Assert.AreSame( object expected, object actual,
 ```
 
 ####See also...
- * [[SameAs Constraint]]
+ * [SameAs Constraint](SameAsConstraint)

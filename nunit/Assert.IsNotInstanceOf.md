@@ -9,5 +9,5 @@ Assert.IsNotInstanceOf<T>( object actual,
                         string message, params object[] parms );			
 ```
 
-<h4>See also...</h4>
- * [[Type Constraints]]
+####See also...
+ * [Type Constraints](constraints#type-constraints)
