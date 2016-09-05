@@ -100,6 +100,15 @@ Constraint Name                      | Purpose
 [[NullConstraint]]                   |
 [[TrueConstraint]]                   |
 
+#####File and Directory Constraints
+Constraint Name                      | Purpose
+-------------------------------------|--------
+[[EmptyDirectoryConstraint]]         |
+[[FileOrDirectoryExistsConstraint]]  |
+[[SamePathConstraint]]               |
+[[SamePathOrUnderConstraint]]        |
+[[SubPathConstraint]]                |
+
 #####String Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
