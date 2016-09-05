@@ -96,6 +96,7 @@ Constraint Name                      | Purpose
 -------------------------------------|--------
 [[TrueConstraint]]                   |
 [[FalseConstraint]]                  |
+[[NaNConstraint]]                    |
 [[NullConstraint]]                   |
 
 #####String Constraints
