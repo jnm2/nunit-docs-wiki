@@ -5,7 +5,7 @@ optionally within a specified tolerance.
 <h4>Constructor</h4>
 
 ```C#
-EqualConstraint(object expected )
+EqualConstraint( object expected )
 ```
 
 <h4>Syntax</h4>
