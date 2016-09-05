@@ -98,6 +98,7 @@ Constraint Name                      | Purpose
 [[FalseConstraint]]                  |
 [[NaNConstraint]]                    |
 [[NullConstraint]]                   |
+[[EmptyConstraint]]                  |
 
 #####String Constraints
 Constraint Name                      | Purpose
