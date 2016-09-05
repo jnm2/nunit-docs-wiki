@@ -94,11 +94,11 @@ Constraint Name                      | Purpose
 #####Condition Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
-[[TrueConstraint]]                   |
+[[EmptyConstraint]]                  |
 [[FalseConstraint]]                  |
 [[NaNConstraint]]                    |
 [[NullConstraint]]                   |
-[[EmptyConstraint]]                  |
+[[TrueConstraint]]                   |
 
 #####String Constraints
 Constraint Name                      | Purpose
