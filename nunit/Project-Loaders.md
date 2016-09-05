@@ -2,7 +2,7 @@
   * NUnitProjectLoader
   * VisualStudioProjectLoader
 
-The `TypeExtensionPoint` for project loaders accepts extensions that implement the `NUnit.Engine.Extensibility.IProjectLoader` interface. The definition of a project loader extension might look something like the following...
+The extension point for project loaders accepts extensions that implement the `NUnit.Engine.Extensibility.IProjectLoader` interface. The definition of a project loader extension might look something like the following...
 
 ```C#
 [Extension]
