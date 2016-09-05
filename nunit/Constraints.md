@@ -61,7 +61,7 @@ Constraint Name                      | Purpose
 
 Constraint Name                      | Purpose
 -------------------------------------|--------
-**Collection Constraints**           |
+#####Collection Constraints          |
 [[AllItemsConstraint]]               |
 [[CollectionContainsConstraint]]     |
 [[CollectionEquivalentConstraint]]   |
@@ -73,23 +73,23 @@ Constraint Name                      | Purpose
 [[NoItemConstraint]]                 |
 [[SomeItemsConstraint]]              |
 [[UniqueItemsConstraint]]            |
-**Comparison Constraints**           |
+#####Comparison Constraints          |
 [[GreaterThanConstraint]]            |
 [[GreaterThanOrEqualConstraint]]     |
 [[LessThanConstraint]]               |
 [[LessThanOrEqualConstraint]]        |
 [[RangeConstraint]]                  |
-**Compound Constraints**             |
+#####Compound Constraints            |
 [[AndConstraint]]                    |
 [[NotConstraint]]                    |
 [[OrConstraint]]                     |
-**String Constraints**               |
+#####String Constraints              |
 [[EmptyStringConstraint]]            |
 [[EndsWithConstraint]]               |
 [[RegexConstraint]]                  |
 [[StartsWithConstraint]]             |
 [[SubstringConstraint]]              |
-**Type Constraints**                 |
+#####Type Constraints                |
 [[AssignableFromConstraint]]         |
 [[AssignableToConstraint]]           |
 [[ExactTypeConstraint]]              |
