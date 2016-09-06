@@ -24,22 +24,22 @@ A SetUpFixture outside of any namespace provides SetUp and TearDown for the enti
 ####Example:
 
 ```C#
+using System;
+using NUnit.Framework;
+
 namespace NUnit.Tests
 {
-  using System;
-  using NUnit.Framework;
-
   [SetUpFixture]
   public class MySetUpClass
   {
-    [OneTimeSetUp]
-	RunBeforeAnyTests()
+	[OneTimeSetUp]
+	public void RunBeforeAnyTests()
 	{
 	  // ...
 	}
 
-    [OneTimeTearDown]
-	RunAfterAnyTests()
+	[OneTimeTearDown]
+	public void RunAfterAnyTests()
 	{
 	  // ...
 	}
@@ -47,7 +47,7 @@ namespace NUnit.Tests
 }
 ```
 
-<b>Note:</b> Prior to NUnit 3.0, SetUpFixture used the SetUp and 
+**Note:** Prior to NUnit 3.0, SetUpFixture used the SetUp and 
 TearDown attributes rather than OneTimeSetUp and OneTimeTearDown.
 The older attributes are no longer supported in SetUpFixutres
 in NUnit 3.0 and later.
