@@ -1,6 +1,6 @@
 **TODO:** This documentation was copied from the original packaging info and needs to be updated for packaging just the Framework.
 
-This note describes how to create release packages for the NUnit console runner, test engine and framework. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
+This note describes how to create release packages for the NUnit Framework. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
 
 > **Note:** These instructions assume that you are creating releases for Silverlight and the Compact Framework at the same time as the general release. If that's not the case, you may skip the steps marked CF or SL. To release either build separately, perform those steps in sequence.
 
@@ -9,8 +9,7 @@ Software Prerequisites
 
 Various software combinations and environments may be used to build NUnit components. The following software is what we have used and tested for building everything and creating the release packages. We'll add options to the list as we find them.
 
-1. Visual Studio 2012, 2013 or 2015 with the Nuget Package manager and WiX toolset.
-
+1. Visual Studio 2012, 2013 or 2015 with the Nuget Package manager.
 2. Visual Studio 2008 (for the compact framework build).
 
 Preparing for Release
@@ -21,7 +20,7 @@ Preparing for Release
 All work on releases should be done on a branch.
 
 1. Fetch and pull latest from master
-2. Create a branch in the form release/3.2.0
+2. Create a branch in the form release/3.5.0
 3. As you make the changes below, push the branch to GitHub and create a Pull Request to allow other team members to review your changes.
 4. **Do not merge this branch/PR**, we will create a separate PR to merge the changes back into master.
 
@@ -32,7 +31,7 @@ All work on releases should be done on a branch.
 2. Do a clean build and run all the tests on Windows. You may use the command below or three separate commands if preferred. If you encounter errors at any stage, you're not actually ready to release!
 
       `build.cmd -Target=Clean`
-      `build.cmd -Target=TestAll`
+      `build.cmd -Target=Test`
 
    **SL** Nothing further - Silverlight is included in the overall build and test targets on Windows.
 
@@ -40,9 +39,9 @@ All work on releases should be done on a branch.
 
 3. Repeat the build on a Linux system, if available. If this is not possible, be sure to scrutinize the results from the Travis CI build carefully. On Linux, you may use the command
 
-      `./build -Target=TestAll`
+      `./build -Target=Test`
 
-4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor. Check on TeamCity once we get that build working again.
+4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor.
 
 #### Review Milestone Status
 
@@ -58,21 +57,11 @@ AssemblyVersion and AssemblyFileVersion are set separately for the framework, en
 
       Component             | File to Update      | AssemblyVersion | AssemblyFileVersion 
       --------------------- | ------------------- | --------------- | -------------------
-      Framework             | FrameworkVersion.cs |     3.4.1.0     |      3.4.1.0
-      Engine                | EngineVersion.cs    |     3.4.1.0     |      3.4.1.0
-      Engine API            | EngineApiVersion.cs |     3.0.0.0     |      3.4.1.0
-      Console               | ConsoleVersion.cs   |     3.4.1.0     |      3.4.1.0
-      TeamCityEventListener | AssemblyInfo.cs     |     1.0.1.0     |      1.0.1.0
-
-#####Notes:
-
-1. The Engine API AssemblyVersion is fixed and will not be changed unless it becomes necessary to modify the API in a non-additive manner.
-
-2. The TeamCityEventListener maintains it's own version numbering and will be unbundled in the next release. Other bundled extensions automatically use the same version as the engine.
+      Framework             | FrameworkVersion.cs |     3.5.0.0     |      3.5.0.0
 
 #### Update Copyright Year
 
-The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunit3-console` and `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `nunit3-console` and `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
+The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
 
 If necessary, update the year in the general copyright notices LICENSE.txt and License.rtf. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
 
@@ -83,12 +72,8 @@ Notices at the top of each source code file are only updated when copyrightable 
 The package version is updated in the `build.cake` file. The following lines appear near the beginning of the file. Update the versions and modifiers as necessary.
 
 ```
-var version="3.4.1";
+var version="3.5.0";
 var modifier=""
-
-// For now, set teamcity extension version and modifier separately
-var tcVersion = "1.0.1";
-var tcModifier = "";
 ```
 
 The version variables are three-part version numbers that follow the basic principles of [semantic versioning]. Since we publish a number of nuget packages, we use the nuget implementation of semantic versioning. 
@@ -106,6 +91,8 @@ The CHANGES.txt file in the project root contains all relevant changes for each 
 Create new sections in the CHANGES file to match those for prior releases. To ensure that all changes are included, review closed issues in the current and any future milestones. If an issue for a previous milestone was actually completed and closed, move it to the current milestone, since that's where it is being released. Include all issues resolved as closed:done in the issues section of the file. Significant feature additions and changes should be documented, even if they are also listed with issue numbers. Reviewing commits and merged pull requests may help in catching additional changes.
 
 You should commit the CHANGES file separately from the version number changes since that commit will be merged back into master while the version changes will not.
+
+**I have updated up to here, continue from here...***
 
 #### Update the Documentation
 
