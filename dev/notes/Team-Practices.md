@@ -12,7 +12,7 @@
 <tr><td>[[Standard Defines]]</td><td>Lists standard defines used in building the NUnit projects.</td></tr>
 <tr><td>[[Adding New Projects]]</td><td>How to add new projects to the NUnit solutions.</td></tr>
 <tr><td>[[Packaging the Framework]]</td><td>How to create the packages for a new NUnit Framework release.</td></tr>
-<tr><td>[[Packaging the Console/Engine]]</td><td>How to create the packages for a new NUnit Console and Engine release.</td></tr>
+<tr><td>[[Packaging the Console and Engine]]</td><td>How to create the packages for a new NUnit Console and Engine release.</td></tr>
 <tr><td>[[Packaging Extensions]]</td><td>How to create the packages and release NUnit Extensions.</td></tr>
 <tr><td>[[Packaging the Installer]]</td><td>How to create and release the NUnit MSI Installer.</td></tr>
 <tr><td>[[Packaging the V2 Adapter]]</td><td>How to create the packages for a new NUnit 2 VS Adapter release.</td></tr>
