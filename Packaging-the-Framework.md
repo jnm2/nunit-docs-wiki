@@ -225,7 +225,7 @@ Publishing the Release
 
 1. Close your release Pull Request
 2. Create a new branch off of your release branch
-3. Increment the version in the various locations from the even release to the SemVer odd dev release number. For example 3.2 -> 3.3. See the Update Package Versions section above.
+3. Increment the version in the various locations. For example 3.5 -> 3.6. See the Update Package Versions section above.
 4. Push your changes to GitHub
 5. Create a pull request from your branch making sure it is based off master
 
