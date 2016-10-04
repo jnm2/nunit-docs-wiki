@@ -1,5 +1,3 @@
-**TODO:** This documentation was copied from the original packaging info and needs to be updated for packaging just the Framework.
-
 This note describes how to create release packages for the NUnit Framework. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
 
 > **Note:** These instructions assume that you are creating releases for Silverlight and the Compact Framework at the same time as the general release. If that's not the case, you may skip the steps marked CF or SL. To release either build separately, perform those steps in sequence.
