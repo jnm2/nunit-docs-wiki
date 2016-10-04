@@ -35,7 +35,7 @@ All work on releases should be done on a branch.
 
    **SL** Nothing further - Silverlight is included in the overall build and test targets on Windows.
 
-   **CF** Open Visual Studio 2008 and use it to build the Release configuration of the compact framework solution, `nunitCF35.sln`. The build output will appear in the `bin\Release\netcf-3.5` sub-directory, alongside the other framework builds. Run the tests using a device or an emulator. Close VS 2008.
+   **CF** is included in the overall build and test targets on Windows. The build output will appear in the `bin\Release\netcf-3.5` sub-directory, alongside the other framework builds. Run the tests using a device or an emulator.
 
 3. Repeat the build on a Linux system, if available. If this is not possible, be sure to scrutinize the results from the Travis CI build carefully. On Linux, you may use the command
 
@@ -92,8 +92,6 @@ Create new sections in the CHANGES file to match those for prior releases. To en
 
 You should commit the CHANGES file separately from the version number changes since that commit will be merged back into master while the version changes will not.
 
-**I have updated up to here, continue from here...***
-
 #### Update the Documentation
 
 The [Release Notes](https://github.com/nunit/docs/wiki/Release-Notes) section of the documentation wiki should match the content of the CHANGES.txt file except for any format differences.
@@ -124,8 +122,6 @@ Creating the Release
 
       `build -Target Build`
 
-   **CF** If necessary, rebuild the release configuration of the Compact Framework build in VS2008. This is needed so that the CF binaries are included in the image directory in the next step.
-
 4. Create the image directory
 
       `build -Target CreateImage`
@@ -143,36 +139,23 @@ Creating the Release
 6. Verify that the correct packages have been created in the `package` sub-directory:
 
   * NUnit-VERSION.zip
-  * NUnit-VERSION-src.zip
   * NUnitCF-VERSION.zip
   * NUnitSL-VERSION.zip
   * NUnit.VERSION.nupkg
-  * NUnit.Console.VERSION.nupkg
-  * NUnit.ConsoleRunner.VERSION.nupkg
-  * NUnit.Engine.VERSION.nupkg
-  * NUnit.Engine.Tool.VERSION.nupkg (Do not release)
-  * NUnit.Extension.NUnitProjectLoader.VERSION.nupkg
-  * NUnit.Extension.NUnitV2Driver.VERSION.nupkg
-  * NUnit.Extension.NUnitV2ResultWriter.VERSION.nupkg
-  * NUnit.Extension.VSProjectLoader.VERSION.nupkg
-  * NUnit.Runners.3.2.0.nupkg
   * NUnitCF.VERSION.nupkg
   * NUnit.SL50.VERSION.nupkg
   * NUnitLite.VERSION.nupkg
   * NUnitLiteCF.VERSION.nupkg
   * NUnitLite.SL50.VERSION.nupkg
-  * NUnit.VERSION.msi
 
 Testing the Release
 -------------------
 
 The degree to which each package needs testing may vary depending on what has been changed. Here is a minimal set of tests for each package.
 
- * **Binary Zip** Unzip the file, change into the bin directory and use the console to run all the tests.
+ * **Binary Zip** Unzip the file, change into the bin directory and use an install of the console to run all the tests.
 
 ```
-nunit3-console.exe ConsoleTests.nunit
-nunit3-console.exe EngineTests.nunit
 nunit3-console.exe net-2.0\nunit.framework.tests.dll
 nunit3-console.exe net-3.5\nunit.framework.tests.dll
 nunit3-console.exe net-4.0\nunit.framework.tests.dll
@@ -193,11 +176,7 @@ portable\nunitlite.tests.exe
 nunit.framework.tests.exe
 ```
 
- * **Source Zip** Unzip the file, change into the directory and use the msbuild script to build and run all the tests.
-
  * **NuGet Packages** Create a test project. Install the packages and verify that they apply to the project correctly. Run tests.
-
- * **Msi Packages** Run the packages. Verify that files are placed in the correct location and that the contents of the directories are complete. Run tests.
 
 It is also a good idea to install over the previous version to ensure that all files that need upgrades are upgraded. This will catch changes in the Engine.API.
 
