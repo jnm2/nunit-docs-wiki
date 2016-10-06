@@ -85,6 +85,8 @@ Testing the Release
 
 Open the NuGet package from the `package` sub-directory using [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer). Inspect the package metadata for errors and check that the tools folder contains the extension dll and any dependent assemblies.
 
+Next install the extension into a project with the `NUnit.ConsoleRunner` package and make sure you can run tests.
+
 Archiving the Release
 ---------------------
 
