@@ -88,7 +88,7 @@ Open the NuGet package from the `package` sub-directory using [NuGet Package Exp
 Archiving the Release
 ---------------------
 
-Packages are archived on nunit.org in the downloads directory. Create a new subfolder under downloads/nunit/v3 for the release. Upload all the package files into that directory.
+Packages are archived on nunit.org in the downloads directory. Create a new subfolder under `downloads/extensions/v3/EXTENSION_NAME` for the release. Upload all the package files into that directory.
 
 Publishing the Release
 ----------------------
