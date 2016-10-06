@@ -51,3 +51,88 @@ The copyright year in all the source files is only updated as they are changed, 
 If necessary, update the year in the general copyright notice `LICENSE.txt`. The `.nuspec` files in solution root contains a copyright line, which should also be updated.
 
 Notices at the top of each source code file are only updated when copyrightable changes are made to the file, not at the time of release.
+
+#### Push All Changes
+
+Make sure the release branch and any changes are pushed to GitHub, reviewed in a PR and all CI servers are passing.
+
+####Creating the Release
+
+1. Clear the package directory to avoid confusion:
+
+      `erase package\*`
+
+   This is not absolutely required, but will be helpful if you have other release packages present
+   in the directory.
+
+2. You should be working on the release branch. Do a pull to make sure you have everything up to date. If changes of any significance were merged, you should test again before creating the release.
+
+3. Ensure that the release build is up to date. If you have any doubt whether the latest code changes 
+   have actually been built, do a clean build. If the build is up to date you may skip this step.
+
+      `build -Target Build`
+
+4. Create the packages by running:
+
+      `build -Target Package`
+
+5. Verify that the correct package has been created in the `package` sub-directory.
+
+  * NUnit..Extension.{NAME}.{VERSION}.nupkg
+
+Testing the Release
+-------------------
+
+Open the NuGet package from the `package` sub-directory using [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer). Inspect the package metadata for errors and check that the tools folder contains the extension dll and any dependent assemblies.
+
+Archiving the Release
+---------------------
+
+Packages are archived on nunit.org in the downloads directory. Create a new subfolder under downloads/nunit/v3 for the release. Upload all the package files into that directory.
+
+Publishing the Release
+----------------------
+
+####Github
+
+1. Log onto Github and go to the extension repository.
+
+2. Select Releases and then click on the "Draft a new release" button.
+
+3. Enter a tag to be used for the release in the format v3.x.y **Select your release branch** as the target for the tag.
+
+4. Enter a title for the release, like NUnit Project Loader Extension 3.5 release. If you type 'N' you'll get some hints.
+
+5. Add a description of the release. It will be easier if you have prepared this in advance and can just paste it in.
+
+6. If this is an Alpha or Beta release, check the box that indicates a pre-release.
+
+7. Upload the `nupkg` package you created.
+
+8. Click the "Publish release" button to publish the release on Github.
+
+####NuGet
+
+1. Sign on to Nuget.org.
+
+2. Select Upload package.
+
+3. Browse to the location of the `nupkg` you created and upload it.
+
+4. Verify that the info is correct and click the "Submit" button.
+
+#### Merge into Master
+
+1. Close your release Pull Request
+2. Create a new branch off of your release branch
+3. Increment the version in the various locations. For example 3.5 -> 3.6. See the Update Package Versions section above.
+4. Push your changes to GitHub
+5. Create a pull request from your branch making sure it is based off master
+
+####Notify Users
+
+Send notifications to the mailing list and twitter if the changes to the extension warrant it.
+
+####Close the Milestone
+
+The milestone representing this release should be closed at this time.
