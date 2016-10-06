@@ -13,7 +13,7 @@ All but the TeamCityEventListener are built and shipped by the NUnit team. These
 All work on releases should be done on a branch.
 
 1. Fetch and pull latest from master
-2. Create a branch in the form release/3.5.0
+2. Create a branch in the form release-3.5
 3. As you make the changes below, push the branch to GitHub and create a Pull Request to allow other team members to review your changes.
 4. **Do not merge this branch/PR**, we will create a separate PR to merge the changes back into master.
 
