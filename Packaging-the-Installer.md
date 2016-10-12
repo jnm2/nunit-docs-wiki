@@ -3,21 +3,21 @@ Before packaging the installer, you must first package and release the Console a
 ## Prepare the Release
 
 1. Get latest from master
-2. Delete the `image` and `distribution` directories
-3. Check the `version` and `displayVersion` in `build.cake`. They should have been updated at the last release.
-4. Package the release, `.\build.ps1` or `.\build.cmd`
-5. Check the `distribution` directory for `NUnit.{VERSION}.msi` and `NUnit.{VERSION}.zip`
+1. Update CHANGES.TXT. Set the date of the release, and list any packages which have been upgraded since the last release.
+1. Check the `version` and `displayVersion` in `build.cake`. They should have been updated at the last release.
+1. Package the release, `.\build.ps1` or `.\build.cmd`
+1. Check the `distribution` directory for `NUnit.{VERSION}.msi` and `NUnit.{VERSION}.zip`
 
 ## Test the Release
 
 ### Test the Installer
 
 1. Install `NUnit.{VERSION}.msi`
-2. Ensure it installs correctly
-3. Check that the extensions included in `build.cake` are installed
-4. Run unit tests using the install
-5. Ensure the extensions work by running NUnit 2 tests and by creating NUnit 2 test results
-6. Check the version in the `nunit3-console.exe` output headers when running tests.
+1. Ensure it installs correctly
+1. Check that the extensions included in `build.cake` are installed
+1. Run unit tests using the install
+1. Ensure the extensions work by running NUnit 2 tests and by creating NUnit 2 test results
+1. Check the version in the `nunit3-console.exe` output headers when running tests.
 
 ### Test the ZIP File
 
