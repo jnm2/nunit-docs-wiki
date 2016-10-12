@@ -7,11 +7,7 @@ This note describes how to create release packages for the NUnit console runner,
 Software Prerequisites
 ----------------------
 
-Various software combinations and environments may be used to build NUnit components. The following software is what we have used and tested for building everything and creating the release packages. We'll add options to the list as we find them.
-
-1. Visual Studio 2012, 2013 or 2015 with the Nuget Package manager and WiX toolset.
-
-2. Visual Studio 2008 (for the compact framework build).
+Various software combinations and environments may be used to build the NUnit 3 console runner and engine. Our standard environment is Visual Studio 2015 Community Edition but it may be built with Vs 2012, 2013 or 2015 as well as MonoDevelop. 
 
 Preparing for Release
 ---------------------
@@ -32,15 +28,11 @@ All work on releases should be done on a branch.
 2. Do a clean build and run all the tests on Windows. You may use the command below or three separate commands if preferred. If you encounter errors at any stage, you're not actually ready to release!
 
       `build.cmd -Target=Clean`
-      `build.cmd -Target=TestAll`
-
-   **SL** Nothing further - Silverlight is included in the overall build and test targets on Windows.
-
-   **CF** Open Visual Studio 2008 and use it to build the Release configuration of the compact framework solution, `nunitCF35.sln`. The build output will appear in the `bin\Release\netcf-3.5` sub-directory, alongside the other framework builds. Run the tests using a device or an emulator. Close VS 2008.
+      `build.cmd -Target=Test`
 
 3. Repeat the build on a Linux system, if available. If this is not possible, be sure to scrutinize the results from the Travis CI build carefully. On Linux, you may use the command
 
-      `./build -Target=TestAll`
+      `./build -Target=Test`
 
 4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor. Check on TeamCity once we get that build working again.
 
@@ -58,23 +50,19 @@ AssemblyVersion and AssemblyFileVersion are set separately for the framework, en
 
       Component             | File to Update      | AssemblyVersion | AssemblyFileVersion 
       --------------------- | ------------------- | --------------- | -------------------
-      Framework             | FrameworkVersion.cs |     3.4.1.0     |      3.4.1.0
       Engine                | EngineVersion.cs    |     3.4.1.0     |      3.4.1.0
       Engine API            | EngineApiVersion.cs |     3.0.0.0     |      3.4.1.0
       Console               | ConsoleVersion.cs   |     3.4.1.0     |      3.4.1.0
-      TeamCityEventListener | AssemblyInfo.cs     |     1.0.1.0     |      1.0.1.0
 
 #####Notes:
 
 1. The Engine API AssemblyVersion is fixed and will not be changed unless it becomes necessary to modify the API in a non-additive manner.
 
-2. The TeamCityEventListener maintains it's own version numbering and will be unbundled in the next release. Other bundled extensions automatically use the same version as the engine.
-
 #### Update Copyright Year
 
 The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunit3-console` and `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `nunit3-console` and `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
 
-If necessary, update the year in the general copyright notices LICENSE.txt and License.rtf. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
+If necessary, update the year in the general copyright notice LICENSE.txt. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
 
 Notices at the top of each source code file are only updated when copyrightable changes are made to the file, not at the time of release.
 
