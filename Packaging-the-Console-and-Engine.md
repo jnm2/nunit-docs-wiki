@@ -1,8 +1,6 @@
 **TODO:** This documentation was copied from the original packaging info and needs to be updated for packaging just the Console and Engine.
 
-This note describes how to create release packages for the NUnit console runner, test engine and framework. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
-
-> **Note:** These instructions assume that you are creating releases for Silverlight and the Compact Framework at the same time as the general release. If that's not the case, you may skip the steps marked CF or SL. To release either build separately, perform those steps in sequence.
+This note describes how to create release packages for the NUnit console runner and test engine. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
 
 Software Prerequisites
 ----------------------
@@ -46,7 +44,7 @@ All work on releases should be done on a branch.
 
 #### Check Assembly Versioning
 
-AssemblyVersion and AssemblyFileVersion are set separately for the framework, engine, engine api and console runner. Each is kept in a separate file and they may be updated separately. Using the 3.4.1 release as an example, version information was set as follows:
+AssemblyVersion and AssemblyFileVersion are set separately for the framework, engine, engine api and console runner. Each is kept in a separate file and they may be updated separately. Using the 3.4.1 release as an example, version information would be set as follows:
 
       Component             | File to Update      | AssemblyVersion | AssemblyFileVersion 
       --------------------- | ------------------- | --------------- | -------------------
@@ -58,9 +56,11 @@ AssemblyVersion and AssemblyFileVersion are set separately for the framework, en
 
 1. The Engine API AssemblyVersion is fixed and will not be changed unless it becomes necessary to modify the API in a non-additive manner.
 
+2. These values will normally already be correct for the release, since they should have been set immediately following the prior release.
+
 #### Update Copyright Year
 
-The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunit3-console` and `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `nunit3-console` and `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
+The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunit3-console` and `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `nunit3-console` for default values used when no attribute is found.
 
 If necessary, update the year in the general copyright notice LICENSE.txt. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
 
@@ -68,15 +68,11 @@ Notices at the top of each source code file are only updated when copyrightable 
 
 #### Update Package Versions
 
-The package version is updated in the `build.cake` file. The following lines appear near the beginning of the file. Update the versions and modifiers as necessary.
+The package version is updated in the `build.cake` file. The following lines appear near the beginning of the file. Update the versions and modifiers if necessary. Normally, they will already have been set correctly.
 
 ```
 var version="3.4.1";
 var modifier=""
-
-// For now, set teamcity extension version and modifier separately
-var tcVersion = "1.0.1";
-var tcModifier = "";
 ```
 
 The version variables are three-part version numbers that follow the basic principles of [semantic versioning]. Since we publish a number of nuget packages, we use the nuget implementation of semantic versioning. 
@@ -120,95 +116,28 @@ Creating the Release
 
 2. You should be working on the release branch. Do a pull to make sure you have everything up to date. If changes of any significance were merged, you should test again before creating the release.
 
-3. Ensure that the release build is up to date. If you have any doubt whether the latest code changes 
-   have actually been built, do a clean build. If the build is up to date you may skip this step.
-
-      `build -Target Build`
-
-   **CF** If necessary, rebuild the release configuration of the Compact Framework build in VS2008. This is needed so that the CF binaries are included in the image directory in the next step.
-
-4. Create the image directory
-
-      `build -Target CreateImage`
-
-   You do this to ensure that the latest build is used for packaging. If the `images` directory does
-   not already contain a subdirectory named for this release (package version and suffix) you may skip
-   this step as a new one will be created automatically.
-
-5. Create the packages by running:
+3. Create the packages by running:
 
       `build -Target Package`
 
-      **CF** `build -Target PackageCF`
+4. Verify that the correct packages have been created in the `package` sub-directory:
 
-6. Verify that the correct packages have been created in the `package` sub-directory:
-
-  * NUnit-VERSION.zip
-  * NUnit-VERSION-src.zip
-  * NUnitCF-VERSION.zip
-  * NUnitSL-VERSION.zip
-  * NUnit.VERSION.nupkg
   * NUnit.Console.VERSION.nupkg
   * NUnit.ConsoleRunner.VERSION.nupkg
   * NUnit.Engine.VERSION.nupkg
+  * NUnit.Engine.Api.VERSION.nupkg
   * NUnit.Engine.Tool.VERSION.nupkg (Do not release)
-  * NUnit.Extension.NUnitProjectLoader.VERSION.nupkg
-  * NUnit.Extension.NUnitV2Driver.VERSION.nupkg
-  * NUnit.Extension.NUnitV2ResultWriter.VERSION.nupkg
-  * NUnit.Extension.VSProjectLoader.VERSION.nupkg
-  * NUnit.Runners.3.2.0.nupkg
-  * NUnitCF.VERSION.nupkg
-  * NUnit.SL50.VERSION.nupkg
-  * NUnitLite.VERSION.nupkg
-  * NUnitLiteCF.VERSION.nupkg
-  * NUnitLite.SL50.VERSION.nupkg
-  * NUnit.VERSION.msi
+  * NUnit.Runners.VERSION.nupkg
 
 Testing the Release
 -------------------
 
-The degree to which each package needs testing may vary depending on what has been changed. Here is a minimal set of tests for each package.
-
- * **Binary Zip** Unzip the file, change into the bin directory and use the console to run all the tests.
-
-```
-nunit3-console.exe ConsoleTests.nunit
-nunit3-console.exe EngineTests.nunit
-nunit3-console.exe net-2.0\nunit.framework.tests.dll
-nunit3-console.exe net-3.5\nunit.framework.tests.dll
-nunit3-console.exe net-4.0\nunit.framework.tests.dll
-nunit3-console.exe net-4.5\nunit.framework.tests.dll
-portable\nunitlite-runner.exe portable\nunit.framework.tests.dll
-portable\nunitlite.tests.exe
-```
-
- * **Silverlight Zip** Unzip the file, change into the bin\sl-5.0 directory and run the tests. Change the following command to match the location of sllauncher.exe on your system.
-
-```
-"C:\Program Files\Microsoft Silverlight\sllauncher.exe" /emulate:nunit.framework.tests.xap /origin:http://localhost
-```
-
- * **CF Zip** Unzip the file, change into the bin\netcf-3.5 directory and run the tests. The following command runs the tests using your desktop runtime. **TODO:** Develop an approach to testing on devices.
-
-```
-nunit.framework.tests.exe
-```
-
- * **Source Zip** Unzip the file, change into the directory and use the msbuild script to build and run all the tests.
-
- * **NuGet Packages** Create a test project. Install the packages and verify that they apply to the project correctly. Run tests.
-
- * **Msi Packages** Run the packages. Verify that files are placed in the correct location and that the contents of the directories are complete. Run tests.
-
-It is also a good idea to install over the previous version to ensure that all files that need upgrades are upgraded. This will catch changes in the Engine.API.
+The degree to which each package needs testing may vary depending on what has been changed. Usually, you should install all the nuget packages into a test project, verifying that the
 
 Archiving the Release
 ---------------------
 
 Packages are archived on nunit.org in the downloads directory. Create a new subfolder under downloads/nunit/v3 for the release. Upload all the package files into that directory.
-
-> **Note:** We need to develop a plan for additionally archiving the image directory. For the moment,
-  the binary zip package provides a backup but it's possible that the two may diverge in the future.
 
 Publishing the Release
 ----------------------
