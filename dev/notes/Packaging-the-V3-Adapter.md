@@ -62,7 +62,7 @@ The resulting files can be found in the "package" folder:
 
   * **NUnit3TestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
-  * **NUnit3TestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+  * **NUnit3TestAdapter.[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
 
 ####Testing the Packages
 
