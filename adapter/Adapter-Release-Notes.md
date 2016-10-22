@@ -1,3 +1,21 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.5 - October 22, 2016
+
+#####Features
+
+ * The adapter now uses version 3.5 of the NUnit engine
+ * The NuGet package is now installed as a tool and no longer creates unnecessary references in the project
+
+#####Resolved Issues
+
+ * 97 Tests with dynamic/random parameters are never run closed:done is:bug pri:normal
+ * 204 If a test writes to Console.Error, the test passes but the session fails
+ * 220 Visual Studio Test Adapter - Writing to test output throws an error
+ * 221 Change adapter package to use tools directory
+ * 236 Update adapter to use Version 3.5 of the Engine
+ * 238 Just warn upon failing to restore random seed
+ * 239 Remove Error-level log messages from adapter where we don't want run to fail
+ * 243 Nuget package and copy local
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.4.1 - August 5, 2016
 
 #####Features
