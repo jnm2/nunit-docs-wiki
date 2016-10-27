@@ -36,6 +36,8 @@ The TestParameters object supports the following methods:
  * **Get(string name)** - Returns the same value as the indexer.
  * **Get&lt;T&gt;(string name, T defaultValue)** - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
 
+**Note** that all parameter values are strings. You may convert them to other Types using the generic `Get` method listed above or using your own code. An exception may be thrown if the supplied value cannot be converted correctly.
+
 ###Static Methods
 
 ####Write
