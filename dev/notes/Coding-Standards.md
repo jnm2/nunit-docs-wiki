@@ -14,7 +14,7 @@ Don't make arbitrary changes in existing code merely to conform them to these gu
 
 In cases where we make broad changes in layout or naming, they should be committed separately from any bug fixes or feature changes in order to keep the review process as simple as possible. That said, we don't do this very often, since we have real work to do!
 
-Visual Studio can be set up to match the coding standards by importing the [nunit.vssettings](https://github.com/nunit/dev/blob/master/nunit.vssettings) file from this repository. This file will only change the C# indentation and formatting settings. It will not modify any other Visual Studio settings. It can be imported into Visual Studio 2010 and later by going to Tools | Import and Export Settings...
+Visual Studio can be set up to match the coding standards by importing the [nunit.vssettings](https://github.com/nunit/docs/blob/master/nunit.vssettings) file from this repository. This file will only change the C# indentation and formatting settings. It will not modify any other Visual Studio settings. It can be imported into Visual Studio 2010 and later by going to Tools | Import and Export Settings...
 
 ### Copyright
 
