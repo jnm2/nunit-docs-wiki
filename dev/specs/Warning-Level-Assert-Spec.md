@@ -2,56 +2,75 @@
 
 Sometimes - especially in integration testing - it's desirable to give a warning message but continue execution. This feature will provide the ability to do so.
 
-### Check.That
+###Warning Results
 
-A new static class will be added to the framework. The name **Check** is preliminary. Other possibilities are **Verify** and **Warn** - but see the note below about **Warn**.
-
-**Check.That** would support all the same uses as **Assert.That** and **Assume.That**, for example...
+NUnit currently supports four fundamental outcomes, represented by the `TestStatus` enumeration. This change would add a fifth value, `Warning` to the enum:
 
 ```C#
+    /// <summary>
+    /// The TestStatus enum indicates the result of running a test
+    /// </summary>
+    public enum TestStatus
+    {
+        /// <summary>
+        /// The test was inconclusive
+        /// </summary>
+        Inconclusive,
+
+        /// <summary>
+        /// The test has skipped 
+        /// </summary>
+        Skipped,
+
+        /// <summary>
+        /// The test succeeded
+        /// </summary>
+        Passed,
+
+        /// <summary>
+        /// There was a warning
+        /// </summary>
+        Warning,
+
+        /// <summary>
+        /// The test failed
+        /// </summary>
+        Failed
+    }
+```
+
+A new well-known `ResultState` would be created: `ResultState.Warning`. In addition, `ResultState.Ignored`, which is currently defined as "Skipped:Ignored" but specially handled as a warning, would be redefined as "Warning:Ignored". This would have the side effect that coloring of output would then completely follow the `TestStatus`, without any exceptions.
+
+All switches and tests on `TestStatus` or `ResultState` would need to be examined and have code added to deal with warnings. If we decide to proceed with this, it's probably best to make these internal changes before moving on to the explicit syntax for warnings.
+
+### Syntax
+
+In the NUnit framework, Constraints either succeed, fail or throw an unexpected exception. ConstraintResults therefore have a status of "Success", "Failure" or "Error". It's up to the individual assertion verbs to decide how to interpret a "Failure" status. For example, `Assert.That` causes the test to fail, while `Assume.That`causes the test to be inconclusive.
+
+In keeping with the overall design, we will need a new assertion verb to return a warning when the associated constraint fails. There are a number of candidates, as seen in these examples:
+
+```C#
+  // Use Check - used in some versions of cppunit and in boost
   Check.That(2+2 == 5);
   Check.That(2+2, Is.EqualTo(5));
   Check.That(() => 2+2, Is.EqualTo(5).After(3000));
-```
 
-All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would be reported at the end of the test. If the test were to be terminated early by some sort of failure, the warnings would be reported in addition to the ultimate failure.
+  // Use Expect - used in gtest in this way, but may conflict with AssertionHelper
+  Expect.That(2+2 == 5);
+  Expect.That(2+2, Is.EqualTo(5));
+  Expect.That(() => 2+2, Is.EqualTo(5).After(3000));
 
-**Note:** If instead of **Check** we use **Warn** there are two alternatives. Either the condition has to be reversed or the following verb must be changed. For example,
-
-```C#
+  // Use Warn with reversed condition - Warn.If could be used the same way
+  Warn.That(2+2 != 5);
   Warn.That(2+2, Is.Not.EqualTo(5));
+  Warn.That(() => 2+2, Is.Not.EqualTo(5).After(3000));
+
+  // Use Warn with original condition
+  Warn.Unless(2+2 == 5);
   Warn.Unless(2+2, Is.EqualTo(5));
+  Warn.Unless(() => 2+2, Is.EqualTo(5).After(3000));
 ```
 
-Both of the above usages seem confusing. Perhaps other alternatives can be examined.
+All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would be reported at the end of the test. The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block.
 
-###Warning Results
-
-If a test runs without failures, but with warnings, we will need a new ResultState to represent the outcome. There are two possibilities to choose from:
-
-1. Add **Warning** as a member of **TestStatus**, giving us five rather than four fundamental outcomes. This would involve changes in lots of places upon implementation, but would leave us with a fairly simple interpretation of results. Among other things, we would probably want to add a warnings attribute to the XML representation of test suite results.
-
-2. Create a new well-known **ResultState**, without adding to **TestStatus**. This could be either **Failed:Warning** or **Passed:Warning** depending on how we want to look at it. I lean towards the former, because it keeps the **Passed** state clean - their are currently know sub-categories of **Passed**.
-
-If we take the second approach, we may want to add an explicit **Severity** to **ResultState** so as to simplify processing of results for clients. That too would need to be added to the Xml.
-
-###Ignored Tests
-
-If we implement warnings, then Ignored results should become a type of warning result: **Warning:Ignored** rather than **Skipped:Ignored**.
-
-###Decisions Pending
-
-We need to decide, in priority order:
-
-1. Whether to do this at all.
-
-2. What syntax to use.
-
-3. What representation to use for the result internally.
-
-###Implementation
-
-Once the decisions are made, implementation should be fairly straightforward. We will need a central place to collect warnings, which can be a collection in the **TestExecutionContext**. We will want to centralize result reporting in Assert as well, rather than throwing exceptions from multiple locations.
-
-This feature needs to be coordinated with [[Multiple Asserts]].
-
+Selection of the exact syntax is the main issue blocking implementation.
