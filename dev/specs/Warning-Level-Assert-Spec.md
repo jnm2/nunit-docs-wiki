@@ -1,5 +1,3 @@
-###DRAFT - Not Yet Implemented
-
 Sometimes - especially in integration testing - it's desirable to give a warning message but continue execution. This feature will provide the ability to do so.
 
 ###Warning Results
@@ -72,5 +70,7 @@ In keeping with the overall design, we will need a new assertion verb to return 
 ```
 
 All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would be reported at the end of the test. The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block.
+
+Additionally, we would want to implement `Assert.Warn` giving an absolute way to issue a warning, similar to `Assert.Pass` and `Assert.Fail`.
 
 Selection of the exact syntax is the main issue blocking implementation.
