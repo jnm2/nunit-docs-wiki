@@ -2,7 +2,7 @@
 
 Breaking changes introduced in NUnit 3.4
 
- * The `--teamcity` comsole command-line option now requires the TeamCityEventListener extension to be intalled. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.
+ * The `--teamcity` console command-line option now requires the TeamCityEventListener extension to be intalled. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.
 
  * String arguments in the names of test cases are no longer truncated to 40 characters.
 
