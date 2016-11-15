@@ -1,3 +1,14 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.6 - November 15, 2016
+
+#####Features
+
+ * Adds support for Visual Studio "15"
+
+#####Resolved Issues
+
+ * 253 Warnings about $RANDOM_SEED$ during build
+ * 262 Support for VS 15
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.5 - October 22, 2016
 
 #####Features
