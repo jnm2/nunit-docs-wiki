@@ -1,4 +1,4 @@
-###DRAFT - Not Yet Implemented
+###DRAFT - Partially Implemented
 
 This feature is inspired by MbUnit's **Assert.Multiple**. It allows the user to review multiple failures in one run of the test and is useful for testing things like object initialization and UI appearance. It is likely to have the greatest use in extremely simple unit tests and in integration testing.
 
@@ -49,30 +49,36 @@ Here is an example of using **Assert.Multiple**:
 
 ![Assert.Multiple](https://cloud.githubusercontent.com/assets/8772586/5229921/014e331e-76e4-11e4-8f94-45a553b75faf.png)
 
-Functionally, this results in NUnit storing any failures encountered in the block and reporting all of them together upon exit of the block. The test itself would terminate at the end of the block if any errors were encountered, but would continue otherwise.
+Functionally, this results in NUnit storing any failures encountered in the block and reporting all of them together upon exit of the block. The test itself would terminate at the end of the block if any failures were encountered, but would continue otherwise.
 
-###Early Termination
+###Unexpected Exceptions
 
-The test will be terminated immediately if any of the following events occur:
+The test will be terminated immediately if any exception is thrown that is not handled by the test. An unexpected exception is often an indication that the test itself is in error, so it must be terminated.
 
-  * Execution of **Assert.Fail**, **Assert.Pass**, **Assert.Inconclusive** or **Assert.Ignore**. These commands are specifically designed to terminate the test and shouldn't be used if that's not the intent.
+If the exception occurs after one or more assertion failures have been recorded, those failures will be reported along with the terminating exception itself.
 
-  * Failure of any Assumption (**Assume.That**), which is equivalent to **Assert.Inconclusive**. Assumptions are designed to test whether it's possible to run the test. If it's not possible, then we must exit.
+###Special Asserts
 
-  * Any unexpected exception, whether thrown by a test or by the system under test. An unexpected exception is an indication that the test itself is in error, so it must be terminated.
+**Assert.Fail**, **Assert.Pass**, **Assert.Inconclusive** and **Assert.Ignore** normally cause the test to terminate immediately with result states of Failure, Success, Inconclusive and Ignored respectively. Each of these could conceivably be handled in one of two different ways:
+ 1. Immediately terminate the test with an error if they are found in any multiple assert block. The error would cause this to be handled as an unexpected exception.
+ 2. Like option 1, but only report an error if failures have already been recorded in the block. This may be preferred to option 1, since some users may call methods containing assertions from inside a multiple assert block. The method would not necessarily know that it was running inside a block.
+ 3. Record the result as pending until the end of the block and then terminate the test using the "worst" of the results encountered. This is slightly more complicated but may be easier to explain to users, since all asserts will work the same way.
 
-If any of  the events causing early termination occur, it's possible to have a conflict. For example, if there are pending failures and the user executes **Assert.Pass** we have to decide whether to report the test as a failure or a success. Since failure to report failures is a cardinal sin for a testing framework, we will always report failure. In each case, an **additional** failure message will be added to the list of pending failures before terminating.
+Specific behavior to use in each case follows:
 
-The following table shows the general form of message that will be used in the case of each early termination event:
+####Assert.Fail
 
-| Event | Message |
-|-------|--------|
-| **Assert.Fail**          | Assert.Fail encountered with pending failures: $usermessage$ |
-| **Assert.Pass**          | Assert.Pass encountered with pending failures: $usermessage$ |
-| **Assert.Inconclusive**  | Assert.Inconclusive encountered with pending failures: $usermessage$ |
-| **Assert.Ignore**        | Assert.Ignore encountered with pending failures: $usermessage$ |
-| Failing **Assume.That**  | Assumption failed with pending test failures: $usermessage$ |
-| Unexpected Exception     | TypeOfException encountered with pending failures: $exceptionmessage$ |
+Assert.Fail should be handled just as any other assert failure. The message and stack trace will be recorded but the test will continue to execute until the end of the block. This is necessary because Assert.Fail is sometimes used in place of a more normal assert, in order to tailor the message.
+
+####Assert.Pass / Assert.Ignore
+
+Report an error if prior failures have occurred (option 2). Display the failures along with the final error. While it's possible to use option 3 here, the use of these asserts inside a multiple assert block doesn't really make much sense. Note that we can change our mind later and use option 3 if it should be needed. Going from 3 to 1 or 2 is not feasible since it would remove functionality.
+
+####Assert.Inconclusive / Assume.That
+
+When Assume.That fails, it generates an Inconclusive result. If an assumption fails inside a multiple block, the result should be recorded with a result of Inconclusive (option 3). At the end of the block, the final test result will be a failure, inconclusive or success, depending on the results that have been recorded.
+
+We use option 3 here so that users of Assume can specify multiple tests, just as for assert.
 
 ###Effect on Third-Party Frameworks
 
