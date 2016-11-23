@@ -72,7 +72,7 @@ Assert.Fail should be handled just as any other assert failure. The message and 
 
 ####Assert.Pass / Assert.Ignore
 
-Report an error if prior failures have occurred (option 2). Display the failures along with the final error. While it's possible to use option 3 here, the use of these asserts inside a multiple assert block doesn't really make much sense. Note that we can change our mind later and use option 3 if it should be needed. Going from 3 to 1 or 2 is not feasible since it would remove functionality.
+Report an error if either of these is used inside a multiple assert block (option 1). Display the failures along with the final error. While it's possible to use option 3 here, the use of these asserts inside a multiple assert block doesn't really make much sense. Note that we can change our mind later and use option 3 if it should be needed. Going from 3 to 1 or 2 would not be popular since it would remove functionality.
 
 ####Assert.Inconclusive / Assume.That
 
