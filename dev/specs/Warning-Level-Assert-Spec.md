@@ -45,23 +45,13 @@ All switches and tests on `TestStatus` or `ResultState` would need to be examine
 
 In the NUnit framework, Constraints either succeed, fail or throw an unexpected exception. ConstraintResults therefore have a status of "Success", "Failure" or "Error". It's up to the individual assertion verbs to decide how to interpret a "Failure" status. For example, `Assert.That` causes the test to fail, while `Assume.That`causes the test to be inconclusive.
 
-In keeping with the overall design, we will need a new assertion verb to return a warning when the associated constraint fails. There are a number of candidates, as seen in these examples:
+In keeping with the overall design, we will need a new assertion verb to return a warning when the associated constraint fails. In this case, two variants are proposed, one using the original condition that is to be tested and one working with a negated condition.
 
 ```C#
-  // Use Check - used in some versions of cppunit and in boost
-  Check.That(2+2 == 5);
-  Check.That(2+2, Is.EqualTo(5));
-  Check.That(() => 2+2, Is.EqualTo(5).After(3000));
-
-  // Use Expect - used in gtest in this way, but may conflict with AssertionHelper
-  Expect.That(2+2 == 5);
-  Expect.That(2+2, Is.EqualTo(5));
-  Expect.That(() => 2+2, Is.EqualTo(5).After(3000));
-
-  // Use Warn with reversed condition - Warn.If could be used the same way
-  Warn.That(2+2 != 5);
-  Warn.That(2+2, Is.Not.EqualTo(5));
-  Warn.That(() => 2+2, Is.Not.EqualTo(5).After(3000));
+  // Use Warn with reversed condition
+  Warn.If(2+2 != 5);
+  Warn.If(2+2, Is.Not.EqualTo(5));
+  Warn.If(() => 2+2, Is.Not.EqualTo(5).After(3000));
 
   // Use Warn with original condition
   Warn.Unless(2+2 == 5);
@@ -69,8 +59,6 @@ In keeping with the overall design, we will need a new assertion verb to return 
   Warn.Unless(() => 2+2, Is.EqualTo(5).After(3000));
 ```
 
-All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would be reported at the end of the test. The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block.
+All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would only be reported at the end of the test. The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block.
 
-Additionally, we would want to implement `Assert.Warn` giving an absolute way to issue a warning, similar to `Assert.Pass` and `Assert.Fail`.
-
-Selection of the exact syntax is the main issue blocking implementation.
+Additionally, we implement `Assert.Warn` giving an absolute way to issue a warning, similar to `Assert.Pass` and `Assert.Fail`.
