@@ -70,15 +70,11 @@ Specific behavior to use in each case follows:
 
 Assert.Fail should be handled just as any other assert failure. The message and stack trace will be recorded but the test will continue to execute until the end of the block. This is necessary because Assert.Fail is sometimes used in place of a more normal assert, in order to tailor the message.
 
-####Assert.Pass / Assert.Ignore
+####Assert.Pass / Assert.Ignore / Assert.Inconclusive / Assume.That
 
-Report an error if either of these is used inside a multiple assert block (option 1). Display the failures along with the final error. While it's possible to use option 3 here, the use of these asserts inside a multiple assert block doesn't really make much sense. Note that we can change our mind later and use option 3 if it should be needed. Going from 3 to 1 or 2 would not be popular since it would remove functionality.
+Report an error if any of these is used inside a multiple assert block (option 1). While it's possible to use option 3 here, the use of these asserts inside a multiple assert block doesn't really make much sense. Note that we can change our mind later and use option 3 if it should be needed. Going from 3 to 1 or 2 would not be popular since it would remove functionality.
 
-####Assert.Inconclusive / Assume.That
-
-When Assume.That fails, it generates an Inconclusive result. If an assumption fails inside a multiple block, the result should be recorded with a result of Inconclusive (option 3). At the end of the block, the final test result will be a failure, inconclusive or success, depending on the results that have been recorded.
-
-We use option 3 here so that users of Assume can specify multiple tests, just as for assert.
+Originally, the plan was to allow assumptions inside a multiple assert block. However, in practice, this is somewhat complicated, since the block could have both assumptions and assertions. A failed assumption is intended to terminate the execution of a block.
 
 ###Effect on Third-Party Frameworks
 
