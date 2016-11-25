@@ -1,1 +1,1 @@
-This page has been moved to [Visual Studio Test Adapter].
+This page has been moved to [[Visual Studio Test Adapter]].
