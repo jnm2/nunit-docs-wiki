@@ -40,7 +40,10 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicat
         //nunit.AddTestAssembly(typeof(MyTests).Assembly);
 
         // Do you want to automatically run tests when the app starts?
-        nunit.AutoRun = true;
+        nunit.Options = new TestOptions
+            {
+                AutoRun = true
+            };
 
         LoadApplication(nunit);
     }
@@ -72,7 +75,10 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
         //nunit.AddTestAssembly(typeof(MyTests).Assembly);
 
         // Do you want to automatically run tests when the app starts?
-        nunit.AutoRun = true;
+        nunit.Options = new TestOptions
+            {
+                AutoRun = true
+            };
 
         LoadApplication(nunit);
 
@@ -121,7 +127,10 @@ public sealed partial class MainPage : WindowsPage
         nunit.AddTestAssembly(typeof(MainPage).GetTypeInfo().Assembly);
 
         // Do you want to automatically run tests when the app starts?
-        nunit.AutoRun = true;
+        nunit.Options = new TestOptions
+            {
+                AutoRun = true
+            };
 
         LoadApplication(nunit);
     }
