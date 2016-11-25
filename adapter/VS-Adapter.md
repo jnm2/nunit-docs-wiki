@@ -1,0 +1,1 @@
+This page has been moved to [Visual Studio Test Adapter].
