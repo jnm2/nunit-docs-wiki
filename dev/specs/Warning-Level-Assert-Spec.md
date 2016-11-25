@@ -57,8 +57,22 @@ In keeping with the overall design, we will need a new assertion verb to return 
   Warn.Unless(2+2 == 5);
   Warn.Unless(2+2, Is.EqualTo(5));
   Warn.Unless(() => 2+2, Is.EqualTo(5).After(3000));
+
+  // Issue a warning message
+  Assert.Warn("Warning message")
 ```
 
-All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would only be reported at the end of the test. The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block.
+All of the above items would fail - even the one that waits 3 seconds. :-) The test would continue to execute, however, and the warning messages would only be reported at the end of the test.
 
-Additionally, we implement `Assert.Warn` giving an absolute way to issue a warning, similar to `Assert.Pass` and `Assert.Fail`.
+### Reporting
+
+The XML format would be modified to add a `warnings` attribute to each suite, along with the other attributes for each of the possible test statuses. Each warning would add a new `<assertion>` element to the XML with a status of Warning.
+
+The output of nunit3-console and nunitlite will include a count of warnings and display warnings as part of the Errors and Failures report. Warnings should be displayed in the GUI tree using the existing warning-level yellow color.
+
+### Assert.Multiple and Warnings
+
+The feature would inter-operate with `Assert.Multiple` and any warning assertions would be listed along with failed assertions that occurred in an `Assert.Multiple` block. 
+
+The Assert.Multiple feature will have to be modified to recognize which elements in the `<assertions>` display are failures as opposed to warnings and only terminate the test if there are failures.
+
