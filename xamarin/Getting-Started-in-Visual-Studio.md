@@ -1,5 +1,3 @@
-## How to Use (Visual Studio)##
-
 The easiest way to get started is to install the [NUnit Templates extension for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/6cd55f79-4936-49e7-b81d-c40fcd81abc7). It will add project templates for the various Xamarin platforms.
 
 In your solution;
