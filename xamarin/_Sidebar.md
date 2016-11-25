@@ -4,9 +4,9 @@
 * **[[NUnit Gui]]**
 * **[[Project Editor]]**
 * **NUnit Xamarin Runners**
-  * **[[Index & Options|xamarin-index]]**
-  * **[[Getting Started in Visual Studio|xamarin-gettingstarted-vs]]**
-  * **[[Getting Started in VS for Mac|xamarin-gettingstarted-vsmac]]**
+  * [[Index & Options|NUnit-Xamarin-Runners]]
+  * [[Getting Started in Visual Studio|Getting-Started-in-Visual-Studio]]
+  * [[Getting Started in VS for Mac|Getting-Started-in-Visual-Studio-for-Mac]]
 * **Visual Studio**
   * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
   * **[[Test Generator|Visual-Studio-Test-Generator]]**
