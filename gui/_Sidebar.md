@@ -4,6 +4,7 @@
 * **NUnit Gui**
   * [[Release Notes|Gui-Release-Notes]]
 * **[[Project Editor]]**
+* **[[NUnit Xamarin Runners|xamarin-index]]**
 * **Visual Studio**
   * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
   * **[[Test Generator|Visual-Studio-Test-Generator]]**

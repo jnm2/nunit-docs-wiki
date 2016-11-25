@@ -31,6 +31,7 @@
     * [[NUnit Internals]]
 * **[[NUnit Gui]]**
 * **[[Project Editor]]**
+* **[[NUnit Xamarin Runners|xamarin-index]]**
 * **Visual Studio**
   * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
   * **[[Test Generator|Visual-Studio-Test-Generator]]**
