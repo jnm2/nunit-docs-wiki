@@ -5,6 +5,8 @@ The NUnit Xamarin Runners provide NUnit 3 test runners for Xamarin and mobile de
 Runner options are set inside a `TestOptions` object. For example:
 
 ```C#
+var nunit = new NUnit.Runner.App();
+
 nunit.Options = new TestOptions
             {
                 AutoRun = true
