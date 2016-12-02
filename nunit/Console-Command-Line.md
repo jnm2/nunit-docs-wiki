@@ -150,13 +150,13 @@ the following forms:</p>
 
 <p>The --result option may use any of the following formats:
 <ul>
-    <li>nunit3 - the native XML format for NUnit 3.0
+    <li>nunit3 - the native XML format for NUnit 3
     <li>nunit2 - legacy XML format used by earlier releases of NUnit</p>
 </ul>
 
 <p>The --explore option may use any of the following formats:
 <ul>
-    <li>nunit3 - the native XML format for NUnit 3.0
+    <li>nunit3 - the native XML format for NUnit 3
     <li>cases  - a text file listing the full names of all test cases.</p>
 </ul>
 
