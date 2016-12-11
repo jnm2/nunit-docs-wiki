@@ -22,7 +22,7 @@ The following options are available:
 ###Example implementation
 See https://github.com/nunit/nunit3-vs-adapter/blob/8a9b8a38b7f808a4a78598542ddaf557950c6790/demo/demo.runsettings
 
-###Runsettings consummating code
+###NUnit .runsettings implementation
 https://github.com/nunit/nunit3-vs-adapter/blob/master/src/NUnitTestAdapter/AdapterSettings.cs#L143
 
 
