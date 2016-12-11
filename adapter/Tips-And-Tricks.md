@@ -1,7 +1,34 @@
 > ﻿####NOTE:
-> As of the 3.0 final release, these registry settings are no longer recognized. Instead, use settings in the `.runsettings` file. This page will be updated soon.
+> As of the 3.0 final release, these registry settings are no longer recognized. Instead, use settings in the `.runsettings` file. 
 
-###Registry Settings
+
+## NUnit 3.x
+
+### VS Test .Runsettings configuration
+Certain NUnit Test Adapter settings are configurable using a .runsettings file. 
+The following options are available:
+
+|Key|Type|Options| Default|
+|---|----|-------|--------------|
+|InternalTraceLevel| string |  Off, Error, Warning, Info, Verbose,  Debug| ?|
+|NumberOfTestWorkers| int | nr of workers | -1|
+|ShadowCopyFiles| bool |True, False | False|
+|Verbosity| int | 0-5 ? | 0|
+|UseVsKeepEngineRunning| bool | True, False| False|
+|BasePath| string | path| ?|
+|PrivateBinPath | string| directory1;directory2;etc |?|
+|RandomSeed| int | 0| random|
+
+For a demo, see https://github.com/nunit/nunit3-vs-adapter/blob/8a9b8a38b7f808a4a78598542ddaf557950c6790/demo/demo.runsettings
+
+For the inner workings, see
+https://github.com/nunit/nunit3-vs-adapter/blob/master/src/NUnitTestAdapter/AdapterSettings.cs#L143
+
+
+## NUnit 2.x
+
+
+###Registry Settings 
 
 Certain settings in the registry affect how the adapter runs. All these settings are added by using RegEdit under the key **HKCU\Software\nunit.org\VSAdapter**.
 
