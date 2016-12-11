@@ -17,7 +17,7 @@ The following options are available:
 |UseVsKeepEngineRunning| bool | True, False| False|
 |BasePath| string | path| ?|
 |PrivateBinPath | string| directory1;directory2;etc |?|
-|RandomSeed| int | 0| random|
+|RandomSeed| int | seed integer| random|
 
 ###Example implementation
 See https://github.com/nunit/nunit3-vs-adapter/blob/8a9b8a38b7f808a4a78598542ddaf557950c6790/demo/demo.runsettings
