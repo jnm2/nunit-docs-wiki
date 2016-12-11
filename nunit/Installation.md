@@ -1,23 +1,9 @@
 To get a copy of the NUnit 3, you can use various installation approaches.
 
-1.  Zip file download.
-2.  Full NUnit install via NuGet.
-3.  NUnitLite install via NuGet.
+1.  Full NUnit install via NuGet.
+2.  NUnitLite install via NuGet.
+3.  Zip file download.
 4.  Combined Approach
-
-### Downloading the Zip File
-
-Download the latest binary zip from our [Download](http://nunit.org/index.php?p=download) page or from [GitHub](https://github.com/nunit/nunit/releases). Unzip the file into any convenient directory.
-
-If you would like be able to run nunit3-console from the command line, put the bin directory, containing nunit3-console.exe on your path.
-
-In your test assemblies, add a reference to nunit.framework.dll, using the copy in the subdirectory for the appropriate runtime version. For example, if you are targeting .NET 4.0, you should reference the framework assembly in the net-4.0 subdirectory.
-
-Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:
-
-```
-     nunit3-console net-2.0/nunit.framework.tests.dll
-```
 
 ### Using NuGet Packages
 
@@ -38,6 +24,20 @@ Scroll or use search to locate the **NUnitLite Version 3** and install it. The p
 As a result of your installation, a file named "Program.cs" will have been copied into each of your test projects. NUnitLite test projects are console applications and this file contains the Main() program for your tests. If you already have a Main() in some other class, you may delete the file. This file also contains comments describing how the main should call the NUnitLite runner.
 
 To run your tests, simply run your executable test assembly. No other runner is needed.
+
+### Downloading the Zip File
+
+Download the latest binary zip from our [Download](http://nunit.org/index.php?p=download) page or from [GitHub](https://github.com/nunit/nunit/releases). Unzip the file into any convenient directory.
+
+If you would like be able to run nunit3-console from the command line, put the bin directory, containing nunit3-console.exe on your path.
+
+In your test assemblies, add a reference to nunit.framework.dll, using the copy in the subdirectory for the appropriate runtime version. For example, if you are targeting .NET 4.0, you should reference the framework assembly in the net-4.0 subdirectory.
+
+Run nunit3-console from the command line, giving it the path to your test assembly. To run NUnit's own framework tests from within the NUnit bin directory, enter:
+
+```
+     nunit3-console net-2.0/nunit.framework.tests.dll
+```
 
 ### Combined Approach
 
