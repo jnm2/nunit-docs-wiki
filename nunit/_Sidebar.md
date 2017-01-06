@@ -11,7 +11,9 @@
   * **Writing Tests**
     * [[Attributes]]
     * [[Assertions]]
+      * [[Multiple Asserts]]
     * [[Assumptions]]
+    * [[Warnings]]
     * [[Constraints]]
     * [[TestCaseData]]
     * [[TestFixtureData]]
