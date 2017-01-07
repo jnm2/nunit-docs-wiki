@@ -189,20 +189,31 @@ Optional element that appears on all tests or suites with a result of 'Failed'. 
  * **Contained Elements:** [&lt;message&gt;](#message), [&lt;stack-trace&gt;](#stack-trace)
  * **Attributes** None
 
+##&lt;assertions&gt;
+* **Containing Elements:** [&lt;test-suite&gt;](#test-suite), [&lt;test-case&gt;](#test-case)
+* **Contained Elements:** [&lt;assertion&gt;](#assertion)
+* **Attributes** None
+
+##&lt;assertion&gt;
+* **Containing Elements:** [&lt;assertions&gt;](#assertions)
+* **Contained Elements:** [&lt;message&gt;](#message), [&lt;stack-trace&gt;](#stack-trace)
+* **Attributes**
+    * **result** The result of the assertion. May be Inconclusive, Passed, Warning, Failed or Error.
+
 ##&lt;message&gt;
 Optional element with a CDATA section containing a message relating to the test's result.
-* **Containing ELements:** [&lt;failure&gt;](#failure), [&lt;reason&gt;](#reason)
+* **Containing ELements:** [&lt;failure&gt;](#failure), [&lt;reason&gt;](#reason), [&lt;assertion&gt;](#assertion)
 * **Contained Elements:** None
-* **Attributes: None
+* **Attributes** None
 
 ##&lt;stack-trace&gt;
 Optional element with a CDATA section containing a stack-trace of the location where a test failed.
-* **Containing Elements:** [&lt;failure&gt;](#failure)
+* **Containing Elements:** [&lt;failure&gt;](#failure), [&lt;assertion&gt;](#assertion)
 * **Contained Elements:** None
-* **Attributes: None
+* **Attributes** None
 
 ##&lt;output&gt;
 Optional element that appears on tests or suites that produce text output. The output may be intercepted from writes to the console or captured directly when the test writes to the TestContext. It is contained in a CDATA section.
  * **Containing Elements:** [&lt;test-suite&gt;](#test-suite), [&lt;test-case&gt;](#test-case)
  * **Contained Elements:** None
- * **Attributes: None
+ * **Attributes** None
