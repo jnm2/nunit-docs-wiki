@@ -40,40 +40,14 @@ Functionally, this results in NUnit storing any failures encountered in the bloc
 
 7. Use of Warnings (Assert.Warn, Warn.If, Warn.Unless) is permitted inside a multiple assert block. Warnings are reported normally along with any failures that occur inside the block.
 
-##XML Result Representation
+###Runner Support
 
-###Current Elements
+Multiple assertion failures per test are stored in the representation of the test result using new XML elements, which are not recognized by older runners. The following runners are known to support display of the new elements:
 
-Currently, only the assertion that terminates a test is shown in the XML. This may be a failure encountered in the course of a normal assert. Or a "categorical" assert such as `Assert.Fail`, `Assert.Success`, `Assert.Ignore` or `Assert.Inconclusive`.
+ * NUnit Console Runner 3.6
+ * NUnit 3 Visual Studio Adapter 3.7
+ * NUnit Gui Runner (under development)
 
-The following elements are currently used in the XML:
+####Compatibility
 
-####`<failure>`
-This element appears when a test has failed or an unexpected exception has occured. It contains sub-elements for the message and stack trace.
-
-####`<reason>`
-This element appears when a test has been skipped or ignored for some reason. It contains a message element.
-
-###Enhanced Elements
-
-The test case could potentially contain an entry for each assertion executed, although the initial implementation would only include multiple failing asserts in support of this specification. The enhanced elements would be contained in an `<asserts>` element as follows:
-
-```xml
-            <asserts>
-              <assert result="failed">
-                <message>Assert message 1</message>
-                <stack-trace>...</stack-trace>
-              </assert result="failed">
-              <assert result="failed">
-                <message>Assert message 2</message>
-                <stack-trace>...</stack-trace>
-              </assert>
-            </asserts>
-```
-
-Each individual assertion result would normally include a message and stacktrace, duplicating what is generally contained in the existing `<failure>` element. The `result` attribute would always be set to failed in the initial implementation, since only failures are shown but could be expanded as the feature was used for other purposes to include values of 'warning' and 'passed' for example.
-
-###Compatibility
-
-For backward compatibility, a failure in the multiple assert block would cause a special message to be generated, concatenating all the individual failure messages. The stack trace would show the point of exit from the block.
-
+Older runners generally display a single failure message and stack trace for each test. For compatibility purposes, the framework creates a single message that lists all the failures. The stack trace in such a case will indicate the end of the assert multiple block.
