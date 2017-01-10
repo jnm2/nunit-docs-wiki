@@ -17,3 +17,16 @@
 <tr><td>After(int, int)</td><td>DelayedConstraint(Constraint, int, int)</td></td><td>tests that a constraint is satisfied after a delay using polling.</tr>
 </table>
 
+####Enhanced Syntax
+
+With NUnit 3.6, an enhanced syntax is available that allows expressing the delay and polling interval more fluently.
+
+```C
+   After(4).Seconds
+   After(1).Minutes.PollingEvery(10).Seconds
+   After(500).MilliSeconds
+```
+
+Only Minutes, Seconds and MilliSeconds (note capital-S) are accepted as time modifiers. The default is to use MilliSeconds.
+
+
