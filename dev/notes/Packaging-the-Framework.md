@@ -18,7 +18,7 @@ Preparing for Release
 All work on releases should be done on a branch.
 
 1. Fetch and pull latest from master
-2. Create a branch in the form release/3.5.0
+2. Create a branch in the form release/3.6
 3. As you make the changes below, push the branch to GitHub and create a Pull Request to allow other team members to review your changes.
 4. **Do not merge this branch/PR**, we will create a separate PR to merge the changes back into master.
 
@@ -30,10 +30,6 @@ All work on releases should be done on a branch.
 
       `build.cmd -Target=Clean`
       `build.cmd -Target=Test`
-
-   **SL** Nothing further - Silverlight is included in the overall build and test targets on Windows.
-
-   **CF** is included in the overall build and test targets on Windows. The build output will appear in the `bin\Release\netcf-3.5` sub-directory, alongside the other framework builds. Run the tests using a device or an emulator.
 
 3. Repeat the build on a Linux system, if available. If this is not possible, be sure to scrutinize the results from the Travis CI build carefully. On Linux, you may use the command
 
@@ -55,13 +51,13 @@ AssemblyVersion and AssemblyFileVersion are set separately for the framework, en
 
       Component             | File to Update      | AssemblyVersion | AssemblyFileVersion 
       --------------------- | ------------------- | --------------- | -------------------
-      Framework             | FrameworkVersion.cs |     3.5.0.0     |      3.5.0.0
+      Framework             | FrameworkVersion.cs |     3.6.0.0     |      3.6.0.0
 
 #### Update Copyright Year
 
-The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `Program.cs` in `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
+The copyright year in all the source files is only updated as they are changed, but the copyright in the `[assembly: AssemblyCopyright("...")]` and the copyright text displayed by `nunitlite` should be updated to the year of the release. Search for `AssemblyCopyright` in the solution and update it where needed, then check `TextUI.cs` in `nunitlite-runner` for default values used when no attribute is found.
 
-If necessary, update the year in the general copyright notices LICENSE.txt and License.rtf. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
+If necessary, update the year in the general copyright notice LICENSE.txt. Note that these copyright notices refer to each of the packages in their entirety. Each of the `.nuspec` files in the `nuget` subdirectory contains a copyright line, which should also be updated.
 
 Notices at the top of each source code file are only updated when copyrightable changes are made to the file, not at the time of release.
 
@@ -70,7 +66,7 @@ Notices at the top of each source code file are only updated when copyrightable 
 The package version is updated in the `build.cake` file. The following lines appear near the beginning of the file. Update the versions and modifiers as necessary.
 
 ```
-var version="3.5.0";
+var version="3.6.0";
 var modifier=""
 ```
 
@@ -132,19 +128,11 @@ Creating the Release
 
       `build -Target Package`
 
-      **CF** `build -Target PackageCF`
-
 6. Verify that the correct packages have been created in the `package` sub-directory:
 
   * NUnit-VERSION.zip
-  * NUnitCF-VERSION.zip
-  * NUnitSL-VERSION.zip
   * NUnit.VERSION.nupkg
-  * NUnitCF.VERSION.nupkg
-  * NUnit.SL50.VERSION.nupkg
   * NUnitLite.VERSION.nupkg
-  * NUnitLiteCF.VERSION.nupkg
-  * NUnitLite.SL50.VERSION.nupkg
 
 Testing the Release
 -------------------
@@ -162,21 +150,7 @@ portable\nunitlite-runner.exe portable\nunit.framework.tests.dll
 portable\nunitlite.tests.exe
 ```
 
- * **Silverlight Zip** Unzip the file, change into the bin\sl-5.0 directory and run the tests. Change the following command to match the location of sllauncher.exe on your system.
-
-```
-"C:\Program Files\Microsoft Silverlight\sllauncher.exe" /emulate:nunit.framework.tests.xap /origin:http://localhost
-```
-
- * **CF Zip** Unzip the file, change into the bin\netcf-3.5 directory and run the tests. The following command runs the tests using your desktop runtime. **TODO:** Develop an approach to testing on devices.
-
-```
-nunit.framework.tests.exe
-```
-
  * **NuGet Packages** Create a test project. Install the packages and verify that they apply to the project correctly. Run tests.
-
-It is also a good idea to install over the previous version to ensure that all files that need upgrades are upgraded. This will catch changes in the Engine.API.
 
 Archiving the Release
 ---------------------
@@ -217,7 +191,7 @@ Publishing the Release
 
 4. Verify that the info is correct and click the "Submit" button.
 
-5. Repeat steps 2-4 for NUnitLite.VERSION.nupkg, NUnit.Console.VERSION.nupkg, NUnitCF.VERSION.nupkg and NUnitLiteCF.VERSION.nupkg, NUnit.SL50.VERSION.nupkg and NUnitLite.SL50.nupkg. **Do not upload NUnit.Engine.Tool.VERSION.nupkg.**
+5. Repeat steps 2-4 for NUnitLite.VERSION.nupkg
 
 #### Merge into Master
 
