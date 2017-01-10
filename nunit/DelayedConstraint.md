@@ -23,8 +23,7 @@ With NUnit 3.6, an enhanced syntax is available that allows expressing the delay
 
 ```C
    After(4).Seconds
-   After(1).Minutes.PollingEvery(10).Seconds
-   After(500).MilliSeconds
+   After(1).Minutes.PollEvery(500).MilliSeconds
 ```
 
 Only Minutes, Seconds and MilliSeconds (note capital-S) are accepted as time modifiers. The default is to use MilliSeconds.
