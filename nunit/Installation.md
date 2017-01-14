@@ -11,6 +11,7 @@ In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuG
 Open the Browser tab, and Scroll or use search to locate the **NUnit** and **NUnit.Console** packages. 
 
 **NUnit** and **NUnit.Console**
+
 Install both packages. The **NUnit** package should be referenced by each of your test assemblies, but not by any others.
 
 Locate nunit3-console in the **packages\NUnit.ConsoleRunner.3.X.X\tools** (or your configured package directory of choice) directory under your solution. This is the location from which you must run nunit3-console when if you would like to run NUnit3 from console. 
