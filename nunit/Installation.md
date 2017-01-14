@@ -8,10 +8,18 @@ To get a copy of the NUnit 3, you can use various installation approaches.
 ### Using NuGet Packages
 
 In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...
+Open the Browser tab, and Scroll or use search to locate the **NUnit** and **NUnit.Console** packages. 
 
-Scroll or use search to locate the **NUnit** and **NUnit.Console** packages. Install both packages. The **NUnit** package should be referenced by each of your test assemblies, but not by any others.
+**NUnit** and **NUnit.Console**
+Install both packages. The **NUnit** package should be referenced by each of your test assemblies, but not by any others.
 
-Locate nunit3-console in the **packages\NUnit.ConsoleRunner.3.X.X\tools** directory under your solution. This is the location from which you must run nunit3-console when using this approach. We recommend you only use this approach when running under the control of a script on your build server.
+Locate nunit3-console in the **packages\NUnit.ConsoleRunner.3.X.X\tools** (or your configured package directory of choice) directory under your solution. This is the location from which you must run nunit3-console when if you would like to run NUnit3 from console. 
+We recommend you only use this approach when running under the control of a script on your build server.
+
+**NUnit3TestAdapter**
+If you want to run NUnit tests automated on a clean machine without any installations (e.g. TFS build agent) - and you're using Visual Studio 2012 or later, use this package.
+It's based on https://github.com/nunit/docs/wiki/Visual-Studio-Test-Adapter and provides a compiled NUnit3 Visual Studio Test Adapter.
+
 
 ### Using NuGet NUnitLite Package
 
