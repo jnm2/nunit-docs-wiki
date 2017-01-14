@@ -18,7 +18,9 @@ Locate nunit3-console in the **packages\NUnit.ConsoleRunner.3.X.X\tools** (or yo
 We recommend you only use this approach when running under the control of a script on your build server.
 
 **NUnit3TestAdapter**
+
 If you want to run NUnit tests automated on a clean machine without any installations (e.g. TFS build agent) - and you're using Visual Studio 2012 or later, use this package.
+
 It's based on https://github.com/nunit/docs/wiki/Visual-Studio-Test-Adapter and provides a compiled NUnit3 Visual Studio Test Adapter.
 
 
