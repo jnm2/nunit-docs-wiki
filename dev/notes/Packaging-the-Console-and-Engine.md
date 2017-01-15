@@ -126,7 +126,7 @@ Creating the Release
   * NUnit.ConsoleRunner.VERSION.nupkg
   * NUnit.Engine.VERSION.nupkg
   * NUnit.Engine.Api.VERSION.nupkg
-  * NUnit.Engine.Tool.VERSION.nupkg (Do not release)
+  * NUnit.Engine.Tool.VERSION.nupkg **(Do not release)**
   * NUnit.Runners.VERSION.nupkg
 
 Testing the Release
@@ -166,11 +166,11 @@ Publishing the Release
 
 2. Select Upload package.
 
-3. Browse to the location of the NUnit.VERSION.nupkg you created and upload it.
+3. Browse to the location of the NUnit.Console.VERSION.nupkg you created and upload it.
 
 4. Verify that the info is correct and click the "Submit" button.
 
-5. Repeat steps 2-4 for NUnitLite.VERSION.nupkg, NUnit.Console.VERSION.nupkg, NUnitCF.VERSION.nupkg and NUnitLiteCF.VERSION.nupkg, NUnit.SL50.VERSION.nupkg and NUnitLite.SL50.nupkg. **Do not upload NUnit.Engine.Tool.VERSION.nupkg.**
+5. Repeat steps 2-4 for the other NuGet packages. **Do not upload NUnit.Engine.Tool.VERSION.nupkg.**
 
 #### Merge into Master
 
