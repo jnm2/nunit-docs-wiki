@@ -1,4 +1,31 @@
-﻿###NUnit-Gui 0.1 - April 8, 2016
+###﻿NUnit-Gui 0.3 - January 1, 2017
+
+This release continues development of the Gui.
+
+####Issues Resolved
+
+ * 61     When loading tests using an agent, a cmd window is opened
+ * 86     Review and Revise Settings Panels
+ * 101    Bug Fix when viewing by category
+ * 102    Add Extension Manager dialog
+ * 117    System.FormatException on parsing duration
+ * 122    Update package references to latest versions
+ * 123    Create temporary thread to run tests
+ * 126    Need an easier way to make Engine changes for the Gui
+ * 133    Initial NUnit Tree display should show top of tree
+ * 134    File Exit command doesn't work
+ * 146    Remove additional unused settings
+
+###NUnit-Gui 0.2 - April 12, 2016
+
+The 0.1 release had two critical bugs, which are fixed in this one. This release is still intended solely for the purpose of reviewing the look and feel of the new gui.
+
+####Issues Resolved
+
+ * 93 Crash on startup if newer NUnit installation
+ * 94 BadImageFormatException loading dlls targeting .NET 4.0 and higher﻿
+
+###NUnit-Gui 0.1 - April 8, 2016
 
 ####General
 
