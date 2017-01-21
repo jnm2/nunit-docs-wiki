@@ -2,6 +2,10 @@
 
 This release of the framework no longer includes builds for Compact Framework or for SilverLight, but adds a .NET Standard 1.6 build. If anyone still using Compact Framework or SilverLight and would like to continue development on those versions of the framework, please contact the NUnit team.
 
+####Console Runner
+
+ * A new option, --skipnontestassemblies, will skip any non-test assemblies specified, without error.
+
 ####Framework
 
  * .NET Standard 1.6 is now supported
