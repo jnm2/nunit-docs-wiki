@@ -119,6 +119,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 
 <tr><th>--list-extensions</th>
     <td>Lists all extension points and the extensions installed on each of them.</td></tr>
+
+<tr><th>--set-principal-policy=POLICY</th>
+    <td>Set the principal policy for the test domain to POLICY. Values: UnauthenticatedPrincipal, NoPrincipal, WindowsPrincipal</td></tr>
     
 <tr><th>--noheader, --noh</th>
     <td>Suppress display of program information at start of run.</td></tr>
