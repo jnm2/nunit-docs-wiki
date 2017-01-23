@@ -184,7 +184,7 @@ Optional element that may appear on tests or suites that were not executed. Cont
  * **Attributes** None
 
 ##&lt;failure&gt;
-Optional element that appears on all tests or suites with a result of 'Failed'. Contains the error message and optionally a stack trace.
+Optional element that appears on all tests or suites with a result of 'Failed'. Optionally contains the error message and/or a stack trace.
  * **Containing Elements:** [&lt;test-suite&gt;](#test-suite), [&lt;test-case&gt;](#test-case)
  * **Contained Elements:** [&lt;message&gt;](#message), [&lt;stack-trace&gt;](#stack-trace)
  * **Attributes** None
