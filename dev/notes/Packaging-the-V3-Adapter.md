@@ -86,10 +86,10 @@ Test both the vsix and nuget packages using each version of Visual Studio you ha
 Prerequisites
 -----
 1. **Visual Studio**
-You need Visual Studio 2013 or 2015.
+   Visual Studio 2017 is required in order to build the vsix. Visual Studio 2013 or 2015 may be used for other development.
 
-1. **Visual Studio SDK**  
-You need this to work with the vsix.
+2. **Visual Studio SDK**  
+   You need this to work with the vsix.
 
 
 
