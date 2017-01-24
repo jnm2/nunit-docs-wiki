@@ -1,3 +1,11 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.6.1 - December 5, 2016
+
+This was a hotfix release of the vsix package only, fixing an issue that prevented it from installing under VS2012 and 2013.
+
+#####Resolved Issues
+
+ * 260 VSIX no longer visible in Visual Studio 2012
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.6 - November 15, 2016
 
 #####Features
