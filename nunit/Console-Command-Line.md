@@ -24,6 +24,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 
 <table class="nunit" style="margin-left:0; max-width:700px">
 
+<tr><th>@FILE</th>
+    <td>Specifies the name (or path) of a FILE containing additional command-line arguments to be interpolated at the point where the @FILE expression appears. Each line in the file represents a separate command-line argument.
+
 <tr><th>--test=NAMES</th>
     <td>Comma-separated list of NAMES of tests to run or explore. This option may be repeated. Note that this option is retained for backward compatibility. The --where option can now be used instead.</td></tr>
     
