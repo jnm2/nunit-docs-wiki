@@ -1,3 +1,22 @@
+####NUnit3 Test Adapter for Visual Studio - Version 3.7 - January 25, 2017
+
+#####Features
+
+ * The adapter now uses version 3.6 of the engine to run tests
+ * Warning messages are displayed. Note that Visual Studio currently lists them as skipped.
+ * Multiple assertion failures in a Multiple Assert block are displayed.
+
+#####Resolved Issues
+
+ * 218 No tests found to run when TestFixture is a nested class
+ * 256 Rename $RANDOM_SEED$
+ * 258 Modify adapter to display multiple assert information
+ * 268 Make the Icon Larger
+ * 272 URL for "More information" should point to correct landing page
+ * 273 Report Warnings in VS adapter
+ * 276 Adapter requires test project pbd's to be generated for tests to be executed
+ * 288 Test parameters containing semicolons are truncated
+
 ####NUnit3 Test Adapter for Visual Studio - Version 3.6.1 - December 5, 2016
 
 > **Note:** This was a hotfix release of the vsix package only, fixing an issue that prevented it from installing under VS2012 and 2013.
