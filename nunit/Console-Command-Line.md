@@ -132,9 +132,6 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 <tr><th>--nocolor, --noc</th>
     <td>Displays console output without color.</td></tr>
     
-<tr><th>--verbose, -v</th>
-    <td>Display additional information as the test runs.</td></tr>
-    
 <tr><th>--help, -h</th>
     <td>Display this message and exit.</td></tr>
     
