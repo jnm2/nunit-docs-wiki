@@ -33,7 +33,7 @@ NUnit is licensed under the MIT / X11 license. Each file is prefixed by the [[NU
 
 ### Language Level
 
-Each NUnit project sets it's own C# language level. We generally aim to keep the code build-able by folks who don't necessarily have the latest compilers, so this is sometimes not the very latest level. Currently, the maximum level for most NUnit projects is C# 6.
+Each NUnit project sets its own C# language level. We generally aim to keep the code buildable by folks who don't necessarily have the latest compilers, so this is sometimes not the very latest level. Currently, the maximum level for most NUnit projects is C# 6.
 
 Note that targeting a particular level of C# does not mean that all features are available. Features are limited based on the framework targeted as well. For example, the engine currently targets .NET 2.0, which means that `System.Linq` extensions cannot be used in the code.
 
