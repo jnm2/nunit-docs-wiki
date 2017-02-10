@@ -111,6 +111,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 <tr><th>--trace=LEVEL</th>
     <td>Set internal trace LEVEL. Values: Off, Error, Warning, Info, Verbose (Debug)</td></tr>
     
+<tr><th>--encoding=CODEPAGE</th>
+    <td>Specify the Console CODEPAGE, such as utf-8, ascii, etc. This option is not normally needed unless your output includes special characters. The page specified must be available on the system.</td></tr>
+
 <tr><th>--shadowcopy</th>
     <td>Tells .NET to copy loaded assemblies to the shadowcopy directory.</td></tr>
     
