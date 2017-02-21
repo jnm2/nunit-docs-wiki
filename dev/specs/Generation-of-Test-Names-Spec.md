@@ -74,6 +74,6 @@ This would result in the display of the test name as
          SomeMethod(User Argument)
 ```
 
-Note that in this usage, it will generally only make sense to use `{m}`, `{a}` or `{o}` specifiers. However, NUnit will use whatever is provided.
+Note that in this usage, it will generally only make sense to use `{m}`, `{a}` or `{0}` through `{9}` specifiers. However, NUnit will use whatever is provided.
 
 
