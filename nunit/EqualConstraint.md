@@ -51,8 +51,8 @@ Assert.That(2 + 2 == 4);
 Assert.That(2 + 2, Is.Not.EqualTo(5));
 Assert.That(2 + 2 != 5);
 Assert.That( 5.0, Is.EqualTo( 5 );
-Assert.That( 5.5, Is.EqualTo( 5 ).Within(0.075);
-Assert.That( 5.5, Is.EqualTo( 5 ).Within(1.5).Percent;
+Assert.That( 5.5, Is.EqualTo( 5 ).Within(0.075));
+Assert.That( 5.5, Is.EqualTo( 5 ).Within(1.5).Percent);
 ```
 
 <h4>Comparing Floating Point Values</h4>
@@ -67,10 +67,10 @@ this is safer than a fixed tolerance because it automatically compensates
 for the added inaccuracy of larger numbers.
 
 ```C#
-Assert.That( 2.1 + 1.2, Is.EqualTo( 3.3 ).Within( .0005 );
-Assert.That( double.PositiveInfinity, Is.EqualTo( double.PositiveInfinity ) );
-Assert.That( double.NegativeInfinity, Is.EqualTo( double.NegativeInfinity ) );
-Assert.That( double.NaN, Is.EqualTo( double.NaN ) );
+Assert.That( 2.1 + 1.2, Is.EqualTo( 3.3 ).Within( .0005 ));
+Assert.That( double.PositiveInfinity, Is.EqualTo( double.PositiveInfinity ));
+Assert.That( double.NegativeInfinity, Is.EqualTo( double.NegativeInfinity ));
+Assert.That( double.NaN, Is.EqualTo( double.NaN ));
 Assert.That( 20000000000000004.0, Is.EqualTo(20000000000000000.0).Within(1).Ulps);
 ```
 
@@ -81,12 +81,11 @@ causes the comparison to be case-insensitive. It may also be used when
 comparing arrays or collections of strings.
 
 ```C#
-Assert.That( "Hello!", Is.Not.EqualTo( "HELLO!" ) );
-Assert.That( "Hello!", Is.EqualTo( "HELLO!" ).IgnoreCase );
+Assert.That( "Hello!", Is.Not.EqualTo( "HELLO!" ));
+Assert.That( "Hello!", Is.EqualTo( "HELLO!" ).IgnoreCase);
 
 string[] expected = new string[] { "Hello", World" };
 string[] actual = new string[] { "HELLO", "world" };
-Assert.That( actual, Is.EqualTo( expected ).IgnoreCase;
 ```
 
 ####Comparing DateTimes and TimeSpans
@@ -104,9 +103,9 @@ modifier to check the offset along with the date and time.
 DateTime now = DateTime.Now;
 DateTime later = now + TimeSpan.FromHours(1.0);
 
-Assert.That( now, Is.EqualTo(now) );
-Assert.That( later. Is.EqualTo(now).Within(TimeSpan.FromHours(3.0);
-Assert.That( later, Is.EqualTo(now).Within(3).Hours;
+Assert.That( now, Is.EqualTo(now));
+Assert.That( later. Is.EqualTo(now).Within(TimeSpan.FromHours(3.0));
+Assert.That( later, Is.EqualTo(now).Within(3).Hours);
 ```
 
 <h4>Comparing Arrays and Collections</h4>
@@ -133,7 +132,7 @@ Assert.That(i3, Is.Not.EqualTo(iunequal));
 
 int array2x2 = new int[,] { { 1, 2 } { 3, 4 } };
 int array4 = new int[] { 1, 2, 3, 4 };		
-Assert.That( array2x2, Is.Not.EqualTo( array4 ) );
+Assert.That( array2x2, Is.Not.EqualTo( array4 ));
 Assert.That( array2x2, Is.EqualTo( array4 ).AsCollection );
 ```
 
@@ -169,7 +168,7 @@ may supply an <b>IEqualityComparer</b>, <b>IEqualityComparer&lt;T&gt;</b>,
 as the argument to <b>Using</b>.
 
 ```C#
-Assert.That( myObj1, Is.EqualTo( myObj2 ).Using( myComparer ) );
+Assert.That( myObj1, Is.EqualTo( myObj2 ).Using( myComparer ));
 ```
 
 Prior to NUnit 2.6, only one comparer could be used. If multiple
@@ -190,7 +189,7 @@ var list1 = new List<int>();
 var list2 = new List<int>();
 var myComparer = new ListOfIntComparer();
 ...
-Assert.That( list1, Is.EqualTo(list2).Using( myComparer ) );
+Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 ```
 
 <h4>Notes</h4>
