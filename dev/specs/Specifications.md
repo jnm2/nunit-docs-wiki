@@ -16,7 +16,7 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[NUnitLite Portable Spec]]                | Yes            |
 |                 | [[Include and Exclude Attributes Spec]]    | No             |
 |                 | [[Warning Level Assert Spec]]              | No             |
-|                 | [[Multiple Asserts Spec]]                  | No             |
+|                 | [[Multiple Asserts Spec]]                  | Yes            |
 |                 | [[File Directory and Path Assertions Spec]]| Yes            |
 |                 | [[Extended Constraint Syntax Spec]]        | No             |
 |                 | [[Dynamic Test Cases Spec]]                | No             |
