@@ -12,6 +12,7 @@
     * [[Known Problems]]
     * [[Tips and Tricks]]
     * [[Release Notes|Adapter Release Notes]]
+    * [[Release Notes|AdapterV2 Release Notes]]
     * [[License|Adapter License]]
   * **[[Test Generator|Visual-Studio-Test-Generator]]**
 * **[[User FAQ]]**

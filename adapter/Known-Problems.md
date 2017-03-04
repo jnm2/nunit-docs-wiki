@@ -11,6 +11,10 @@
 5. A VSIX adapter of older version will be used regardless of version of NuGet adapter.
 
    Workaround: Make sure you have upgraded VSIX adapter to latest version, or uninstalled it if you have the NuGet adapter in a solution. The adapter will display its version number in the Output window under Tests.
+   
+ 6. Visual Studio 2017 Live Unit Testing require NUnit3.  The NUnit2 adapter doesn't support Live Unit Testing.
+
+
 
 ###Issues with other tools
 
