@@ -9,6 +9,10 @@
  * #84 NUnit load failure 
  * #87 Can't overload async/await methods
 
+#####Notes
+ * The NUnit V2 adapter does not support the Live Unit Testing feature in VS 2017.  That support is only included with the NUnit V3 adapter. 
+ * The package including both the adapter and the framework are discontinued. Please install the separate packages instead when upgrading. 
+
 
 ####NUnit Test Adapter for Visual Studio - Version 2.0 - April 1, 2015
 

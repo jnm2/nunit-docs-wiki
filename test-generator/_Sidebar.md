@@ -7,6 +7,8 @@
 * **Visual Studio**
   * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
   * **Test Generator**
+     * [[Installation|TestGenerator Installation]]
+     * [[Release Notes|TestGenerator Release Notes]]
 * **[[User FAQ]]**
   
 ###Developer Docs
