@@ -2,7 +2,13 @@
 
 #####Features
  * #8 Support for VS 2017
- 
+
+
+ #####Bugs and minor fixes
+  * #6 NUnit3 tests using removed ExpectedException attribute
+  * #10 Specify NUnit versions as v2 and v3
+  * #11 Update more information link
+  * #14 Update NUnit version (will use latest version)
 
 
 
