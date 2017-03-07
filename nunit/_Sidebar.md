@@ -1,9 +1,9 @@
 ###User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
-  * **[[Release Notes]]**<br/>
+  * **Release Notes**<br/>
     * [[Framework|Framework-Release-Notes]]
-    * [[Console Runner and Engine|Console-Release-Notes]]
+    * [[Console and Engine|Console-Release-Notes]]
   * **[[License]]**<br/>
   * **Getting Started**
     * [[Installation]]
