@@ -1,7 +1,9 @@
 **IgnoreAttribute** is used to indicate that a test should not be executed for
-some reason. Note that with NUnit 3.0, the reason must be specified. Ignored 
+some reason. Note that with NUnit 3, the reason must be specified. Ignored 
 tests are displayed by the runners as warnings in order to provide a reminder
 that the test needs to be corrected or otherwise changed and re-instated.
+
+Note that the Ignore Attribute is attached to a method. If you have multiple Test Case Attributes on one method, adding an Ignore Attribute will ignore all test cases. To ignore individual test cases, use the Ignore named parameter on the [[TestCase Attribute]].
 
 ####Test Fixture Syntax
 
