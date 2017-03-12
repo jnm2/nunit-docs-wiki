@@ -51,7 +51,7 @@ TestCaseAttribute supports a number of additional named parameters:
 
  * **Explicit** is set to true in order to make the individual test case Explicit. Use **Reason** to explain why.
 
- * **Ignore*** causes the test case to be ignored and specifies the reason.
+ * **Ignore** causes the test case to be ignored and specifies the reason.
 
  * **IgnoreReason** causes this test case to be ignored and specifies the reason.
 
