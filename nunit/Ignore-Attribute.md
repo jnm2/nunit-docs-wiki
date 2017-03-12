@@ -3,7 +3,7 @@ some reason. Note that with NUnit 3, the reason must be specified. Ignored
 tests are displayed by the runners as warnings in order to provide a reminder
 that the test needs to be corrected or otherwise changed and re-instated.
 
-Note that the Ignore Attribute is attached to a method. If you have multiple Test Case Attributes on one method, adding an Ignore Attribute will ignore all test cases. To ignore individual test cases, use the Ignore named parameter on the [[TestCase Attribute]].
+Note that the **IgnoreAttribute** is attached to a method. If you have multiple test cases using the same method, adding  it will ignore all the cases. To ignore individual test cases see [Ignoring Individual Test Cases](#ignoring-individual-test-cases) below.
 
 ####Test Fixture Syntax
 
@@ -59,3 +59,13 @@ public class MyTests
 In the above example, it's assumed that the test would fail if run. With the
 IgnoreAttribute, it will give a warning until the specified date. After that
 time, it will run normally and either pass or fail.
+
+####Ignoring Individual Test Cases
+
+The **IgnoreAttribute** causes all the test cases using the method on which it is placed to be ignored. Ignoring individual test cases is possible, depending on how they are specified.
+
+   Attribute        |   How to ignore a case
+--------------------|------------------------------------------------------------------
+**TestCase**        | Use the **Ignore** named parameter of the **TestCaseAttribute.**
+**TestCaseSource**  | Use **TestCaseData** for the source and set the **Ignore** property.
+
