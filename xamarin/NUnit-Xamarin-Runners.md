@@ -23,7 +23,7 @@ The following options are available:
 | CreateXmlResultFile | 3.6.1         | Boolean                         | If True, create a xml file containing results.  |
 | ResultFilePath      | 3.6.1         | String                          | Specify file path to save xml result file.      |
 
-###TcpWriterInfo
+### TcpWriterInfo
 `TcpWriterInfo` takes three parameters: hostname, port, and an optional timeout in seconds (default 10).
 
 ```C#
