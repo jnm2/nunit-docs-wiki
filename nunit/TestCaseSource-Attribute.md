@@ -5,11 +5,11 @@ The data is kept separate from the test itself and may be used by multiple
 test methods. See [[Parameterized Tests]] for a general introduction to
 tests with arguments.
 
-####Usage
+### Usage
 
 Consider a test of the divide operation, taking three arguments: the numerator, the denominator and the expected result. We can specify the test and it's data using one of the forms of **TestCaseSourceAttribute**:
 
-######Form 1 - [TestCaseSource(string sourceName)]
+#### Form 1 - [TestCaseSource(string sourceName)]
 
 ```C#
 public class MyTestClass
@@ -35,13 +35,13 @@ to provide test cases. It has the following characteristics:
 
  * It __must__ be static. This is a change from NUnit 2.x.
 
- * It must return an IEnumerable or a type that implements IEnumerable. For fields an array is generally used. For properties and methods, you may return an array or implement your own iterator.
+ * It must return an `IEnumerable` or a type that implements `IEnumerable`. For fields an array is generally used. For properties and methods, you may return an array or implement your own iterator.
 
  * The individual items returned by the enumerator must be compatible
    with the signature of the method on which the attribute appears.
    See the **Test Case Construction** section below for details.
 
-######Form 2 - [TestCaseSource(Type sourceType, string sourceName)]
+#### Form 2 - [TestCaseSource(Type sourceType, string sourceName)]
 
 ```C#
 public class MyTestClass
@@ -73,13 +73,13 @@ to provide test cases. It has the following characteristics:
 
  * It __must__ be static. This is a change from NUnit 2.x.
 
- * It must return an IEnumerable or a type that implements IEnumerable. For fields an array is generally used. For properties and methods, you may return an array or implement your own iterator.
+ * It must return an `IEnumerable` or a type that implements `IEnumerable`. For fields an array is generally used. For properties and methods, you may return an array or implement your own iterator.
 
  * The individual items returned by the enumerator must be compatible
    with the signature of the method on which the attribute appears. 
    See the **Test Case Construction** section below for details.
 
-######Form 3 - [TestCaseSource(Type sourceType)]
+#### Form 3 - [TestCaseSource(Type sourceType)]
 
 ```C#
 public class MyTestClass
@@ -103,22 +103,22 @@ class DivideCases : IEnumerable
 ```
 
 The Type argument in this form represents the class that provides test cases.
-It must have a default constructor and implement <b>IEnumerable</b>. The enumerator
+It must have a default constructor and implement `IEnumerable`. The enumerator
 should return test case data compatible with the signature of the test on which the attribute appears.
 See the **Test Case Construction** section below for details.
 
-####Named Parameters
+#### Named Parameters
 
 TestCaseSourceAttribute supports one named parameter:
 
  * **Category** is used to assign one or more categories to every test case returned from this source.
 
-####Test Case Construction
+#### Test Case Construction
 
 In constructing tests, NUnit uses each item returned by
 the enumerator as follows:
 
-1. If it is an object implementing `NUnit.Framework.ITestCaseData`, 
+1. If it is an object derived from the `TestCaseDataParameters` class, 
    its properties are used to provide the test case. NUnit provides
    the [[TestCaseData]] type for this purpose.
 
@@ -139,14 +139,14 @@ the enumerator as follows:
    }
    ```
 
-3. If it is an <b>object[]</b>, its members are used to provide
+3. If it is an `object[]`, its members are used to provide
    the arguments for the method. This is the approach taken in
    the three examples above.
 
 4. If it is an array of some other type, NUnit can use it provided
    that the arguments to the method are all of that type. For example,
    the above examples could be modified to make the three nested arrays 
-   of type int[].
+   of type `int[]`.
 
 5. If anything else is returned, it is used directly as the sole 
    argument to the method. Because every returned value is used,
@@ -154,15 +154,15 @@ the enumerator as follows:
    requires a different number of arguments or
    an argument of a different type.
 
-#####Notes:
+#### Notes:
 
 1. It is recommended that the SourceType not be the same as the test fixture class. It may be a nested class, however, and probably should be if the data is only used within that fixture.
 
-2. A generic IEnumerable and IEnumerator may be used but NUnit will actually deal with the underlying IEnumerator in the current release.
+2. A generic `IEnumerable` and `IEnumerator` may be used but NUnit will actually deal with the underlying `IEnumerator` in the current release.
 
 3. The GetEnumerator method may use yield statements or simply return the enumerator for an array or other collection held by the class.
 
-####Order of Execution
+### Order of Execution
 
 Individual test cases are 
 executed in the order in which NUnit discovers them. This order does <b>not</b>
@@ -177,7 +177,7 @@ However, when a single <b>TestCaseSourceAttribute</b> is used by itself,
 the order of the tests follows exactly the order in which the test cases 
 are returned from the source.
    
-####Object Construction
+### Object Construction
 
 NUnit locates the test cases at the time the tests are loaded. It creates
 instances of each class used with the third form of the attribute and builds a list of 
