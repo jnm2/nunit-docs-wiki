@@ -37,7 +37,7 @@ domain.CreateInstanceAndUnwrap(
 // of running the test, which was passed to it by the framework.
 ```
 
-###API Classes
+### API Classes
 
 The following classes provide the API:
 * DriverSettings
@@ -48,13 +48,13 @@ The following classes provide the API:
   * ExploreTestsAction
   * RunTestsAction
 
-####DriverSettings
+#### DriverSettings
 
 This static class defines constants for the names of all settings recognized by the framework. We use DriverSettings rather than constants spread throughout the code in order to keep things consistent. It is intended that a copy of this class should be used by the engine as well.
 
 Once NUnit 3.0 is released, settings in this file should not be changed, although new settings may be added. See the code itself for a list of the settings currently in use.
 
-####FrameworkController
+#### FrameworkController
     
 A FrameworkController instance is created by the driver for each test assembly that must be loaded for browsing or execution. The constructor is defined as follows:
 
@@ -68,7 +68,7 @@ where
 
 This constructor always succeeds, provided that the arguments are of the correct types. Any operational errors will occur when specific actions like Load or Run are taken.
 
-####FrameworkControllerAction
+#### FrameworkControllerAction
 
 As the driver needs to perform some action, it creates a temporary instance of a class derived from FrameworkControllerAction. The constructors for all actions have the following points in common:
 
@@ -79,7 +79,7 @@ As the driver needs to perform some action, it creates a temporary instance of a
 
 Some actions take the string representation of a test filter as an argument. The NUnit Engine and Framework have shared knowledge of the format of a filter. For an empty filter (no filtering) use "<filter/>".
 
-####LoadTestsAction
+#### LoadTestsAction
 
 LoadTestsAction must be used before any other action can be called. Its constructor is as follows:
 
@@ -95,7 +95,7 @@ The result returned from handler.GetCallbackResult() is the XML representation o
 
 If the assembly can not be found or loaded, the same result is returned, but with a RunState of NotRunnable.
 
-####ExploreTestsAction
+#### ExploreTestsAction
 
 ExploreTestsAction is used to get the full tree of test results, as for display in a Gui. Its constructor is as follows:
 
@@ -115,7 +115,7 @@ If the assembly was not be found or unable to be loaded, a non-runnable assembly
 
 If this action is invoked without first invoking LoadTestsAction, an InvalidOperationException is thrown.
 
-####CountTestsAction
+#### CountTestsAction
 
 CountTestsAction is used to get the number of test cases that will be executed under a specified filter, for use in a progress display. It's constructor is as follows.
 
@@ -134,7 +134,7 @@ If the assembly was not found or unable to be loaded, "0" is returned.
 
 If this action is invoked without first invoking LoadTestsAction, an InvalidOperationException is thrown.
 
-####RunTestsAction
+#### RunTestsAction
 
 RunTestsAction is used to execute the loaded tests. It's constructor is as follows:
 
@@ -152,7 +152,7 @@ If the assembly was not found or could not be loaded, a non-runnable result with
 
 If this action is invoked without first invoking LoadTestsAction, an InvalidOperationException is thrown.
 
-###Unresolved Issues
+### Unresolved Issues
 
 * The existing (2.6.3) Gui runner uses BeginRun, which starts tests asynchronously. Our options are:
     ** Add BeginRun to the framework API

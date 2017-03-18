@@ -1,4 +1,4 @@
-###DRAFT
+### DRAFT
 
 This specification describes the overall layered architecture of the NUnit Platform. Details of individual components are covered only as they are relevant to the overall architecture.
 
@@ -71,5 +71,5 @@ The NUnitLite framework will be supported running on devices and reporting resul
 
 Various popular mock frameworks will be supported. NUnit's own self-tests now use the NSubstitute framework, which is packaged with NUnit, but users may make use of whatever mocking framework they prefer.
 
-####See also...
+#### See also...
 > You can also view the [[Original Architectural Overview Document | NUnit-3.0-Architecture-(2009)]] created for NUnit 3.0 in 2009.

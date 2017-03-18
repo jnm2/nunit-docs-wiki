@@ -8,7 +8,7 @@ Some of the characters used in the expression, such as space, | or &amp;, may ha
 
 Note that TSL is handled by the NUnit engine but requires framework support to actually select the tests. The NUnit 3.0 framework supports it fully. See below for support limitations in NUnit V2 tests.
 
-####Simple Expressions
+#### Simple Expressions
 
 Simple Expressions are essentially comparisons, consisting of a key word or property name on the left-hand side, an operator and some constant value on the right-hand side. Here are some examples:
 
@@ -47,7 +47,7 @@ The right-hand side of the comparison may be a sequence of non-blank, non-specia
 
 For matching regular expressions, NUnit users .NET's `Regex.IsMatch` method. For detailed information on the syntax of regular expressions in .NET, see https://msdn.microsoft.com/en-us/library/az24scfc%28v=vs.110%29.aspx.
 
-####Filtering Based on Properties
+#### Filtering Based on Properties
 
 Although the syntax will accept any property name - including names that don't actually exist - filtering is only useful for existing, string-valued properties.  The following properties are created by NUnit and have string values:
 
@@ -63,11 +63,11 @@ In general, these properties were not created with filtering in mind, but you ca
 
 We envision that most filtering by property will be based on user-defined properties, created for this purpose by inheriting from [[Property Attribute]]. When defining a property, you should keep the limitation to string values in mind. For example, a PriorityAttribute taking values of "High", "Medium" and "Low" could be used for filtering, while one that took the integers 1, 2 and 3 could not.
 
-####Filtering by Test Id
+#### Filtering by Test Id
 
 In addition to the left-hand-side items listed, NUnit supports filtering by the test id through the `id` keyword. The id may only be selected using the `==` operator and is intended only for use by programs that have explored the tests and cached the ids, not for general use by users. The reason for this restriction is that users have no way of predicting the id that will be assigned to a test. The id is not persistent across test runs and it's format can differ between different framework drivers.
 
-####Compound Expressions
+#### Compound Expressions
 
 Simple expressions may be combined using logical and, logical or, parentheses or negation operators.
 
@@ -82,7 +82,7 @@ The following are valid compound expressions:
   method =~ /Source.*Test/ and class =~ "My.Namespace.ClassName"
 ```
 
-####Usage on the Command Line
+#### Usage on the Command Line
 
 Because TSL contains special characters and may contain blank spaces, you will usually want to put the expression in quotes on the command line. Consequently, any strings within the TSL expression will most likely need to use an alternate quote character. For example:
 
@@ -90,7 +90,7 @@ Because TSL contains special characters and may contain blank spaces, you will u
   nunit-console test.dll --where "method =~ /Source.*Test/ && class =~ 'My.Namespace.Classname'"
 ````
 
-####Support in NUnit V2
+#### Support in NUnit V2
 
 The driver for NUnit V2 supports a subset of TSL. Because the V2 NUnit framework only allowed filtering on test names and categories, you may only use the `cat` and `test` keywords in comparisons. In addition, the regular expression operators `=~` and `!~` are not supported.
 

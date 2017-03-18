@@ -12,7 +12,7 @@ Test Names are generated in the framework and used in the other layers. There ar
 
 Note that the term "tests" in this section refers to test cases, test methods, test fixtures and other kinds of test suites. NUnit treats all of these as "tests" for most purposes.
 
-####Name Formatting Strings
+#### Name Formatting Strings
 
 TestName generation is driven driven by a name formatting string, which may be be specified or modified by the user. The format string may contain any of the following format specifiers, for which NUnit will make the appropriate substitution:
 
@@ -42,7 +42,7 @@ String arguments may be truncated to a maximum length. Either the {a} specifier 
 
   * {0:20} Truncate argument 0 to 20 characters.
 
-####Standard Name Formats
+#### Standard Name Formats
 
 Internally, NUnit uses certain standard formats unless overridden by the user. The standard format for generating a name from a test method and its arguments is
 
@@ -60,7 +60,7 @@ This leads to test names like
          Test4("This is quite long argument, so it is...")
 ```
 
-####Modifying the Name Format
+#### Modifying the Name Format
 
 The SetName property of TestCaseData allow setting the format string for the individual test case. So long as no format specifiers are used in the name, there will be no change in how this works. Any format specifier will trigger regeneration of the test name according to what is provided. For example, if the user wishes to specify only the argument portion of the name of a test method, while retaining the method name, the name could be set to
 

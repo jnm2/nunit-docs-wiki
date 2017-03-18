@@ -3,7 +3,7 @@ assembly was built, provided it is available on the test machine. If it is not a
 NUnit runs the assembly under the best available runtime that will allow it to run. If
 no suitable runtime can be found, an error is reported.
 
-####Overriding the Defaults
+#### Overriding the Defaults
 
 The default runtime framework may be overridden using command line options.
 In all cases, NUnit will attempt to honor the options given, issuing an

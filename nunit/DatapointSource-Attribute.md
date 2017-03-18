@@ -12,7 +12,7 @@ for which data is being supplied.
 > In earlier versions of NUnit, the obsolete <b>DatapointsAttribute</b>
 > was used in place of <b>DatapointSourceAttribute</b>.
    
-####Automatically Supplied Datapoints
+#### Automatically Supplied Datapoints
 
 It is normally not necessary to specify datapoints for 
 <b>boolean</b> or <b>enum</b> arguments.
@@ -25,7 +25,7 @@ can override this behavior by supplying your own datapoints. If you
 supply any datapoints for an argument, automatic datapoint generation 
 is suppressed.
    
-####Example
+#### Example
 
 For an example of use, see [[Theory Attribute]]
    

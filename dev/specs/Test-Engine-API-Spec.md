@@ -2,7 +2,7 @@
 
 The NUnit Test Engine API is our first published API for discovering, exploring and executing tests programmatically. Previously, third-party runners have had to use unsupported internal classes and methods in order to execute NUnit tests.  With the development of the Engine API, this is no longer necessary.
 
-####Objectives of the API
+#### Objectives of the API
 
 The API was developed with a number of objectives in mind:
 
@@ -16,13 +16,13 @@ The API was developed with a number of objectives in mind:
   * Other engine-layer features may be  introduced as new versions are created.
 * To isolate client runners from the engine itself, so that any updated engine installed will become immediately available to all clients on a machine without the need to upgrade the client.
 
-####Overview
+#### Overview
 
 The Engine API is included in the `nunit.engine.api` assembly, which must be referenced by any runners wanting to use it. This assembly is being released as version 3.0, to coincide with the versioning of other NUnit components. 
 
 The actual engine is contained in the `nunit.engine` assembly. This assembly is **not** referenced by the runners. Instead, the API is used to locate and load an appropriate version of the engine, returning an instance of the `ITestEngine` interface to the  runner.
 
-####Getting an Instance of the Engine
+#### Getting an Instance of the Engine
 
 The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member currently has the first overload listed. The added overloads are proposed enhancements. Additional overloads used for testing are found in the code itself.
 
@@ -35,15 +35,15 @@ We search for the engine in a standard set of locations, starting with the curre
 
 We encourage authors of runners to **not** use the private copy feature, but they may use it if they do not want to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
 
-#####Test Engine Search Order
+##### Test Engine Search Order
 
 [REWRITE] To be defined. In the current Alpha, the engine must be in the same directory as the runner exe.
 
-####Key Interfaces
+#### Key Interfaces
 
 The runner deals with the engine through a set of interfaces. These are quite general because we hope to avoid many changes to this API.
 
-#####[ITestEngine](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestEngine.cs)
+##### [ITestEngine](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestEngine.cs)
 
 This is the primary interface to the engine. The normal sequence of calls for initially accessing it is:
 
@@ -57,7 +57,7 @@ The engine provides a number of services, some internal and some public. Public 
 
 The final and probably most frequently used method on the interface is `GetRunner`. It takes a `TestPackage` and returns an `ITestRunner` that is appropriate for the options specified.
 
-#####[ITestRunner](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestRunner.cs)
+##### [ITestRunner](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestRunner.cs)
 
 This interface allows loading test assemblies, exploring the tests contained in them and running the tests. For the most common use cases, it isn't necessary to call `Load`, `Unload` or `Reload`. Calling either `Explore`, `Run` or `RunAsync` will cause the tests to be loaded automatically.
 
@@ -65,7 +65,7 @@ The `Explore` methods returns an `XmlNode` containing the description of all tes
 
 The progress of a run is reported to the `ITestEventListener` passed to one of the run methods. Notifications received on this interface are strings in XML format, rather than XmlNodes, so that they may be passed directly across a Remoting interface.
 
-#####Engine Services
+##### Engine Services
 
 The engine `Services` property exposes the [IServiceLocator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/IServiceLocator.cs) interface, which allows the runner to use public services of the engine. The following services are available publicly.
 
@@ -87,7 +87,7 @@ The following services are used internally by the engine but are not exposed pub
 | RuntimeFrameworkSelector | Determines the runtime framework to be used in running a test |
 | TestAgency               | Creates and manages Processes used to run tests       |
 
-#####Extensibility Interfaces
+##### Extensibility Interfaces
 
 The following interfaces are used by addins that extend the engine:
 

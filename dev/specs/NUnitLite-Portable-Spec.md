@@ -1,6 +1,6 @@
 > **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
 
-### Supported Platforms ###
+### Supported Platforms
 
 The portable framework will support the following platforms,
 
@@ -16,7 +16,7 @@ For full support, we or third party providers will need to provide platform spec
 
 .NET 4.5 on the desktop is automatically supported since the functionality is minimal supported feature set. 
 
-### NUnitLite Portable Assembly ###
+### NUnitLite Portable Assembly
 
 The creation of the portable version of NUnitLite will allow NUnit to work on mobile devices like Android, Windows Phone, iOS, etc. It will also simplify maintaining NUnit on additional platforms since they can all be supported from one assembly. With the .NET framework being used on so many platforms, a portable version is the only maintainable approach to supporting these platforms.
 
@@ -35,13 +35,13 @@ We may be able to get several of the deleted features working by reworking the r
 
 For example, to re-introduce the PlatformAttribute, we could include it in the platform specific runners instead of in the framework assembly. It might also be possible to inject information from the runner into the framework at runtime.
 
-### NUnitLite Runner ###
+### NUnitLite Runner
 
 By definition, portable code cannot contain any runner code. The runner code needs to be in a platform specific assembly. To demonstrate how this works, I created an nunitlite.runner-sl-5.0 project and converted the Silverlight tests to use the portable library and the SilverLight framework.
 
 We would then need to provide runners for each of the platforms we want NUnitLite to support, although we might want to leave some platforms up to others. For example, Xamarin already has decent NUnitLite 2.0 runners for iOS and Android.
 
-### Future of NUnitLite ###
+### Future of NUnitLite
 
 Depending on what we decide our vision is for the future of NUnitLite, the portable build might be rebranded NUnit for the various platforms it supports. The desktop version of NUnitLite is nearly feature compatible with the full framework. The CF version is adding features and becoming closer to the desktop version. Meanwhile, on phone platforms, we will be supporting a much smaller subset of features.
 

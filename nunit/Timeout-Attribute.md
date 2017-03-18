@@ -10,7 +10,7 @@ The specified timeout value covers the test setup and teardown as well as the te
 The attribute may also be specified on a fixture or assembly, in which
 case it indicates the default timeout for any subordinate test cases. When using the console runner, it is also possible to specify a default timeout on the command-line.
    
-####Example
+#### Example
 
 ```C#
 [Test, Timeout(2000)]
@@ -20,6 +20,6 @@ public void PotentiallyLongRunningTest()
 }
 ```
 
-####See Also...
+#### See Also...
  * [[Maxtime Attribute]]
    

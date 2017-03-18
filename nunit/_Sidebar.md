@@ -1,4 +1,4 @@
-###User Docs
+### User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
   * **Release Notes**<br/>
@@ -41,7 +41,7 @@
   * **[[Test Generator|Visual-Studio-Test-Generator]]**
 * **[[User FAQ]]**
 
-###Developer Docs
+### Developer Docs
 
  * **[[NUnit Vision]]**
  * **[[NUnit Roadmap]]**

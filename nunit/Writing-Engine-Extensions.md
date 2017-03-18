@@ -1,6 +1,6 @@
 The NUnit Test Engine uses a plugin architecture that allows users and third parties to add new functionality to the engine. The extensibility model defines a number of Extension Points to which Extensions may be added. This page gives general information that applies to all types of extensions you may want to write. The individual pages for each type of extension give specific details. For a detailed description of the engine extensibility architecture, see [[Engine Extensibility]].
 
-##Extension Attribute
+## Extension Attribute
 
 Every extension is implemented by a class with specific characteristics:
  * Has a default constructor so that NUnit can create an instance.
@@ -29,7 +29,7 @@ The attribute has four named properties, all optional:
 
   **Note:** Only engine versions 3.4 or later check this property. The only way to avoid errors in the case of lower engine versions is to not install such extensions.
 
-##ExtensionPropertyAttribute
+## ExtensionPropertyAttribute
 
 Using only the `ExtensionAttribute`, NUnit would have to create instances of every extension in order to ask questions like "What file extensions do you support." This would mean loading many potentially unneeded assemblies.
 
@@ -48,7 +48,7 @@ By use of the `ExtensionPropertyAttribute` NUnit is able to postpone loading the
 
 **Note:** Extensions are usually created each in their own assembly for efficiency. It's possible to have several related extensions in the same assembly, but they will all be loaded into memory as soon as one is used.
 
-##Kinds of Extensions
+## Kinds of Extensions
 
 As of version 3.4, the NUnit Engine supports four types of extensions. The individual pages for each type give specific details on implementing each of them.
 
@@ -57,7 +57,7 @@ As of version 3.4, the NUnit Engine supports four types of extensions. The indiv
 * [[Framework Drivers]]
 * [[Event Listeners]]
 
-##Installing Extensions
+## Installing Extensions
 
 Once an extension is written and compiled, it has to be placed somewhere such that NUnit will find it.
 

@@ -1,26 +1,26 @@
 Each NUnit test runs in an execution context, which includes information about the environment as well as the test itself. The `TestContext` class allows tests to access certain information about the execution context.
 
-###Static Properties
+### Static Properties
 
-####CurrentContext
+#### CurrentContext
 
 Gets the context of the currently executing test. This context
 is created separately for each test before it begins execution.
 See below for properties of the current context.
 
-####Out
+#### Out
 
 Gets a TextWriter used for sending output to the current test result.
 
-####Error
+#### Error
 
 Gets a TextWriter used for sending error output intended for immediate display.
 
-####Progress
+#### Progress
 
 Gets a TextWriter used for  sending normal (non-error) output intended for immediate display.
 
-####TestParameters
+#### TestParameters
 
 Test parameters may be supplied to a run in various ways, depending on the runner used. For example, the console runner provides a command-line argument and v3.4 of the NUnit 3 VS Adapter will supports specifying them in a .runsettings file. The static TestParameters property returns an object representing those passed-in parameters.
 
@@ -38,9 +38,9 @@ The TestParameters object supports the following methods:
 
 **Note** that all parameter values are strings. You may convert them to other Types using the generic `Get` method listed above or using your own code. An exception may be thrown if the supplied value cannot be converted correctly.
 
-###Static Methods
+### Static Methods
 
-####Write
+#### Write
 
 Writes text to the current test result.
 
@@ -62,7 +62,7 @@ Writes text to the current test result.
     Write(string format, object arg1, object arg2, object arg3)
     Write(string format, params object[] args)
 ```
-####WriteLine
+#### WriteLine
 
 Writes text to the current test result, followed by a newline.
 
@@ -85,7 +85,7 @@ Writes text to the current test result, followed by a newline.
     WriteLine(string format, object arg1, object arg2, object arg3)
     WriteLine(string format, params object[] args)
 ```
-####AddFormatter (3.2+)
+#### AddFormatter (3.2+)
 
 Adds a formatter for values based on some criterion, such as the Type of the value. The provided formatter will be used when an expected or actual value needs to be displayed as part of a message from a constraint.
 
@@ -96,9 +96,9 @@ Adds a formatter for values based on some criterion, such as the Type of the val
 
 Both `ValueFormatter` and `ValueFormatterFactory` are delegates. `ValueFormatter` takes a single object as an argument and returns it's string representation. The `AddFormatter` overload that takes a ValueFormatter is intended for use in most cases that arise.
 
-###Properties of the CurrentContext
+### Properties of the CurrentContext
 
-####Test
+#### Test
 
 Gets a representation of the current test, with the following properties:
 
@@ -108,7 +108,7 @@ Gets a representation of the current test, with the following properties:
  * **MethodName** - The name of the method representing the test, if any
  * **Properties** - An `IPropertyBag` of the test properties
 
-####Result
+#### Result
 
 Gets a representation of the test result, with the following properties:
 
@@ -128,7 +128,7 @@ Gets a representation of the test result, with the following properties:
 
 Although the outcome of the test may be accessed during setup or test execution, it only has a useful value in the teardown stage.
 
-#####Common Outcomes
+##### Common Outcomes
 
 The following is a list of outcomes currently produced by NUnit. Others may be added in the future.
    * Success: the test passed. (Status=Passed)
@@ -141,16 +141,16 @@ The following is a list of outcomes currently produced by NUnit. Others may be a
    * Explicit: the test was not run because it is marked Explicit. (Status=Skipped, Label=Explicit)
    * Skipped: the test was skipped for some other reason. (Status=Skipped, Label=empty)
 
-####TestDirectory
+#### TestDirectory
 
 Gets the full path of the directory containing the current test assembly. Not available in the Silverlight or Portable builds.
 
-####WorkDirectory
+#### WorkDirectory
 
 Gets the full path of the directory to be used for output from this test run. The XML result file and any redirected output files are located under this directory. This is normally the directory that was current when execution of
 NUnit began but may be changed by use of the **--work** option of nunit-console.
 
-####Random
+#### Random
 
 Returns a `Randomizer` object, which may be used in the test code to generate random values. These values are repeatable on reruns of the tests so long as (a) the test assembly is not changed and (b) the same seed is used. The initial random seed used in any test run may be found in the XML result file and may be provided to a subsequent run on the command line.
 

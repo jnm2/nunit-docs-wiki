@@ -4,7 +4,7 @@ Often when writing unit tests we have logic that we want to run upon certain eve
 
 `Action Attributes` allow the user to create custom attributes to encapsulate specific actions for use before or after any test is run.
 
-###The Problem of Composability
+### The Problem of Composability
 
 Suppose we have some tests in multiple fixtures that need the same in-memory test database to be created and destroyed on each test run. We could create a base fixture class and derive each fixture that depends on the test from that class. Alternatively, we could create a `SetUpFixture` class at the level of a common namespace shared by each fixture. 
 
@@ -13,7 +13,7 @@ ServiceLocator. We could put that functionality in the base fixture class or set
 
 If we now discover a third piece of functionality we need to reuse, like configuring the Thread's CurrentPrincipal in arbitrary ways, the complexity of the solution very quickly. We've violated the Single Responsibility Principle and are suffering for it. What we really want is the ability to separate the different pieces of resuable test logic and compose them together as our tests need them.
 
-###Resolving the Problem
+### Resolving the Problem
 
 `Action Attributes` get us out of our bind. Consider this example:
 
@@ -47,7 +47,7 @@ We can reuse these actions in other test fixtures, simply by decorating
 them with the appropriate attributes.without having to inherit from a base class.
 We can even develop and distribute a library of common test actions.
 
-###Implementing an Action Attribute
+### Implementing an Action Attribute
 
 Action attributes are defined by the programmer. They implement the `ITestAction`
 interface, which is defined as follows:
@@ -67,7 +67,7 @@ For convenience, you may derive your own action attribute from NUnit's `TestActi
 an abstract class with virtual implementations of each member of the interface. Alternatively, you
 may derive from `System.Attribute` and implement the interface directly.
 
-####Action Targets
+#### Action Targets
 
 The value returned from the `Targets` property determines when the `BeforeTest` and
 `AfterTest` methods will be called. The ActionTargets enum is defined as follows:
@@ -98,7 +98,7 @@ Action attributes that return `ActionTargets.Default` target the particular code
 which they are attached. When attached to a method, they behave as if `ActionTargets.Test` had been
 specified. When attached to a class or assembly, they behave as if `ActionTargets.Suite` was returned.
 
-####ITest Interface
+#### ITest Interface
 
 The `BeforeTest` and `AfterTest` methods are provided with information
 about the test that is about to run (before) or has just run (after). The `ITest`
@@ -150,7 +150,7 @@ public interface ITest : IXmlNodeBuilder
 }
 ```
 
-###Examples
+### Examples
 
 The examples that follow all use the following sample Action Attribute:
 
@@ -193,9 +193,9 @@ public class ConsoleActionAttribute : Attribute, ITestAction
 
 Note that the above Action Attribute returns the union of ActionTargets.Test and ActionTargets.Suite. This is permitted, but will probably not be the normal case. It is done here so we can reuse the attribute in multiple examples. The attribute takes a single constructor argument, a message, that will be used to write output to the console. All of the Before and After methods write output via the WriteToConsole method.
    
-###Method Attached Actions
+### Method Attached Actions
 
-####Example 1 (applied to simple test method):
+#### Example 1 (applied to simple test method):
 
 ```C#
 [TestFixture]
@@ -209,14 +209,14 @@ public class ActionAttributeSampleTests
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTest.
   Test ran.
   After Case: Hello, from ActionAttributeSampleTests.SimpleTest.
 ```
 
-####Example 2 (applied action twice to test method):
+#### Example 2 (applied action twice to test method):
 
 ```C#
 [TestFixture]
@@ -231,7 +231,7 @@ public class ActionAttributeSampleTests
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```
   Before Case: Greetings, from ActionAttributeSampleTests.SimpleTest.
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTest.
@@ -240,12 +240,12 @@ public class ActionAttributeSampleTests
   After Case: Greetings, from ActionAttributeSampleTests.SimpleTest.
 ```
 
-#####Remarks
+##### Remarks
 You are permitted to apply the same attribute multiple times. Note
 that the order in which attributes are applied is indeterminate, although
 it will generally be stable for a single release of .NET.
 
-####Example 3 (applied to a test method with test cases):
+#### Example 3 (applied to a test method with test cases):
 
 ```C#
 [TestFixture]
@@ -261,7 +261,7 @@ public class ActionAttributeSampleTests
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```
   Before Suite: Hello, from ActionAttributeSampleTests.SimpleTest.
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTest.
@@ -273,15 +273,15 @@ public class ActionAttributeSampleTests
   After Suite: Hello, from ActionAttributeSampleTests.SimpleTest.
 ```
 
-#####Remarks
+##### Remarks
 When one or more [TestCase] attributes are applied to a method, NUnit treats the method as a test suite.  
 You'll notice that BeforeTest was run once before the suite and AfterTest was run once after it.
 In addition, BeforeTest and AfterTest are run again for each individual test case.
 Note that the order in which test cases are executed is indeterminate.
 
-###Type Attached Actions
+### Type Attached Actions
 
-####Example 1:
+#### Example 1:
 
 ```C#
 [TestFixture] [ConsoleAction("Hello")]
@@ -301,7 +301,7 @@ public class ActionAttributeSampleTests
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```
   Before Suite: Hello, from ActionAttributeSampleTests.{no method}.
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTestOne.
@@ -313,10 +313,10 @@ public class ActionAttributeSampleTests
   After Suite: Hello, from ActionAttributeSampleTests.{no method}.
 ```
 
-#####Remarks
+##### Remarks
 In this case, the class is the test suite. BeforeTest and AfterTest are run once each for this class and then again for each test.
 
-####Example 2 (attached to interface):
+#### Example 2 (attached to interface):
 
 ```C#
 [ConsoleAction("Hello")]
@@ -335,7 +335,7 @@ public class ActionAttributeSampleTests : IHaveAnAction
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```
   Before Suite: Hello, from ActionAttributeSampleTests.{no method}.
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTest.
@@ -344,10 +344,10 @@ public class ActionAttributeSampleTests : IHaveAnAction
   After Suite: Hello, from ActionAttributeSampleTests.{no method}.
 ```
 
-#####Remarks
+##### Remarks
 Action attributes can be applied to an interface.  If a class marked with [TestFixture] implements an interface that has an action attribute applied to the interface, the class inherits the action attribute from the interface.  It behaves as if you applied the action attribute to the class itself.
 
-####Example 3 (action attribute is applied to interface and attribute uses interface to provide data to tests):
+#### Example 3 (action attribute is applied to interface and attribute uses interface to provide data to tests):
 
 ```C#
 [AttributeUsage(AttributeTargets.Interface)]
@@ -386,20 +386,20 @@ public class ActionAttributeSampleTests : IHaveAnAction
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```C#
   Hello, World!
 ```
 
-#####Remarks</h5>
+##### Remarks</h5>
 Here we see a new action attribute, `InterfaceAwareAction`.  This attribute uses the Fixture property of the TestDetails passed into BeforeTest and casts it to an interface, IHaveAnAction.  If the fixture implements the IHaveAnAction interface, the attribute sets the Message property to the string passed into the constructor of the attribute.  Since the attribute is applied to the interface, any class that implements this interface gets it's Message property set to the string provided to the constructor of the attribute.  This is useful when the action attribute provides some data or service to the tests.
 
 Note that this attribute inherits from `TestActionAttribute`. It uses the default (do-nothing) implementation
 of `AfterTest` and overrides both `BeforeTest` and `Target`.
 
-###Assembly Attached Action
+### Assembly Attached Action
 
-####Example 1:
+#### Example 1:
 
 ```C#
 [assembly: ConsoleAction("Hello")]
@@ -415,7 +415,7 @@ public class ActionAttributeSampleTests
 }
 ```
 
-#####Console Output:
+##### Console Output:
 ```C#
   Before Suite: Hello, from {no fixture}.{no method}.
   Before Case: Hello, from ActionAttributeSampleTests.SimpleTest.
@@ -424,5 +424,5 @@ public class ActionAttributeSampleTests
   After Suite: Hello, from {no fixture}.{no method}.
 ```
 
-#####Remarks
+##### Remarks
 The `ConsoleAction` attribute in this example is applied to the entire assembly.  NUnit treats an assembly as a test suite (in fact, a suite of suites).  Since the `ConsoleAction` attribute implements both ITestSuiteAction and ITestCaseAction, NUnit will run BeforeTest once before any tests are run in the assembly, and AfterTest after all tests are run in the assembly.  Additionally, BeforeTest and AfterTest will be run for every test case in the assembly.  It is unlikely that action attributes are applied to assemblies often.  However, it is useful to build action attributes that ensure state gets cleaned up before and after each tests to prevent individual tests from affecting the outcome of other test.  For example, if you have any static or cached data or services, an action attribute can be used to clean them up for each test.

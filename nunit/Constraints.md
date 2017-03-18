@@ -2,7 +2,7 @@ This page lists all the constraints available in NUnit.
 * [Alphabetical List of Constraints](#alphabetical-list-of-constraints)
 * [Constraints by Category](#constraints-by-category)
 
-####Alphabetical List of Constraints
+#### Alphabetical List of Constraints
 
 Constraint Name                      | Purpose
 -------------------------------------|--------
@@ -57,9 +57,9 @@ Constraint Name                      | Purpose
 [[UniqueItemsConstraint]]            |
 [[XmlSerializableConstraint]]        |
 
-####Constraints by Category
+#### Constraints by Category
 
-#####Collection Constraints
+##### Collection Constraints
   
 Constraint Name                      | Purpose
 -------------------------------------|--------
@@ -75,7 +75,7 @@ Constraint Name                      | Purpose
 [[SomeItemsConstraint]]              |
 [[UniqueItemsConstraint]]            |
 
-#####Comparison Constraints
+##### Comparison Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[GreaterThanConstraint]]            |
@@ -84,14 +84,14 @@ Constraint Name                      | Purpose
 [[LessThanOrEqualConstraint]]        |
 [[RangeConstraint]]                  |
 
-#####Compound Constraints
+##### Compound Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[AndConstraint]]                    |
 [[NotConstraint]]                    |
 [[OrConstraint]]                     |
 
-#####Condition Constraints
+##### Condition Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[EmptyConstraint]]                  |
@@ -100,7 +100,7 @@ Constraint Name                      | Purpose
 [[NullConstraint]]                   |
 [[TrueConstraint]]                   |
 
-#####File and Directory Constraints
+##### File and Directory Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[EmptyDirectoryConstraint]]         |
@@ -109,7 +109,7 @@ Constraint Name                      | Purpose
 [[SamePathOrUnderConstraint]]        |
 [[SubPathConstraint]]                |
 
-#####String Constraints
+##### String Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[EmptyStringConstraint]]            |
@@ -118,7 +118,7 @@ Constraint Name                      | Purpose
 [[StartsWithConstraint]]             |
 [[SubstringConstraint]]              |
 
-#####Type Constraints
+##### Type Constraints
 Constraint Name                      | Purpose
 -------------------------------------|--------
 [[AssignableFromConstraint]]         |

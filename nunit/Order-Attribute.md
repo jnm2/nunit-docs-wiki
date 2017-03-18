@@ -1,6 +1,6 @@
 The **OrderAttribute** may be placed on a test method to specify the order in which tests are run. Ordering is given by the required `order` argument to the attribute, an `int`.
 
-####Example
+#### Example
 
 The following tests will be run in the order:
  * TestA
@@ -22,7 +22,7 @@ public class MyFixture
 }
 ```
 
-####Notes:
+#### Notes:
 
 1. Tests with an `OrderAttribute` argument are started before any tests without the attribute.
 

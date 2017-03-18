@@ -11,7 +11,7 @@ Each method may be called without a message, with a simple text message or with
 a message and arguments. In the last case the message is formatted using the 
 provided text and arguments.
 	
-###Two Models
+### Two Models
 
 In NUnit 3.0, assertions are written primarily using the `Assert.That` method,
 which takes [[constraint objects|Constraints]] as an argument. We call this

@@ -1,6 +1,6 @@
 > **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
 
-####Background
+#### Background
 
 In the past, NUnit was able to capture text output (Console, Trace and Log) and associate it with the correct test. This was possible because only one test could run at a time, therefore any output received between the start and end of a particular test could be identified with that test.
 
@@ -13,7 +13,7 @@ In an environment where multiple tests may be running at the same time, this is 
 
 In this situation, the text output might be from Test A or from Test B. NUnit cannot associate the output with a particular test, although it is possible that the user might be able to interpret the result based on the actual content of the text output.
 
-####Approach
+#### Approach
 
 Since it does run tests in parallel, NUnit 3.0 needs a new approach to handling text output:
 
@@ -32,7 +32,7 @@ Since it does run tests in parallel, NUnit 3.0 needs a new approach to handling 
 
 * Console error output will not be captured, but will display directly to the Console when using any of the console runners.
 
-####Impact of Changes
+#### Impact of Changes
 
 Standard output sent to the console will not display until the test completes. It will be clearly associated with the test if test labels are in use. If error output is redirected to a file either through the operating system or by using a command-line option then it will be written to the file. When running in the Gui, it will be available for display when the test is selected.
 

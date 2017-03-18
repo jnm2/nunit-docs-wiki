@@ -9,7 +9,7 @@ of the data values provided on parameters - the combinatorial approach.
 This default may be modified by use of specific attributes on the
 test method itself.
 
-####Example
+#### Example
 
 ```C#
 [Test]
@@ -30,7 +30,7 @@ MyTest(3, "A")
 MyTest(3, "B")
 ```
 
-####Values with Enum or Boolean
+#### Values with Enum or Boolean
 
 The values attribute works in a special way with Enums and Boolean parameters.
 
@@ -56,7 +56,7 @@ public void MyBoolTest([Values]bool value)
 }
 ```
 
-####See also...
+#### See also...
  * [[Range Attribute]]
  * [[Random Attribute]]
  * [[Sequential Attribute]]

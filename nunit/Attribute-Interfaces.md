@@ -1,14 +1,14 @@
-###OUT OF DATE - UPDATE IN PROCESS
+### OUT OF DATE - UPDATE IN PROCESS
 
 NUnit 3.0 implements a great deal of its functionality in its attributes. This functionality is accessed through a number of standard interfaces, which are implemented by the attributes. This technical note describes the interfaces used on NUnit attributes and recognized by NUnit when loading or running tests.
 
 For ease of understanding, the interfaces are grouped according to the stage in the life-cycle of a test at which they are used. The two primary stages in the life of a test are Load-Time and Execution-Time.
 
-###Load-Time Interfaces
+### Load-Time Interfaces
 
 _Loading_ tests means loading the assembly into memory and examining its content to discover the classes and fixtures that represent tests. The internal structures that represent tests are built at this time. If requested by the application, information about the tests may be returned for display, as is done in the NUnit GUI runner.
 
-####IFixtureBuilder
+#### IFixtureBuilder
 
 This interface is used by attributes that know how to build a fixture from a user class. `IFixtureBuilder` is defined as follows:
 
@@ -27,7 +27,7 @@ The following NUnit attributes currently implement this interface:
 
 > It would make more sense for this interface method to return `TestFixture` rather than `TestSuite`. We use `TestSuite` because it is the common base for both `TestFixture` and `SetupFixture`. In a future version, we will try to adjust the hierarchy so that all suites based on a class are derived from `TestFixture`.
 
-####ITestBuilder
+#### ITestBuilder
 
 This interface is used by attributes that know how to build one or more parameterized `TestMethod` instances from a `MethodInfo`. `ITestMethodBuilder` is defined as follows:
 
@@ -51,7 +51,7 @@ The following NUnit attributes currently implement `ITestBuilder`:
 * `TestCaseSourceAttribute`
 * `TheoryAttribute`
 
-####ISimpleTestBuilder
+#### ISimpleTestBuilder
 
 This interface is used by attributes that know how to build a single, non-parameterized test from a `MethodInfo`. `ISimpleTestBuilder` is defined as follows:
 
@@ -68,7 +68,7 @@ NUnit treats attributes implementing this interface specially. They are ignored 
 
 In the current build, only `TestAttribute` implements this interface.
 
-####IImplyFixture
+#### IImplyFixture
 
 The `IImplyFixture` interface is an empty interface, used solely as a marker:
 
@@ -84,7 +84,7 @@ If a class contains any method with an attribute that implements this interface,
 * `TestCaseSourceAttribute`
 * `TheoryAttribute`
 
-####IApplyToTest
+#### IApplyToTest
 
 The `IApplyToTest` interface is used to make modifications to a test immediately after it is constructed. It is defined as follows:
 
@@ -125,11 +125,11 @@ The following NUnit attributes implement `IApplyToTest`:
 * `TestAttribute`
 * `TestFixtureAttribute`
 
-###Execution-Time Interfaces
+### Execution-Time Interfaces
 
 At execution-time, some or all of the tests that were previously loaded are actually run. Their results are returned and made available to the application.
 
-####IApplyToContext
+#### IApplyToContext
 
 NUnit tests run within a context, known as the `TestExecutionContext`. The context for a test case is nested within the context for its containing suite and so on, up to the assembly level. Attributes that implement `IApplyToContext` are called immediately after the context is created and before the test is run in order to make changes to the context. Once the test execution has completed, the context is discarded so that - effectively - any changes are reverted to their original values.
 
@@ -151,7 +151,7 @@ The NUnit attributes that implement `IApplyToContext` are as follows:
 * `SetUICultureAttribute`
 * `TimeoutAttribute`
 
-####ICommandDecoratorSource
+#### ICommandDecoratorSource
 
 In NUnit 2.x, tests were self-executing objects. In NUnit 3.0, execution is done using command objects, which are constructed for each test. Execution of a single test will  generally require multiple nested commands. Some attributes are able to contribute to the chain of commands. For example, `MaxTimeAttribute` adds a command, which examines the elapsed time to complete a test and fails it if a specified maximum was exceeded.
 
@@ -166,7 +166,7 @@ public interface ICommandDecoratorSource
 
 Custom attributes that require participation in the command chain may create and return a decorator. Note that the decorators returned may vary according to the state of the attribute and that returning an empty collection is valid.
 
-####ICommandDecorator
+#### ICommandDecorator
 
 This interface is implemented by command decorators, which are normally separate objects from the attributes. The `ICommandDecorator` interface is defined as follows:
 

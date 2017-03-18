@@ -88,7 +88,7 @@ string[] expected = new string[] { "Hello", World" };
 string[] actual = new string[] { "HELLO", "world" };
 ```
 
-####Comparing DateTimes and TimeSpans
+#### Comparing DateTimes and TimeSpans
 
 <b>DateTimes</b> and <b>TimeSpans</b> may be compared either with or without
 a tolerance. A tolerance is specified using <b>Within</b> with either a 

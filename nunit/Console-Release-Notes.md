@@ -1,18 +1,18 @@
-###NUnit Console 3.6.1 - March 6, 2017
+### NUnit Console 3.6.1 - March 6, 2017
 
-####Engine
+#### Engine
 
  * This hotfix release addresses a race condition in the Engine that caused
    tests to intermittently fail.
 
-####Issues Resolved
+#### Issues Resolved
 
  * 168 Intermittent errors while running tests after updating to 3.6
 
 
-###NUnit Console 3.6 - January 14, 2017
+### NUnit Console 3.6 - January 14, 2017
 
-####Console Runner
+#### Console Runner
 
  * Added command line option --skipnontestassemblies to skip assemblies that do
    not contain tests without raising an error and to skip assemblies that contain
@@ -20,12 +20,12 @@
  * Messages from the new Multiple Assert blocks will be displayed individually
  * Warnings from the new Warn.If, Warn.Unless and Assert.Warn are now displayed
 
-####Engine
+#### Engine
 
  * NUnit agents now monitor the running engine process and will terminate themselves
    if the parent runner process is killed or dies
 
-####Issues Resolved
+#### Issues Resolved
 
  * 16 NUnit Engine Tests fail if not run from test directory
  * 18 Invalid file type is shown in XML as type="Assembly"

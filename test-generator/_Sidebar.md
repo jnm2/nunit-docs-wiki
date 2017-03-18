@@ -1,4 +1,4 @@
-###User Docs
+### User Docs
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Gui]]**
@@ -12,7 +12,7 @@
      * [[Release Notes VS2015|TestGenerator-Release-Notes-VS2015]]
 * **[[User FAQ]]**
   
-###Developer Docs
+### Developer Docs
 
 * **[[NUnit Vision]]**
 * **[[NUnit Roadmap]]**

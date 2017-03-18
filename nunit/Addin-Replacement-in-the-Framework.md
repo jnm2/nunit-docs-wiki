@@ -12,7 +12,7 @@ The addin design for NUnit 2.6 was intended to extend to the console and gui run
 
 In NUnit 3.0, the functions provided by these addins are being taken over by the use of custom attributes. NUnit 3.0 attributes are generally active. That is, they contain code to perform the function they call for rather than simply serving as markers to be interpreted by the runner.
 
-####Advantages
+#### Advantages
 
 In general, all the same capabilities will be present in NUnit 3.0 and will be much more easily accessible to those who create extensions. Currently, creating an extension is complex and error prone. Use of active attributes generally involves one of two approaches:
 
@@ -20,13 +20,13 @@ In general, all the same capabilities will be present in NUnit 3.0 and will be m
 
 2. Derive directly from `NUnitAttribute`, the base of the NUnit attribute hierarchy, and implement one or more interfaces that perform the desired function.
 
-####Limitations
+#### Limitations
 
 All existing addins will need to be re-implemented as custom attributes. They will not work in NUnit 3.0.
 
 Addins not based on custom attributes are no longer possible. In NUnit 2.6, for example, it was possible to write an addin that defined tests based on the name of a method, e.g.: methods beginning with "Test". This sort of extension will no longer be possible in the NUnit 3.0 framework. However, this does not seem to be a big problem, since virtually all addins that we know about have been based on attributes.
 
-###Implementation
+### Implementation
 
 Because parts of NUnit are implemented as *internal addins*, it's not possible to simply remove all addin support at once. Many things would stop working if we did this. Therefore, we will refactor code for each of the internal types to conform to the new design, only removing the overall addin framework when this is complete.
 
@@ -38,7 +38,7 @@ The remaining sections of this spec deal with how each of the addin types is bei
 > Some of the sections that follow have not had all their design work completed, so the degree of detail
 > varies among them. More information will be added as work progresses.
 
-####TestDecorators 
+#### TestDecorators 
 > Status: REMOVED
 
 TestDecorators in NUnit 2.6 could do one of three things:
@@ -57,7 +57,7 @@ It is no longer possible - but not necessary either - to replace the test. In NU
 
 It is no longer possible to simply eliminate the test. Once created, a test will always appear in the UI, for example. However, by use of a command decorator, it is possible to prevent the test from executing.
 
-####DataPointProviders
+#### DataPointProviders
 > Status: Removed
 
 NUnit 2.6 has two built-in providers of data for individual parameters of test methods:
@@ -70,7 +70,7 @@ On the other hand, `DataPointProvider` contains the code for accessing the data 
 
 Since `DataPointProvider`s are only called from within `TestCaseProvider`s, implementation of these changes may need to be interleaved with changes related to `TestCaseProvider`s. See the next section for details.
 
-####TestCaseProviders 
+#### TestCaseProviders 
 > Status: REMOVED
 
 NUnit 2.6 currently has two built-in TestCaseProviders:
@@ -83,7 +83,7 @@ Currently, `DataAttributeTestCaseProvider` delegates all the work to the `DataAt
 
 For NUnit 3.0, the work of combining parameter data into cases will be moved into the `CombiningStrategy` attributes. An interface will be defined and users will be able to create new combining strategies by defining a custom attribute that implements the interface.
 
-####EventListeners
+#### EventListeners
 > Status: REMOVED
 
 EventListeners implement the `ITestListener` interface and are notified when important events in the life of a test occur. Almost all the functions of an `EventListener` can already be emulated in NUnit 2.6 by use of an `ActionAttribute`. `ActionAttribute`s are not yet implemented in NUnit 3.0.
@@ -92,7 +92,7 @@ Consequently, the first step in removing EventListeners is to implement `ActionA
 
 The only function of EventListeners that cannot be duplicated by ActionAttributes at this time is the capture of text output from the test. A new approach will be designed for this purpose.
 
-####TestCaseBuilders
+#### TestCaseBuilders
 > Status: REMOVED
 
 NUnit 2.6 has one built-in TestCaseBuilder, `NUnitTestCaseBuilder`, which implements `ITestCaseBuilder2`. All TestCaseBuilders must implement either `ITestCaseBuilder` or `ITestCaseBuilder2`.
@@ -104,7 +104,7 @@ A few issues need to be resolved:
 1. Some attributes, such as `TestCaseAttribute` or `TestCaseSourceAttribute` serve dual functions: they both mark a test case and provide data for the test case. Some combination of the code for generating test cases with that for creating tests is likely to be required.
 2. For backward compatibility, an extra `TestAttribute` accompanying one or more `TestCaseAttribute`s should not generate an additional `TestCase`.
 
-####SuiteBuilders
+#### SuiteBuilders
 > Status: REMOVED
 
 NUnit 2.6 has one built-in SuiteBuilder, which implements the required `ISuiteBuilder` interface.

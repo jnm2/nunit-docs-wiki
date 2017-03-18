@@ -17,7 +17,7 @@
 <tr><td>After(int, int)</td><td>DelayedConstraint(Constraint, int, int)</td></td><td>tests that a constraint is satisfied after a delay using polling.</tr>
 </table>
 
-####Enhanced Syntax
+#### Enhanced Syntax
 
 With NUnit 3.6, an enhanced syntax is available that allows expressing the delay and polling interval more fluently.
 

@@ -1,8 +1,8 @@
-###﻿NUnit-Gui 0.3 - January 1, 2017
+### ﻿NUnit-Gui 0.3 - January 1, 2017
 
 This release continues development of the Gui.
 
-####Issues Resolved
+#### Issues Resolved
 
  * 61     When loading tests using an agent, a cmd window is opened
  * 86     Review and Revise Settings Panels
@@ -16,24 +16,24 @@ This release continues development of the Gui.
  * 134    File Exit command doesn't work
  * 146    Remove additional unused settings
 
-###NUnit-Gui 0.2 - April 12, 2016
+### NUnit-Gui 0.2 - April 12, 2016
 
 The 0.1 release had two critical bugs, which are fixed in this one. This release is still intended solely for the purpose of reviewing the look and feel of the new gui.
 
-####Issues Resolved
+#### Issues Resolved
 
  * 93 Crash on startup if newer NUnit installation
  * 94 BadImageFormatException loading dlls targeting .NET 4.0 and higher﻿
 
-###NUnit-Gui 0.1 - April 8, 2016
+### NUnit-Gui 0.1 - April 8, 2016
 
-####General
+#### General
 
 This is the initial release of the NUnit GUI runner. This is pre-alpha code we are releasing
 primarily for the purpose of getting feedback on the user interface itself. It is not suitable
 for use in production.
 
-####Features
+#### Features
 
  * The left-hand panel displays the tests in a variety of ways.
    * As a traditional NUnit tree
@@ -48,7 +48,7 @@ for use in production.
    * Properties - shows the information about the test (upper pane) and it's result (lower pane)
    * XML - shows the XML representation for the test or test result
 
-####Issues Resolved
+#### Issues Resolved
 
  * 17 Gui should highlight not-runnable and ignored tests immediately upon load
  * 19 CI Server for nunit-gui

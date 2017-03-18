@@ -1,6 +1,6 @@
 Sometimes - especially in integration testing - it's desirable to give a warning message but continue execution. This feature will provide the ability to do so.
 
-###Warning Results
+### Warning Results
 
 NUnit currently supports four fundamental outcomes, represented by the `TestStatus` enumeration. This change would add a fifth value, `Warning` to the enum:
 

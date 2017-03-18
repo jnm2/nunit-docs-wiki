@@ -10,7 +10,7 @@ So long as any SetUp method runs without error, the TearDown method is
 guaranteed to run. It will not run if a SetUp method fails or throws an 
 exception.
 
-####Example:
+#### Example:
 
 ```C#
 namespace NUnit.Tests
@@ -33,7 +33,7 @@ namespace NUnit.Tests
 }
 ```
 
-####Inheritance
+#### Inheritance
 
 The TearDown attribute is inherited from any base class. Therefore, if a base 
 class has defined a TearDown method, that method will be called 
@@ -43,7 +43,7 @@ You may define a TearDown method
 in the base class and another in the derived class. NUnit will call base
 class TearDown methods after those in the derived classes.
    
-####Notes:
+#### Notes:
 
 1. Although it is possible to define multiple TearDown methods
    in the same class, you should rarely do so. Unlike methods defined in
@@ -52,7 +52,7 @@ class TearDown methods after those in the derived classes.
 
 2.TearDown methods may be async if running under .NET 4.0 or higher.
 
-####See also...
+#### See also...
  * [[SetUp Attribute]]
  * [[OneTimeSetUp Attribute]]
  * [[OneTimeTearDown Attribute]]

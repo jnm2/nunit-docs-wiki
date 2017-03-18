@@ -64,11 +64,11 @@ The resulting files can be found in the "package" folder:
 
   * **NUnit3TestAdapter.[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
 
-####Testing the Packages
+#### Testing the Packages
 
 Test both the vsix and nuget packages using each version of Visual Studio you have available, from 2012 through 2015.
 
-####Publishing the Release
+#### Publishing the Release
 
 1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all three packages created above as a part of the release.
 
@@ -80,7 +80,7 @@ Test both the vsix and nuget packages using each version of Visual Studio you ha
 
 5. Publicize the release, first announcing it on the nunit-developer and nunit-discuss lists and then more widely as appropriate. [We should develop a list of places.]
 
-#####Note:
+##### Note:
   * Publishing the release requires access to various online accounts, which are mentioned above. For obvious reasons, the passwords are not provided. Contact Charlie or Terje if you need this access.
 
 Prerequisites

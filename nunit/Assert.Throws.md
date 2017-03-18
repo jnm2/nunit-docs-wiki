@@ -99,7 +99,7 @@ public class UsingConstraint
 
 Use the form that matches your style of coding.
 
-###Exact Versus Derived Types
+### Exact Versus Derived Types
 
 When used with a Type argument, **Assert.Throws** requires
 that exact type to be thrown. If you want to test for any
@@ -124,7 +124,7 @@ Assert.Catch<ApplicationException>( code );
 Assert.Catch( code );
 ```
 
-####See also...
+#### See also...
  * [[Assert.Catch]]
  * [[Assert.CatchAsync]]
  * [[Assert.ThrowsAsync]]

@@ -1,4 +1,4 @@
-####Further information
+#### Further information
 
 For more information see the blogs by <a href="http://nunit.com/blogs/" title="Charlie Poole">Charlie Poole</a> and <a href="http://geekswithblogs.net/terje/Default.aspx">Terje Sandstrom</a> 
 
@@ -10,7 +10,7 @@ The MSDN ALM blog post series on _How to Manage Unit Tests in Visual Studio 2012
 
  * <a href="http://blogs.msdn.com/b/visualstudioalm/archive/2013/06/11/part-3-unit-testing-with-traits-and-code-coverage-in-visual-studio-2012-using-the-tfs-build-and-the-new-nuget-adapter-approach.aspx">Part 3: Unit testing with Traits and code coverage in Visual Studio 2012 using the TFS Build</a>
 
-####Reporting Problems
+#### Reporting Problems
 
 Bugs should be reported using the <a href="https://github.com/nunit/nunit3-vs-adapter/issues">issue tracker</a> on Github.
 

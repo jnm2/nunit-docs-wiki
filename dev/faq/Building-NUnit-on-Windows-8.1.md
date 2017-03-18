@@ -1,8 +1,8 @@
-## Update ##
+## Update
 
 We have updated the nunit.snk in version 3, so this does not apply. It does apply for NUnit 2.x, so if you are doing any work in the old repository, follow the instructions below, but note that the location of the nunit.snk files is different in that repository.
 
-## Signing Error ##
+## Signing Error
 
 There is a [bug in Windows 8.1](http://stackoverflow.com/questions/19861961/cryptoapi-sign-verify-not-working-on-windows-8-1-how-to-debug) that causes the build to fail with the following error,
 

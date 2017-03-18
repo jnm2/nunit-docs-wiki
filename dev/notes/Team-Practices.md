@@ -1,4 +1,4 @@
-####How We Work As a Team
+#### How We Work As a Team
 
 <table>
 <tr><td>[[Issue Tracking]]</td><td>How we track bugs, enhancements and features on GitHub.</td></tr>
@@ -6,7 +6,7 @@
 <tr><td>[[Contributions]]</td><td>Explains how to review and merge code submitted by other developers.</td></tr>
 </table>
 
-####Technical Practices
+#### Technical Practices
 <table>
 <tr><td>[[Coding Standards]]</td><td>Describes coding standards used in NUnit.</td></tr>
 <tr><td>[[Standard Defines]]</td><td>Lists standard defines used in building the NUnit projects.</td></tr>

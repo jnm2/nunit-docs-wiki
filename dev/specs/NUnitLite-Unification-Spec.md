@@ -1,6 +1,6 @@
 > **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
 
-##Background
+## Background
 
 NUnitLite originated in 2007 as a lightweight version of the NUnit framework. The code was developed from scratch with the intention of providing a test framework that would use minimal resources and run on resource-restricted platforms such as those used in embedded and mobile development.
 
@@ -10,7 +10,7 @@ Over time, NUnitLite has also been adopted by many people for use in the desktop
 
 With NUnit 3.0, both frameworks now share a common codebase.
 
-##Unifying the Frameworks
+## Unifying the Frameworks
 
 We will eliminate feature differences between the NUnitLite framework and the full NUnit framework. Many of the differences will be re-characterized as platform differences. That is, for certain platforms certain features may not be supported. For example, since Silverlight does not support file access, our Silverlight build of the framework will not support file-related constraints and asserts.
 
@@ -20,7 +20,7 @@ We will re-brand the term NUnitLite to mean a distribution of the framework and 
 
 Specifically, parallelism and file-related features will be supported in the framework on a platform-dependent basis. Classic Asserts will be included in order to support legacy applications that use them. On every platform, we would aim to implement as much of NUnit as is possible.
 
-###Implementation
+### Implementation
 
 The following issues have been created in order to implement this spec:
 
@@ -33,50 +33,50 @@ The following issues have been created in order to implement this spec:
   * [#335 Re-introduce 'Classic' NUnit syntax in NUnitLite](https://github.com/nunit/nunit/issues/335)
   * [#341 Move the NUnitLite runners to separate assemblies](https://github.com/nunit/nunit/issues/341)
 
-##Detailed Discussion
+## Detailed Discussion
 
 The sections that follow capture some of the details of the discussion that led up to the decision to unify NUnit and NUnitLite.
 
 ### Added Features
 
-####Platform Support
+#### Platform Support
 
 NUnitLite runs under Silverlight and the Compact framework, in addition to the desktop .NET and mono platforms.
 
-#####Actions:
+##### Actions:
   * Continue to support desktop and Silverlight platforms
   * Drop support for version 2.0 of the Compact Framework
   * Add support for version 3.9 of the Compact Framework
   * Develop a portable build and subsequently evaluate whether it can be used to replace any existing builds
 
-####Built-In Runner
+#### Built-In Runner
 
 NUnitLite has a built-in runner, allowing it to be used without the NUnit Test Engine or any external runner. This is the primary justification for calling it "lite" at the present time.
 
-#####Actions:
+##### Actions:
   * Remove the current NUnitLite text-based runner from the framework assembly and create it as a separate assembly, linked to the framework. We can use this runner for desktop .NET and CF.
   * Create a separated runner for Silverlight and the portable builds.
 
 ### Missing Features
 
-####Parallelism
+#### Parallelism
 
 The full NUnit framework supports parallel execution of tests. NUnitLite does not but rather executes all tests sequentially on a single thread. The ParallelizableAttribute is accepted but ignored by NUnitLite and a number of internal classes that support parallel execution are not present.
 
 The full NUnit framework contains code to execute tests sequentially, like NUnitLite. This execution path is activated when running under the console with /workers=0. The sequential path is also used by TestSuites to execute individual cases on the same thread.
 
-#####Actions:
+##### Actions:
   * Add support for parallel execution to NUnitLite on a platform-by-platform basis. Desktop platforms and CF 3.9 should be able to support it. **Issue #333 created**
   * Reduce use of the sequential execution path as much as possible in both NUnit and NUnitLite, replacing it by a dispatcher that uses a single worker. This internal change will reduce special cases in the code but should not be visible to users.
 
-####File-Related Features
+#### File-Related Features
 
 NUnitLite does not include the constraints and asserts that apply to files.
 
-#####Actions:
+##### Actions:
   * Add support for constraints and asserts on a platform-by-platform basis rather than excluding them for all NUnitLite builds. Most features will then be supported on the desktop and in CF but not in Silverlight. **Issue #334 Created**
 
-####Classic Asserts
+#### Classic Asserts
 
 When NUnitLite was written, we planned to phase out "classic" asserts in favor of the user of Assert.That with constraints. Therefore, NUnitLite does not include classic Asserts, with the exception of True, False, Null, NotNull, AreEqual and AreNotEqual. 
 
@@ -104,59 +104,59 @@ In addition, the following extended assert classes are absent in NUnitLite:
   * FileAssert
   * DirectoryAssert
 
-#####Actions
+##### Actions
   * These features should be added to NUnitLite  for platforms that support them. **Issue #335 Created**
 
-##Platform-Specific Differences
+## Platform-Specific Differences
 
 A number of features that are not generally omitted from NUnitLite are missing on specific platforms.
 
-####BinarySerializableConstraint
+#### BinarySerializableConstraint
 
 This constraint and associated syntax are not implemented on either the compact framework or Silverlight because the platforms don't support binary serialization.
 
-#####Actions:
+##### Actions:
   * None
 
-####XmlSerializableConstraint
+#### XmlSerializableConstraint
 
 This constraint and associated syntax is not implemented on Silverlight.
 
-#####Actions:
+##### Actions:
   * None.
 
-####RegexConstraint
+#### RegexConstraint
 
 This constraint and associated syntax are not implemented in our compact framework builds because it was not supported in earlier versions.
 
-#####Actions:
+##### Actions:
   * Implement in CF 3.5 and higher. **Issue #325 Created**
 
-####SetCultureAttribute and SetUICultureAttribute
+#### SetCultureAttribute and SetUICultureAttribute
 
 These attributes are not implemented on the compact framework.
 
-#####Actions:
+##### Actions:
   * None
 
-####TimeoutAttribute
+#### TimeoutAttribute
 
 This attribute is not implemented in our compact framework builds, because it was not possible to support in earlier versions.
 
-#####Actions:
+##### Actions:
   * Implement in CF 3.5 and higher. **Issue #326 Created**
 
-####Generic Test Methods
+#### Generic Test Methods
 
 This is not available in our CF builds, due to differences in the internal implementation of generics in CF.
 
-#####Actions:
+##### Actions:
   * Incorporate Neil's code that implements generic test methods. **Issue #327 Created**
 
-####Use of Stopwatch for Timing Tests
+#### Use of Stopwatch for Timing Tests
 
 Our compact framework and Silverlight builds use a private version of Stopwatch based on the time of day, which gives us a much lower resolution. In the case of CF, this is because earlier versions of the framework didn't have Stopwatch.
 
-#####Actions:
+##### Actions:
   * Use .NET Stopwatch in the CF builds. **Issue #328 Created**
 

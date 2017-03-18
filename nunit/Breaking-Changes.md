@@ -16,7 +16,7 @@ A key change is that the NUnit Test Engine will not recognize a test assembly th
 
 Other breaking changes are grouped in the following tables.
 
-######Attributes
+###### Attributes
 
 |            Name              |          Notes                                        |
 |------------------------------|-------------------------------------------------------|
@@ -36,7 +36,7 @@ Other breaking changes are grouped in the following tables.
 | TestFixtureTearDownAttribute | Deprecated. Use `OneTimeTearDownAttribute`.  |
 | ValueSourceAttribute         | The source name of the data source must now use only static fields, properties or  methods. |
 
-######Assertions and Constraints
+###### Assertions and Constraints
 
 |          Feature                 |          Notes                                        |
 |----------------------------------|-------------------------------------------------------|
@@ -59,7 +59,7 @@ Other breaking changes are grouped in the following tables.
 | Text.Matches                     | No longer supported. Use `Does.Match` |
 | Text.DoesNotMatch                | No longer supported. Use `Does.Not.Match` |
 
-######Other Framework Features
+###### Other Framework Features
 
 |      Feature       |          Notes                                        |
 |--------------------|-------------------------------------------------------|
@@ -70,7 +70,7 @@ Other breaking changes are grouped in the following tables.
 | TestCaseData       | The `Throws` Named Property is no longer available. Use `Assert.Throws` or `Assert.That` in your test case. |
 | TestContext        | The fields available in the [[TestContext]] have changed, although the same information remains available as for NUnit V2. |
 
-######Console Features
+###### Console Features
 
 The console runner is now called `nunit3-console`. The following breaking changes apply to the options that  the new runner supports.
 

@@ -4,7 +4,7 @@ In the example below, the fixture class MathTests is given a Location
 value of 723 while the test case AdditionTest is given a Severity
 of "Critical"
 
-####Example:
+#### Example:
 
 ```C#
 namespace NUnit.Tests
@@ -22,7 +22,7 @@ namespace NUnit.Tests
 }
 ```
 
-####Usage Note
+#### Usage Note
 
 The PropertyAttribute is not currently used for any purpose by NUnit itself, other
 than to display them in the XML output file and in the Test Properties
@@ -31,7 +31,7 @@ command-line in order to select tests to run. See [[Test Selection Language]].
 
 User tests may access properties through the [[TestContext]] or by reflection.
    
-####Custom Property Attributes
+#### Custom Property Attributes
 
 Users can define custom attributes that derive from **PropertyAttribute**
 and have them recognized by NUnit. PropertyAttribute provides a protected constructor

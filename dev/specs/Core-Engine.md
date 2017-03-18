@@ -2,7 +2,7 @@ The core engine is a non-extensible, minimal engine for use by devices and simil
 
 See [[Test Engine]] for a discussion of the other engine variants we are supporting or considering.
 
-####Differences from the Full TestEngine
+#### Differences from the Full TestEngine
 
 * Mono.addins is not used, so plugins are not supported.
 
@@ -16,6 +16,6 @@ See [[Test Engine]] for a discussion of the other engine variants we are support
 
 * The core engine is intended to be directly referenced by a runner, not created indirectly like the full engine.
 
-####Implementation
+#### Implementation
 
 We will attempt to implement the core engine as a portable library. Some experimentation is required in order to determine whether this is possible.

@@ -1,10 +1,10 @@
-####Adding to nunit.sln and nunit.linux.sln
+#### Adding to nunit.sln and nunit.linux.sln
 
 The main repository for NUnit code is the **nunit/nunit** repository on GitHub. It contains code for the framework, the test engine and the console runner.
 
 This repo contains two main solution files, **nunit.sln** and **nunit.linux.sln**. The first is used when building on Windows, the second on Linux. New projects added should normally also be added to both solutions, unless they are not supported on one platform or the other.
 
-####Updating the MsBuild Script
+#### Updating the MsBuild Script
 
 The **NUnit.proj** script is used to build nunit on both platforms under MsBuild or XBuild. It does not refer to the solution files, but builds each project individually. Consequently, code must be added to build any new project.
 
@@ -19,7 +19,7 @@ Normally, it is sufficient to add the new project to one of the four properties,
 
 If a project is only built on a particular platform, a Condition attribute should be used in its entry.
 
-####References to Other Projects
+#### References to Other Projects
 
 The architecture of NUnit uses three distinct layers: framework, engine and runners. Within one layer, use Project References to refer to a different project as needed. References across layers are strictly limited, as follows:
 

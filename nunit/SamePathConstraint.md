@@ -29,7 +29,7 @@ Assert.That( "/folder1/folder2",
 	Is.Not.SamePath( "/Folder1/Folder2" ).RespectCase );
 ```
 
-####Notes
+#### Notes
 
 1. Path constraints perform tests on paths, without reference to any
 actual files or directories. This allows testing paths that are
@@ -45,6 +45,6 @@ use the <b>IgnoreCase</b> and <b>RespectCase</b> modifiers to provide
 behavior other than the system default.
 
 
-###See also...
+### See also...
  * [[SubPathConstraint]]
  * [[SamePathOrUnderConstraint]]

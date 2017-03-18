@@ -2,7 +2,7 @@ The NUnit Test Engine uses a plugin architecture to allow new functionality to b
 
 The NUnit 3.0 Engine Extensibility model is essentially based on the NUnit V2 addin design with a number of improvements, primarily inspired by `Mono.Addins`. On this page, we describe that model as a guide for folks working on NUnit or otherwise needing to understand it. See [[Writing Engine Extensions]] for user-focused informaton about how to create an extension.
 
-##Extension Points
+## Extension Points
 
 NUnit 3.0 Extensibility centers around `ExtensionPoints`. An `ExtensionPoint` is a place in the application where add-ins can register themselves in order to provide added functionality. Each extension point is identified by a string, called the `Path`, is associated with a particular `Type` to be used by extensions and may also have an optional `Description`.
 
@@ -12,7 +12,7 @@ In our initial implementation, all extension points are contained in the engine.
 
 `ExtensionPoints` are identified by use of either the `TypeExtensionPointAttribute` or the `ExtensionPointAttribute`.
 
-####TypeExtensionPointAttribute
+#### TypeExtensionPointAttribute
 
 This is the most common way we identify `ExtensionPoints` in NUnit. The `TypeExtensionPointAttribute` is applied to an interface or class, exposed to the user in the nunit.engine.api assembly. This indicates that extensions must implement the specified interface or derive from the class.
 
@@ -48,7 +48,7 @@ In this case, we used the default constructor. An alternate constructor allows s
 
 `Description` is the only named property for this attribute.
 
-####ExtensionPointAttribute
+#### ExtensionPointAttribute
 
 Extensions may also defined by use of the `ExtensionPointAttribute` at the assembly level. The `Path` and the `Type` must be specified in the attribute constructor. Each attribute identifies one extension point supported by that assembly, specifying an identifying string (the Path) and the required Type of any extension objects to be registered with it.
 
@@ -65,7 +65,7 @@ This example defines **exactly** the same extension point as in the `TypeExtensi
 
 Again, `Description` is the only named property for this attribute.
 
-####Supported Extension Points
+#### Supported Extension Points
 
 The following extension types are supported by the engine:
 
@@ -74,13 +74,13 @@ The following extension types are supported by the engine:
 * [[Framework Drivers]]
 * [[Event Listeners]] (NUnit 3.4 and later only)
 
-##Extensions
+## Extensions
 
 An `Extension` is a single object of the required `Type`, which is registered with an `ExtensionPoint`. Extensions are identified by the `ExtensionAttribute` and additional information may be provided by use of the `ExtensionPropertyAttribute`, both of which are applied to the class that implements the extension.
 
 All `Extensions` must have a default constructor, which is used by NUnit to create the object when it is needed.
 
-####ExtensionAttribute
+#### ExtensionAttribute
 
 The `ExtensionAttribute` has only a default constructor, as well as two named properties, `Path` and `Description`. If the path is not provided, NUnit will try to find the appropriate extension point based on what Types are inherited or implemented by the class on which the attribute is placed.
 
@@ -102,7 +102,7 @@ Assuming the extension point definition used above, any of the following would i
 
 Generally, the `Path` will be omitted and the default value used. It may be needed in some cases, where classes implement multiple interfaces or inherit other classes that do so. Usually, this is not necessary if you follow the Single Responsibility principle.
 
-####ExtensionPropertyAttribute
+#### ExtensionPropertyAttribute
 
 Using only the `ExtensionAttribute`, NUnit would have to create instances of every extension in order to query it (for example) about its capabilities. Since extensions are generally in separate assemblies, this means that many potentially unneeded assemblies would be loaded.
 
@@ -124,7 +124,7 @@ By use of the `ExtensionPropertyAttribute` the assembly containing this extensio
 
 Of course, this means that the extension author must know a great deal about how each extension point works. That's why we provide a page for each supported extension points with details of how to use it.
 
-####Locating Addins
+#### Locating Addins
 
 Assemblies containing Addins and Extensions are stored in one or more locations indicated in files of type `.addins`. Each line of the file contains the path of an addin assembly or a directory containing assemblies. Wildcards may be used for assembly entries and relative paths are interpreted based on the location of the `.addins` file. The default `nunit.engine.addins` is located in the engine directory and lists addins we build with NUnit, which are contained in the addins directory.
 

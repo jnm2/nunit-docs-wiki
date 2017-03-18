@@ -4,22 +4,22 @@ NUnit 2.6.4 supports parameterized test fixtures using constructor arguments spe
 
 For NUnit 3.0, we would like to create a similarly rich set of attributes for specifying how TestFixture instances should be created. This spec will outline the features we plan to support. Type names are placeholders and may be changed as the work proceeds.
 
-#####TestFixtureSourceAttribute
+##### TestFixtureSourceAttribute
 
 This will work similarly to `TestCaseSourceAttribute` and will supply the constructor arguments for the fixture. The two types will probably be unified under a common base.
 
-#####TestFixtureData
+##### TestFixtureData
 
 This will work similarly to `TestCaseData` with the addition of a number of features that are needed for fixtures. In particular, the Type will need to support a TypeArgs property and possibly a separate set of arguments for use with the OneTimeSetUp method.
 
-#####ValuesAttribute
-#####ValueSourceAttribute
-#####RangeAttribute
-#####RandomAttribute
+##### ValuesAttribute
+##### ValueSourceAttribute
+##### RangeAttribute
+##### RandomAttribute
 These attributes may be used on a TestFixture constructor with arguments. Their effect will be similar to use on method arguments, causing the fixture to be constructed a number of times.
 
-#####CombinatorialAttribute
-#####PairwiseAttribute
-#####SequentialAttribute
+##### CombinatorialAttribute
+##### PairwiseAttribute
+##### SequentialAttribute
 
 These attributes will need to be modified to work on test fixtures as well as methods. They specify how individual argument values are to be combined to for a set of arguments for constructing the fixture.

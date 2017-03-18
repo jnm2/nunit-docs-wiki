@@ -19,7 +19,7 @@ public RangeAttribute( float from, float to, float step );
 public RangeAttribute( double from, double to, double step );
 ```
 
-####Example
+#### Example
 
 The following test will be executed nine times.
 
@@ -47,7 +47,7 @@ The MyTest method is called nine times, as follows:
     MyTest(3, 0.6)
 ```
 
-####See also...
+#### See also...
  * [[Values Attribute]]
  * [[Random Attribute]]
  * [[Sequential Attribute]]

@@ -22,12 +22,12 @@ public enum ParallelScope
 
 Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
 
-####Specifying Parallelizable at Multiple Test Levels
+#### Specifying Parallelizable at Multiple Test Levels
 
 The <b>ParallelizableAttribute</b> may be specified on multiple levels of the tests. Settings at a higher level may affect lower level tests, unless those lower-level tests override the inherited settings. Thus, if the assembly has <b>ParallelScope.None</b> either by use of the attribute or by default, classes with <b>ParallelScope.Self</b> may be run in parallel as may their children if an appropriate scope is used.
 
 Note that a lower-level test cannot change the settings on higher-level tests. Thus, allowing parallel execution for methods of a class that does not allow it, results in those methods running in parallel with one another, but not in parallel with test methods under any other classes. This is the natural outcome of the fact that the execution of a test method is, in fact, part of the execution of the test represented by the class.
 
-####See also...
+#### See also...
  * [[LevelOfParallelism Attribute]]
 

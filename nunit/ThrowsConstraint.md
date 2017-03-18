@@ -6,7 +6,7 @@ specified as an argument.
 The related [[ThrowsNothingConstraint]] simply asserts that the delegate
 does not throw an exception.
 
-####Constructors
+#### Constructors
 
 ```C#
 ThrowsConstraint(Type expectedType)
@@ -15,7 +15,7 @@ ThrowsConstraint(Type expectedType, Constraint constraint)
 ThrowsConstraint<T>(Constraint constraint)
 ```
 
-####Syntax
+#### Syntax
 
 ```C#
 Throws.Exception
@@ -31,7 +31,7 @@ Throws.InnerException
 ```
 
 
-###Examples of Use
+### Examples of Use
 
 ```C#
 Assert.That( SomeMethod, Throws.TypeOf<ArgumentException>());

@@ -2,7 +2,7 @@ The <b>MaxtimeAttribute</b> is used on test methods to specify a maximum time
 in milliseconds for a test case. If the test case takes longer than the 
 specified time to complete, it is reported as a failure.
    
-####Example
+#### Example
 
 ```C#
 [Test, Maxtime(2000)]
@@ -12,7 +12,7 @@ public void TimedTest()
 }
 ```
 
-####Notes:
+#### Notes:
 
 1. Any assertion failures take precedence over the elapsed time check.
 

@@ -10,7 +10,7 @@ Assert.AreEqual( object expected, object actual,
                  string message, params object[] parms );
 ```
 
-####Comparing Numerics of Different Types
+#### Comparing Numerics of Different Types
 
 The method overloads that compare two objects make special provision so that numeric
 values of different types compare as expected. This assert succeeds:
@@ -18,7 +18,7 @@ values of different types compare as expected. This assert succeeds:
 ```C#
 Assert.AreEqual( 5, 5.0 );
 ```
-####Comparing Floating Point Values
+#### Comparing Floating Point Values
 
 Values of type float and double are normally compared using an additional
 argument that indicates a tolerance within which they will be considered
@@ -33,7 +33,7 @@ Assert.AreEqual( double.NegativeInfinity, double.NegativeInfinity );
 Assert.AreEqual( double.NaN, double.NaN );
 ```
 
-####Comparing Arrays and Collections
+#### Comparing Arrays and Collections
 
 NUnit is able to compare single-dimensioned arrays, multi-dimensioned arrays, 
 nested arrays (arrays of arrays) and collections. Two arrays or collections are considered equal
@@ -41,5 +41,5 @@ if they have the same dimensions and if each pair of corresponding elements is e
 
 NUnit 3.0 adds the ability to compare generic collections and dictionaries.
 
-####See also...
+#### See also...
  * [Equal Constraint](EqualConstraint)

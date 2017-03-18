@@ -1,4 +1,4 @@
-###DRAFT
+### DRAFT
 Use of XML in NUnit 2.x is somewhat limited and is only used in external files. NUnit 3.0 uses XML in several of its interfaces for communicating between its three architectural layers.
 
 The samples given here represent the current state of the application and are subject to change. Watch this page for new information as development continues.
@@ -29,7 +29,7 @@ The results of an test run are saved in a file with the default name of TestResu
 
 For details of the file layout see [[Test Result XML Format]].
 
-####V2 Test Results
+#### V2 Test Results
 
 Optionally, NUnit 3.0 is able to save results in the NUnit 2.x format for use with CI servers that do not yet understand the new format.
 

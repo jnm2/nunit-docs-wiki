@@ -1,12 +1,12 @@
 **AttributeExistsConstraint** tests for the existence of an attribute on a Type.
 
-####Constructor
+#### Constructor
 
 ```C#
 AttributeExistsConstraint(Type type)
 ```
 
-####Syntax
+#### Syntax
 
 ```C#
 Has.Attribute( typeof(TestFixtureAttribute) )
@@ -14,7 +14,7 @@ Has.Attribute<TestFixtureAttribute>()
 ```
 
 
-####Examples of Use
+#### Examples of Use
 
 
 ```C#

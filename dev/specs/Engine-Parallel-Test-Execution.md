@@ -1,10 +1,10 @@
-###DRAFT
+### DRAFT
 
 The NUnit test engine is able to offer a certain degree of parallelization by running the tests in each test assembly in a different Process or ```AppDomain```. If tests are already split across multiple assemblies, this is the simplest way to improve performance through parallel execution.
 
 This is a separate facility from [[Framework Parallel Test Execution]] although the two may be used concurrently.
 
-####Process Model
+#### Process Model
 
 NUnit uses the ```ProcessModel``` enumeration to specify how assemblies are split across processes. The ```ProcessModel``` for a run is specified either on the console command line, through the NUnit default settings or in the NUnit project file.
 
@@ -15,7 +15,7 @@ In NUnit 2.6.3, three values are defined:
 
 NUnit 3.0 will define a new setting, `ProcessModel.Parallel`, creating a separate process for each test assembly and running them all in parallel.
 
-####Domain Usage
+#### Domain Usage
 
 The ```DomainUsage``` enumeration is specified in the same ways as ```ProcessModel``` and specifies how the assemblies are split across `AppDomain`s.
 
@@ -26,7 +26,7 @@ In NUnit 2.6.3, three values are defined:
 
 NUnit 3.0 will define a new setting, `DomainUsage.Parallel` to cause the test assemblies to be run in parallel. A separate thread will be created to run within each `AppDomain`.
 
-####Interactions between ProcessModel and DomainUsage
+#### Interactions between ProcessModel and DomainUsage
 
 The result of combining the possible values of the two enumerations ```ProcessModel``` and ```DomainUsage``` are summarized in the following table.
 
@@ -41,6 +41,6 @@ Two of the process model settings, `ProcessModel.Multiple` and `ProcessModel.Par
 
 We plan to eliminate support for `DomainUsage.None` except where the tests are run in a separate process form NUnit. However, the setting may still be available, but deprecated, in the 3.0 release.
 
-####Default Settings
+#### Default Settings
 
 For now, we are keeping the default values as `ProcessModel.Single` and `DomainUsage.Single`. This may change as development proceeds.

@@ -2,7 +2,7 @@
 
 This spec covers a proposed new approach to Engine addins, replacing the use of Mono.Addins.
 
-##Background
+## Background
 We originally planned to use Mono.Addins for the engine and have done so in the first betas. However, Mono.Addins no longer supports .NET 2.0. We are using a modified version that we created and which we will have to maintain in the future. Mono.Addins has many more features than we expect to use and has a rather large memory and disk footprint.
 
 In sum, Mono.Addins is not really carrying it's weight for our usage. We will try to replace it with a simple plugin architecture of our own design, using some pieces of our old NUnit 2.x addin feature as well as other features inspired by Mono.Addins.
@@ -15,9 +15,9 @@ Three addin types are currently supported:
 2. Result Writers - used to write out results in NUnit 2 format
 3. Driver Factories - used to create the driver for running NUnit 2 tests under NUnit 3
 
-##Design
+## Design
 
-###Extension Points
+### Extension Points
 
 In both Mono and NUnit (2.x) addins, extensibility centers around `ExtensionPoints`. An `ExtensionPoint` is a place in the application where add-ins can register themselves in order to provide added functionality. extension nodes to provide extra functionality. NUnit 3.0 will continue to use this concept. 
 
@@ -25,7 +25,7 @@ In our initial implementation, all extension points must be known in advance and
 
 `ExtensionPoints` in the engine will be identified by use of `ExtensionPointAttribute` at the assembly level. Each attribute identifies one extension point, specifying an identifying string (the Path) and the required Type of any extension objects to be registered with it.
 
-######Example:
+###### Example:
 ```C#
 [assembly: ExtensionPoint(Path="/NUnit/Engine/DriverService"
                           Type="NUnit.Engine.Extensibility.IDriverFactory")]
@@ -33,11 +33,11 @@ In our initial implementation, all extension points must be known in advance and
 
 In this example, the Path identifying the extension point is "/NUnit/Engine/DriverService." Any type to be plugged into this extension point must implement `IDriverFactory`. Note that even though each extension point is typically implemented by some class in the system, the identity of that class is an implementation detail, which is not revealed in the `ExtensionPoint`.
 
-###Extensions
+### Extensions
 
 An `Extension` is a single object of the required type, which is registered with an `ExtensionPoint`. Extensions are identified by the `ExtensionAttribute` which is applied to the class. Extensions identified in this way must have a default constructor. See the `Addins` section below for dealing with more complex situations.
 
-######Example:
+###### Example:
 ```C#
     [Extension(Path = "/NUnit/Engine/DriverService")]
     public class NUnit2DriverFactory : IDriverFactory
@@ -61,7 +61,7 @@ In fact, that's the case in this example, which can be rewritten more simply as.
 
 The Path may be omitted provided that no other extension point is able to accept an object of the same class as the extension.
 
-####Locating Addins
+#### Locating Addins
 
 Assemblies containing Addins and Extensions are stored in one or more locations indicated in files of type `.addins`. Each line of the file contains the path of an addin assembly or a directory containing assemblies. Wildcards may be used for assembly entries and relative paths are interpreted based on the location of the `.addins` file. The default `nunit.engine.addins` is located in the engine directory and lists addins we build with NUnit, which are contained in the addins directory.
 
@@ -71,15 +71,15 @@ Assemblies are be examined using Cecil. Any assembly that cannot be opened is be
 
 We hope that the combination of specifically indicating which assemblies to scan and the use of Cecil to do the scanning will make this process quite efficient. If that turns out not to be the case, we can use an assembly-level attribute to identify assemblies containing extensions.
 
-##Future Enhancements
+## Future Enhancements
 
-###Addins
+### Addins
 
 An `Addin` is a Type that provides `Extensions`. As indicated in the previous section, simple extensions providing a single instance of the object through a default constructor do not require an Addin. For more complex situations, an Addin object could be allowed to create and register one or more extensions. This is the approach that we took in NUnit 2.x.
 
 Addins would be identified by the `AddinAttribute` and implement the IAddin interface. They actively participate in the installation of extensions and may be used to create objects that require parameters, to install multiple extensions or to select among different extensions.
 
-######Example:
+###### Example:
 ```C#
     [Addin]
     public class MyAddin : IAddin
@@ -104,7 +104,7 @@ The above example does the same thing as the previous example in a more complica
 
 2. The interfaces used in this section are notionally based on NUnit 2.6.4.
 
-###Addins on Addins
+### Addins on Addins
 
 Initially, we only need one level of addins to allow for everything we now do. It may be convenient at some point to support addins on top of other addins. For example, a given framework driver might be enhanced with some special feature through an addin.
 

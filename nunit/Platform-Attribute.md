@@ -11,7 +11,7 @@ the run at all: it is not considered as ignored and is not even counted in
 the total number of tests. _[Ed.: Check this.]_ In the gui, the tree node for the test remains 
 gray and the status bar color is not affected.
 
-####Test Fixture Syntax
+#### Test Fixture Syntax
 
 ```C#
 namespace NUnit.Tests
@@ -28,7 +28,7 @@ namespace NUnit.Tests
 }
 ```
 
-####Test Syntax
+#### Test Syntax
 
 ```C#
 namespace NUnit.Tests
@@ -46,12 +46,12 @@ namespace NUnit.Tests
 }
 ```
 
-####Platform Specifiers
+#### Platform Specifiers
 
 The following values are recognized as platform specifiers.
 They may be expressed in upper, lower or mixed case.
 
-######Operating System
+###### Operating System
 
 <ul>
 <li>Win</li>
@@ -82,7 +82,7 @@ They may be expressed in upper, lower or mixed case.
 <li>XBox</li>
 </ul>
 
-######Architecture
+###### Architecture
 
 * 32-Bit
 * 32-Bit-Process
@@ -91,7 +91,7 @@ They may be expressed in upper, lower or mixed case.
 * 64-Bit-Process
 * 64-Bit-OS (.NET 4.0 and higher only)
 
-######Runtime
+###### Runtime
 
 <ul>
 <li>Net</li>
@@ -113,7 +113,7 @@ They may be expressed in upper, lower or mixed case.
 <li>Mono-4.0</li>
 </ul>
 
-####Notes:
+#### Notes:
 
 1. Includes Net-2.0
 2. Includes Net-2.0 and Net-3.0

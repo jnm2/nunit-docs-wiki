@@ -1,4 +1,4 @@
-####Known Problems
+#### Known Problems
 
 1. There is no test status in Visual Studio corresponding to NUnit's Inconclusive result, so tests with this result are reported as Not Run. Click on the individual test to see the result.
 
@@ -16,7 +16,7 @@
 
 
 
-###Issues with other tools
+### Issues with other tools
 
  * Versions of Resharper earlier than the 8.2 version has an issue with the NuGet adapter, which will prevent NUnit tests from running. Make sure you have updated Reshaper to at least version 8.2.
 

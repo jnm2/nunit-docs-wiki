@@ -7,20 +7,20 @@ a single project or as defaults for all projects.
 This page describes the different types of settings and enumerates
 existing and planned settings for NUnit 3.0.
 
-##### Built-in Defaults #####
+##### Built-in Defaults
 
 Built-in defaults are part of the code of NUnit itself. Often they
 are expressed as a default value for any user settings that are
 not found in the NUnitSettings.xml file.
 
-##### User Default Settings #####
+##### User Default Settings
 
 User Defaults are contained in the NUnitSettings.xml file and may
 be updated using an editor or through the Gui settings dialog.
 In the table that follows, the key for the settings file is
 given where applicable.
 
-##### Project Settings #####
+##### Project Settings
 
 Project settings are contained in NUnit project file and may
 be updated using an editor or through the Gui Project Editor.
@@ -28,12 +28,12 @@ In the table that follows, the element or attribute name
 is given where applicable. Attributes are specified as
 element@attribute.
 
-##### One-time Settings #####
+##### One-time Settings
 
 One-time settings for a run may be set using command-line arguments
 or - in some cases - by menu selections in the Gui.
 
-### General Settings ###
+### General Settings
 
 General settings affect all test runs, whether through the gui, the console runner or a third-party runner.
 The notations 2.5 and 3.0 indicate whether the particular setting is available in the respective versions of NUnit.
@@ -49,12 +49,12 @@ The notations 2.5 and 3.0 indicate whether the particular setting is available i
 | ShadowCopyCache    |  %TMP%/nunit20/ShadowCopyCache  |  2.5, 3.0  |  -      |     -      |
 | RuntimeFramework   |  See [[Runtime Selection]]      |  -  |   2.5, 3.0     |  2.5, 3.0  |
 
-##### Notes #####
+##### Notes
 
   1. ApartmentState and ThreadPriority are currently set in the configuration for a test assembly or project. This will be replaced by standard user settings and command line options for NUnit 3.0.
   2. The /noshadow command line option will be removed for NUnit 3.0.
 
-### Gui Settings ###
+### Gui Settings
 
 Gui settings determine aspects of the appearance of the Gui runner. These settings are not
 controlled on a project or session basis, so only built-in and user default columns are
@@ -90,6 +90,6 @@ The notations 2.5 and 3.0 indicate whether the particular setting is available i
 | Reload before each test run?                        |        No          |  2.5, 3.0  |
 | Allow opening Visual Studio files?                  |        No          |  2.5 (1)   |
 
-##### Notes #####
+##### Notes
 
   1. This will no longer be a Gui option but will depend on which plugins are installed. However, the VS Project plugin will be installed by default, since the format is used by multiple IDEs.

@@ -1,6 +1,6 @@
 NUnit 3.0 offers two forms of parallel execution, allowing tests to be run more quickly.
 
-##Parallel Execution of Multiple Assemblies
+## Parallel Execution of Multiple Assemblies
 
 The NUnit test engine is able to offer a certain degree of parallelization by running the tests in each test assembly in a different Process. If tests are already split across multiple assemblies, this is the simplest way to improve performance through parallel execution.
 
@@ -10,7 +10,7 @@ Normally, all the test processes run simultaneously. If you need to reduce the n
 
 **Note:** This facility does not depend on the test framework used in any way. Test assemblies that use older versions of NUnit may be run in parallel processes just as easily as those using NUnit 3.0. If extensions are created to support additional frameworks, the NUnit engine will run those assemblies in parallel as well.
 
-##Parallel Execution within an Assembly
+## Parallel Execution within an Assembly
 
 The NUnit 3.0 framework can run tests in parallel within an assembly. By default, no parallel excecution takes place. Tests that are eligible to be run in parallel with other tests must be identified using the [[Parallelizable Attribute]].
 
@@ -18,7 +18,7 @@ The framework creates worker threads for running tests. The default number of th
 
 Parallel execution in the framework requires some attention to how tests are written. Use of non-readonly statics or access to common internal or external resources can easily break your tests or hang the test run. Race conditions may result in problems that arise only intermittently and are very difficult to resolve. Once we implement parallel execution of test cases, shared use of instance members will be dangerous as well. Tests to be run in parallel should generally be stateless.
 
-####How It Works
+#### How It Works
 
 We use multiple queues organized into "shifts". A `WorkShift` consists of one or more queues of work items, which may be active at the same time. As the name suggests, no two shifts are active simultaneously. NUnit runs one `WorkShift` until all available work is complete and then switches to the next shift. When there is no work for any shift, the run is complete.
 
@@ -43,12 +43,12 @@ _* Depends on Level of Parallelism_
 
 4. In the current implementation, test methods or cases are never run in parallel with one another, even if the `ParallelizableAttribute` is specified on them.
 
-####Text Output from Tests
+#### Text Output from Tests
 
 In the past, NUnit was able to capture text output (Console, Trace and Log) and associate it with the correct test. This was possible because only one test could run at a time, therefore any output received between the start and end of a particular test could be identified with that test.
 
 In an environment where multiple tests may be running at the same time, this is no longer possible. To solve this problem, output is now collected in the result for each test and is not displayed until the test completes.
 
-####Platform Support
+#### Platform Support
 
 This feature is supported by .NET 2.0, 4.0, 4.5 and Compact Framework builds of the NUnit framework. It is not available in the  Silverlight or Portable builds. Where not supported, the related attributes are still accepted but are ignored.

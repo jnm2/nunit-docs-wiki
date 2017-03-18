@@ -16,7 +16,7 @@ for its arguments and allows special processing for assumptions
 about that data. The key difference, though, is that theories
 make general statements and are more than just a set of examples.
    
-####Data for Theories
+#### Data for Theories
 
 The primary source of data for a <b>Theory</b> is the
 [[Datapoint Attribute]] or [[DatapointSource Attribute]]. 
@@ -43,7 +43,7 @@ values for the argument.
 > This limitation may be removed in a future release. See below for
 > a workaround using a generic fixture.
    
-####Assumptions
+#### Assumptions
 
 The theory itself is responsible for ensuring that all data supplied
 meets its assumptions. It does this by use of the
@@ -66,7 +66,7 @@ a theory, they are not normally displayed in the Gui. For situations
 where they are needed - such as debugging - the context menu for the
 theory provides an option to display them.
    
-####Example:
+#### Example:
 
 In the following example, the Theory SquareRootDefinition
 verifies that the implementation of square root satisfies
@@ -95,7 +95,7 @@ public class SqrtTests
 }
 ```
 
-####Theories in Generic Fixtures
+#### Theories in Generic Fixtures
 
 In a generic fixture with Type parameter `T` individual methods using `T` as
 a parameter type or not generic, since `T` has been resolved to an actual
@@ -122,7 +122,7 @@ public class TheorySampleTestsGeneric<T>
 }
 ```
    
-####See also...
+#### See also...
 
  * [[Datapoint Attribute]]
  * [[DatapointSource Attribute]]

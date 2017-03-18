@@ -26,7 +26,7 @@ Or alternatively..
     Assert.That("not a null", myConstraint); // Passes
 ```
 
-###Technical Explanation
+### Technical Explanation
 
 In the original example, the value assigned to myConstraint is
 known as an <b>unresolved</b> constraint. In fact, it's an

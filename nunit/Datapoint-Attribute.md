@@ -9,7 +9,7 @@ Fields must be members of the class containing the Theory
 and their Type must exactly match the argument for which
 data is being supplied.
        
-####Automatically Supplied Datapoints
+#### Automatically Supplied Datapoints
 
 It is normally not necessary to specify datapoints for 
 <b>boolean</b> or <b>enum</b> arguments. 

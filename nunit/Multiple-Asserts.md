@@ -1,6 +1,6 @@
 Usually, once an assertion fails, we want the test to terminate. But sometimes, it's desireable to continue and accumulate any additional failures so they may all be fixed at once. This is particularly useful for testing things like object initialization and UI appearance as well as certain kinds of integration testing.
 
-###Syntax
+### Syntax
 
 Multiple asserts are implemented using the `Assert.Multiple` method. Here is an example of its use:
 
@@ -20,7 +20,7 @@ public void ComplexNumberTest()
 
 Functionally, this results in NUnit storing any failures encountered in the block and reporting all of them together upon exit from the block. If both asserts failed, then both would be reported. The test itself would terminate at the end of the block if any failures were encountered, but would continue otherwise.
 
-####Notes:
+#### Notes:
 
 1. The multiple assert block may contain any arbitrary code, not just asserts.
 
@@ -40,7 +40,7 @@ Functionally, this results in NUnit storing any failures encountered in the bloc
 
 7. Use of Warnings (Assert.Warn, Warn.If, Warn.Unless) is permitted inside a multiple assert block. Warnings are reported normally along with any failures that occur inside the block.
 
-###Runner Support
+### Runner Support
 
 Multiple assertion failures per test are stored in the representation of the test result using new XML elements, which are not recognized by older runners. The following runners are known to support display of the new elements:
 
@@ -48,6 +48,6 @@ Multiple assertion failures per test are stored in the representation of the tes
  * NUnit 3 Visual Studio Adapter 3.7
  * NUnit Gui Runner (under development)
 
-####Compatibility
+#### Compatibility
 
 Older runners generally display a single failure message and stack trace for each test. For compatibility purposes, the framework creates a single message that lists all the failures. The stack trace in such a case will indicate the end of the assert multiple block.

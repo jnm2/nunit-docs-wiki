@@ -46,7 +46,7 @@ The resulting files can be found in the "package" folder:
 
   * **NUnitVisualStudioTestAdapterAndFramework-[VERSION].nupkg** This is a NuGet package which includes the NUnit 2.6.3 framework, uploaded to [Nuget for the adapter with framework]   
 
-####Publishing the Release
+#### Publishing the Release
 
 1. Create a release on GitHub. Few people use this directly, but it is the benchmark release and provides an archive of all past releases, so we do this first. Github will automatically create zip and tar files containing the source. In addition, upload all four packages created above as a part of the release.
 
@@ -60,7 +60,7 @@ The resulting files can be found in the "package" folder:
 
 6. Publicize the release, first announcing it on the nunit-developer and nunit-discuss lists and then more widely as appropriate. [We should develop a list of places.]
 
-#####Notes:
+##### Notes:
   * Publishing the release requires access to various online accounts, which are mentioned above. For obvious reasons, the passwords are not provided. Contact Charlie or Terje if you need this access.
   * The website and wiki contain duplicate information at this time. In future, the duplication will be eliminated.
   * When a change is merged into the nunit.org master branch, one of the project leaders uploads it manually to the web site. This will be automated in the future.

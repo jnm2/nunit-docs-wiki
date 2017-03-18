@@ -16,7 +16,7 @@ Explicit tests are displayed in the gui as skipped.
 SetUpFixture class, the attribute is ignored by NUnit and has no effect in current releases.
 	
 <h4>Test Fixture Syntax</h4>
-#####C\# #####
+##### C\#
 ```C#
 namespace NUnit.Tests
 {
@@ -31,7 +31,7 @@ namespace NUnit.Tests
 }
 ```
 
-#####Visual Basic
+##### Visual Basic
 
 ```VB
 Imports System
@@ -46,7 +46,7 @@ Namespace Nunit.Tests
 End Namespace
 ```
 
-#####C++
+##### C++
 ```C++
 using namespace System;
 using namespace NUnit::Framework;
@@ -61,7 +61,7 @@ namespace NUnitTests
   };
 }
 
-#include "cppsample.h"
+# include "cppsample.h"
 
 namespace NUnitTests {
   // ...
@@ -70,7 +70,7 @@ namespace NUnitTests {
 
 <h4>Test Syntax</h4>
 
-#####C# #####
+##### C#
 ```C#
 namespace NUnit.Tests
 {
@@ -86,7 +86,7 @@ namespace NUnit.Tests
 }
 ```
 
-#####Visual Basic
+##### Visual Basic
 ```vb
 Imports System
 Imports Nunit.Framework
@@ -101,9 +101,9 @@ Namespace Nunit.Tests
 End Namespace
 ```
 
-#####C++
+##### C++
 ```c++
-#using <Nunit.Framework.dll>
+# using <Nunit.Framework.dll>
 using namespace System;
 using namespace NUnit::Framework;
 
@@ -116,7 +116,7 @@ namespace NUnitTests
   };
 }
 
-#include "cppsample.h"
+# include "cppsample.h"
 
 namespace NUnitTests {
   // ...

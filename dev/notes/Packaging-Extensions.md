@@ -56,7 +56,7 @@ Notices at the top of each source code file are only updated when copyrightable 
 
 Make sure the release branch and any changes are pushed to GitHub, reviewed in a PR and all CI servers are passing.
 
-####Creating the Release
+#### Creating the Release
 
 1. Clear the package directory to avoid confusion:
 
@@ -95,7 +95,7 @@ Packages are archived on nunit.org in the downloads directory. Create a new subf
 Publishing the Release
 ----------------------
 
-####Github
+#### Github
 
 1. Log onto Github and go to the extension repository.
 
@@ -113,7 +113,7 @@ Publishing the Release
 
 8. Click the "Publish release" button to publish the release on Github.
 
-####NuGet
+#### NuGet
 
 1. Sign on to Nuget.org.
 
@@ -131,10 +131,10 @@ Publishing the Release
 4. Push your changes to GitHub
 5. Create a pull request from your branch making sure it is based off master
 
-####Notify Users
+#### Notify Users
 
 Send notifications to the mailing list and twitter if the changes to the extension warrant it.
 
-####Close the Milestone
+#### Close the Milestone
 
 The milestone representing this release should be closed at this time.

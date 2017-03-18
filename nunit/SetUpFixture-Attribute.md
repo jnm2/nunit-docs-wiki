@@ -21,7 +21,7 @@ of such fixtures is indeterminate.
 
 A SetUpFixture outside of any namespace provides SetUp and TearDown for the entire assembly.
 
-####Example:
+#### Example:
 
 ```C#
 using System;
@@ -53,7 +53,7 @@ The older attributes are no longer supported in SetUpFixutres
 in NUnit 3.0 and later.
 
 
-####See also...
+#### See also...
 
  * [[SetUp Attribute]]
  * [[TearDown Attribute]]

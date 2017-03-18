@@ -27,7 +27,7 @@ are provided:
  * [[Pairwise Attribute]]
  * [[Sequential Attribute]]
 
-###Order of Execution
+### Order of Execution
 
 The individual test cases are executed in the order in which NUnit discovers them. 
 This order does <b>not</b> necessarily follow the lexical order of the attributes 

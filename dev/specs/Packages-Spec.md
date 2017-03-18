@@ -2,15 +2,15 @@
 
 This specification will try to address how NUnit will be packaged. The first section deals with the logical content of each package we want to make available and how they relate to one another. A second section, to be added at a later point will deal with the format of packages, what software will be used to create them and how they will be distributed.
 
-####NUnit Package Breakdown
+#### NUnit Package Breakdown
 
-#####Framework
+##### Framework
 
 The framework is the part of NUnit that is referenced by user tests. It references no other part of NUnit and no other part references it. It is strictly a library component. It is currently made up of a single assembly, nunit.framework.dll, which is built for various environments. The user selects the version needed and multiple versions may be in use on one machine at the same time.
 
 The framework package needs to be available separately and should not replace older framework versions when installed.
 
-#####Engine
+##### Engine
 
 The engine is used by all NUnit runners to execute tests. It may exist on a given machine in multiple versions, in case third-party runners require a particular version.
 
@@ -20,15 +20,15 @@ Each engine addin will need to be packaged separately. Certain addins will also 
 
 The engine may be considered to suggest the framework if the implementation supports that relation.
 
-#####Console Runner
+##### Console Runner
 
 The console depends on the engine API assembly. It requires that some version of the full engine package be available on the system.
 
-#####Gui Runner
+##### Gui Runner
 
 The Gui is not yet developed. The package will have the same dependencies as the console runner.
 
-#####Project Editor
+##### Project Editor
 
 The editor reads the project file directly and has no dependencies on other parts of NUnit.
 

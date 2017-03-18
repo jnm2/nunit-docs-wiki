@@ -1,6 +1,6 @@
 > **NOTE:** This page is a specification that was used as a starting point for creating the feature in NUnit. It needs to be reviewed and revised in order to accurately reflect what was actually built. If you take it with a grain of salt, it may still be helpful to you as documentation. This notice will be removed when the page is brought up to date.
 
-####Purpose of the Engine
+#### Purpose of the Engine
 
 The NUnit Test Engine is the second layer of the three-layered NUnit architecture. The engine has several important functions:
 
@@ -22,7 +22,7 @@ The NUnit Test Engine is the second layer of the three-layered NUnit architectur
 
    2.4 Provision of alternative XML output formats beyond the native 3.0 format.
 
-####Engine Variants
+#### Engine Variants
 
 The engine is built on various platforms with varying functionality. There are three primary variants:
 
@@ -65,7 +65,7 @@ The following table outlines the functionality of each variant at a high level. 
     <td>Yes</td><td></td><td></td><td></td><td></td></tr>
 </table>
 
-######Notes
+###### Notes
 
 1. Features currently implemented as an extension would need to be re-implemented if they are needed in an engine variant that doesn't support extensions. This is feasible, since all these features started life as part of the engine, but it does impact the engine design.
 
@@ -75,17 +75,17 @@ The following table outlines the functionality of each variant at a high level. 
 
 4. NUnit Settings are not currently used but might be useful in the adapter, since it runs on the development machine where the settings xml file is located.
 
-####Full Engine
+#### Full Engine
 
 This is the full TestEngine, providing complete functionality. It is used on the developer machine and may control other engines on the same or other machines or on attached devices.
 
 The engine that is initially created by a runner is considered the primary engine. Other engines with which it communicates are considered as secondary engines. The full engine may be used in either the primary or secondary role. As a secondary engine, it is executed by the nunit-agent program.
 
-####Core Engine
+#### Core Engine
 
 The [[Core Engine]] supports minimal functionality and is built as a portable library. It is used in various device environments and is one alternative being considered for use by the Visual Studio Test Adapter.
 
-####Mini-Engine
+#### Mini-Engine
 
 The [[Mini-Engine]] would support various levels of functionality between the full engine and core engine. We are still evaluating whether to build it. It's primary usage would be under the compact framework and it is also an alternative for the the Visual Studio Test Adapter to use.
 

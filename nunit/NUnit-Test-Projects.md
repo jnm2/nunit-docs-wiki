@@ -28,7 +28,7 @@ use a path relative to the directory containing the project file as the location
 
 For details, see [[NUnit Project XML Format]]
 
-####Command-line Overrides
+#### Command-line Overrides
 
 The following command-line options override what is specified in the NUnit project file:
 

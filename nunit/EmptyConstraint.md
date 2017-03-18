@@ -17,7 +17,7 @@ Assert.That( dirInfo, Is.Empty );
 Assert.That( collection, Is.Empty );
 ```
 
-####Notes:
+#### Notes:
 
  * **EmptyConstraint** creates and uses either an [[EmptyStringConstraint]],
    [[EmptyDirectoryConstraint]] or [[EmptyCollectionConstraint]] depending on 

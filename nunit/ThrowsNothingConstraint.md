@@ -1,18 +1,18 @@
 **ThrowsNothingConstraint** asserts that the delegate passed as its argument does not throw an exception.
 
-####Constructor
+#### Constructor
 
 ```C#
 ThrowsNothingConstraint()
 ```
 
-####Syntax
+#### Syntax
 
 ```C#
 Throws.Nothing
 ```
 
-####Example of Use
+#### Example of Use
 
 ```C#
 Assert.That(() => SomeMethod(actual), Throws.Nothing);

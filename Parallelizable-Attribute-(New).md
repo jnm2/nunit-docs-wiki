@@ -14,12 +14,12 @@ This is a <b>[Flags]</b> enumeration used to specify which tests may run in para
 **ParallelScope.Children** | child tests may be run in parallel with one another     | Assembly, Classes
 **ParallelScope.Fixtures** | fixtures may be run in parallel with one another        | Assembly, Classes
 
-#####Notes: 
+##### Notes: 
  1. Some values are invalid on certain elements, although they will compile. NUnit will report any tests so marked as invalid and will produce an error message.
  2. The **ParallelScope** enum has additional values, which are used internally but are not visible to users through Intellisense.
  3. The <b>ParallelizableAttribute</b> may be specified on multiple levels of the tests. Settings at a higher level may affect lower level tests, unless those lower-level tests override the inherited settings.
 
-####See also...
+#### See also...
  * [[NonParallelizable Attribute]]
  * [[LevelOfParallelism Attribute]]
 

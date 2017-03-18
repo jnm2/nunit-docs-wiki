@@ -52,7 +52,7 @@ AssemblyVersion and AssemblyFileVersion are set separately for the framework, en
       Engine API            | EngineApiVersion.cs |     3.0.0.0     |      3.4.1.0
       Console               | ConsoleVersion.cs   |     3.4.1.0     |      3.4.1.0
 
-#####Notes:
+##### Notes:
 
 1. The Engine API AssemblyVersion is fixed and will not be changed unless it becomes necessary to modify the API in a non-additive manner.
 
@@ -142,7 +142,7 @@ Packages are archived on nunit.org in the downloads directory. Create a new subf
 Publishing the Release
 ----------------------
 
-####Github
+#### Github
 
 1. Log onto Github and go to the main nunit repository at https://github.com/nunit.nunit.
 
@@ -160,7 +160,7 @@ Publishing the Release
 
 8. Click the "Publish release" button to publish the release on Github.
 
-####NuGet
+#### NuGet
 
 1. Sign on to Nuget.org.
 
@@ -180,15 +180,15 @@ Publishing the Release
 4. Push your changes to GitHub
 5. Create a pull request from your branch making sure it is based off master
 
-####Website
+#### Website
 
 If changes to the website have been accumulated in a branch, now is the time to merge it and upload the pages to the site.
 
-####Notify Users
+#### Notify Users
 
 Send notifications to the mailing list and twitter.
 
-####Close the Milestone
+#### Close the Milestone
 
 The milestone representing this release should be closed at this time.
 

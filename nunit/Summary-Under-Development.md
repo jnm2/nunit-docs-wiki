@@ -1,16 +1,16 @@
-###UNDER CONSTRUCTION
+### UNDER CONSTRUCTION
 
 NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new codebase. This page summarizes what's different between NUnit 2.6.4, the last version 2 release, and NUnit 3.0.
 
-##General Changes
+## General Changes
 
   * The previous NUnitLite framework, released as version 1.0, is now merged with the NUnit framework.
 
   * The license for NUnit is now MIT / X11.
 
-##Framework
+## Framework
 
-###Platforms
+### Platforms
 
  * The NUnit framework is now built for a number of different platforms:
    * .NET 4.5 (also used for runtimes greater than 4.5)
@@ -31,7 +31,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * Users targeting .NET 4.0 who want to write async tests will need
    to reference the Microsoft.Bcl.Async NuGet package.
 
-###Attributes
+### Attributes
 
  * The following new attributes have been added:
    * **TestFixtureSourceAttribute** is equivalent to TestCaseSource for fixtures.
@@ -61,12 +61,12 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * The following new values are now recognized by PlatformAttribute: Win7, Win8, Win8.1, Win2012Server, Win2012ServerR2, NT6.1, NT6.2, 32-bit, 64-bit
  * ValuesAttribute may be used without any values on an enum or boolean argument. All possible values are used.
 
-###Asserts
+### Asserts
  * Unnecessary overloads of Assert.That and Assume.That have been removed.
  * Assert.NullOrEmpty is no longer supported (Use Is.Null.Or.Empty)
  * FileAssert.Exists and FileAssert.DoesNotExist
 
-###Constraints
+### Constraints
  * New SupersetConstraint and Is.SupersetOf syntax complement SubsetConstraint.
  * Added Throws.ArgumentNullException
  * When checking the equality of DateTimeOffset, you can now use the 
@@ -76,7 +76,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * A new FileExistsConstraint has been added.
  * You may now specify a tolerance using Within when testing equality of DateTimeOffset values.
 
-###Other
+### Other
  * TestContext.Random has also been extended to add support for new data types including 
    uint, long, ulong, short, ushort, float, byte, sbyte and decimal
  * Added GetString methods to NUnit.Framework.Internal.RandomGenerator to 
@@ -102,7 +102,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * Created new API for controlling framework
  * Support for old style tests has been removed
 
-##NUnitLite
+## NUnitLite
 
  * The NUnitLite report output has been standardized to match that of nunit-console.
  * The NUnitLite command-line has been standardized to match that of nunit-console where they share the same options.
@@ -114,7 +114,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * The NUnit and NUnitLite frameworks have now been merged. There is no longer any distinction
    between them in terms of features, although some features are not available on all platforms.
 
-##Engine
+## Engine
 
  * The format of the XML result file has been finalized and documented.
  * The engine now runs multiple test assemblies in parallel by default
@@ -147,7 +147,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * On 64-bit systems, each test process is automatically created as 32-bit or 64-bit,
    depending on the platform specified for the test assembly. 
 
-##Console Runner
+## Console Runner
 
    **NOTE:** The `nunit3-console` runner cannot run tests that reference the portable build. 
    You may run such tests using NUnitLite or a platform-specific runner.
@@ -176,9 +176,9 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * Both nunit-console and NUnitLite now display output in color.
  * The console runner refuses to run tests build with older versions of NUnit. A plugin will be available to run older tests in the future.
 
-##Issues Resolved
+## Issues Resolved
 
-####Github Issues
+#### Github Issues
 
  * 6	Log4net not working with NUnit
  * 8  [SetUpFixture] is not working as expected
@@ -505,7 +505,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * 960 Intermittent failure of CategoryFilterTests
  * 967 Run Settings Report is not being displayed.
 
-####GitHub Issues from former nunit-console repository
+#### GitHub Issues from former nunit-console repository
 
  * 2	Failure in TestFixtureSetUp is not reported correctly
  * 5	CI Server for nunit-console
@@ -514,7 +514,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * 24	'Debug' value for /trace option is deprecated in 2.6.3
  * 38	Confusing Excluded categories output
 
-####Launchpad Bugs
+#### Launchpad Bugs
 
    * 400502 	NUnitEqualityComparer.StreamsE­qual fails for same stream
    * 400508 	TestCaseSource attirbute is not working when Type is given
@@ -632,7 +632,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 1225542 	Standardize commandline options for test harness
 
 	
-###Earlier Releases
+### Earlier Releases
 
 
  * Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>

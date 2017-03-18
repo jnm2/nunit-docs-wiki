@@ -21,7 +21,7 @@ provide the arguments. It should have the following characteristics:
  * The individual items returned from the enumerator must be compatible
    with the type of the parameter on which the attribute appears.
 
-####Order of Execution
+#### Order of Execution
 
 Individual test cases are executed in the order in which NUnit discovers them.
 This order does <b>not</b> follow the lexical order of the attributes and will 
@@ -35,7 +35,7 @@ However, when a single <b>ValueSourceAttribute</b> is used by itself,
 the order of the arguments follows exactly the order in which the data 
 is returned from the source.
    
-####Note on Object Construction
+#### Note on Object Construction
 
 NUnit locates the test cases at the time the tests are loaded, creates
 instances of each class with non-static sources and builds a list of 

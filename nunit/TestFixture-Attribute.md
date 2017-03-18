@@ -25,7 +25,7 @@ for non-parameterized, non-generic fixtures. So long as the class contains
 at least one method marked with the <b>Test</b>, <b>TestCase</b> or 
 <b>TestCaseSource</b> attribute, it will be treated as a test fixture.
 
-####Example:
+#### Example:
 
 ```C#
 namespace NUnit.Tests
@@ -42,7 +42,7 @@ namespace NUnit.Tests
 ```
 
 
-####Inheritance
+#### Inheritance
 
 The <b>TestFixtureAttribute</b> may be applied to a base class and is
 inherited by any derived classes. This includes any abstract base class,
@@ -78,7 +78,7 @@ public class DerivedFixture<T> : AbstractFixtureBase
 }
 ```
 
-####Parameterized Test Fixtures
+#### Parameterized Test Fixtures
 
 Test fixtures may take constructor arguments.
 Argument values are specified as arguments to the <b>TestFixture</b>
@@ -92,7 +92,7 @@ Individual fixture instances may be given categories as well. Set the <b>Categor
 named parameter of the attribute to the name of the category or to a comma-separated
 list of categories.
    
-####Example
+#### Example
 
 The following test fixture would be instantiated by NUnit three times,
 passing in each set of arguments to the appropriate constructor. Note
@@ -144,7 +144,7 @@ public class ParameterizedTestFixture
 }
 ```
 
-####Generic Test Fixtures
+#### Generic Test Fixtures
 
 You may also use a generic class as a test fixture.
 In order for NUnit to instantiate the fixture, you must either specify the 
@@ -153,7 +153,7 @@ named parameter <b>TypeArgs=</b> to specify them. NUnit will construct a
 separate instance of the fixture for each <b>TestFixtureAttribute</b> 
 you provide.
    
-####Example
+#### Example
 
 The following test fixture would be instantiated by NUnit twice,
 once using an ArrayList and once using a List&lt;int&gt;.
@@ -180,7 +180,7 @@ public class IList_Tests<TList> where TList : IList, new()
 }
 ```
 
-####Generic Test Fixtures with Parameters
+#### Generic Test Fixtures with Parameters
 
 If a Generic fixture, uses constructor arguments, there are three
 approaches to telling NUnit which arguments are type parameters 

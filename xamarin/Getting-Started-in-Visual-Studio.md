@@ -25,7 +25,7 @@ nunit.AddTestAssembly(typeof(MyTests).Assembly);
 
 The startup code for each platform is as follows;
 
-### Android ###
+### Android
 
 **MainActivity.cs**
 
@@ -55,7 +55,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicat
     }
 }
 ```
-### iOS ###
+### iOS
 
 **AppDelegate.cs**
 
@@ -94,7 +94,7 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
 ```
 
 
-### Windows 10 Universal ###
+### Windows 10 Universal
 
 **MainPage.xaml**
 

@@ -1,10 +1,10 @@
-#####General
+##### General
 
  * [[What is the purpose of this FAQ]]?
  * [[Who maintains this FAQ]]?
  * [[How do I contribute a question]]?
 
-#####Getting Started
+##### Getting Started
 
   * [[What is NUnit]]?
   * [[What packages are available]]?
