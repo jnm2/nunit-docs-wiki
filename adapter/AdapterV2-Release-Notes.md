@@ -1,3 +1,12 @@
+#### NUnit Test Adapter for Visual Studio - Version 2.1.1 - March 19, 2017
+
+Hotfix release
+
+#### Bug Fixes
+ * #142 NUnit Test Adapter 2.1 doesn't work with projects that target .NET Framework 3.5 / CLR 2.0 
+ * #144 Adapter requires test project pbd's to be generated for tests to be executed
+ 
+
 #### NUnit Test Adapter for Visual Studio - Version 2.1 - March 4, 2017
 
 ##### Features
