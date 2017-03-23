@@ -1,7 +1,12 @@
+>**Note:** Combined Release Notes for the nunit framework, console and engine, up to version 3.5. For later releases, see:
+>* [[Framework Release Notes]]
+>* [[Console Release Notes]]
+
+
 ### NUnit 3.5 -  October 3, 2016
 
-This is the first version of NUnit where the framework will be released separately from the
-console runner, engine and other extensions. From this point forward, the NUnit Framework will be
+This is the last version of NUnit where the framework, console runner, engine and extensions are being
+released together. From this point forward, the NUnit Framework will be
 released on its own schedule that is not bound to that of any other NUnit project and version numbers
 may diverge over time.
 
