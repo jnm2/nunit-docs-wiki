@@ -84,6 +84,8 @@ The console runner is now called `nunit3-console`. The following breaking change
 | --process=PROCESS | ProcessModel for test assemblies        | Default value is now Separate for a single assembly, Multiple for more than one. Multiple assemblies run in parallel by default. |
 | --domain=DOMAIN   | DomainUsage for test assemblies         | Default value is now Separate for a single assembly, Multiple for more than one. |
 | --apartment=APT   | Apartment in which to run tests         | No longer supported. Use ApartmentAttribute. |
+| --xml=PATH        | Output result xml to path               | No longer supported. Use --result=SPEC instead.    |
+| --noxml           | Disable xml result output               | No longer supported. Use --noresult instead.    |
 | --xmlconsole      | Display XML to the console              | No longer supported.     |
 | --basepath        | Set ApplicationBase for execution       | No longer supported.     |
 | --privatebinpath  | Specify probing path for execution      | No longer supported.     |
