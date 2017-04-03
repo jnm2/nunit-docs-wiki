@@ -41,7 +41,7 @@ _* Depends on Level of Parallelism_
 
 3. If the command line specifies zero workers, all use of the dispatcher and its queues is currently bypassed and tests are run sequentially on a single thread.
 
-4. In the current implementation, test methods or cases are never run in parallel with one another, even if the `ParallelizableAttribute` is specified on them.
+4. In implementations prior to NUnit 3.7, test methods or cases are never run in parallel with one another, even if the `ParallelizableAttribute` is specified on them.
 
 #### Text Output from Tests
 
@@ -51,4 +51,4 @@ In an environment where multiple tests may be running at the same time, this is 
 
 #### Platform Support
 
-This feature is supported by .NET 2.0, 4.0, 4.5 and Compact Framework builds of the NUnit framework. It is not available in the  Silverlight or Portable builds. Where not supported, the related attributes are still accepted but are ignored.
+This feature is supported by .NET 2.0, 3.5, 4.0 and 4.5 builds of the NUnit framework. It is not available in the .NET Standard or Portable builds. Where not supported, the related attributes are still accepted but are ignored.
