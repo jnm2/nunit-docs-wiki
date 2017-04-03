@@ -18,9 +18,13 @@ public enum ParallelScope
 }
 ```
 
-> **Note:** Parallel execution of methods within a class is not yet implemented. Parallel execution only applies down to the TestFixture level. `ParallelScope.Children` works as `ParallelScope.Fixtures` and any `ParallelizableAttribute` placed on a method is ignored.
+#### Notes:
 
-Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
+ 1. Parallel execution of methods within a class is supported starting with NUnit 3.7. In earlier releases, parallel execution only applies down to the TestFixture level, `ParallelScope.Children` works as `ParallelScope.Fixtures` and any `ParallelizableAttribute` placed on a method is ignored.
+
+ 2. Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
+
+ 3. Although `ParallelScope.None` continues to be supported, it is recommended that you use the new [[NonParallelizable Attribute]] in new work.
 
 #### Specifying Parallelizable at Multiple Test Levels
 
@@ -29,5 +33,6 @@ The <b>ParallelizableAttribute</b> may be specified on multiple levels of the te
 Note that a lower-level test cannot change the settings on higher-level tests. Thus, allowing parallel execution for methods of a class that does not allow it, results in those methods running in parallel with one another, but not in parallel with test methods under any other classes. This is the natural outcome of the fact that the execution of a test method is, in fact, part of the execution of the test represented by the class.
 
 #### See also...
+ * [[NonParallelizable Attribute]]
  * [[LevelOfParallelism Attribute]]
 
