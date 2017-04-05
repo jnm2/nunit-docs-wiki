@@ -84,6 +84,9 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 <tr><th>--debug-agent</th>
     <td>Available only in debug builds of NUnit, this option is for use by developers in debugging the nunit-agent itself. It breaks in the agent code immediately upon entry of the process.</td></tr>
 
+<tr><th>--pause</th>
+    <td>Causes NUnit to immediately open a message box, allowing you to attach a debugger. For cases where --debug does not work.</td></tr>
+
 <tr><th>--wait</th>
     <td>Wait for input before closing console window.</td></tr>
     
