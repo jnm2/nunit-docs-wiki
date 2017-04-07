@@ -54,7 +54,7 @@
 <h3>Earlier Releases</h3>
 
 <ul>
-<li>Release Notes for [[NUnit 2.9.1 through 3.5|Release-Notes]].
+<li>Release Notes for [[NUnit 2.9.1 through 3.5|Pre-3.5-Release-Notes]].
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
