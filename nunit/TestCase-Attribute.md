@@ -59,7 +59,7 @@ TestCaseAttribute supports a number of additional named parameters:
 
  * **Reason** specifies the reason for not running this test case. Use in conjunction with <b>Explicit</b>.
 
- * **TestName** provides a name for the test. If not specified, a name is generated based on the method name and the arguments provided.
+ * **TestName** provides a name for the test. If not specified, a name is generated based on the method name and the arguments provided. See [[Template-Based-Test-Naming]].
 
  * **TestOf** specifies the Type that this test is testing
 

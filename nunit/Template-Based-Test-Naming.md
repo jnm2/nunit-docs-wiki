@@ -1,17 +1,3 @@
-Test Names are generated in the framework and used in the other layers. There are four key issues around naming of tests.
-
-1. NUnit test names often "look like" method names but in principal they are arbitrary strings. Since we allow the user to change the name in many cases - using the TestCase attribute for example - they can be arbitrary in practice as well. This issue is essentially the underlying cause of the remaining three issues.
-
-2. Some clients display the names in a way that causes an error if they are too long. Such clients need a way to direct NUnit to restrict the length of names.
-
-3. NUnit does not require the names of tests to be unique. Some clients, however, make that assumption, which leads to errors. Such clients need a way to add a unique value to each test name.
-
-4. Test names may be used in the command line for the purpose of selecting tests. That means the user must be able to predict the name of the test. In NUnit 3.0, this problem is mitigated by the presence of command-line options that allow for selecting tests in other ways. Nevertheless, it is desirable that the user have some control over how names are generated.
-
-Note that the term "tests" in this section refers to test cases, test methods, test fixtures and other kinds of test suites. NUnit treats all of these as "tests" for most purposes.
-
-#### Name Formatting Strings
-
 TestName generation is driven driven by a name formatting string, which may be specified or modified by the user. The format string may contain any of the following format specifiers, for which NUnit will make the appropriate substitution:
 
   * {n} The namespace of the test or empty if there is no namespace. If empty, any immediately following '.' is ignored.
@@ -36,9 +22,9 @@ After the name is formatted, any leading or trailing '.' characters are removed.
 
 String arguments may be truncated to a maximum length. Either the {a} specifier or any of the individual argument specifiers may be followed by a colon and a length:
 
-  * {a:40} Truncate __each string argument__ to 40 characters. All strings lest than 37 characters are truncated to the first 37 followed by "..."
+  * {a:40} Truncate __each string argument__ to 40 characters. All strings more than 37 characters are truncated to the first 37 followed by "..."
 
-  * {0:20} Truncate argument 0 to 20 characters.
+  * {0:20} Truncate argument zero to 20 characters.
 
 #### Standard Name Formats
 
@@ -73,5 +59,3 @@ This would result in the display of the test name as
 ```
 
 Note that in this usage, it will generally only make sense to use `{m}`, `{a}` or `{0}` through `{9}` specifiers. However, NUnit will use whatever is provided.
-
-
