@@ -26,6 +26,24 @@ String arguments may be truncated to a maximum length. Either the {a} specifier 
 
   * `{0:20}` Truncate argument zero to 20 characters.
 
+#### Standard Name Formats		
+		
+Internally, NUnit uses certain standard formats unless overridden by the user. The standard format for generating a name from a test method and its arguments is:
+
+```
+         {m}{a:40} // Name
+         {M}{a:40} // FullName
+```
+
+This leads to test names like:
+
+```
+         Test1
+         Test2(5, 2)
+         Test3("This is the argument")
+         Test4("This is quite long argument, so it is...")
+```
+
 #### Modifying the Name Format
 
 The SetName property of TestCaseData allow setting the format string for the individual test case. So long as no format specifiers are used in the name, there will be no change in how this works. Any format specifier will trigger regeneration of the test name according to what is provided. For example, if the user wishes to specify only the argument portion of the name of a test method, while retaining the method name, the name could be set to
