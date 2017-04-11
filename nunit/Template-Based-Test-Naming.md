@@ -12,7 +12,7 @@ NUnit uses a standard naming convention for all tests - however, this can be ove
 
   * `{a}` The full argument representation, enclosed in parentheses and separated by commas. Each argument is represented by the standard NUnit format for certain types, otherwise by the result of ToString().
 
-  * `{0}`, `{1} ... {9}`. An individual argument. This form is only useful when setting the name of an individual test case. If used in the default format string, any arguments not used will be ignored.
+  * `{0}`, `{1}`...`{9}`. An individual argument. This form is only useful when setting the name of an individual test case. If used in the default format string, any arguments not used will be ignored.
 
   * `{i}` The test id, which is normally of the form mmm-nnn.
 
