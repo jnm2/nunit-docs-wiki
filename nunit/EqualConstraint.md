@@ -108,7 +108,7 @@ Assert.That( later. Is.EqualTo(now).Within(TimeSpan.FromHours(3.0));
 Assert.That( later, Is.EqualTo(now).Within(3).Hours);
 ```
 
-<h4>Comparing Arrays and Collections</h4>
+<h4>Comparing Arrays, Collections and IEnumerables<h4>
 
 Since version 2.2, NUnit has been able to compare two single-dimensioned arrays.
 Beginning with version 2.4, multi-dimensioned arrays, nested arrays (arrays of arrays)
@@ -122,6 +122,11 @@ the comparison to be made element by element, without regard for the rank or
 dimensions of the array. Note that jagged arrays (arrays of arrays) do not
 have a single underlying collection. The modifier would be applied
 to each array separately, which has no effect in most cases. 
+
+The `AsCollection` modifier is also useful on classes implementing both `IEnumerable`
+and `IEquatable`. Without the modifier, the `IEquatable` implementation is used to
+test equality. With the modifier specified, `IEquatable` is ignored and the contents
+of the enumeration are compared one by one.
 
 ```C#
 int[] i3 = new int[] { 1, 2, 3 };
@@ -194,7 +199,7 @@ Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 
 <h4>Notes</h4>
 <ol>
-<li><p>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements <b>IEquatable&lt;T&gt;</b>. If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
+<li><p>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
     of the <b>Equals</b> override on the expected object. If you neglect to either implement <b>IEquatable&lt;T&gt;</b> or to
 	override <b>Equals</b>, you can expect failures comparing non-identical objects. 
 	In particular, overriding <b>operator==</b> without overriding <b>Equals</b>
