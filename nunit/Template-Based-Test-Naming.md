@@ -31,8 +31,8 @@ String arguments may be truncated to a maximum length. Either the {a} specifier 
 Internally, NUnit uses certain standard formats unless overridden by the user. The standard format for generating a name from a test method and its arguments is:
 
 ```
-         {m}{a:40} // Name
-         {M}{a:40} // FullName
+         {m}{a} // Name
+         {M}{a} // FullName
 ```
 
 This leads to test names like:
