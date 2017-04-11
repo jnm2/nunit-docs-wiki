@@ -8,5 +8,5 @@ You can download from the marketplace [Visual Studio Gallery](https://visualstud
 
 #### For Visual Studio 2017
 
-You can download from the marketplace [Visual Studio Gallery](xxxx) or from the [GitHub Release page](xxxx)
+You can download from the marketplace [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension-18371) or from the [GitHub Release page](https://github.com/nunit/nunit-vs-testgenerator/releases)
 
