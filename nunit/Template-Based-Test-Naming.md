@@ -8,7 +8,7 @@ NUnit uses a standard naming convention for all tests - however, this can be ove
 
   * `{m}` The method name of the test or empty if there is no method. The name includes any type arguments, enclosed in angle braces and separated by commas.
 
-  * `{M}` The full name of the method. Equivalent to `{n}.{c}.{m}` or `{C}.{m}`
+  * `{M}` The full name of the method.
 
   * `{a}` The full argument representation, enclosed in parentheses and separated by commas. Each argument is represented by the standard NUnit format for certain types, otherwise by the result of ToString().
 
@@ -32,7 +32,6 @@ Internally, NUnit uses certain standard formats unless overridden by the user. T
 
 ```
          {m}{a} // Name
-         {M}{a} // FullName
 ```
 
 This leads to test names like:
