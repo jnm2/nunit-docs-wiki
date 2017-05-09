@@ -102,7 +102,7 @@ Method declarations and method calls should not have spaces between the method n
 ```C#
 public void SomeMethod(int x, int y)
 {
-    Console.WriteLine("{0}+{1}={2}", x, y, x+y );
+    Console.WriteLine("{0}+{1}={2}", x, y, x+y);
 }
 ```
 
