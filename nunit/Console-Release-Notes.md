@@ -7,7 +7,7 @@
 
 #### Issues Resolved
 
- * 168 Intermittent errors while running tests after updating to 3.6
+ * [168](https://github.com/nunit/docs/issues/168) Intermittent errors while running tests after updating to 3.6
 
 
 ### NUnit Console 3.6 - January 14, 2017
@@ -27,29 +27,29 @@
 
 #### Issues Resolved
 
- * 16 NUnit Engine Tests fail if not run from test directory
- * 18 Invalid file type is shown in XML as type="Assembly"
- * 23 In nunit3-console you cannot pass parameters containing ';' because they always get split
- * 37 NUnit 3 console should produce xml events for ITestEventListener which contain
+ * [16](https://github.com/nunit/docs/issues/16) NUnit Engine Tests fail if not run from test directory
+ * [18](https://github.com/nunit/docs/issues/18) Invalid file type is shown in XML as type="Assembly"
+ * [23](https://github.com/nunit/docs/issues/23) In nunit3-console you cannot pass parameters containing ';' because they always get split
+ * [37](https://github.com/nunit/docs/issues/37) NUnit 3 console should produce xml events for ITestEventListener which contain
       unique id in the scope of all test agents for NUnit 2 tests
- * 58 System.Configuration.ConfigurationErrorsException thrown in multiple domain mode.
- * 62 NUnit3 Fails on DLL with no Tests, Unlike NUnit2
- * 100 Class NUnit.Engine.Services.ResultWriters.Tests.SchemaValidator is never used
- * 101 Method NUnit.Options.OptionSet.Unprocessed always returns "false"
- * 104 Type of variable enumerated in 'foreach' is not guaranteed to be castable
- * 110 Writability check could give a friendlier message.
- * 113 Add task descriptions to Build.cake
- * 127 Modify console runner to display multiple assert information
- * 128 Terminate agent if main process has terminated
- * 133 NUnit downloadable packages zip file naming is confusing and non-intuitive
- * 136 Handle early termination of multiple assert block
- * 138 Report Warnings in console runner
- * 145 MasterTestRunner.RunAsync no longer provides start-run and test-run events
- * 151 Unexpected behaviour from --framework flag
- * 153 Remove some settings used by the engine
- * 156 Use high-quality icon for nuspecs
- * 157 Fix Detection of invalid framework when --inprocess
- * 159 Update extension versions in the NuSpec Files
+ * [58](https://github.com/nunit/docs/issues/58) System.Configuration.ConfigurationErrorsException thrown in multiple domain mode.
+ * [62](https://github.com/nunit/docs/issues/62) NUnit3 Fails on DLL with no Tests, Unlike NUnit2
+ * [100](https://github.com/nunit/docs/issues/100) Class NUnit.Engine.Services.ResultWriters.Tests.SchemaValidator is never used
+ * [101](https://github.com/nunit/docs/issues/101) Method NUnit.Options.OptionSet.Unprocessed always returns "false"
+ * [104](https://github.com/nunit/docs/issues/104) Type of variable enumerated in 'foreach' is not guaranteed to be castable
+ * [110](https://github.com/nunit/docs/issues/110) Writability check could give a friendlier message.
+ * [113](https://github.com/nunit/docs/issues/113) Add task descriptions to Build.cake
+ * [127](https://github.com/nunit/docs/issues/127) Modify console runner to display multiple assert information
+ * [128](https://github.com/nunit/docs/issues/128) Terminate agent if main process has terminated
+ * [133](https://github.com/nunit/docs/issues/133) NUnit downloadable packages zip file naming is confusing and non-intuitive
+ * [136](https://github.com/nunit/docs/issues/136) Handle early termination of multiple assert block
+ * [138](https://github.com/nunit/docs/issues/138) Report Warnings in console runner
+ * [145](https://github.com/nunit/docs/issues/145) MasterTestRunner.RunAsync no longer provides start-run and test-run events
+ * [151](https://github.com/nunit/docs/issues/151) Unexpected behaviour from --framework flag
+ * [153](https://github.com/nunit/docs/issues/153) Remove some settings used by the engine
+ * [156](https://github.com/nunit/docs/issues/156) Use high-quality icon for nuspecs
+ * [157](https://github.com/nunit/docs/issues/157) Fix Detection of invalid framework when --inprocess
+ * [159](https://github.com/nunit/docs/issues/159) Update extension versions in the NuSpec Files
 
 <h3>Earlier Releases</h3>
 
