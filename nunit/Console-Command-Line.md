@@ -52,7 +52,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     <td>NUMBER of agents that may be allowed to run simultaneously assuming you are not running inprocess. If not specified, all agent processes run tests at the same time, whatever the number of assemblies. This setting is used to control running your assemblies in parallel.</td></tr>
     
 <tr><th>--domain=DOMAIN</th>
-    <td>DOMAIN isolation for test assemblies.  Values: None, Single, Multiple. If not specified, defaults to Separate for a single assembly or Multiple for more than one.</td></tr>
+    <td>DOMAIN isolation for test assemblies.  Values: None, Single, Multiple. If not specified, defaults to Single for a single assembly or Multiple for more than one.</td></tr>
     
 <tr><th>--framework=FRAMEWORK</th>
     <td>FRAMEWORK type/version to use for tests. Examples: mono, net-4.5, v4.0, 2.0, mono-4.0</td></tr>
