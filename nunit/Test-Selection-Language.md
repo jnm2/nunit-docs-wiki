@@ -21,9 +21,9 @@ Simple Expressions are essentially comparisons, consisting of a key word or prop
 ```
 
 The following key words are recognized on the left-hand side of the comparison:
-  * `test` - The full test name as assigned by NUnit, e.g. My.Name.Space.TestFixture.TestMethod(5)
+  * `test` - The fully qualified test name as assigned by NUnit, e.g. My.Name.Space.TestFixture.TestMethod(5)
   * `name` - The test name assigned by NUnit, e.g. TestMethod(5)
-  * `class` - The full name of the class containing the test, e.g. My.Name.Space.TestFixture
+  * `class` - The fully qualified name of the class containing the test, e.g. My.Name.Space.TestFixture
   * `method` - The name of the method, e.g. TestMethod
   * `cat` - A category assigned to the test, e.g. SmokeTests
 
@@ -46,6 +46,9 @@ The right-hand side of the comparison may be a sequence of non-blank, non-specia
 ```
 
 For matching regular expressions, NUnit users .NET's `Regex.IsMatch` method. For detailed information on the syntax of regular expressions in .NET, see https://msdn.microsoft.com/en-us/library/az24scfc%28v=vs.110%29.aspx.
+
+For specifying qualified names, the same format as used for reflection should be used.   
+For example `My.Name.Space.TestFixture+NestedFixture` can be used to select a nested fixture. For detailed information see: [Specifying Special Characters](https://msdn.microsoft.com/en-us/library/yfsftwz6(v=vs.110).aspx#Anchor_1)
 
 #### Filtering Based on Properties
 
