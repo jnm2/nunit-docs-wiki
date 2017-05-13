@@ -65,14 +65,6 @@ Whenever a non-parallel fixture begins execution, an entirely new set of queues 
 
 If the command line specifies zero workers, all use of the dispatcher and its queues is bypassed and tests are run sequentially on a single thread.
 
-#### Text Output from Tests
-
-In the past, NUnit was able to capture text output (Console, Trace and Log) and associate it with the correct test. This was possible because only one test could run at a time, therefore any output received between the start and end of a particular test could be identified with that test.
-
-In an environment where multiple tests may be running at the same time, this is no longer possible. Consequently, NUnit 3.0 will no longer capture Console, Trace or Log output. A separate facility is being added to the NUnit `TextContext` to allow writing output to the test result itself.
-
-See [[Text Output from Tests]] for further details.
-
 #### Platform Support
 
-This feature is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
+Parallel execution is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
