@@ -5,7 +5,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |  Component      |  Title                                     |  Implemented?  |
 |-----------------|--------------------------------------------|----------------|
 |  **General**    | [[Test Discovery and Execution API Spec]]  | Yes            |
-|                 | [[Parallel Test Execution Spec]]           | Yes            |
 |                 | [[Linux Makefiles Spec]]                   | No             |
 |                 | [[NUnit Settings Spec]]                    | Yes            |
 |                 | [[Packages Spec]]                          | Yes            |
@@ -20,7 +19,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[File Directory and Path Assertions Spec]]| Yes            |
 |                 | [[Extended Constraint Syntax Spec]]        | No             |
 |                 | [[Dynamic Test Cases Spec]]                | No             |
-|                 | [[Framework Parallel Test Execution Spec]] | Yes            |
 |                 | [[Text Output from Tests Spec]]            | Yes            |
 |                 | [[Generation of Test Names Spec]]          | Yes            |
 |                 | [[Parameterized Test Fixtures Spec]]       | No             |
@@ -28,6 +26,5 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 | **Test Engine** | [[Test Engine Spec]]                       | Yes            |
 |                 | [[Test Engine Api Spec]]                   | Yes            |
 |                 | [[Engine Driver Api Spec]]                 | Yes            |
-|                 | [[Engine Parallel Test Execution Spec]]    | Yes            |
 |                 | [[Engine Addins Spec]]                     | Yes            |
 |                 | [[TeamCity Service Messages Spec]]         | Yes            |
