@@ -1,24 +1,25 @@
 The NUnit 3.0 framework can run tests in parallel within an assembly. This is a completely separate facility from [[Engine Parallel Test Execution]], although it is possible to use both in the same test run.
 
-By default, no parallel execution takes place. Attributes are used to indicate which tests may run in parallel and how they relate to other tests. The names of some attributes and properties are adapted from MbUnit, since those names are familiar to many users. However, the semantics may be slightly different in some cases.
+By default, no parallel execution takes place. Attributes are used to indicate which tests may run in parallel and how they relate to other tests.
 
 #### ParallelizableAttribute
 
 This attribute is used to indicate whether the test and/or its descendants may be run in parallel with other tests. The constructor takes an optional `ParallelScope` enumeration argument (see below), which defaults to `ParallelScope.Self`. The attribute may be used at the assembly, class or method level and the word "test" in the rest of this description refers to the suite or test case that corresponds to the item on which the attribute appears.
 
-Two Named Properties are supported:
+One Named Property is supported:
   * `Scope = ParallelScope` for setting `ParallelScope` using property syntax
-  * `ExclusionGroup = string` for ensuring that certain tests do not run together (NYI)
+
+#### NonParallelizableAttribute
+
+This Attribute is used to indicate that the test as well as its descendents may __not__ be run in parallel with other tests. Although `[NonParallelizable]` is completely equivalent to `[Parallelizable(ParallelScope.None)]`, we recommend that you use the former for clarity.
 
 ##### ParallelScope Enumeration
 
-This is a `[Flags]` type enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. Initially, it will use the following values:
-  * `ParallelScope.None` indicates that the test may not be run in parallel with other tests.
-  * `ParallelScope.Self` indicates that the test itself may be run in parallel with other tests.
+This is a `[Flags]` type enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. The following values are available for use:
+  * `ParallelScope.Self` indicates that the test itself may be run in parallel with other tests. This is the default for the `ParallelizableAttribute` and is the only value permitted on a test method.
   * `ParallelScope.Children` indicates that the descendants of the test may be run in parallel with respect to one another.
-  * `ParallelScope.Fixtures` indicates that fixtures may be run in parallel with one another.
+  * `ParallelScope.Fixtures` indicates that test fixtures that are the descendants of the test may be run in parallel with one another.
 
-> Specific values may be added or removed as development proceeds.
 > Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
 
 ##### ExclusionGroup (NYI)
