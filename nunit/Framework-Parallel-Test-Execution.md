@@ -18,35 +18,33 @@ This Attribute is used to indicate that the test as well as its descendents may 
 This is a `[Flags]` type enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. The following values are available for use:
   * `ParallelScope.Self` indicates that the test itself may be run in parallel with other tests. This is the default for the `ParallelizableAttribute` and is the only value permitted on a test method.
   * `ParallelScope.Children` indicates that the descendants of the test may be run in parallel with respect to one another.
-  * `ParallelScope.Fixtures` indicates that test fixtures that are the descendants of the test may be run in parallel with one another.
+  * `ParallelScope.Fixtures` indicates that test fixtures that are the descendants of the test may be run in parallel with one another.`
 
-> Values that apply to a higher level test than the test on which the scope appears - for example, ParallelScope.Fixtures appearing on a method - are ignored without warning or affect.
+**Note:** Additional values of the enumerator are used internally. They do not show up in the Intellisense and are not documented here. The value `ParallelScope.None`, which was used before the creation of the `NonParallelizableAttribute` is still accepted for the purpose of backward compatibility.
 
-##### ExclusionGroup (NYI)
+##### Specifying Parallelism at Multiple Test Levels
 
-The string identifies a group of tests to which this one belongs. Only one test within a group may execute at the same time. Note that the exclusion only applies to the test on which the attribute appears. If the attribute indicates that descendants may run in parallel with one another, the group setting does not prevent them from doing so.
+`[Parallelizable]` or `[NonParallelizable]` may be specified on multiple levels of the tests, with lower-level specifications overriding higher ones to a certain degree. Thus, if the assembly has `[NonParallelizable]` either by use of the attribute or by default, classes with `[Parallelizable]` may be run in parallel as may their children if an appropriate scope is used.
 
-Since exclusion groups represent locks that must be acquired, we need to minimize the possiblility of deadlocks. Therefore, we only allow tests to belong to one exclusion group. However, deadlocks are still possible if child tests also specify exclusion groups. To avoid them, the following guidelines need to be followed:
+It is important to note that a parallel or non-parallel specification only applies at that level where it appears and below. It cannot override the settings on higher-level tests. In this way, parallelism is not absolute but is relative to other tests at the same level in the tree. The following are a few examples of how this works:
 
-  1. No child test should specify the same exclusion group as a parent.
+1. **Non-parallel class with parallel methods:** The methods only run in parallel with one another, not with the test methods of any other classes.
 
-  2. The order of specifying exclusion groups from the outermost test to the innermost should always be the same. Minimizing the number of exclusion groups used will make this easier
+2. **Parallel class with non-parallel methods:** The methods run sequentially, usually on the same thread that ran the class one-time setup, but may actually be running in parallel with other, unrelated methods from other classes.
 
-> We need to do some research to determine if we can avoid the problem of deadlock by simply detecting and prohibiting any violation of these guidelines.
+3. **Non-parallel SetUpFixture with parallel test fixtures:** The entire group of fixtures runs separately from any fixtures outside the group. Within the group, multiple fixtures run in parallel.
 
-> We may want to consider replacing the use of a string with a Type for better refactoring.
+4. **Parallel SetUpFixture with non-parallel test fixtures:** The group runs in parallel with other fixtures and groups. Within the group, only one fixture at a time may execute.
 
-##### Specifying Parallelizable at Multiple Test Levels
+5. **Parallel SetUpFixture with non-parallel test fixtures containing parallel test cases:** This is just one example of a more complex setup. The fixtures themselves run as described in (4) but the cases within each fixture run in parallel with one another.
 
-The `ParallelizableAttribute` may be specified on multiple levels of the tests, with lower-level specifications overriding higher ones. Thus, if the assembly has `ParallelScope.None` either by use of the attribute or by default, classes with `ParallelScope.Self` may be run in parallel as may their children if an appropriate scope is used.
-
-It is however important to note that a lower-level specification only applies at that level and below. It cannot override settings on higher-level tests. Thus, allowing parallel execution for methods of a class that does not allow it, results in those methods running in parallel with one another, but not in parallel with test methods under any other classes. This is the natural outcome of the fact that the execution of a test method is, in fact, part of the execution of the test represented by the class.
+Once you understand the principles, you can construct complex hierarchies of parallel and non-parallel tests.
 
 #### LevelOfParallelismAttribute
 
 This is an **assembly-level** attribute, which may be used to specify the level of parallelism, that is, the maximum number of worker threads executing tests in this assembly. It may be overridden using a command-line option in the console runner. If it is not specified, NUnit uses a default value based on the number of processors available or a specified minimum, whichever is greater.
 
-#### Parallel Execution
+#### Parallel Execution Internals
 
 We use multiple queues organized into "shifts". A `WorkShift` consists of one or more queues of work items, which may be active at the same time. As the name suggests, no two shifts are active simultaneously. NUnit runs one `WorkShift` until all available work is complete and then switches to the next shift. When there is no work for any shift, the run is complete.
 
@@ -63,9 +61,9 @@ _* Depends on Level of Parallelism_
 
 For efficiency, each queue is created when the first test is added to it. At the time of creation, all workers for that queue are also created and initialized.
 
-If the command line specifies zero workers, all use of the dispatcher and its queues is currently bypassed and tests are run sequentially on a single thread.
+Whenever a non-parallel fixture begins execution, an entirely new set of queues is created so that the child tests of that fixture may be run without any conflict from other tests that are already in the main set of queues.
 
-**NOTE:** In the current implementation, test methods or cases are never run in parallel with one another, even if the `ParallelizableAttribute` is specified on them.
+If the command line specifies zero workers, all use of the dispatcher and its queues is bypassed and tests are run sequentially on a single thread.
 
 #### Text Output from Tests
 
@@ -77,17 +75,4 @@ See [[Text Output from Tests]] for further details.
 
 #### Platform Support
 
-This feature is intended to be supported by the full NUnit framework on all supported platforms. It is not being supported at this time under NUnitLite. The attributes are recognized under NUnitLite but they have no effect.
-
-#### Implementation Status
-
-The following is done:
-* All work shifts and queues described above.
-* ParallelizableAttribute and LevelOfParallelismAttribute.
-* NUnit-console commandline option --workers
-* Fixtures may be run in parallel.
-
-Not yet done:
-* Implementation of ExclusionGroups
-* Running test cases in parallel
-* Special handling of text output
+This feature is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
