@@ -15,7 +15,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[Generation of Test Names Spec]]          | Yes            |
 |                 | [[Parameterized Test Fixtures Spec]]       | No             |
 |                 | [[Test Dependency Attribute Spec]]         | No             |
-| **Test Engine** | [[Test Engine Spec]]                       | Yes            |
-|                 | [[Test Engine Api Spec]]                   | Yes            |
+| **Test Engine** | [[Test Engine Api Spec]]                   | Yes            |
 |                 | [[Engine Driver Api Spec]]                 | Yes            |
 |                 | [[Engine Addins Spec]]                     | Yes            |
