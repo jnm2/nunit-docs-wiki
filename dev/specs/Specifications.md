@@ -5,9 +5,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |  Component      |  Title                                     |  Implemented?  |
 |-----------------|--------------------------------------------|----------------|
 |  **General**    | [[Test Discovery and Execution API Spec]]  | Yes            |
-|                 | [[Linux Makefiles Spec]]                   | No             |
-|                 | [[NUnit Settings Spec]]                    | Yes            |
-|                 | [[Packages Spec]]                          | Yes            |
 |  **Framework**  | [[Framework Api Spec]]                     | Yes            |
 |                 | [[Framework Attribute Support Spec]]       | Yes            |
 |                 | [[Framework Distributions Spec]]           | Yes            |
