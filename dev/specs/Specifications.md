@@ -7,8 +7,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |  **General**    | [[Test Discovery and Execution API Spec]]  | Yes            |
 |  **Framework**  | [[Framework Api Spec]]                     | Yes            |
 |                 | [[Include and Exclude Attributes Spec]]    | No             |
-|                 | [[Warning Level Assert Spec]]              | Yes            |
-|                 | [[Multiple Asserts Spec]]                  | Yes            |
 |                 | [[Extended Constraint Syntax Spec]]        | No             |
 |                 | [[Dynamic Test Cases Spec]]                | No             |
 |                 | [[Text Output from Tests Spec]]            | Yes            |
