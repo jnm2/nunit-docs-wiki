@@ -1,9 +1,9 @@
 #### Internals
  * [[Architectural Overview]]
  * [[NUnit APIs]]
- * [[Low-Level Framework API]]
- * [[Engine API]]
- * [[Framework Driver API]]
+   * [[Test Engine API]]
+   * [[Engine Driver API]]
+   * [[Framework API]]
  * [[Framework Design]]
  * [[Active Attributes]]
  * [[Internal Trace]]
