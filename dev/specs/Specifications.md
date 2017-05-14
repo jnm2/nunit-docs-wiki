@@ -4,15 +4,11 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 
 |  Component      |  Title                                     |  Implemented?  |
 |-----------------|--------------------------------------------|----------------|
-|  **General**    | [[Test Discovery and Execution API Spec]]  | Yes            |
-|  **Framework**  | [[Framework Api Spec]]                     | Yes            |
-|                 | [[Include and Exclude Attributes Spec]]    | No             |
+|  **Framework**  | [[Include and Exclude Attributes Spec]]    | No             |
 |                 | [[Extended Constraint Syntax Spec]]        | No             |
 |                 | [[Dynamic Test Cases Spec]]                | No             |
 |                 | [[Text Output from Tests Spec]]            | Yes            |
 |                 | [[Generation of Test Names Spec]]          | Yes            |
 |                 | [[Parameterized Test Fixtures Spec]]       | Partial        |
 |                 | [[Test Dependency Attribute Spec]]         | No             |
-| **Test Engine** | [[Test Engine Api Spec]]                   | Yes            |
-|                 | [[Engine Driver Api Spec]]                 | Yes            |
-|                 | [[Engine Addins Spec]]                     | Yes            |
+| **Test Engine** | [[Engine Addins Spec]]                     | Yes            |
