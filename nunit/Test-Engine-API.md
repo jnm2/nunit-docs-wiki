@@ -1,8 +1,6 @@
-> **NOTE:** This page requires updates.
-
 The NUnit Test Engine API is our first published API for discovering, exploring and executing tests programmatically. Previously, third-party runners have had to use unsupported internal classes and methods in order to execute NUnit tests.  With the development of the Engine API, this is no longer necessary.
 
-#### Objectives of the API
+### Objectives of the API
 
 The API was developed with a number of objectives in mind:
 
@@ -16,36 +14,93 @@ The API was developed with a number of objectives in mind:
   * Other engine-layer features may be  introduced as new versions are created.
 * To isolate client runners from the engine itself, so that any updated engine installed will become immediately available to all clients on a machine without the need to upgrade the client.
 
-#### Overview
+### Overview
 
 The Engine API is included in the `nunit.engine.api` assembly, which must be referenced by any runners wanting to use it. This assembly is being released as version 3.0, to coincide with the versioning of other NUnit components. 
 
 The actual engine is contained in the `nunit.engine` assembly. This assembly is **not** referenced by the runners. Instead, the API is used to locate and load an appropriate version of the engine, returning an instance of the `ITestEngine` interface to the  runner.
 
-#### Getting an Instance of the Engine
+### Getting an Instance of the Engine
 
-The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member currently has the first overload listed. The added overloads are proposed enhancements. Additional overloads used for testing are found in the code itself.
+The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member has two overloads, depending on whether a particular minimum version of the engine is required.
 
 ```C#
 public static ITestEngine CreateInstance(bool privateCopy = false);
 public static ITestEngine CreateInstance(Version minVersion bool privateCopy = false);
 ```
 
-We search for the engine in a standard set of locations, starting with the current ApplicationBase. If `privateCopy` is true, then only the ApplicationBase is examined. If no engine is found that satisfies the minimum version requirement, an exception is thrown.
+We search for the engine in a standard set of locations, starting with the current ApplicationBase. 
 
-We encourage authors of runners to **not** use the private copy feature, but they may use it if they do not want to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
+1. The Application base and probling path
+2. A copy installed as a nuget package - intended for use only when developing runners that make use of the engine.
+3. If `privateCopy` is false and the engine is not found in the first two steps, we check standard locations where the engine may have been installed.
 
-##### Test Engine Search Order
+**Note:** We encourage authors of runners to **not** use the private copy feature, but they may use it if they do not want to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
 
-[REWRITE] To be defined. In the current Alpha, the engine must be in the same directory as the runner exe.
-
-#### Key Interfaces
+### Key Interfaces
 
 The runner deals with the engine through a set of interfaces. These are quite general because we hope to avoid many changes to this API.
 
-##### [ITestEngine](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestEngine.cs)
+#### ITestEngine
 
-This is the primary interface to the engine. The normal sequence of calls for initially accessing it is:
+This is the primary interface to the engine. 
+
+```C#
+namespace NUnit.Engine
+{
+    /// <summary>
+    /// ITestEngine represents an instance of the test engine.
+    /// Clients wanting to discover, explore or run tests start
+    /// require an instance of the engine, which is generally 
+    /// acquired from the TestEngineActivator class.
+    /// </summary>
+    public interface ITestEngine : IDisposable
+    {
+        /// <summary>
+        /// Gets the IServiceLocator interface, which gives access to
+        /// certain services provided by the engine.
+        /// </summary>
+        IServiceLocator Services { get; }
+
+        /// <summary>
+        /// Gets and sets the directory path used by the engine for saving files.
+        /// Some services may ignore changes to this path made after initialization.
+        /// The default value is the current directory.
+        /// </summary>
+        string WorkDirectory { get; set;  }
+
+        /// <summary>
+        /// Gets and sets the InternalTraceLevel used by the engine. Changing this
+        /// setting after initialization will have no effect. The default value
+        /// is the value saved in the NUnit settings.
+        /// </summary>
+        InternalTraceLevel InternalTraceLevel { get; set; }
+
+        /// <summary>
+        /// Initialize the engine. This includes initializing mono addins,
+        /// setting the trace level and creating the standard set of services 
+        /// used in the Engine.
+        /// 
+        /// This interface is not normally called by user code. Programs linking 
+        /// only to the nunit.engine.api assembly are given a
+        /// pre-initialized instance of TestEngine. Programs 
+        /// that link directly to nunit.engine usually do so
+        /// in order to perform custom initialization.
+        /// </summary>
+        void Initialize();
+
+        /// <summary>
+        /// Returns a test runner instance for use by clients in discovering,
+        /// exploring and executing tests.
+        /// </summary>
+        /// <param name="package">The TestPackage for which the runner is intended.</param>
+        /// <returns>An ITestRunner.</returns>
+        ITestRunner GetRunner(TestPackage package);
+    }
+}
+```
+
+The normal sequence of calls for initially acquiring this interface is:
 
 ```C#
 ITestEngine engine = TestEngineActivator.CreateInstance(...);
@@ -57,15 +112,95 @@ The engine provides a number of services, some internal and some public. Public 
 
 The final and probably most frequently used method on the interface is `GetRunner`. It takes a `TestPackage` and returns an `ITestRunner` that is appropriate for the options specified.
 
-##### [ITestRunner](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestRunner.cs)
+#### [ITestRunner](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestRunner.cs)
 
-This interface allows loading test assemblies, exploring the tests contained in them and running the tests. For the most common use cases, it isn't necessary to call `Load`, `Unload` or `Reload`. Calling either `Explore`, `Run` or `RunAsync` will cause the tests to be loaded automatically.
+This interface allows loading test assemblies, exploring the tests contained in them and running the tests. 
+
+```C#
+namespace NUnit.Engine
+{
+    /// <summary>
+    /// Interface implemented by all test runners.
+    /// </summary>
+    public interface ITestRunner : IDisposable
+    {
+        /// <summary>
+        /// Get a flag indicating whether a test is running
+        /// </summary>
+        bool IsTestRunning { get; }
+
+        /// <summary>
+        /// Load a TestPackage for possible execution
+        /// </summary>
+        /// <returns>An XmlNode representing the loaded package.</returns>
+        /// <remarks>
+        /// This method is normally optional, since Explore and Run call
+        /// it automatically when necessary. The method is kept in order
+        /// to make it easier to convert older programs that use it.
+        /// </remarks>
+        XmlNode Load();
+
+        /// <summary>
+        /// Unload any loaded TestPackage. If none is loaded,
+        /// the call is ignored.
+        /// </summary>
+        void Unload();
+
+        /// <summary>
+        /// Reload the current TestPackage
+        /// </summary>
+        /// <returns>An XmlNode representing the loaded package.</returns>
+        XmlNode Reload();
+
+        /// <summary>
+        /// Count the test cases that would be run under
+        /// the specified filter.
+        /// </summary>
+        /// <param name="filter">A TestFilter</param>
+        /// <returns>The count of test cases</returns>
+        int CountTestCases(TestFilter filter);
+
+        /// <summary>
+        /// Run the tests in the loaded TestPackage and return a test result. The tests
+        /// are run synchronously and the listener interface is notified as it progresses.
+        /// </summary>
+        /// <param name="listener">The listener that is notified as the run progresses</param>
+        /// <param name="filter">A TestFilter used to select tests</param>
+        /// <returns>An XmlNode giving the result of the test execution</returns>
+        XmlNode Run(ITestEventListener listener, TestFilter filter);
+
+        /// <summary>
+        /// Start a run of the tests in the loaded TestPackage. The tests are run
+        /// asynchronously and the listener interface is notified as it progresses.
+        /// </summary>
+        /// <param name="listener">The listener that is notified as the run progresses</param>
+        /// <param name="filter">A TestFilter used to select tests</param>
+        /// <returns></returns>
+        ITestRun RunAsync(ITestEventListener listener, TestFilter filter);
+
+        /// <summary>
+        /// Cancel the ongoing test run. If no  test is running, the call is ignored.
+        /// </summary>
+        /// <param name="force">If true, cancel any ongoing test threads, otherwise wait for them to complete.</param>
+        void StopRun(bool force);
+
+        /// <summary>
+        /// Explore a loaded TestPackage and return information about the tests found.
+        /// </summary>
+        /// <param name="filter">The TestFilter to be used in selecting tests to explore.</param>
+        /// <returns>An XmlNode representing the tests found.</returns>
+        XmlNode Explore(TestFilter filter);
+    }
+}
+```
+
+For the most common use cases, it isn't necessary to call `Load`, `Unload` or `Reload`. Calling either `Explore`, `Run` or `RunAsync` will cause the tests to be loaded automatically.
 
 The `Explore` methods returns an `XmlNode` containing the description of all tests found. The `Run` method returns an `XmlNode` containing the results of every test. The XML format for results is the same as that for the exploration of tests, with additional nodes added to indicate the outcome of the test. `RunAsync` returns an `ITestRun` interface, which allows retrieving the XML result when it is complete.
 
 The progress of a run is reported to the `ITestEventListener` passed to one of the run methods. Notifications received on this interface are strings in XML format, rather than XmlNodes, so that they may be passed directly across a Remoting interface.
 
-##### Engine Services
+#### Engine Services
 
 The engine `Services` property exposes the [IServiceLocator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/IServiceLocator.cs) interface, which allows the runner to use public services of the engine. The following services are available publicly.
 
