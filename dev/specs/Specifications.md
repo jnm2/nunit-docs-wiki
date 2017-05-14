@@ -6,10 +6,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |-----------------|--------------------------------------------|----------------|
 |  **General**    | [[Test Discovery and Execution API Spec]]  | Yes            |
 |  **Framework**  | [[Framework Api Spec]]                     | Yes            |
-|                 | [[Framework Attribute Support Spec]]       | Yes            |
-|                 | [[Framework Distributions Spec]]           | Yes            |
-|                 | [[NUnitLite Unification Spec]]             | Yes            |
-|                 | [[NUnitLite Portable Spec]]                | Yes            |
 |                 | [[Include and Exclude Attributes Spec]]    | No             |
 |                 | [[Warning Level Assert Spec]]              | Yes            |
 |                 | [[Multiple Asserts Spec]]                  | Yes            |
