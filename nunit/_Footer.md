@@ -1,1 +1,1 @@
-                          Copyright (c) 2015 NUnit Software
+                                  Copyright © 2017 NUnit Software
