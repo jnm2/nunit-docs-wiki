@@ -9,7 +9,6 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[Include and Exclude Attributes Spec]]    | No             |
 |                 | [[Warning Level Assert Spec]]              | Yes            |
 |                 | [[Multiple Asserts Spec]]                  | Yes            |
-|                 | [[File Directory and Path Assertions Spec]]| Yes            |
 |                 | [[Extended Constraint Syntax Spec]]        | No             |
 |                 | [[Dynamic Test Cases Spec]]                | No             |
 |                 | [[Text Output from Tests Spec]]            | Yes            |
@@ -20,4 +19,3 @@ Specifications are descriptions of work we are doing or plan to do. They may var
 |                 | [[Test Engine Api Spec]]                   | Yes            |
 |                 | [[Engine Driver Api Spec]]                 | Yes            |
 |                 | [[Engine Addins Spec]]                     | Yes            |
-|                 | [[TeamCity Service Messages Spec]]         | Yes            |
