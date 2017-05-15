@@ -57,8 +57,7 @@ The driver creates a `FrameworkController` instance using reflection for each te
 ```C#
 public FrameworkController(string assemblyPath, string idPrefix, IDictionary settings)
 ```
-
-st
+where
 * `assemblyPath` is the full path to the test assembly.
 * `idPrefix` is a prefix used for all test ids created under this controller. This is how the engine is able to provide unique ids for each test identified, even though multiple assemblies, frameworks and controllers may be involved.
 * `settings` is an IDictionary containing the settings to be used in loading and running this assembly. A non-generic dictionary is used to allow for implementation of the framework on platforms that don't support Generics.
