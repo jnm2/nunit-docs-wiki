@@ -2,7 +2,7 @@ The TestEngine uses drivers to interface with frameworks. This isolates framewor
 
 Because they are quite different internally, NUnit itself treats its own 2.x and 3.x framework versions as separate frameworks, with each using a different driver. The NUnit 3 driver is the only one built into the engine. All other drivers must be written and installed as extensions.
 
-Designing an API for drivers involved compromise. The API had to be simple enough to be easily implemented by those wanting to use NUnit with a particular framework. On the other hand, if it is too simple, some advanced capabilities of a given framework might not be easily accessible.
+Designing an API for drivers involved compromise. The API had to be simple enough to be easily implemented by those wanting to use NUnit with a particular framework. On the other hand, if it was too simple, some advanced capabilities of a given framework might not be easily accessible.
 
 ### Implementation Details
 
