@@ -26,7 +26,7 @@ The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngin
 
 ```C#
 public static ITestEngine CreateInstance(bool privateCopy = false);
-public static ITestEngine CreateInstance(Version minVersion bool privateCopy = false);
+public static ITestEngine CreateInstance(Version minVersion, bool privateCopy = false);
 ```
 
 We search for the engine in a standard set of locations, starting with the current ApplicationBase. 
