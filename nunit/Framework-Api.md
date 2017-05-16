@@ -1,4 +1,4 @@
-The NUnit 3 Framework API consists of a number of related classes with well-known names contained in the framework. The 3 Framework Driver, which is part of the engine, performs actions by creating these classes. All required actions are performed in the constructor. The driver only needs to know the names of the classes and the arguments each one accepts.
+The NUnit 3 Framework API consists of a number of related classes with well-known names contained in the framework. The NUnit 3 Framework Driver, which is part of the engine, performs actions by creating these classes. All required actions are performed in the constructor. The driver only needs to know the names of the classes and the arguments each one accepts.
 
 This document describes the interface between the driver and framework and the rules that must be followed to provide continued backward compatibility as new versions of the framework are created. Note that it __only__ applies to the NUnit 3 framework.
 
@@ -70,10 +70,10 @@ As the driver needs to perform some action, it creates a temporary instance of a
 
 * They take an instance of `FrameworkController` as their first argument. This must be the instance originally created by the driver for the particular assembly. This instance provides a common point of communication among various actions taken against the assembly.
 * Another argument, the last one, is an object that implements `System.Web.UI.ICallbackEventHandler`. The handler receives the result of each action and - in the case of executing tests - progress notifications.
-* Due to the nature of the `ICallbackEventHandler` interface, the results they return are always strings. The specific content of each result depends on the particular action.
+* Due to the nature of the `ICallbackEventHandler` interface, the results returned are always strings. The specific content of each result depends on the particular action.
 * Exceptions are only thrown in the case of completely unanticipated errors, generally meaning an error in the calling program or a bug in the framework. We don't consider things like missing or bad files or exceptions thrown in user code as unanticipated.
 
-Some actions take the string representation of a test filter as an argument. The NUnit Engine and Framework have shared knowledge of the format of a filter. For an empty filter (no filtering) use "<filter/>".
+Some actions take the string representation of a test filter as an argument. The NUnit Engine and Framework have shared knowledge of the format of a filter. For an empty filter (no filtering) use `string.Empty`.
 
 **Note:** The `ICallbackEventHandler` is actually passed as an object and cast to the interface by the framework. This is intended to allow future use of other interfaces for progress.
 
@@ -95,7 +95,7 @@ If the assembly can not be found or loaded, the same result is returned, but wit
 
 #### ExploreTestsAction
 
-`ExploreTestsAction` is used to get the full tree of test results, as for display in a Gui. Its constructor is as follows:
+`ExploreTestsAction` is used to get the full tree of tests, as for display in a Gui. Its constructor is as follows:
 
 ```C#
 public ExploreTestsAction(FrameworkController controller, string filter, object handler);
@@ -107,7 +107,7 @@ where
 
 The result returned from `handler.GetCallbackResult()` is the XML representation of the test assembly, containing all tests that passed the filter, arranged as a tree with child tests contained within their parents.
 
-If the assembly was not be found or unable to be loaded, a non-runnable assembly with no child tests is returned.
+If the assembly was not found or unable to be loaded, a non-runnable assembly with no child tests is returned.
 
 If this action is invoked without first invoking `LoadTestsAction`, an `InvalidOperationException` is thrown.
 
@@ -135,7 +135,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 `RunTestsAction` is used to execute the loaded tests. It's constructor is as follows:
 
 ```C#
-public RunTestsAction(FrameworkController controller, string filter, object handler) ;
+public RunTestsAction(FrameworkController controller, string filter, object handler);
 ```
 where
 * `controller` is the `FrameworkController` instance that was created for managing the test assembly.
@@ -153,7 +153,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 `RunAsyncAction` is used to initiate an asynchronous test run, returning immediately. It's constructor is as follows:
 
 ```C#
-public RunAsyncAction(FrameworkController controller, string filter, object handler) ;
+public RunAsyncAction(FrameworkController controller, string filter, object handler);
 ```
 where
 * `controller` is the `FrameworkController` instance that was created for managing the test assembly.
@@ -171,7 +171,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 `StopRunAction` is used to stop an ongoing test run. It's constructor is as follows:
 
 ```C#
-public StopRunAction(FrameworkController controller, bool force, object handler) ;
+public StopRunAction(FrameworkController controller, bool force, object handler);
 ```
 where
 * `controller` is the `FrameworkController` instance that was created for managing the test assembly.
