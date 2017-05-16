@@ -2,7 +2,7 @@ The TestEngine uses drivers to interface with frameworks. This isolates framewor
 
 Because they are quite different internally, NUnit itself treats its own 2.x and 3.x framework versions as separate frameworks, with each using a different driver. The NUnit 3 driver is the only one built into the engine. All other drivers must be written and installed as extensions.
 
-Designing an API for drivers involves compromise. The API should be simple enough to be easily implemented by those wanting to use NUnit with a particular framework. On the other hand, if it is too simple, some advanced capabilities of a given framework might not be easily accessible.
+Designing an API for drivers involved compromise. The API had to be simple enough to be easily implemented by those wanting to use NUnit with a particular framework. On the other hand, if it is too simple, some advanced capabilities of a given framework might not be easily accessible.
 
 ### Implementation Details
 
@@ -18,8 +18,7 @@ namespace NUnit.Engine.Extensibility
     /// <summary>
     /// Interface implemented by a Type that knows how to create a driver for a test assembly.
     /// </summary>
-    [TypeExtensionPoint(
-        Description = "Supplies a driver to run tests that use a specific test framework.")]
+    [TypeExtensionPoint(Description = "Supplies a driver to run tests that use a specific test framework.")]
     public interface IDriverFactory
     {
         /// <summary>
@@ -90,7 +89,7 @@ namespace NUnit.Engine.Extensibility
         string Explore(string filter);
 
         /// <summary>
-        /// Cancel the ongoing test run. If no  test is running, the call is ignored.
+        /// Cancel the ongoing test run. If no test is running, the call is ignored.
         /// </summary>
         /// <param name="force">If true, cancel any ongoing test threads, otherwise wait for them to complete.</param>
         void StopRun(bool force);
@@ -100,7 +99,7 @@ namespace NUnit.Engine.Extensibility
 
 As designed, the `IFrameworkDriver` interface maps most directly to the requirements of the NUnit 3 framework. Drivers for other frameworks need to function as an adapter to run tests and return understandable results to the engine.
 
-The filter argument passed to several of the interface methods is an XML string representing the filter. See https://github.com/nunit/docs/wiki/Test-Filters for a description of the representation, which is directly understood by the NUnit 3 framework, but which must be converted by the driver to something that is understood by other frameworks.
+The filter argument passed to several of the interface methods is an XML string representing the filter. See [[Test Filters]] for a description of the format, which is directly understood by the NUnit 3 framework, but which must be converted by the driver to something that is understood by other frameworks.
 
 #### ITestEventListener
 
@@ -117,8 +116,7 @@ namespace NUnit.Engine
     /// any driver and framework may add additional events and the engine will
     /// simply pass them on through this interface.
     /// </summary>
-    [TypeExtensionPoint(
-        Description = "Allows an extension to process progress reports and other events from the test.")]
+    [TypeExtensionPoint(Description = "Allows an extension to process progress reports and other events from the test.")]
     public interface ITestEventListener
     {
         /// <summary>
