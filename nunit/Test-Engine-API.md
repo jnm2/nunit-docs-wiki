@@ -212,7 +212,7 @@ The engine `Services` property exposes the [IServiceLocator](../../../nunit/blob
 | SettingsService    | [ISettings](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ISettings.cs) | Provides access to user settings |
 | LoggingService     | [ILogging](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (NYI) |
 
-The following services are used internally by the engine but are not currently exposed publicly. The potentially could be in the future:
+The following services are used internally by the engine but are not currently exposed publicly. They potentially could be in the future:
 
 | Service                  | Function  |
 |--------------------------|-----------|
