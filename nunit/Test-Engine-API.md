@@ -32,7 +32,7 @@ public static ITestEngine CreateInstance(Version minVersion, bool privateCopy = 
 We search for the engine in a standard set of locations, starting with the current ApplicationBase. 
 
 1. The Application base and probling path
-2. A copy installed as a nuget package - intended for use only when developing runners that make use of the engine.
+2. A copy installed as a NuGet package - intended for use only when developing runners that make use of the engine.
 3. If `privateCopy` is false and the engine is not found in the first two steps, we check standard locations where the engine may have been installed.
 
 **Note:** We encourage authors of runners to **not** use the private copy feature, but they may use it if they do not want to rely on the user already having the engine installed. We suggest any installation of a local copy of the engine be optional in the install program.
@@ -212,7 +212,7 @@ The engine `Services` property exposes the [IServiceLocator](../../../nunit/blob
 | SettingsService    | [ISettings](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ISettings.cs) | Provides access to user settings |
 | LoggingService     | [ILogging](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (NYI) |
 
-The following services are used internally by the engine but are not exposed publicly but could be in the future:
+The following services are used internally by the engine but are not currently exposed publicly. The potentially could be in the future:
 
 | Service                  | Function  |
 |--------------------------|-----------|
@@ -228,9 +228,9 @@ The following interfaces are used by addins that extend the engine:
 
 | Interface              | Addin Function  |
 |------------------------|-----------------|
-| [IProjectLoader](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)       | Load projects in a particular format. |
+| [IProjectLoader](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)       | Load projects in a particular format |
 | [IProject](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProject.cs)             | Project returned by IProjectLoader |
-| [IDriverFactory](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IDriverFactory.cs)       | Provide a driver to interface with a test framework. |
+| [IDriverFactory](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IDriverFactory.cs)       | Provide a driver to interface with a test framework |
 | [IFrameworkDriver](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IFrameworkDriver.cs)     | Driver returned by IDriverFactory |
 | [IResultWriterFactory](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriterFactory.cs) | Provide a result writer to produce an output file in a specified format |
 | [IResultWriter](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriter.cs)        | Result writer returned by IResultWriterFactory |
