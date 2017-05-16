@@ -1,10 +1,8 @@
-NUnit provides three levels of APIs for discovering and running tests. Only one of them - the highest level - is intended for general usage. The others have very specific purposes and we recommend that they only be used for those purposes.
+NUnit provides three levels of public APIs for discovering and running tests. From highest to lowest level they are:
 
-The three APIs, from highest to lowest level, are:
-
-* **Test Engine API** - for use by any program that needs to discover and execute tests.
-* **Engine Driver API** - for use by framework drivers, intended to be loaded by the engine to enable communication with a particular framework.
-* **Framework API** - used by NUnit's own framework driver to communicate with the framework.
+* **Test Engine API** - for general use by any program that needs to discover and execute tests.
+* **Engine Driver API** - implemented by framework drivers to allow the engine to communicate with a particular framework.
+* **Framework API** - used by the NUnit 3 framework driver to communicate with the framework.
 
 ![](https://docs.google.com/drawings/d/1eBVjjrWtiqgyIod_ld0rjtyLdeLYzXs_JMGHkhkZaJw/pub?w=361&h=434)
 
