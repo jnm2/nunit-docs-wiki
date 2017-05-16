@@ -254,7 +254,7 @@ The following services are available publicly.
 | RecentFilesService | [IRecentFiles](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/IRecentFiles.cs)  | Provides information about recently opened files  |
 | ResultService      | [IResultService](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/IResultService.cs)  | Produces test result output in various formats  |
 | SettingsService    | [ISettings](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/ISettings.cs) | Provides access to user settings |
-| LoggingService     | [ILogging](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (NYI) |
+| LoggingService     | [ILogging](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (Not Yet Implemented) |
 
 The following services are used internally by the engine but are not currently exposed publicly. They potentially could be in the future:
 
