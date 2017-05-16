@@ -22,7 +22,7 @@ The actual engine is contained in the `nunit.engine` assembly. This assembly is 
 
 ### Getting an Instance of the Engine
 
-The static class [TestEngineActivator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member has two overloads, depending on whether a particular minimum version of the engine is required.
+The static class [TestEngineActivator](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member has two overloads, depending on whether a particular minimum version of the engine is required.
 
 ```C#
 public static ITestEngine CreateInstance(bool privateCopy = false);
@@ -31,7 +31,7 @@ public static ITestEngine CreateInstance(Version minVersion, bool privateCopy = 
 
 We search for the engine in a standard set of locations, starting with the current ApplicationBase. 
 
-1. The Application base and probling path
+1. The Application base and probing privatepath.
 2. A copy installed as a NuGet package - intended for use only when developing runners that make use of the engine.
 3. If `privateCopy` is false and the engine is not found in the first two steps, we check standard locations where the engine may have been installed.
 
@@ -112,7 +112,7 @@ The engine provides a number of services, some internal and some public. Public 
 
 The final and probably most frequently used method on the interface is `GetRunner`. It takes a `TestPackage` and returns an `ITestRunner` that is appropriate for the options specified.
 
-#### [ITestRunner](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ITestRunner.cs)
+#### ITestRunner
 
 This interface allows loading test assemblies, exploring the tests contained in them and running the tests. 
 
@@ -200,17 +200,61 @@ The `Explore` methods returns an `XmlNode` containing the description of all tes
 
 The progress of a run is reported to the `ITestEventListener` passed to one of the run methods. Notifications received on this interface are strings in XML format, rather than XmlNodes, so that they may be passed directly across a Remoting interface.
 
+The following example shows how to get a copy of the engine, create a runner and run tests using the interfaces.
+
+```C#
+// Get an interface to the engine
+ITestEngine engine = TestEngineActivator.CreateInstance();
+
+// Create a simple test package - one assembly, no special settings
+TestPackage package = new TestPackage("my.test.assembly.dll");
+
+// Get a runner for the test package
+ITestRunner runner = engine.GetRunner(package);
+
+// Run all the tests in the assembly
+XmlNode testResult = runner.Run(this, TestFilter.Empty);
+```
+
+The call to `Run` assumes that the calling class implements ITestEventListener. The returned result is an XmlNode representing the result of the test run.
+
 #### Engine Services
 
-The engine `Services` property exposes the [IServiceLocator](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/IServiceLocator.cs) interface, which allows the runner to use public services of the engine. The following services are available publicly.
+The engine `Services` property exposes the `IServiceLocator` interface, which allows the runner to use public services of the engine.
+
+```C#
+namespace NUnit.Engine
+{
+    /// <summary>
+    /// IServiceLocator allows clients to locate any NUnit services
+    /// for which the interface is referenced. In normal use, this
+    /// linits it to those services using interfaces defined in the 
+    /// nunit.engine.api assembly.
+    /// </summary>
+    public interface IServiceLocator
+    {
+        /// <summary>
+        /// Return a specified type of service
+        /// </summary>
+        T GetService<T>() where T : class;
+
+        /// <summary>
+        /// Return a specified type of service
+        /// </summary>
+        object GetService(Type serviceType);
+    }
+}
+```
+
+The following services are available publicly.
 
 | Service            | Interface    | Function  |
 |--------------------|--------------|-----------|
-| ProjectService     | [IProjectLoader](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)  | Loads projects in various formats |
-| RecentFilesService | [IRecentFiles](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/IRecentFiles.cs)  | Provides information about recently opened files  |
-| ResultService      | [IResultService](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/IResultService.cs)  | Produces test result output in various formats  |
-| SettingsService    | [ISettings](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ISettings.cs) | Provides access to user settings |
-| LoggingService     | [ILogging](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (NYI) |
+| ProjectService     | [IProjectLoader](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)  | Loads projects in various formats |
+| RecentFilesService | [IRecentFiles](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/IRecentFiles.cs)  | Provides information about recently opened files  |
+| ResultService      | [IResultService](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/IResultService.cs)  | Produces test result output in various formats  |
+| SettingsService    | [ISettings](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/ISettings.cs) | Provides access to user settings |
+| LoggingService     | [ILogging](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/ILogging.cs) | Provides centralized internal trace logging for both the engine and runners (NYI) |
 
 The following services are used internally by the engine but are not currently exposed publicly. They potentially could be in the future:
 
@@ -224,13 +268,12 @@ The following services are used internally by the engine but are not currently e
 
 ##### Extensibility Interfaces
 
-The following interfaces are used by addins that extend the engine:
+The following interfaces are used by engine extensions:
 
-| Interface              | Addin Function  |
+| Interface              | Extension Function  |
 |------------------------|-----------------|
-| [IProjectLoader](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)       | Load projects in a particular format |
-| [IProject](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProject.cs)             | Project returned by IProjectLoader |
-| [IDriverFactory](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IDriverFactory.cs)       | Provide a driver to interface with a test framework |
-| [IFrameworkDriver](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IFrameworkDriver.cs)     | Driver returned by IDriverFactory |
-| [IResultWriterFactory](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriterFactory.cs) | Provide a result writer to produce an output file in a specified format |
-| [IResultWriter](../../../nunit/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriter.cs)        | Result writer returned by IResultWriterFactory |
+| [IProjectLoader](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProjectLoader.cs)       | Load projects in a particular format |
+| [IProject](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IProject.cs)             | Project returned by IProjectLoader |
+| [IDriverFactory](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IDriverFactory.cs)       | Provide a driver to interface with a test framework |
+| [IFrameworkDriver](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IFrameworkDriver.cs)     | Driver returned by IDriverFactory |
+| [IResultWriter](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/Extensibility/IResultWriter.cs)        | Result writer returned by IResultWriterFactory |
