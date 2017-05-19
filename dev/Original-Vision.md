@@ -5,7 +5,7 @@ Stated simply...
 
 ##### NUnit is a unit testing framework for developers working with the .NET framework.
 
-On this page, we articulate the details of what that statement means to us. We don't specify features here - see the Nunit Roadmap for that - but try to provide set of guidelines that will help us when we are considering what features to add.
+On this page, we articulate the details of what that statement means to us. We don't specify features here - see the NUnit Roadmap for that - but try to provide set of guidelines that will help us when we are considering what features to add.
 
 ### A Bit More Detail
 

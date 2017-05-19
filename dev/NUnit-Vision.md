@@ -2,7 +2,7 @@ Stated simply...
 
 **The NUnit 3.0 Extended Testing Platform will be a world-class platform for individuals and teams using a test-centric approach to .NET software development.**
 
-On this page, we articulate the details of what that statement means to us. We don't specify features here - see the Nunit Roadmap for that - but try to provide set of guidelines that will help us when we are considering what features to add.
+On this page, we articulate the details of what that statement means to us. We don't specify features here - but try to provide set of guidelines that will help us when we are considering what features to add.
 
 > Note that our vision of an Extended Testing Platform is substantially changed from the earlier vision of NUnit as a framework. Some of the changes are explained in more detail below. You can read the [[Original Vision]] if you would like to compare them directly.
 

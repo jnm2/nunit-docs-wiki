@@ -10,12 +10,10 @@
      * [[Installation|TestGenerator Installation]]
      * [[Release Notes VS2017|TestGenerator-Release-Notes]]
      * [[Release Notes VS2015|TestGenerator-Release-Notes-VS2015]]
-* **[[User FAQ]]**
   
 ### Developer Docs
 
 * **[[NUnit Vision]]**
-* **[[NUnit Roadmap]]**
 * **[[Team Practices]]**
 * **[[Specifications]]**
 * **[[Developer FAQ]]**

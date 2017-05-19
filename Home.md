@@ -3,7 +3,7 @@ This wiki contains the documentation for all active NUnit projects as well as de
 
 #### User Documentation
  * [[NUnit|NUnit-Documentation]] covers NUnit itself, including the framework, engine and console runner.
- * [[NUnit Gui]] covers the new NUnit 3.0 GUI.
+ * [[NUnit Gui]] covers the new NUnit 3 GUI.
  * [[Project Editor]] covers the Windows program for creating and editing `.nunit` project files.
  * [[NUnit Xamarin Runners]] covers the NUnit test runners for Xamarin and mobile devices.
  * [[Test Adapter|Visual-Studio-Test-Adapter]] covers the NUnit Visual Studio test adapters for both NUnit V2 and V3.
@@ -11,7 +11,6 @@ This wiki contains the documentation for all active NUnit projects as well as de
 
 #### Developer Documentation
  * [[NUnit Vision]] covers our vision for NUnit and its future.
- * [[NUnit Roadmap]] shows our plans for coming releases.
  * [[Team Practices]] describes how we work on NUnit and the standards we follow.
  * [[Specifications]] are descriptions of features we plan to add.
  * [[Developer FAQ]] contains basic info for those who want to work on NUnit.

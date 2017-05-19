@@ -15,12 +15,10 @@
     * [[Release Notes V2|AdapterV2 Release Notes]]
     * [[License|Adapter License]]
   * **[[Test Generator|Visual-Studio-Test-Generator]]**
-* **[[User FAQ]]**
 
 ### Developer Docs
 
 * **[[NUnit Vision]]**
-* **[[NUnit Roadmap]]**
 * **[[Team Practices]]**
 * **[[Specifications]]**
 * **[[Developer FAQ]]**
