@@ -12,6 +12,6 @@ Assert.Pass( string message, params object[] parms );
 ```
 
 #### See also...
- * [[Assert.Pass]]
+ * [[Assert.Fail]]
  * [[Assert.Ignore]]
  * [[Assert.Inconclusive]]
