@@ -13,6 +13,7 @@ The Assert class provides the most common assertions in NUnit:
  * [[Assert.Null]]
  * [[Assert.NotNull]]
  * [[Assert.Zero]]
+ * [[Assert.NotZero]]
  * [[Assert.IsNaN]]
  * [[Assert.IsEmpty]]
  * [[Assert.IsNotEmpty]]
