@@ -7,6 +7,7 @@ SomeItemsConstraint(Constraint itemConstraint)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Has.Some...
 ```
