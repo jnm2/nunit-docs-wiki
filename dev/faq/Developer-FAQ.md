@@ -20,6 +20,8 @@
   * [[How can I publish my branch on GitHub]]?
   * [[How do I request merging of my branch into the NUnit trunk]]?
   * [[How can I submit a merge request by email]]?
+  * [[How can I build and package the different projects|Team-Practices]]?
+
 
 #### Version Control
 
