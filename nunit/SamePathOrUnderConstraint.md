@@ -1,16 +1,19 @@
 **SamePathOrUnderConstraint** tests that one path is equivalent to another path or that it is under it.
 
 <h4>Constructor</h4>
+
 ```C#
 SamePathOrUnderConstraint( string expectedPath )
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Is.SamePathOrUnder( string expectedPath )
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...IgnoreCase
 ...RespectCase

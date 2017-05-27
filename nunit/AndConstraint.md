@@ -1,11 +1,13 @@
 **AndConstraint** combines two other constraints and succeeds only if they both succeed.
 
 <h4>Constructor</h4>
+
 ```C#
 AndConstraint(Constraint left, Constraint right)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 <Constraint>.And.<Constraint>
 ```

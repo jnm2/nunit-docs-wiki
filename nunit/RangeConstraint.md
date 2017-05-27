@@ -1,16 +1,19 @@
 **RangeConstraint** tests that a value is in an (inclusive) range.
 
 <h4>Constructor</h4>
+
 ```C#
 RangeConstraint(IComparable from, IComparable to)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Is.InRange(IComparable from, IComparable to)
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...Using(IComparer comparer)
 ...Using<T>(IComparer<T> comparer)
@@ -18,6 +21,7 @@ Is.InRange(IComparable from, IComparable to)
 ```
 
 <h4>Examples of Use</h4>
+
 ```C#
 int[] iarray = new int[] { 1, 2, 3 }
 

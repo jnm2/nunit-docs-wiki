@@ -2,11 +2,13 @@
 of unique items with no duplicates.
 
 <h4>Constructor</h4>
+
 ```C#
 UniqueItemsConstraint()
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Is.Unique
 ```

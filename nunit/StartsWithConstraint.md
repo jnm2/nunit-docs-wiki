@@ -1,22 +1,26 @@
 **StartsWithConstraint** tests for an initial string.
 
 <h4>Constructor</h4>
+
 ```C#
 StartsWithConstraint(string expected)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Does.StartWith(string expected)
 StartsWith(string expected)
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...IgnoreCase
 ```
 
 <h4>Examples of Use</h4>
+
 ```C#
 string phrase = "Make your tests fail before passing!"
 

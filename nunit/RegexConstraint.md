@@ -1,22 +1,26 @@
 **RegexConstraint** tests that a pattern is matched.
 
 <h4>Constructor</h4>
+
 ```C#
 RegexConstraint(string pattern)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Does.Match(string pattern)
 Matches(string pattern)
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...IgnoreCase
 ```
 
 <h4>Examples of Use</h4>
+
 ```C#
 string phrase = "Make your tests fail before passing!"
 

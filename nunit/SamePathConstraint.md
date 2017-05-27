@@ -1,22 +1,26 @@
 `SamePathConstraint` tests that two paths are equivalent.
 
 <h4>Constructor</h4>
+
 ```C#
 SamePathConstraint( string expectedPath )
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Is.SamePath( string expectedPath )
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...IgnoreCase
 ...RespectCase
 ```
 
 <h4>Examples of Use</h4>
+
 ```C#
 Assert.That( "/folder1/./junk/../folder2", 
 	Is.SamePath( "/folder1/folder2" ) );

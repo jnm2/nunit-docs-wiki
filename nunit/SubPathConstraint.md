@@ -1,16 +1,19 @@
 `SubPathConstraint` tests that one path is under another path.
 
 <h4>Constructor</h4>
+
 ```C#
 SubPathConstraint( string expectedPath )
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 Is.SubPath( string expectedPath )
 ```
 
 <h4>Modifiers</h4>
+
 ```C#
 ...IgnoreCase
 ...RespectCase

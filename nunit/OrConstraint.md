@@ -1,11 +1,13 @@
 **OrConstraint** combines two other constraints and succeeds if either of them succeeds.
 
 <h4>Constructor</h4>
+
 ```C#
 OrConstraint(Constraint left, Constraint right)
 ```
 
 <h4>Syntax</h4>
+
 ```C#
 <Constraint>.Or.<Constraint>
 ```
