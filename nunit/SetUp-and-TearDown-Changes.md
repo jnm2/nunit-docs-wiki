@@ -16,7 +16,7 @@ These features were somewhat confusing:
   * TestFixtureSetUp and TestFixtureTearDown could do with better names.
   * SetUp and TearDown designate per-test setup/teardown within a test fixture, one-time setup/teardown within a setup fixture
 
-For NUnit 3.0 we standardized the use of attributes for setup and teardown and renamed some of them to make their function clearer.
+For NUnit 3.0 we standardized the use of attributes for setup and teardown and renamed some of them to make their function clearer. 
 
 #### Attribute Usage
 
@@ -24,9 +24,9 @@ For NUnit 3.0 we standardized the use of attributes for setup and teardown and r
 
   * **TearDownAttribute** is now used exclusively for per-test teardown. 
 
-  * **OneTimeSetUpAttribute** is used for one-time setup.
+  * **OneTimeSetUpAttribute** is used for one-time setup per test-run. If you run _n_ tests, this event will only occur once.
 
-  * **OneTimeTearDownAttribute** is used for one-time teardown.
+  * **OneTimeTearDownAttribute** is used for one-time teardown per test-run. If you run _n_ tests, this event will only occur once
 
   * **SetUpFixtureAttribute** continues to be used as at before, but with changed method attributes.
 
