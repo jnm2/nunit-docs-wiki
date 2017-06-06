@@ -26,6 +26,8 @@ The Assert class provides the most common assertions in NUnit:
  * [[Assert.GreaterOrEqual]]
  * [[Assert.Less]]
  * [[Assert.LessOrEqual]]
+ * [[Assert.Positive ]]
+ * [[Assert.Negative]]
  * [[Assert.IsInstanceOf]]
  * [[Assert.IsNotInstanceOf]]
  * [[Assert.IsAssignableFrom]]
