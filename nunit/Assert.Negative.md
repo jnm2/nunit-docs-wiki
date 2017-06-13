@@ -7,7 +7,7 @@ Assert.Negative(-1);
 Assert.Negative(1);
 ```
 
-The full set of signatures is
+All the overloads of the method are
 ```C#
 Assert.Negative(int actual);
 Assert.Negative(int actual, string message, params object[] args);
@@ -33,6 +33,7 @@ Assert.Negative(float actual, string message, params object[] args);
 You may also use **Assert.That** with a **Is.Negative** constraint to achieve the same result.
 
 #### See also...
+ * [[Assert.Positive]]
  * [[Assert.Zero]]
  * [[Assert.NotZero]]
  * [[Assert.IsNaN]]
