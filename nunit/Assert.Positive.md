@@ -5,6 +5,7 @@ Asserts that a number is positive.
 Assert.Positive(-1);
 //true
 Assert.Positive(1);
+```
 
 All the overloads of the method are
 ```C#
