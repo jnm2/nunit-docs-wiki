@@ -1,5 +1,5 @@
 **DelayedConstraint** delays the application of another constraint until a certain
-amount of time has passed. In it's simplest form, it replaces use of a Sleep
+amount of time has passed. In its simplest form, it replaces use of a Sleep
 in the code but it also supports polling, which may allow use of a longer
 maximum time while still keeping the tests as fast as possible.
 
@@ -7,7 +7,7 @@ The **After** modifier is permitted on any constraint, and the delay applies to
 the entire expression up to the point where **After** appears.
 
 Use of a **DelayedConstraint** with a value argument makes no sense, since
-the value will be extracted at the point of call. It's intended use is with
+the value will be extracted at the point of call. Its intended use is with
 delegates and references. If a delegate is used with polling, it may be called
 multiple times so only methods without side effects should be used in this way.
 

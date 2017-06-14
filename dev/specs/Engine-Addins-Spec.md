@@ -5,7 +5,7 @@ This spec covers a proposed new approach to Engine addins, replacing the use of 
 ## Background
 We originally planned to use Mono.Addins for the engine and have done so in the first betas. However, Mono.Addins no longer supports .NET 2.0. We are using a modified version that we created and which we will have to maintain in the future. Mono.Addins has many more features than we expect to use and has a rather large memory and disk footprint.
 
-In sum, Mono.Addins is not really carrying it's weight for our usage. We will try to replace it with a simple plugin architecture of our own design, using some pieces of our old NUnit 2.x addin feature as well as other features inspired by Mono.Addins.
+In sum, Mono.Addins is not really carrying its weight for our usage. We will try to replace it with a simple plugin architecture of our own design, using some pieces of our old NUnit 2.x addin feature as well as other features inspired by Mono.Addins.
 
 At a minimum, we need to support existing addins that are supported by Mono.Addins. Once we have that support, we can replace Mono.Addins. Further features could be added later.
 
@@ -97,7 +97,7 @@ Addins would be identified by the `AddinAttribute` and implement the IAddin inte
     }
 ```
 
-The above example does the same thing as the previous example in a more complicated way. Obviously, you would use this approach only in more complex situations. Note that the factory class does not have an `ExtensionAttribute` as this would lead to it's being installed twice.
+The above example does the same thing as the previous example in a more complicated way. Obviously, you would use this approach only in more complex situations. Note that the factory class does not have an `ExtensionAttribute` as this would lead to its being installed twice.
 
 **Notes:** 
 1. This design feature is not required initially and will be omitted from the implementation until we actually require it. 

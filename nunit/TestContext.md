@@ -94,7 +94,7 @@ Adds a formatter for values based on some criterion, such as the Type of the val
     AddFormatter(ValueFormatterFactory formatterFactory);
 ```
 
-Both `ValueFormatter` and `ValueFormatterFactory` are delegates. `ValueFormatter` takes a single object as an argument and returns it's string representation. The `AddFormatter` overload that takes a ValueFormatter is intended for use in most cases that arise.
+Both `ValueFormatter` and `ValueFormatterFactory` are delegates. `ValueFormatter` takes a single object as an argument and returns its string representation. The `AddFormatter` overload that takes a ValueFormatter is intended for use in most cases that arise.
 
 ### Properties of the CurrentContext
 

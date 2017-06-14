@@ -45,7 +45,7 @@ for use in production.
 
  * The right-hand panel displays information about the individual test selected in the 
    left-hand panel. It has two tabs.
-   * Properties - shows the information about the test (upper pane) and it's result (lower pane)
+   * Properties - shows the information about the test (upper pane) and its result (lower pane)
    * XML - shows the XML representation for the test or test result
 
 #### Issues Resolved

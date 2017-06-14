@@ -22,7 +22,7 @@ The actual engine is contained in the `nunit.engine` assembly. This assembly is 
 
 ### Getting an Instance of the Engine
 
-The static class [TestEngineActivator](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. It's `CreateInstance` member has two overloads, depending on whether a particular minimum version of the engine is required.
+The static class [TestEngineActivator](https://github.com/nunit/nunit-console/blob/master/src/NUnitEngine/nunit.engine.api/TestEngineActivator.cs) is used to get an interface to the engine. Its `CreateInstance` member has two overloads, depending on whether a particular minimum version of the engine is required.
 
 ```C#
 public static ITestEngine CreateInstance(bool privateCopy = false);

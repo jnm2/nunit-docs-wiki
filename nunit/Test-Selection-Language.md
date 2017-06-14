@@ -68,7 +68,7 @@ We envision that most filtering by property will be based on user-defined proper
 
 #### Filtering by Test Id
 
-In addition to the left-hand-side items listed, NUnit supports filtering by the test id through the `id` keyword. The id may only be selected using the `==` operator and is intended only for use by programs that have explored the tests and cached the ids, not for general use by users. The reason for this restriction is that users have no way of predicting the id that will be assigned to a test. The id is not persistent across test runs and it's format can differ between different framework drivers.
+In addition to the left-hand-side items listed, NUnit supports filtering by the test id through the `id` keyword. The id may only be selected using the `==` operator and is intended only for use by programs that have explored the tests and cached the ids, not for general use by users. The reason for this restriction is that users have no way of predicting the id that will be assigned to a test. The id is not persistent across test runs and its format can differ between different framework drivers.
 
 #### Compound Expressions
 

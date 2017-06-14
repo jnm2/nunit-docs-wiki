@@ -34,7 +34,7 @@ node with the assembly shown as its descendant.
 
 When tests are run for a Visual studio project, they run just as if the output assembly had been
 loaded with one exception. The default location for the config file is the directory containing the
-project file and it's default name is the same as the project file with an extension of .config.
+project file and its default name is the same as the project file with an extension of .config.
 For example, the following command would load the tests in the nunit.tests assembly using the
 configuration file nunit.tests.dll.config located in the same directory as the dll.
 ```

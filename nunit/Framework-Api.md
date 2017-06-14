@@ -113,7 +113,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 
 #### CountTestsAction
 
-CountTestsAction is used to get the number of test cases that will be executed under a specified filter, for use in a progress display. It's constructor is as follows.
+CountTestsAction is used to get the number of test cases that will be executed under a specified filter, for use in a progress display. Its constructor is as follows.
 
 ```C#
 public CountTestsAction(FrameworkController controller, string filter, object handler);
@@ -132,7 +132,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 
 #### RunTestsAction
 
-`RunTestsAction` is used to execute the loaded tests. It's constructor is as follows:
+`RunTestsAction` is used to execute the loaded tests. Its constructor is as follows:
 
 ```C#
 public RunTestsAction(FrameworkController controller, string filter, object handler);
@@ -150,7 +150,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 
 #### RunAsyncAction
 
-`RunAsyncAction` is used to initiate an asynchronous test run, returning immediately. It's constructor is as follows:
+`RunAsyncAction` is used to initiate an asynchronous test run, returning immediately. Its constructor is as follows:
 
 ```C#
 public RunAsyncAction(FrameworkController controller, string filter, object handler);
@@ -168,7 +168,7 @@ If this action is invoked without first invoking `LoadTestsAction`, an `InvalidO
 
 #### StopRunAction
 
-`StopRunAction` is used to stop an ongoing test run. It's constructor is as follows:
+`StopRunAction` is used to stop an ongoing test run. Its constructor is as follows:
 
 ```C#
 public StopRunAction(FrameworkController controller, bool force, object handler);

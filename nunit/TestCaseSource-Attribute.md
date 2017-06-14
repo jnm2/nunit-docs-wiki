@@ -7,7 +7,7 @@ tests with arguments.
 
 ### Usage
 
-Consider a test of the divide operation, taking three arguments: the numerator, the denominator and the expected result. We can specify the test and it's data using one of the forms of **TestCaseSourceAttribute**:
+Consider a test of the divide operation, taking three arguments: the numerator, the denominator and the expected result. We can specify the test and its data using one of the forms of **TestCaseSourceAttribute**:
 
 #### Form 1 - [TestCaseSource(string sourceName)]
 

@@ -6,7 +6,7 @@ tests with arguments.
 
 ### Usage
 
-Consider a test fixture class taking two parameters in its constructor, a string and an int. We can specify the test and it's data using one of the forms of **TestFixtureSourceAttribute**:
+Consider a test fixture class taking two parameters in its constructor, a string and an int. We can specify the test and its data using one of the forms of **TestFixtureSourceAttribute**:
 
 #### Form 1 - [TestFixtureSource(string sourceName)]
 

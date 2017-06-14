@@ -32,7 +32,7 @@ Child elements allowed: None.
 
 #### `<tests>`
 
-Represents a selection of test names. This element contains one or more `<test>` elements, each holding the full name of a test as it's inner text.
+Represents a selection of test names. This element contains one or more `<test>` elements, each holding the full name of a test as its inner text.
 
 Child elements allowed: None.
 

@@ -392,7 +392,7 @@ public class ActionAttributeSampleTests : IHaveAnAction
 ```
 
 ##### Remarks</h5>
-Here we see a new action attribute, `InterfaceAwareAction`.  This attribute uses the Fixture property of the TestDetails passed into BeforeTest and casts it to an interface, IHaveAnAction.  If the fixture implements the IHaveAnAction interface, the attribute sets the Message property to the string passed into the constructor of the attribute.  Since the attribute is applied to the interface, any class that implements this interface gets it's Message property set to the string provided to the constructor of the attribute.  This is useful when the action attribute provides some data or service to the tests.
+Here we see a new action attribute, `InterfaceAwareAction`.  This attribute uses the Fixture property of the TestDetails passed into BeforeTest and casts it to an interface, IHaveAnAction.  If the fixture implements the IHaveAnAction interface, the attribute sets the Message property to the string passed into the constructor of the attribute.  Since the attribute is applied to the interface, any class that implements this interface gets its Message property set to the string provided to the constructor of the attribute.  This is useful when the action attribute provides some data or service to the tests.
 
 Note that this attribute inherits from `TestActionAttribute`. It uses the default (do-nothing) implementation
 of `AfterTest` and overrides both `BeforeTest` and `Target`.
