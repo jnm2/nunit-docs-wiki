@@ -9,25 +9,25 @@ of standard NUnit messages.
 The standard NUnit Asserts create an object known as an **asserter** and
 pass it to the **DoAssert** method, which includes code similar to this...
 
-<pre class="prettyprint">
-	if ( !asserter.Test() )
-		throw new AssertionException( asserter.Message );
-</pre></p>
+```c#
+if ( !asserter.Test() )
+	throw new AssertionException( asserter.Message );
+```
 
-<p>**Asserters** encapsulate the comparison to be performed as well as the
+**Asserters** encapsulate the comparison to be performed as well as the
 objects being compared. They implement the **IAsserter** interface, 
 defined as follows:
 
-<pre class="prettyprint">
-	public interface IAsserter
-	{
-		// Test the condition for the assertion.
-		bool Test();
+```c#
+public interface IAsserter
+{
+	// Test the condition for the assertion.
+	bool Test();
 
-		// Return the message giving the failure reason.
-		string Message { get; }
-	}
-</pre></p>
+	// Return the message giving the failure reason.
+	string Message { get; }
+}
+```
 
 <p>When implementing an **asserter**, you will have to decide on an approach
 for creating the message. For complex tests, it may be necessary to create

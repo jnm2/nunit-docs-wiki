@@ -40,10 +40,14 @@ loaded with one exception. The default location for the config file is the direc
 project file and it's default name is the same as the project file with an extension of .config.
 For example, the following command would load the tests in the nunit.tests assembly using the
 configuration file nunit.tests.dll.config located in the same directory as the dll.
-	<pre class="programtext">        nunit.exe nunit.tests.dll</pre>
+```
+        nunit.exe nunit.tests.dll
+```
 On the other hand, the following command would load the tests using the configuration file
 nunit.tests.config located in the same directory as the csproj file.
-      <pre class="programtext">        nunit.exe nunit.tests.csproj</pre>
+```
+        nunit.exe nunit.tests.csproj
+```
 The same consideration applies to running tests using the console runner.
 
 #### Opening Visual Studio Solutions

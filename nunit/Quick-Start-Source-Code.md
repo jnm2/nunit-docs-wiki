@@ -1,10 +1,7 @@
-<style><!--
-  div.code { width: 34em }
---></style>
-
 ## NUnit Quick Start
 
-<div class="code"><pre class="prettyprint">using System;
+```c#
+using System;
 using NUnit.Framework;
 
 namespace Bank
@@ -97,9 +94,5 @@ namespace Bank
       Assert.AreEqual(150m, destination.Balance);
     }
   }
-}</pre>
-</div>
-<div style="width: 34em; text-align:center;">
-**Listing - QuickStart Example**
-</div>
-
+}
+```

@@ -1,6 +1,8 @@
 <p>The console interface runner is invoked by a command in the form</p>
 
-<pre>    NUNIT3-CONSOLE [inputfiles] [options]</pre>
+```
+    NUNIT3-CONSOLE [inputfiles] [options]
+```
 
 <p>where **inputfiles** is one or more assemblies or test projects of 
 a type that NUnit can process and **options** is zero or more options.
