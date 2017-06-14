@@ -21,7 +21,7 @@ public void MyTest([Values(1,2,3)] int x, [Values("A","B")] string s)
 
 The above test will be executed six times, as follows:
 
-```
+```c#
 MyTest(1, "A")
 MyTest(1, "B")
 MyTest(2, "A")

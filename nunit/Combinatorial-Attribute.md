@@ -18,13 +18,13 @@ public void MyTest(
 ```
 
 MyTest is called six times, as follows:
-```
-	MyTest(1, "A")
-	MyTest(1, "B")
-	MyTest(2, "A")
-	MyTest(2, "B")
-	MyTest(3, "A")
-	MyTest(3, "B")
+```c#
+MyTest(1, "A")
+MyTest(1, "B")
+MyTest(2, "A")
+MyTest(2, "B")
+MyTest(3, "A")
+MyTest(3, "B")
 ```
 
 #### Limitations

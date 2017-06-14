@@ -89,9 +89,9 @@ The following are valid compound expressions:
 
 Because TSL contains special characters and may contain blank spaces, you will usually want to put the expression in quotes on the command line. Consequently, any strings within the TSL expression will most likely need to use an alternate quote character. For example:
 
-````
+```
   nunit-console test.dll --where "method =~ /Source.*Test/ && class =~ 'My.Namespace.Classname'"
-````
+```
 
 #### Support in NUnit V2
 

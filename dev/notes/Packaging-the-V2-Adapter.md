@@ -30,10 +30,7 @@ Build a release version, AnyCPU.
 Packaging
 ------
 
-Use NAnt and use the package target
-```
-NAnt package
-```
+Use NAnt and use the package target `NAnt package`
 Run this from the solution root folder
 
 The resulting files can be found in the "package" folder:

@@ -35,16 +35,16 @@ public void MyTest(
 
 The MyTest method is called nine times, as follows:
 
-```
-    MyTest(1, 0.2)
-    MyTest(1, 0.4)
-    MyTest(1, 0.6)
-    MyTest(2, 0.2)
-    MyTest(2, 0.4)
-    MyTest(2, 0.6)
-    MyTest(3, 0.2)
-    MyTest(3, 0.4)
-    MyTest(3, 0.6)
+```c#
+MyTest(1, 0.2)
+MyTest(1, 0.4)
+MyTest(1, 0.6)
+MyTest(2, 0.2)
+MyTest(2, 0.4)
+MyTest(2, 0.6)
+MyTest(3, 0.2)
+MyTest(3, 0.4)
+MyTest(3, 0.6)
 ```
 
 #### See also...

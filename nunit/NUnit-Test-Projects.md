@@ -2,7 +2,7 @@ Although you may simply enter multiple assembly names on the console command-lin
 files with the extension .nunit containing information about the assemblies to be loaded. The
 following is an example of a hypothetical test project file:
 
-```
+```xml
 <NUnitProject>
   <Settings activeconfig="Debug"/>
   <Config name="Debug">

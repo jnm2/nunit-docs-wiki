@@ -25,10 +25,10 @@ public void MyTest(
 
 MyTest is called three times, as follows:
 
-```
-	MyTest(1, "A")
-	MyTest(2, "B")
-	MyTest(3, null)
+```c#
+MyTest(1, "A")
+MyTest(2, "B")
+MyTest(3, null)
 ```
 
 #### See also...
