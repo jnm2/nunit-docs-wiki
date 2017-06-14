@@ -11,7 +11,7 @@
    be terminated and a new one created. In that case, it's necessary
    to re-attach to the new process.
 
-<h4>Debugging</h4>
+#### Debugging
 
 <p>When debugging tests that are run in a separate process, it is 
    not possible to do so by simply running the console or gui runner

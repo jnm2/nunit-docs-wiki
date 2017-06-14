@@ -6,7 +6,7 @@ With NUnit 3.0, the NUnitLite framework has been merged with the full NUnit fram
 is now only one framework, <b>nunit.framework.dll</b>. The built-in runner, 
 which was a part of the old NUnitLite, is now packaged as <b>nunitlite.dll</b>.
 
-<h4>Using NUnitLite</h4>
+#### Using NUnitLite
 
 To run tests under NUnitLite, proceed as follows:
 
@@ -33,7 +33,7 @@ is added to your project with a Main() like that above.
 **Note:** If you are not working in C#, you should delete the Program.cs file
 that the NuGet package added to your test project.
 
-<h4>NUnitLite Output</h4>
+#### NUnitLite Output
 
 As seen in the following screen shot, the output from an NUnitLite run is quite similar to that from the console runner.
 	

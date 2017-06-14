@@ -6,20 +6,20 @@ When used with another constraint, it applies that constraint to each item in th
 
 An exception is thrown if the actual value passed does not implement `IEnumerable`.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 ExactCountConstraint(int expectedCount)
 ExactCountConstraint(int expectedCount, Constraint itemConstraint)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Has.Exactly(int expectedCount)...
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 int[] array = new int[] { 1, 2, 3 };

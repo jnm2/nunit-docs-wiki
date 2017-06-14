@@ -1,26 +1,26 @@
 **FileOrDirectoryExistsConstraint** tests that a File or Directory exists.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 FileOrDirectoryExistsConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Does.Exist
 Does.Not.Exist
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 IgnoreDirectories
 IgnoreFiles
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(fileStr, Does.Exist);

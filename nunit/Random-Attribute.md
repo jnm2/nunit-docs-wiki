@@ -35,7 +35,7 @@ In general, the forms that specify a minimum and maximum should be used on argum
 
 Note that there is no constructor taking decimal values for min and max. This is because .NET does not support use of decimal in an attribute constructor.
    
-<h4>Example</h4>
+#### Example
 
 <p>The following test will be executed fifteen times, three times
 for each value of x, each combined with 5 random doubles from -1.0 to +1.0.
@@ -50,7 +50,7 @@ public void MyTest(
 }
 ```
 
-<h4>See also...</h4>
+#### See also...
  * [[Values Attribute]]
  * [[Range Attribute]]
  * [[Sequential Attribute]]

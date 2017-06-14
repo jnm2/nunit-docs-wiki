@@ -68,7 +68,7 @@ namespace NUnitTests {
 }
 ```
 
-<h4>Test Syntax</h4>
+#### Test Syntax
 
 ##### C#
 ```C#

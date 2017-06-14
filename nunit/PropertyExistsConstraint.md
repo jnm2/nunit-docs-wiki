@@ -1,18 +1,18 @@
 The `PropertyExistsConstraint` tests for the existence of a named property on an object.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 PropertyExistsConstraint(string name)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Has.Property( string )
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( someObject, Has.Property( "Version" ) );

@@ -9,7 +9,7 @@ multiple cultures is a planned future enhancement. At this time, you can
 achieve the same result by factoring out your test code into a private method 
 that is called by each individual test method.
 
-<h4>Examples:</h4>
+#### Examples:
 
 ```C#
 namespace NUnit.Tests
@@ -26,6 +26,6 @@ namespace NUnit.Tests
 }
 ```
 
-<h4>See also...</h4>
+#### See also...
  * [[Culture Attribute]]]
  * [[SetCulture Attribute]]

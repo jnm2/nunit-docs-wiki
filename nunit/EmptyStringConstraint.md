@@ -1,18 +1,18 @@
 The **EmptyStringConstraint** tests if a string is empty.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 EmptyStringConstraint()
 ```
  
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.Empty
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(string.Empty, Is.Empty);

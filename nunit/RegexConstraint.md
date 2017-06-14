@@ -1,25 +1,25 @@
 **RegexConstraint** tests that a pattern is matched.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 RegexConstraint(string pattern)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Does.Match(string pattern)
 Matches(string pattern)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...IgnoreCase
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 string phrase = "Make your tests fail before passing!"
@@ -29,6 +29,6 @@ Assert.That( phrase, Does.Not.Match( "your.*passing.*tests" ) );
 Expect( phrase, Matches( "Make.*pass" ) );
 ```
 
-<h4>Notes</h4>
+#### Notes
 1. <b>Matches</b> may appear only in the body of a constraint 
    expression or when the inherited syntax is used.

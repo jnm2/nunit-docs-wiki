@@ -2,20 +2,20 @@ An EqualConstraint is used to test whether an actual value
 is equal to the expected value supplied in its constructor,
 optionally within a specified tolerance.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 EqualConstraint( object expected )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.EqualTo( object expected )
 Is.Zero // Equivalent to Is.EqualTo(0)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...IgnoreCase
@@ -38,7 +38,7 @@ Is.Zero // Equivalent to Is.EqualTo(0)
 ...Using<T>(Comparison<T> comparer)
 ```
 
-<h4>Comparing Numerics</h4>
+#### Comparing Numerics
 Numerics are compared based on their values. Different types
 may be compared successfully if their values are equal.
    
@@ -55,7 +55,7 @@ Assert.That( 5.5, Is.EqualTo( 5 ).Within(0.075));
 Assert.That( 5.5, Is.EqualTo( 5 ).Within(1.5).Percent);
 ```
 
-<h4>Comparing Floating Point Values</h4>
+#### Comparing Floating Point Values
 Values of type float and double are normally compared using a tolerance
 specified by the <b>Within</b> modifier. The special values PositiveInfinity, 
 NegativeInfinity and NaN compare
@@ -74,7 +74,7 @@ Assert.That( double.NaN, Is.EqualTo( double.NaN ));
 Assert.That( 20000000000000004.0, Is.EqualTo(20000000000000000.0).Within(1).Ulps);
 ```
 
-<h4>Comparing Strings</h4>
+#### Comparing Strings
 
 String comparisons normally respect case. The <b>IgnoreCase</b> modifier 
 causes the comparison to be case-insensitive. It may also be used when 
@@ -108,7 +108,7 @@ Assert.That( later. Is.EqualTo(now).Within(TimeSpan.FromHours(3.0));
 Assert.That( later, Is.EqualTo(now).Within(3).Hours);
 ```
 
-<h4>Comparing Arrays, Collections and IEnumerables<h4>
+#### Comparing Arrays, Collections and IEnumerables
 
 Since version 2.2, NUnit has been able to compare two single-dimensioned arrays.
 Beginning with version 2.4, multi-dimensioned arrays, nested arrays (arrays of arrays)
@@ -141,7 +141,7 @@ Assert.That( array2x2, Is.Not.EqualTo( array4 ));
 Assert.That( array2x2, Is.EqualTo( array4 ).AsCollection );
 ```
 
-<h4>Comparing Dictionaries</h4>
+#### Comparing Dictionaries
 
 Two dictionaries are considered equal if
 
@@ -154,7 +154,7 @@ You can use this capability to compare any two objects implementing
 <b>IDictionary</b>. Generic and non-generic dictionaries (Hashtables) 
 may be successfully compared.
 
-<h4>Comparing DirectoryInfo</h4>
+#### Comparing DirectoryInfo
 
 Two DirectoryInfo objects are considered equal if
 both have the same path, creation time and last access time.
@@ -163,7 +163,7 @@ both have the same path, creation time and last access time.
 Assert.That(new DirectoryInfo(actual), Is.EqualTo(expected));
 ```
 
-<h4>User-Specified Comparers</h4>
+#### User-Specified Comparers
 
 If the default NUnit or .NET behavior for testing equality doesn't
 meet your needs, you can supply a comparer of your own through the
@@ -197,7 +197,7 @@ var myComparer = new ListOfIntComparer();
 Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 ```
 
-<h4>Notes</h4>
+#### Notes
 <ol>
 <li><p>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
     of the <b>Equals</b> override on the expected object. If you neglect to either implement <b>IEquatable&lt;T&gt;</b> or to

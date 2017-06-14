@@ -1,18 +1,18 @@
 **SomeItemsConstraint** applies a constraint to each item in an `IEnumerable`, succeeding if at least one of them succeeds. An exception is thrown if the actual value passed does not implement `IEnumerable`.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 SomeItemsConstraint(Constraint itemConstraint)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Has.Some...
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };

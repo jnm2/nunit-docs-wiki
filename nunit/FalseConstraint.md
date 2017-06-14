@@ -1,18 +1,18 @@
 **FalseConstraint** tests that a value is false.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 FalseConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.False
 ```
 
-<h4>Example of Use</h4>
+#### Example of Use
 
 ```C#
 Assert.That( condition, Is.False );

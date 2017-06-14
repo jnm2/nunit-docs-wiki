@@ -6,7 +6,7 @@
 a type that NUnit can process and <b>options</b> is zero or more options.
 Input files and options may be mixed in any order.</p>
 
-<h3>Input Files</h3>
+### Input Files
 
 <p>The console program must always have an assembly or project specified. 
 Assemblies are specified by file name or path, which may be absolute or
@@ -20,7 +20,7 @@ Visual Studio project types as well as NUnit (.nunit) projects.</p>
 be run based on any version of the NUnit framework beginning with 2.0.
 Without the V2 driver, only version 3.0 and higher tests may be run.
 
-<h3>Options</h3>
+### Options
 
 <table class="nunit" style="margin-left:0; max-width:700px">
 
@@ -143,7 +143,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     
 </table>
 
-<h3>Description</h3>
+### Description
 
 <p>By default, this command runs the tests contained in the
 assemblies and projects specified. If the <b>--explore</b> option

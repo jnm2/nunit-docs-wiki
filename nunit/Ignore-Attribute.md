@@ -22,7 +22,7 @@ namespace NUnit.Tests
 }
 ```
 
-<h4>Test Syntax</h4>
+#### Test Syntax
 
 ```C#
 namespace NUnit.Tests

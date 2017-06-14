@@ -1,19 +1,19 @@
 **LessThanOrEqualConstraint** tests that one value is less than or equal to another.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 LessThanOrEqualConstraint(object expected)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.LessThanOrEqualTo(object expected)
 Is.AtMost(object expected)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...Using(IComparer comparer)
@@ -21,7 +21,7 @@ Is.AtMost(object expected)
 ...Using<T>(Comparison<T> comparer)
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(3, Is.LessThanOrEqualTo(7));

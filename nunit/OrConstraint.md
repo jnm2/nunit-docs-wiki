@@ -1,18 +1,18 @@
 **OrConstraint** combines two other constraints and succeeds if either of them succeeds.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 OrConstraint(Constraint left, Constraint right)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 <Constraint>.Or.<Constraint>
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( 3, Is.LessThan( 5 ).Or.GreaterThan( 10 ) ); 

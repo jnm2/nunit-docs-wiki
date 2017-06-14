@@ -12,7 +12,7 @@
 SetUpFixture class, the attribute is ignored by NUnit and has no effect in 
 current releases.
 	
-<h4>Test Fixture Syntax</h4>
+#### Test Fixture Syntax
 
 ```C#
 namespace NUnit.Tests
@@ -30,7 +30,7 @@ namespace NUnit.Tests
 ```
 
 
-<h4>Test Syntax</h4>
+#### Test Syntax
 
 ```C#
 namespace NUnit.Tests
@@ -48,7 +48,7 @@ namespace NUnit.Tests
 }
 ```
 
-<h3>Custom Category Attributes</h3>
+### Custom Category Attributes
 
 Custom attributes that derive from <b>CategoryAttribute</b> will be recognized
 by NUnit. The default protected constructor of CategoryAttribute 

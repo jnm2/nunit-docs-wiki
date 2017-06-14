@@ -4,7 +4,7 @@ When used without an argument, **Parallelizable** causes the test fixture or met
 
 The constructor takes an optional **ParallelScope** enumeration argument (see below), which indicates whether the attribute applies to the item itself, to its descendants or both. It defaults to **ParallelScope.Self**. The Scope may also be specified using the named property <b>Scope=</b>.
 
-<h4>ParallelScope Enumeration</h4>
+#### ParallelScope Enumeration
 
 This is a <b>[Flags]</b> enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. The following values are available to users:
 

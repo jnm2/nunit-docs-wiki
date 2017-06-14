@@ -1,18 +1,18 @@
 **NaNConstraint** tests that a value is floating-point NaN.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 NaNConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.NaN
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( aDouble, Is.NaN );

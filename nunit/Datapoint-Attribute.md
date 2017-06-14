@@ -22,11 +22,11 @@ can override this behavior by supplying your own datapoints. If you
 supply any datapoints for an argument, automatic datapoint generation 
 is suppressed.
    
-<h4>Example</h4>
+#### Example
 
 For an example of use, see [[Theory Attribute]]
    
-<h4>See also...</h4>
+#### See also...
 
  * [[Theory Attribute]]
  * [[Parameterized Tests]]

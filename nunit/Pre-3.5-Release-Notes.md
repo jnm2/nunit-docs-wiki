@@ -658,15 +658,15 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  * 534	Add classname and methodname to test result xml
  * 541	Console help doesn't indicate defaults
 
-<h3>NUnit 3.0.0 Alpha 5 (3.0.5509) - January 30, 2015</h3>
+### NUnit 3.0.0 Alpha 5 (3.0.5509) - January 30, 2015
 
-<h4>General</h4>
+#### General
 
 <ul>
 <li>A Windows installer is now included in the release packages.
 </ul>
  
-<h4>Framework</h4>
+#### Framework
 
 <ul>
 <li>TestCaseAttribute now allows arguments with default values to be omitted. Additionaly, it accepts IncludePlatform and ExcludePlatform properties to specify the platforms on which the test case should be run.
@@ -675,7 +675,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>String arguments over 20 characters in length are truncated when used as part of a test name.
 </ul>
 
-<h4>Engine</h4>
+#### Engine
 
 <ul>
 <li>The engine is now extensible using Mono.Addins. In this release, extension points are provided for FrameworkDrivers, ProjectLoaders and OutputWriters. The following addins are bundled as a part of NUnit:
@@ -687,7 +687,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>DomainUsage now defaults to Multiple if not specified by the runner
 </ul>
 
-<h4>Console</h4>
+#### Console
 
 <ul>
 <li>New options supported:
@@ -697,7 +697,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   </ul>
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 
 <ul>
 <li>20 TestCaseAttribute needs Platform property.
@@ -719,9 +719,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>469  Truncate string arguments in test names in order to limit the length.
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 4 (3.0.5476) - December 30, 2014</h3>
+### NUnit 3.0.0 Alpha 4 (3.0.5476) - December 30, 2014
 
-<h4>Framework</h4>
+#### Framework
 
 <ul>
 <li>ApartmentAttribute has been added, replacing STAAttribute and MTAAttribute.
@@ -730,7 +730,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>The Pairwise strategy test case generation algorithm has been improved.
 </ul>
 
-<h4>Engine</h4>
+#### Engine
 
 <ul>
 <li>A driver is now included, which allows running NUnit 2.x tests under NUnit 3.0.
@@ -748,13 +748,13 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
    service of the engine, available to any runner.
 </ul>
 
-<h4>Console</h4>
+#### Console
 
 <ul>
 <li>The command-line may now include any number of assemblies and/or supported projects.
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 
 <ul>
 <li>37	Multiple SetUpFixtures should be permitted on same namespace
@@ -779,15 +779,15 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>420	Create Settings file in proper location
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 3 (3.0.5446) - November 29, 2014</h3>
+### NUnit 3.0.0 Alpha 3 (3.0.5446) - November 29, 2014
 
-<h4>Breaking Changes</h4>
+#### Breaking Changes
 
 <ul>
 <li>NUnitLite tests must reference both the nunit.framework and nunitlite assemblies.
 </ul>
 
-<h4>Framework</h4>
+#### Framework
 
 <ul>
 <li>The NUnit and NUnitLite frameworks have now been merged. There is no longer any distinction
@@ -804,7 +804,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   </ul>
 </ul>
 
-<h4>Engine</h4>
+#### Engine
 
 <ul>
 <li>The logic of runtime selection has now changed so that each assembly runs by default
@@ -813,7 +813,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
    depending on the platform specified for the test assembly. 
 </ul>
 
-<h4>Console</h4>
+#### Console
 
 <ul>
 <li>The console runner now runs tests in a separate process per assembly by default. They may
@@ -825,7 +825,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <li>The -teamcity option is now supported.
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 
 <ul>
  <li>12   Compact framework should support generic methods
@@ -858,9 +858,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>386  Console Output Improvements
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 2 (3.0.5419) - November 2, 2014</h3>
+### NUnit 3.0.0 Alpha 2 (3.0.5419) - November 2, 2014
 
-<h4>Breaking Changes</h4>
+#### Breaking Changes
 
 <ul>
  <li>The console runner no longer displays test results in the debugger.
@@ -868,7 +868,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>All addin support has been removed from the framework. Documentation of NUnit 3.0 extensibility features will be published in time for the beta release. In the interim, please ask for support on the nunit-discuss list.
 </ul>
 
-<h4>General</h4>
+#### General
 
 <ul>
  <li>A separate solution has been created for Linux
@@ -876,7 +876,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>The compact framework 3.5 build is now working and will be supported in future releases.
 </ul>
 
-<h4>New Features</h4>
+#### New Features
 
 <ul>
  <li>The console runner now automatically detects 32- versus 64-bit test assemblies.
@@ -888,7 +888,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>The console runner refuses to run tests build with older versions of NUnit. A plugin will be available to run older tests in the future.
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 
 <ul>
  <li>222	Color console for NUnitLite
@@ -915,23 +915,23 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>322	Remove Stopwatch tests where they test the real .NET Stopwatch
 </ul>
 
-<h3>NUnit 3.0.0 Alpha 1 (3.0.5378) - September 22, 2014</h3>
+### NUnit 3.0.0 Alpha 1 (3.0.5378) - September 22, 2014
 
-<h4>Breaking Changes</h4>
+#### Breaking Changes
 
 <ul>
  <li>Legacy suites are no longer supported
  <li>Assert.NullOrEmpty is no longer supported (Use Is.Null.Or.Empty)
 </ul>
 
-<h4>General</h4>
+#### General
 
 <ul>
  <li>MsBuild is now used for the build rather than NAnt
  <li>The framework test harness has been removed now that nunit-console is at a point where it can run the tests.
 </ul>
 
-<h4>New Features</h4>
+#### New Features
 
 <ul>
  <li>Action Attributes have been added with the same features as in NUnit 2.6.3.
@@ -940,7 +940,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>Does prefix operator supplies several added constraints.
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 <ul>
  <li>6	Log4net not working with NUnit
  <li>13	Standardize commandline options for nunitlite runner
@@ -969,7 +969,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>219	Teardown failures are not reported
 </ul>
 
-<h4>Console Issues Resolved (Old nunit-console project, now combined with nunit)</h4>
+#### Console Issues Resolved (Old nunit-console project, now combined with nunit)
 <ul>
  <li>2	Failure in TestFixtureSetUp is not reported correctly
  <li>5	CI Server for nunit-console
@@ -979,16 +979,16 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
  <li>38	Confusing Excluded categories output
 </ul>
 
-<h3>NUnit 2.9.7 - August 8, 2014</h3>
+### NUnit 2.9.7 - August 8, 2014
 
-<h4>Breaking Changes</h4>
+#### Breaking Changes
 
 <ul>
   <li>NUnit no longer supports void async test methods. You should use a Task return Type instead.
   <li>The ExpectedExceptionAttribute is no longer supported. Use Assert.Throws() or Assert.That(..., Throws) instead for a more precise specification of where the exception is expected to be thrown.
 </ul>
 
-<h4>New Features</h4>
+#### New Features
 
 <ul>
   <li>Parallel test execution is supported down to the Fixture level. Use ParallelizableAttribute to indicate types that may be run in parallel.
@@ -1003,7 +1003,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>The XML output now includes a start and end time for each test.
 </ul>
 
-<h4>Issues Resolved</h4>
+#### Issues Resolved
 
 <ul>
   <li>8    [SetUpFixture] is not working as expected
@@ -1040,9 +1040,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>161  Update API to support stopping an ongoing test run
 </ul>
 
-<h3>NUnit 2.9.6 - October 4, 2013</h3>
+### NUnit 2.9.6 - October 4, 2013
 
-<h4>Main Features</h4>
+#### Main Features
 
 <ul>
   <li>Separate projects for nunit-console and nunit.engine
@@ -1053,7 +1053,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>Solutions and projects now use VS2012 (except for Compact framework)
 </ul>
  
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>463470 	We should encapsulate references to pre-2.0 collections
@@ -1130,9 +1130,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>1225542 	Standardize commandline options for test harness
 </ul>
 	
-<h3>NUnit 2.9.5 - July 30, 2010</h3>
+### NUnit 2.9.5 - July 30, 2010
 
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>483836 	Allow non-public test fixtures consistently
@@ -1152,9 +1152,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>608875 	NUnit Equality Comparer incorrectly defines equality for Dictionary objects
 </ul>
 	
-<h3>NUnit 2.9.4 - May 4, 2010</h3>
+### NUnit 2.9.4 - May 4, 2010
 
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>419411 	Fixture With No Tests Shows as Non-Runnable
@@ -1174,9 +1174,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>563532 	DatapointsAttribute should be allowed on properties and methods
 </ul>
 	 
-<h3>NUnit 2.9.3 - October 26, 2009</h3>
+### NUnit 2.9.3 - October 26, 2009
 
-<h4>Main Features</h4>
+#### Main Features
  
 <ul>
   <li>Created new API for controlling framework
@@ -1185,16 +1185,16 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>New adhoc runner for testing the framework
 </ul>
 
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>432805 	Some Framework Tests don't run on Linux
   <li>440109 	Full Framework does not support "Contains"
 </ul>
 
-<h3>NUnit 2.9.2 - September 19, 2009</h3>
+### NUnit 2.9.2 - September 19, 2009
 
-<h4>Main Features</h4>
+#### Main Features
 
 <ul>
   <li>NUnitLite code is now merged with NUnit
@@ -1202,7 +1202,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>Added Compact framework builds
 </ul>
  
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>430100 	Assert.Catch<T> should return T
@@ -1210,9 +1210,9 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>432573 	Mono test should be at runtime
 </ul>
 
-<h3>NUnit 2.9.1 - August 27, 2009</h3>
+### NUnit 2.9.1 - August 27, 2009
 
-<h4>Main Features</h4>
+#### Main Features
 
 <ul>
   <li>Created a separate project for the framework and framework tests
@@ -1220,7 +1220,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>Created Windows installer for the framework
 </ul>
 
-<h4>Bug Fixes</h4>
+#### Bug Fixes
 
 <ul>
   <li>400502 	NUnitEqualityComparer.StreamsE­qual fails for same stream
@@ -1232,7 +1232,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
   <li>417564 	TimeoutAttribute on Assembly
 </ul>
 
-<h3>Earlier Releases</h3>
+### Earlier Releases
 
 <ul>
 <li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>

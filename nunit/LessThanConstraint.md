@@ -1,19 +1,19 @@
 **LessThanConstraint** tests that one value is less than another.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 LessThanConstraint(object expected)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.LessThan(object expected)
 Is.Negative // Equivalent to Is.LessThan(0)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...Using(IComparer comparer)
@@ -21,7 +21,7 @@ Is.Negative // Equivalent to Is.LessThan(0)
 ...Using<T>(Comparison<T> comparer)
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(3, Is.LessThan(7));

@@ -2,7 +2,7 @@
   div.code { width: 34em }
 --></style>
 
-<h2>NUnit Quick Start</h2>
+## NUnit Quick Start
 
 <div class="code"><pre class="prettyprint">using System;
 using NUnit.Framework;

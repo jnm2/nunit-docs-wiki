@@ -1,25 +1,25 @@
 `SubPathConstraint` tests that one path is under another path.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 SubPathConstraint( string expectedPath )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.SubPath( string expectedPath )
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...IgnoreCase
 ...RespectCase
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( "/folder1/./junk/../folder2", 

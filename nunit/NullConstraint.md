@@ -1,18 +1,18 @@
 **NullConstraint** tests that a value is null.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
     NullConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
     Is.Null
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
    Assert.That( anObject, Is.Null );

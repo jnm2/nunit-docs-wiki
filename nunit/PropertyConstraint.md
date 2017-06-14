@@ -1,19 +1,19 @@
 `PropertyConstraint` tests for the existence of a named property on an object and then
 applies a constraint test to the property value.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 PropertyConstraint(string name, IConstraint baseConstraint)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Has.Property(string name)... // followed by further constraint syntax
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(someObject, Has.Property("Version").EqualTo("2.0"));

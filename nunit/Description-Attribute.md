@@ -2,7 +2,7 @@
 TestFixture or Assembly. The text appears in the XML output file and is 
 shown in the Test Properties dialog.</p>
 
-<h4>Example:</h4>
+#### Example:
 
 ```C#
 [assembly: Description("Assembly description here")]

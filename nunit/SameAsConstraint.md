@@ -10,14 +10,14 @@ SameAsConstraint( object expected )
 ```
 
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.SameAs( object expected )
 ```
 
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Exception ex1 = new Exception();

@@ -1,19 +1,19 @@
 **GreaterThanOrEqualConstraint** tests that one value is greater than or equal to another.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 GreaterThanOrEqualConstraint(object expected)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.GreaterThanOrEqualTo(object expected)
 Is.AtLeast(object expected)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...Using(IComparer comparer)
@@ -21,7 +21,7 @@ Is.AtLeast(object expected)
 ...Using<T>(Comparison<T> comparer)
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(7, Is.GreaterThanOrEqualTo(3));

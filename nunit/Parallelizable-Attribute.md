@@ -4,7 +4,7 @@ The constructor takes an optional <b>ParallelScope</b> enumeration argument (see
 
 <p>The Scope may also be specified using the named property <b>Scope=</b>.
 
-<h4>ParallelScope Enumeration</h4>
+#### ParallelScope Enumeration
 
 This is a <b>[Flags]</b> enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. It is defined as follows:
 ```C#

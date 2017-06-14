@@ -51,7 +51,7 @@
  * [157](https://github.com/nunit/nunit-console/issues/157) Fix Detection of invalid framework when --inprocess
  * [159](https://github.com/nunit/nunit-console/issues/159) Update extension versions in the NuSpec Files
 
-<h3>Earlier Releases</h3>
+### Earlier Releases
 
 <ul>
 <li>Release Notes for [[NUnit 2.9.1 through 3.5|Pre-3.5-Release-Notes]].

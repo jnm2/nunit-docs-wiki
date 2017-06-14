@@ -1,18 +1,18 @@
 **CollectionSubsetConstraint** tests that one `IEnumerable` is a subset of another. If the actual value passed does not implement `IEnumerable`, an exception is thrown.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 CollectionSubsetConstraint( IEnumerable )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.SubsetOf( IEnumerable )
 ```
 
-<h4>Example of Use</h4>
+#### Example of Use
 
 ```C#
 int[] iarray = new int[] { 1, 3 };

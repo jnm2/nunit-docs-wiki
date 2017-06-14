@@ -56,7 +56,7 @@ That's what <b>ReusableConstraint</b> does for us. It resolves
 the full expression and saves the result. Then it passes all
 operations on to that saved result.
 
-<h3>When to Use It</h3>
+### When to Use It
 
 Use this constraint any time you want to reuse a constraint
 expression and you'll be safe.

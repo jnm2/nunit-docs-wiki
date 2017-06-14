@@ -1,24 +1,24 @@
 **SubstringConstraint** tests for a substring.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 SubstringConstraint(string expected)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Does.Contain(string expected)
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...IgnoreCase
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 string phrase = "Make your tests fail before passing!"

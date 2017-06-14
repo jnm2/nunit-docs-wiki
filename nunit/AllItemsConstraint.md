@@ -1,19 +1,19 @@
 **AllItemsConstraint** applies a constraint to each item in an `IEnumerable`, succeeding only if all of them succeed. An exception is thrown if the actual value passed does not implement `IEnumerable`.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 AllItemsConstraint(Constraint itemConstraint)
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.All...
 Has.All...
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };

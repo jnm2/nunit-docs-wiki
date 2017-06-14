@@ -7,7 +7,7 @@ argument will <b>always</b> result in creation of a new thread. To
 create a thread <b>only</b> if the current ApartmentState is not appropriate,
 use the <b>ApartmentAttribute</b>.
    
-<h4>Examples</h4>
+#### Examples
    
 ```C#
 // A thread will be created and used to run
@@ -41,6 +41,6 @@ public class AnotherFixture
 }
 ```
 
-<h4>See also...</h4>
+#### See also...
 
  * [[Apartment Attribute]]

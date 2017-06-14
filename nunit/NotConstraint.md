@@ -1,18 +1,18 @@
 **NotConstraint** reverses the effect of another constraint. If the base constraint fails, NotConstraint succeeds. If the base constraint succeeds, NotConstraint fails.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 NotConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.Not...
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( collection, Is.Not.Unique );

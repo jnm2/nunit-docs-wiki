@@ -1,18 +1,18 @@
 **TrueConstraint** tests that a value is true.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 TrueConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.True
 ```
 
-<h4>Example of Use</h4>
+#### Example of Use
 
 ```C#
 Assert.That( condition, Is.True );

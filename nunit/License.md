@@ -1,4 +1,4 @@
-<h2>NUnit License</h2>
+## NUnit License
 
 <p><b>Copyright (c) 2004-2015 Charlie Poole</b></p>
 

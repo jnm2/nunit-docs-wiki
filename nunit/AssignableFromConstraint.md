@@ -1,19 +1,19 @@
 **AssignableFromConstraint** tests that one type is assignable from another
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 AssignableFromConstraint( Type )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.AssignableFrom( Type )
 Is.AssignableFrom<T>()
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( "Hello", Is.AssignableFrom(typeof(string)));

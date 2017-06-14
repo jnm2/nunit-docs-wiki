@@ -9,7 +9,7 @@ it can be expected to remain constant for a given runtime and operating
 system. For best results with <b>SequentialAttribute</b> use only one
 data attribute on each parameter.
    
-<h4>Example</h4>
+#### Example
 
 <p>The following test will be executed three times.
 
@@ -31,6 +31,6 @@ public void MyTest(
 	MyTest(3, null)
 ```
 
-<h4>See also...</h4>
+#### See also...
  * [[Combinatorial Attribute]]
  * [[Pairwise Attribute]]

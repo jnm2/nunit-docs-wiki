@@ -1,4 +1,4 @@
-<h3>NUnitLite Options</h3>
+### NUnitLite Options
 
 The NUnitLite runner is invoked by executing the test program. If desired, any of the 
 following options may be specified:
@@ -76,7 +76,7 @@ following options may be specified:
     
 </table>
 
-<h3>Description</h3>
+### Description
 
 <p>By default, this command runs the tests contained in the
 assemblies and projects specified. If the <b>--explore</b> option

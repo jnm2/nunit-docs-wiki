@@ -44,7 +44,7 @@ Assert.That( SomeMethod, Throws.TargetInvocationException
 Assert.That(() => { throw new ArgumentException(); }, Throws.ArgumentException);
 ```
 
-<h4>Notes</h4>
+#### Notes
 <ol>
     <li>
         <b>Throws.Exception</b> may be followed by further constraints,

@@ -1,12 +1,12 @@
 **CollectionContainsConstraint** tests that an `IEnumerable` contains an object. If the actual value passed does not implement `IEnumerable`, an exception is thrown.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 CollectionContainsConstraint( object )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Has.Member( object )
@@ -14,7 +14,7 @@ Contains.Item( object )
 Does.Contain( object )
 ```
 
-<h4>Modifiers</h4>
+#### Modifiers
 
 ```C#
 ...Using(IComparer comparer)
@@ -22,7 +22,7 @@ Does.Contain( object )
 ...Using<T>(Comparison<T> comparer)
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };
@@ -34,6 +34,6 @@ Assert.That( sarray, Has.No.Member("x") );
 Assert.That( iarray, Does.Contain(3) );
 ```
 
-<h4>Note</h4>
+#### Note
 
 `Has.Member()`, `Contains.Item()` and `Does.Contain()` work the same as `Has.Some.EqualTo()`. The last statement generates a [[SomeItemsConstraint]] based on an [[EqualConstraint]] and offers additional options such as ignoring case or specifying a tolerance. The syntax on this page may be viewed as a shortcut for specifying simpler cases.

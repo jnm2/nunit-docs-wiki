@@ -9,7 +9,7 @@
 <p>If a OneTimeSetUp method fails or throws an exception, none of the tests
    in the fixure are executed and a failure or error is reported.
 
-<h4>Example:</h4>
+#### Example:
 
 ```C#
 namespace NUnit.Tests
@@ -35,7 +35,7 @@ namespace NUnit.Tests
 }
 ```
 
-<h3>Inheritance</h3>
+### Inheritance
 
 <p>The OneTimeSetUp attribute is inherited from any base class. Therefore, if a base 
 	class has defined a OneTimeSetUp method, that method will be called 
@@ -45,7 +45,7 @@ namespace NUnit.Tests
    in the base class and another in the derived class. NUnit will call base
    class OneTimeSetUp methods before those in the derived classes.
    
-<h4>Notes:</h4>
+#### Notes:
 <ol>
 <li>Although it is possible to define multiple OneTimeSetUp methods
    in the same class, you should rarely do so. Unlike methods defined in
@@ -54,7 +54,7 @@ namespace NUnit.Tests
 <li>OneTimeSetUp methods may be async if running under .NET 4.0 or higher.
 </ol>
 
-<h4>See also...</h4>
+#### See also...
  * [[SetUp Attribute]]
  * [[TearDown Attribute]]
  * [[OneTimeTearDown Attribute]]

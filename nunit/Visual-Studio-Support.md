@@ -1,4 +1,4 @@
-<h2>DRAFT - Out of Date</h2>
+## DRAFT - Out of Date
 
 NUnit supports the Visual Studio project and solution format, which are also 
 used by a number of other IDEs.

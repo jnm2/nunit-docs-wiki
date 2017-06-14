@@ -1,18 +1,18 @@
 The **EmptyCollectionConstraint** tests if a Collection or other `IEnumerable` is empty. An `ArgumentException` is thrown if the actual value is not an `IEnumerable` or is null. 
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 EmptyCollectionConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.Empty
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That(new int[] { }, Is.Empty);

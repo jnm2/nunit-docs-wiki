@@ -1,19 +1,19 @@
 **ExactTypeConstraint** tests that an object is an exact Type.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 ExactTypeConstraint( Type )
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.TypeOf( Type )
 Is.TypeOf<T>()
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That("Hello", Is.TypeOf(typeof(string)));

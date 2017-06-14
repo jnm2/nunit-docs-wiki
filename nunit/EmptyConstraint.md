@@ -1,18 +1,18 @@
 **EmptyConstraint** tests that an object is an empty string, directory or collection.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 EmptyConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.Empty
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( aString, Is.Empty );

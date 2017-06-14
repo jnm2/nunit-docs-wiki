@@ -1,19 +1,19 @@
 **UniqueItemsConstraint** tests that an array, collection or other IEnumerable is composed
 of unique items with no duplicates.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 UniqueItemsConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.Unique
 ```
 
-<h4>Example of Use</h4>
+#### Example of Use
 
 ```C#
 Assert.That( collection, Is.Unique );

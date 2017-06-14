@@ -1,18 +1,18 @@
 **XmlSerializableConstraint** tests whether an object is serializable in XML format.
 
-<h4>Constructor</h4>
+#### Constructor
 
 ```C#
 XmlSerializableConstraint()
 ```
 
-<h4>Syntax</h4>
+#### Syntax
 
 ```C#
 Is.XmlSerializable
 ```
 
-<h4>Examples of Use</h4>
+#### Examples of Use
 
 ```C#
 Assert.That( someObject, Is.XmlSerializable ));

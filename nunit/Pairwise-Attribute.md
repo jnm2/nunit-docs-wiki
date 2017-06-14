@@ -4,7 +4,7 @@
    the combinatorial explosion of test cases when more than
    two features (parameters) are involved.
    
-<h4>Example</h4>
+#### Example
 
 <p>Using the Combinatorial attribute, the following test would be executed 12 (3x2x2) times.
    With <b>Pairwise</b> it is executed only enough times so that each possible pair is covered..
@@ -35,13 +35,13 @@ public void MyTest(
 appear twice. NUnit uses a heuristic algorithm to reduce the number of test cases as much
 as it can. Improvements may be made in the future.
 
-<h4>Limitations</h4>
+#### Limitations
 
 <p>When used on a generic method the programmer must ensure that all
    possible combinations of arguments are valid. When multiple parameters
    use the same generic type (e.g.: T) this may not be possible and the
    attribute may generate invalid test cases.
     
-<h4>See also...</h4>
+#### See also...
  * [[Sequential Attribute]]
  * [[Combinatorial Attribute]]

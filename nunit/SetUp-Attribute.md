@@ -10,7 +10,7 @@ If a SetUp method fails or throws an exception, the test is not executed
 and a failure or error is reported.
    
 
-<h4>Example:</h4>
+#### Example:
 
 ```C#
 namespace NUnit.Tests
@@ -33,7 +33,7 @@ namespace NUnit.Tests
 }
 ```
 
-<h4>Inheritance</h4>
+#### Inheritance
 
 The SetUp attribute is inherited from any base class. Therefore, if a base 
 class has defined a SetUp method, that method will be called 
@@ -43,7 +43,7 @@ You may define a SetUp method
 in the base class and another in the derived class. NUnit will call base
 class SetUp methods before those in the derived classes.
    
-<h4>Notes:</h4>
+#### Notes:
 
 1. Although it is possible to define multiple SetUp methods
    in the same class, you should rarely do so. Unlike methods defined in
@@ -52,7 +52,7 @@ class SetUp methods before those in the derived classes.
 
 2. SetUp methods may be async if running under .NET 4.0 or higher.
 
-<h4>See also...</h4>
+#### See also...
 
  * [[TearDown Attribute]]
  * [[OneTimeSetUp Attribute]]
