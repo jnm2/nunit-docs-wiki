@@ -8,7 +8,6 @@
 #### Getting Started
 
   * [[I want to get involved with NUnit Development. Where do I start]]?
-  * [[What tools are needed to build NUnit]]?
   * [[What areas need work]]?
   * [[How do I become a committer]]?
 
