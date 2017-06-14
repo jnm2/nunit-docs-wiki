@@ -15,7 +15,7 @@ Explicit tests are displayed in the gui as skipped.
 > **Warning:** While the C# syntax allows you to place an Explicit attribute on a
 SetUpFixture class, the attribute is ignored by NUnit and has no effect in current releases.
 	
-<h4>Test Fixture Syntax</h4>
+#### Test Fixture Syntax
 ##### C\#
 ```C#
 namespace NUnit.Tests
