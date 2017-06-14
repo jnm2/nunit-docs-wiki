@@ -1,6 +1,6 @@
-<p>The Description attribute is used to apply descriptive text to a Test,
+The Description attribute is used to apply descriptive text to a Test,
 TestFixture or Assembly. The text appears in the XML output file and is 
-shown in the Test Properties dialog.</p>
+shown in the Test Properties dialog.
 
 #### Example:
 
@@ -22,6 +22,6 @@ namespace NUnit.Tests
 }
 ```
 
-<p>**Note:** The Test and TestFixture attributes continue to support an 
+**Note:** The Test and TestFixture attributes continue to support an
 optional Description property. The Description attribute should be used for 
-new applications. If both are used, the Description attribute takes precedence.</p>
+new applications. If both are used, the Description attribute takes precedence.

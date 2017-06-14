@@ -1,14 +1,14 @@
-<p>This attribute is to identify methods that are called once after executing all the tests
-	in a fixture. It may appear on methods of a TestFixture or a SetUpFixture.
-	
-<p>OneTimeTearDown methods may be either static or
-   instance methods and you may define more than one of them in a fixture.
-   Normally, multiple OneTimeTearDown methods are only defined at different levels
-   of an inheritance hierarchy, as explained below.
+This attribute is to identify methods that are called once after executing all the tests
+in a fixture. It may appear on methods of a TestFixture or a SetUpFixture.
 
-<p>So long as any OneTimeSetUp method runs without error, the OneTimeTearDown method is 
-   guaranteed to run. It will not run if a OneTimeSetUp method fails or throws an 
-   exception.</p>
+OneTimeTearDown methods may be either static or
+instance methods and you may define more than one of them in a fixture.
+Normally, multiple OneTimeTearDown methods are only defined at different levels
+of an inheritance hierarchy, as explained below.
+
+So long as any OneTimeSetUp method runs without error, the OneTimeTearDown method is
+guaranteed to run. It will not run if a OneTimeSetUp method fails or throws an
+exception.
 
 #### Example:
 
@@ -38,14 +38,14 @@ namespace NUnit.Tests
 
 ### Inheritance
 
-<p>The OneTimeTearDown attribute is inherited from any base class. Therefore, if a base 
-	class has defined a OneTimeTearDown method, that method will be called 
-	after any test methods in the derived class. 
-	
-<p>You may define a OneTimeTearDown method
-   in the base class and another in the derived class. NUnit will call base
-   class OneTimeTearDown methods after those in the derived classes.
-   
+The OneTimeTearDown attribute is inherited from any base class. Therefore, if a base
+class has defined a OneTimeTearDown method, that method will be called
+after any test methods in the derived class.
+
+You may define a OneTimeTearDown method
+in the base class and another in the derived class. NUnit will call base
+class OneTimeTearDown methods after those in the derived classes.
+
 #### Notes:
 <ol>
 <li>Although it is possible to define multiple OneTimeTearDown methods

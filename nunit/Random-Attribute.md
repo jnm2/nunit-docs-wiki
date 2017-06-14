@@ -1,15 +1,15 @@
-<p>The **RandomAttribute** is used to specify a set of random values to be provided
-   for an individual numeric parameter of a parameterized test method. Since
-   NUnit combines the data provided for each parameter into a set of
-   test cases, data must be provided for all parameters if it is
-   provided for any of them.
-   
-<p>By default, NUnit creates test cases from all possible combinations
-   of the datapoints provided on parameters - the combinatorial approach.
-   This default may be modified by use of specific attributes on the
-   test method itself.
-   
-<p>RandomAttribute supports the following constructors:
+The **RandomAttribute** is used to specify a set of random values to be provided
+for an individual numeric parameter of a parameterized test method. Since
+NUnit combines the data provided for each parameter into a set of
+test cases, data must be provided for all parameters if it is
+provided for any of them.
+
+By default, NUnit creates test cases from all possible combinations
+of the datapoints provided on parameters - the combinatorial approach.
+This default may be modified by use of specific attributes on the
+test method itself.
+
+RandomAttribute supports the following constructors:
 
 ```C#
 public Random( int count );
@@ -37,7 +37,7 @@ Note that there is no constructor taking decimal values for min and max. This is
    
 #### Example
 
-<p>The following test will be executed fifteen times, three times
+The following test will be executed fifteen times, three times
 for each value of x, each combined with 5 random doubles from -1.0 to +1.0.
 
 ```C#

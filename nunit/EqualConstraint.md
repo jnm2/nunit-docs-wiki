@@ -199,37 +199,37 @@ Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 
 #### Notes
 <ol>
-<li><p>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
+<li>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
     of the **Equals** override on the expected object. If you neglect to either implement **IEquatable&lt;T&gt;** or to
 	override **Equals**, you can expect failures comparing non-identical objects. 
 	In particular, overriding **operator==** without overriding **Equals**
 or implementing the interface has no effect.
-<li><p>The **Within** modifier was originally designed for use with floating point
+<li>The **Within** modifier was originally designed for use with floating point
     values only. Beginning with NUnit 2.4, comparisons of **DateTime** values 
 	may use a **TimeSpan** as a tolerance. Beginning with NUnit 2.4.2, 
 	non-float numeric comparisons may also specify a tolerance.
-<li><p>Beginning with NUnit 2.4.4, float and double comparisons for which no 
+<li>Beginning with NUnit 2.4.4, float and double comparisons for which no
 	tolerance is specified use a default, use the value of
 	**GlobalSettings.DefaultFloatingPointTolerance**. If this is not
 	set, a tolerance of 0.0d is used.
-<li><p>Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
+<li>Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
     as specified by IEEE floating point standards. The new behavior, was
 	introduced after some discussion becuase it seems more useful in tests. 
 	To avoid confusion, consider using **Is.NaN** where appropriate.
-<li><p>When an equality test between two strings fails, the relevant portion of
+<li>When an equality test between two strings fails, the relevant portion of
 	of both strings is displayed in the error message, clipping the strings to
 	fit the length of the line as needed. Beginning with 2.4.4, this behavior
 	may be modified by use of the **NoClip** modifier on the constraint. In
 	addition, the maximum line length may be modified for all tests by setting
 	the value of **TextMessageWriter.MaximumLineLength** in the appropriate
 	level of setup.
-<li><p>When used with arrays, collections or dictionaries, EqualConstraint 
+<li>When used with arrays, collections or dictionaries, EqualConstraint
     operates recursively. Any modifiers are saved and used as they apply to 
 	individual items.
-<li><p>A user-specified comparer will not be called by **EqualConstraint**
+<li>A user-specified comparer will not be called by **EqualConstraint**
     if either or both arguments are null. If both are null, the Constraint
 	succeeds. If only one is null, it fails.
-<li><p>NUnit has special semantics for comparing **Streams** and
+<li>NUnit has special semantics for comparing **Streams** and
 **DirectoryInfos**. For a **Stream**, the contents are compared.
 For a **DirectoryInfo**, the first-level directory contents are compared.
 </ol>

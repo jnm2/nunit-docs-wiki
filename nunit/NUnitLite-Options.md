@@ -78,14 +78,14 @@ following options may be specified:
 
 ### Description
 
-<p>By default, this command runs the tests contained in the
+By default, this command runs the tests contained in the
 assemblies and projects specified. If the **--explore** option
 is used, no tests are executed but a description of the tests
-is saved in the specified or default format.</p>
+is saved in the specified or default format.
 
-<p>Several options that specify processing of XML output take
+Several options that specify processing of XML output take
 an output specification as a value. A SPEC may take one of
-the following forms:</p>
+the following forms:
 
 <ul>
     <li>--OPTION:filename
@@ -93,23 +93,23 @@ the following forms:</p>
     <li>--OPTION:filename;transform=xsltfile
 </ul>
 
-<p>The --result option may use any of the following formats:
+The --result option may use any of the following formats:
 <ul>
     <li>nunit3 - the native XML format for NUnit 3.0
-    <li>nunit2 - legacy XML format used by earlier releases of NUnit</p>
+    <li>nunit2 - legacy XML format used by earlier releases of NUnit
 </ul>
 
-<p>The --explore option may use any of the following formats:
+The --explore option may use any of the following formats:
 <ul>
     <li>nunit3 - the native XML format for NUnit 3.0
-    <li>cases  - a text file listing the full names of all test cases.</p>
+    <li>cases  - a text file listing the full names of all test cases.
 </ul>
 
-<p>If --explore is used without any specification following, a list of
-test cases is output to the console.</p>
+If --explore is used without any specification following, a list of
+test cases is output to the console.
 
-<p>If none of the options {--result, --explore, --noxml} is used,
-NUnit saves the results to TestResult.xml in nunit3 format.</p>
+If none of the options {--result, --explore, --noxml} is used,
+NUnit saves the results to TestResult.xml in nunit3 format.
 
-<p>Any transforms provided must handle input in the native nunit3 format.</p>
+Any transforms provided must handle input in the native nunit3 format.
 

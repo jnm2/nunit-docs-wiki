@@ -1,4 +1,4 @@
-<p>Normally, a configuration file used to provide settings or to control the environment 
+Normally, a configuration file used to provide settings or to control the environment
 in which tests are run, should be given the name as the assembly file with the
 suffix ".config" added. For example, the configuration file used to run nunit.tests.dll must
 be named nunit.tests.dll.config and located in the same directory as the dll.

@@ -1,13 +1,13 @@
-<p>This attribute is to identify methods that are called once prior to executing any of the tests
-	in a fixture. It may appear on methods of a TestFixture or a SetUpFixture.
-	
-<p>OneTimeSetUp methods may be either static or
-   instance methods and you may define more than one of them in a fixture.
-   Normally, multiple OneTimeSetUp methods are only defined at different levels
-   of an inheritance hierarchy, as explained below.
+This attribute is to identify methods that are called once prior to executing any of the tests
+in a fixture. It may appear on methods of a TestFixture or a SetUpFixture.
 
-<p>If a OneTimeSetUp method fails or throws an exception, none of the tests
-   in the fixure are executed and a failure or error is reported.
+OneTimeSetUp methods may be either static or
+instance methods and you may define more than one of them in a fixture.
+Normally, multiple OneTimeSetUp methods are only defined at different levels
+of an inheritance hierarchy, as explained below.
+
+If a OneTimeSetUp method fails or throws an exception, none of the tests
+in the fixure are executed and a failure or error is reported.
 
 #### Example:
 
@@ -37,14 +37,14 @@ namespace NUnit.Tests
 
 ### Inheritance
 
-<p>The OneTimeSetUp attribute is inherited from any base class. Therefore, if a base 
-	class has defined a OneTimeSetUp method, that method will be called 
-	before any methods in the derived class. 
-	
-<p>You may define a OneTimeSetUp method
-   in the base class and another in the derived class. NUnit will call base
-   class OneTimeSetUp methods before those in the derived classes.
-   
+The OneTimeSetUp attribute is inherited from any base class. Therefore, if a base
+class has defined a OneTimeSetUp method, that method will be called
+before any methods in the derived class.
+
+You may define a OneTimeSetUp method
+in the base class and another in the derived class. NUnit will call base
+class OneTimeSetUp methods before those in the derived classes.
+
 #### Notes:
 <ol>
 <li>Although it is possible to define multiple OneTimeSetUp methods
