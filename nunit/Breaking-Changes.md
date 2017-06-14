@@ -2,7 +2,7 @@
 
 Breaking changes introduced in NUnit 3.4
 
- * The `--teamcity` console command-line option now requires the TeamCityEventListener extension to be intalled. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.
+ * The `--teamcity` console command-line option now requires the TeamCityEventListener extension to be installed. This only affects users who install the extensions individually or copy them to another directory. If you install using the Windows installer or the NUnit.Console NuGet package the TeamCity extension is included.
 
  * String arguments in the names of test cases are no longer truncated to 40 characters.
 
@@ -65,7 +65,7 @@ Other breaking changes are grouped in the following tables.
 |--------------------|-------------------------------------------------------|
 | Addins             | No longer supported. See [[Addin Replacement in the Framework]]. |
 | CurrentDirectory   | No longer set to the directory containing the test assembly. Use `TestContext.CurrentContext.TestDirectory` to locate that directory. |
-| NUnitLite          | NUnitLite executable tests must now reference nunit.framework in addition to nunitlite. |
+| NUnitLite          | NUnitLite executable tests must now reference nunit.framework in addition to NUnitLite. |
 | SetUpFixture       | Now uses `OneTimeSetUpAttribute` and `OneTimeTearDownAttribute` to designate higher-level setup and teardown methods. `SetUpAttribute` and `TearDownAttribute` are no longer allowed. |
 | TestCaseData       | The `Throws` Named Property is no longer available. Use `Assert.Throws` or `Assert.That` in your test case. |
 | TestContext        | The fields available in the [[TestContext]] have changed, although the same information remains available as for NUnit V2. |

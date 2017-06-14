@@ -8,4 +8,4 @@ In this documentation, we refer to four different types of Framework extension:
 
 [[Custom Constraints]] allow the user to define new constraints for use in tests along with the associated fluent syntax that allows them to be used with `Assert.That`.
 
-[[Custom Asserts]] are, for the most part, no longer needed as a result the constraint-based assertion model. However, it is still possible to create them and custom asserts created for NUnit V2 are still useable.
+[[Custom Asserts]] are, for the most part, no longer needed as a result the constraint-based assertion model. However, it is still possible to create them and custom asserts created for NUnit V2 are still usable.

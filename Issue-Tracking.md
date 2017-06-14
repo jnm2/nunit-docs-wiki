@@ -1,13 +1,13 @@
 We use the GitHub issue tracker to keep track of our ongoing work. We supplement GitHub's native issue handling by using [ZenHub](www.zenhub.com), which provides a number of additional features.
 
 ### Workflow
-We use a [ZenHub](www.zenhub.com) Board with a standard set of piplelines to track the flow of work in each repo. Our standard set of pipleline columns are slightly different from the ZenHub default:
+We use a [ZenHub](www.zenhub.com) Board with a standard set of pipelines to track the flow of work in each repo. Our standard set of pipeline columns are slightly different from the ZenHub default:
 
 * **New Issues** All issues start as new. We like to review them as quickly as possible. Some issues can be immediately closed while others need to be categorized for further work. We usually assign at least an _is_ and a _priority_ label (see below) to every issue and then move it to either the **Discussion** or the **Backlog** column.
 
 * **Discussion** These  are items that require some discussion, either about whether we want to do them or how they should be implemented. Some items here may require confirmation or design as well.
 
-* **Backlog** This is our product backlog consisting of all the issues we want to get done now or in the future. In the past, we have often put things we didn't really want to do in our Backlog, assigning them a low priority. While this avoids having to say no to the requestor, it doesn't do them any real service. Putting an issue into the Backlog should mean that it will eventually make it to a release.
+* **Backlog** This is our product backlog consisting of all the issues we want to get done now or in the future. In the past, we have often put things we didn't really want to do in our Backlog, assigning them a low priority. While this avoids having to say no to the requester, it doesn't do them any real service. Putting an issue into the Backlog should mean that it will eventually make it to a release.
 
 * **To Do** These are things we are ready to get working on right now and represent a suggestion to developers as to what to choose to work on next. Most but not all of them will be scheduled for the next milestone. This is a good place to keep issues that are blocking other work, so as to encourage developers to get the issue done.
 
@@ -33,7 +33,7 @@ We try to use a standard set of labels across all the NUnit repositories. In som
 That said, don't stress about whether something is a bug or an enhancement, normal versus low priority, etc. Just pick one. If things change later, the label can be changed as well. This is only intended to help us organize a relatively large number of issues, not to give us extra work.
 
 #### What it is
-Labels starting with **is:** indicate the nature of the issue. Only one should be used, based on the judgement of the committer who assigns the label. If there is no **is:** label, then we presumably don't know what the item is and should not be working on it!
+Labels starting with **is:** indicate the nature of the issue. Only one should be used, based on the judgment of the committer who assigns the label. If there is no **is:** label, then we presumably don't know what the item is and should not be working on it!
 * **is:bug** Something that isn't working as designed.
 * **is:docs** Solely pertaining to the documentation or sample code.
 * **is:enhancement** An addition or improvement to an existing feature.
@@ -65,7 +65,7 @@ Labels starting with **closed:** indicate the status of the bug at closing and s
 * **easyfix** Indicates an issue that might be a good place for a new contributor to start. Whoever adds the label should couple it with a comment suggesting what code to look at and a general approach to working the issue.
 
 ### Epics
-Where appropriate, we make use of the [ZenHub](www.zenhub.com) **Epic** feature to create issues that include a number of sub-issues. For example, when we split the original nunit repository into separate framework and engine repositories, we created an epic that included a number of separate issues that had to be completed in order to accomplish the split smoothly.
+Where appropriate, we make use of the [ZenHub](www.zenhub.com) **Epic** feature to create issues that include a number of sub-issues. For example, when we split the original NUnit repository into separate framework and engine repositories, we created an epic that included a number of separate issues that had to be completed in order to accomplish the split smoothly.
 
 ### Milestones
 We use GitHub Milestones to represent future releases. Generally milestones are created by the project or team leader, who also decides what issues to place into the milestone. Our practice is to only schedule a limited number of key features in advance for each milestone, rather than trying to "fill" the milestone with the amount of work we think can be completed. Other work is only added to the next milestone after it has been completed.

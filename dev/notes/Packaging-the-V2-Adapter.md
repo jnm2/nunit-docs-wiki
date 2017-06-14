@@ -13,7 +13,7 @@ The version numbers follow the basic principles of [semantic versioning].
 
 The version numbers have to be edited in the following files, and should match:
 
-* **Assemblyinfo.cs**,  found in the NUnitTestAdapter project
+* **AssemblyInfo.cs**,  found in the NUnitTestAdapter project
 -- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
 -- change Version tag
@@ -39,9 +39,9 @@ The resulting files can be found in the "package" folder:
 
   * **NUnitVisualStudioTestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
-  * **NUnitVisualStudioTestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+  * **NUnitVisualStudioTestAdapter-[VERSION].nupkg** This is the NuGet package, which is uploaded to [NuGet for the adapter]
 
-  * **NUnitVisualStudioTestAdapterAndFramework-[VERSION].nupkg** This is a NuGet package which includes the NUnit 2.6.3 framework, uploaded to [Nuget for the adapter with framework]   
+  * **NUnitVisualStudioTestAdapterAndFramework-[VERSION].nupkg** This is a NuGet package which includes the NUnit 2.6.3 framework, uploaded to [NuGet for the adapter with framework]   
 
 #### Publishing the Release
 
@@ -49,7 +49,7 @@ The resulting files can be found in the "package" folder:
 
 2. Upload the vsix package to the [Visual Studio Gallery] using the NUnitDeveloper account. If you don't have access to that account, ask one of the committers with access to do the upload for you.
 
-3. Upload the two nuget packages to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
+3. Upload the two NuGet packages to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
 
 4. Update the documentation pages in this wiki as needed. This will usually affect the [[VS Adapter Introduction|NUnit-Test-Adapter-for-Visual-Studio-2012-and-2013]] page. In order to do this quickly after publishing the packages, you may want to clone the wiki repository and prepare the update in advance.
 
@@ -73,11 +73,11 @@ You need this to work with the vsix.  Download from <http://www.microsoft.com/en
 1. **NAnt**
 Download from <http://nant.sourceforge.net/>.  We use the 0.92 version.
 
-1. **Nuget**
+1. **NuGet**
 You need the nuget.exe in your path.  Download the exe from <http://nuget.codeplex.com/downloads/get/784779>.  We use the 2.8 version
 
-1. **VS2012 Testplatform object model**
-You need to have this around, the adapter and the testproject refers to this.  The easist way to get it, is to have VS2012 installed and get it from there. 
+1. **VS2012 TestPlatform object model**
+You need to have this around, the adapter and the test project refer to this.  The easiest way to get it, is to have VS2012 installed and get it from there. 
 It is located at a location similar to "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow" and is named Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
 1. 1. You might need to fix up these references if the locations doesn't match what has been used.
 
@@ -106,6 +106,6 @@ Also check that the files **vsTestAdapterLicense.html** and **vsTestAdapterRelea
 
 [semantic versioning]:http://semver.org/
 [Visual Studio Gallery]:http://visualstudiogallery.msdn.microsoft.com/6ab922d0-21c0-4f06-ab5f-4ecd1fe7175d
-[Nuget for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
-[Nuget for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
+[NuGet for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
+[NuGet for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
 [nunit.org repository]:http://github.com/nunit/nunit.org

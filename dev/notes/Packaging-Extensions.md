@@ -30,7 +30,7 @@ All work on releases should be done on a branch.
 
       `./build -Target=Test`
 
-4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor.
+4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and AppVeyor.
 
 #### Review Milestone Status
 
@@ -115,7 +115,7 @@ Publishing the Release
 
 #### NuGet
 
-1. Sign on to Nuget.org.
+1. Sign on to nuget.org.
 
 2. Select Upload package.
 

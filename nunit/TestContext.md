@@ -34,7 +34,7 @@ The TestParameters object supports the following methods:
 
  * `Exists(string name)` - Returns true if a parameter of that name exists.
  * `Get(string name)`- Returns the same value as the indexer.
- * `Get<T>(string name, T defaultValue)` - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
+ * `Get<T>(string name, T defaultValue)` - Returns the value of the parameter converted from a string to type T or the specified default if the parameter doesn't exist. Throws an exception if conversion fails.
 
 **Note** that all parameter values are strings. You may convert them to other Types using the generic `Get` method listed above or using your own code. An exception may be thrown if the supplied value cannot be converted correctly.
 
@@ -143,7 +143,7 @@ The following is a list of outcomes currently produced by NUnit. Others may be a
 
 #### TestDirectory
 
-Gets the full path of the directory containing the current test assembly. Not available in the Silverlight or Portable builds.
+Gets the full path of the directory containing the current test assembly. Not available in the SilverLight or Portable builds.
 
 #### WorkDirectory
 

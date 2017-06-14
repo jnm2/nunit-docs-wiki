@@ -15,7 +15,7 @@ See [[Framework Distributions]]
 
 #### Merge NUnitLite
 
-NUnitLite is a light-weight version of NUnit, requiring minimal resources and running on platforms not supported by full NUnit. NUnitLite is approximately equivalent to the framework portion of NUnit, with the addition of a rudimenatry test runner.
+NUnitLite is a light-weight version of NUnit, requiring minimal resources and running on platforms not supported by full NUnit. NUnitLite is approximately equivalent to the framework portion of NUnit, with the addition of a rudimentary test runner.
 
 For the NUnit 3.0 release, the NUnitLite project code has been merged with the code of NUnit itself, using conditional compilation to support a reduced feature set.
 
@@ -77,7 +77,7 @@ test reports its own results.
 
 The absence of a distinct test execution object makes it difficult to
 support certain features, such as high-level setup and teardown, parallel
-test executiono and  cancellation of running tests with restart.
+test execution and cancellation of running tests with restart.
 
 In NUnit 3.0, the objects representing tests will no longer have the
 responsibility of running any subordinate tests and a separate test runner

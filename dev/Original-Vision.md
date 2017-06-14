@@ -31,7 +31,7 @@ We'll remain **platform-neutral** and will **add more platforms**. When we use t
 
 We will continue to be **IDE-neutral**. We'll continue to ship releases that run outside any IDE in order to reach as many people as possible. IDE-specific features - such as those now present for Visual Studio - will remain user-selectable and off by default. Any major IDE integration package - such as plugins or addins - will be packaged separately.
 
-We will become more **usable by other programs**. We'd like to make it easy for other software to run tests programatically using NUnit. To that end, we will provide **standard interfaces** that make it easy for people to write their own clients. We can't guarantee that those interfaces will never change, but we'll make an effort to keep them reasonably stable.
+We will become more **usable by other programs**. We'd like to make it easy for other software to run tests programmatically using NUnit. To that end, we will provide **standard interfaces** that make it easy for people to write their own clients. We can't guarantee that those interfaces will never change, but we'll make an effort to keep them reasonably stable.
 
 NUnit will be **internationalized** and we'll work with those who want to provide **localized versions**.
 

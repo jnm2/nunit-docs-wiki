@@ -215,7 +215,7 @@ Assert.That(list1, Is.EqualTo(list2).Using(myComparer));
 	
  4. Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
     as specified by IEEE floating point standards. The new behavior, was
-	introduced after some discussion becuase it seems more useful in tests. 
+	introduced after some discussion because it seems more useful in tests. 
 	To avoid confusion, consider using **Is.NaN** where appropriate.
 	
  5. When an equality test between two strings fails, the relevant portion of

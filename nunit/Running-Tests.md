@@ -1,4 +1,4 @@
-Nunit provides three different runners, which may be used to load and
+NUnit provides three different runners, which may be used to load and
 run your tests.
 
  * The [[Console Runner]], 

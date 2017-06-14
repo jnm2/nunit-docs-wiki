@@ -80,7 +80,7 @@ namespace Bank
 
     [Test]
     [Ignore("Decide how to implement transaction management")]
-    public void TransferWithInsufficientFundsAtomicity()
+    public void TransferWithInsufficientFundsAtomically()
     {
       try
       {

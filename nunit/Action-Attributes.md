@@ -11,7 +11,7 @@ Suppose we have some tests in multiple fixtures that need the same in-memory tes
 This works fine, until we need some other reusable functionality, say the ability to configure or reset a 
 ServiceLocator. We could put that functionality in the base fixture class or setup fixture, but now we're mixing two different responsibilities into the base class. In the case of a setup fixture, this only works if all classes requiring both features are located in a common namespace. In some cases we may *not* want the test database, but we do want ServiceLocator configuration; and sometimes we want the opposite. Still other times we'll want both - so we'd have to make the base class configurable.
 
-If we now discover a third piece of functionality we need to reuse, like configuring the Thread's CurrentPrincipal in arbitrary ways, the complexity of the solution very quickly. We've violated the Single Responsibility Principle and are suffering for it. What we really want is the ability to separate the different pieces of resuable test logic and compose them together as our tests need them.
+If we now discover a third piece of functionality we need to reuse, like configuring the Thread's CurrentPrincipal in arbitrary ways, the complexity of the solution very quickly. We've violated the Single Responsibility Principle and are suffering for it. What we really want is the ability to separate the different pieces of reusable test logic and compose them together as our tests need them.
 
 ### Resolving the Problem
 
@@ -102,7 +102,7 @@ specified. When attached to a class or assembly, they behave as if `ActionTarget
 
 The `BeforeTest` and `AfterTest` methods are provided with information
 about the test that is about to run (before) or has just run (after). The `ITest`
-interface is an internal NUnit inteface to the representation of a test, which may be
+interface is an internal NUnit interface to the representation of a test, which may be
 either a test case or a suite. The before and after methods may use the interface 
 to decide what actions to take or retrieve information about the test.
 

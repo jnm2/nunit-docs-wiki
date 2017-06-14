@@ -14,7 +14,7 @@ Normally, it is sufficient to add the new project to one of the four properties,
 <tr><th>NUnitProjects</th><td>Projects that are part of the full NUnit framework</td></tr>
 <tr><th>NUnitLiteProjects</th><td>Projects that are part of the NUnitLite framework</td></tr>
 <tr><th>EngineProjects</th><td>Projects that are part of the Engine layer</td></tr>
-<tr><th>ConsoleProjects</th><td>Projects that are part ofthe console runner</td></tr>
+<tr><th>ConsoleProjects</th><td>Projects that are part of the console runner</td></tr>
 </table>
 
 If a project is only built on a particular platform, a Condition attribute should be used in its entry.

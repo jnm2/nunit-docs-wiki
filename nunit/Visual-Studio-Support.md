@@ -29,7 +29,7 @@ When Visual Studio support is enabled, the File Open dialog displays the followi
 Visual Studio project types: C#, VB.Net, J# and C++. The project file is read and the
 configurations and output assembly locations are identified. Since the project files do not contain
 information about the most recently opened configuration, the output assembly for the first
-configuration found (usually Debug) is loaded in the GUI. The tree shows the project as the toplevel
+configuration found (usually Debug) is loaded in the GUI. The tree shows the project as the top-level
 node with the assembly shown as its descendant.
 
 When tests are run for a Visual studio project, they run just as if the output assembly had been

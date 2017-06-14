@@ -13,7 +13,7 @@ This feature provides three main benefits:
 Attributes are ideal to imbed reusable test logic into because attributes can be applied at various locations within .NET code: at an assembly level, at a type (e.g. class, struct, interface) level, or at a member (e.g. method, property, field) level.  NUnit interprets classes and methods as test suites and test cases.  For example, NUnit interprets classes with the TestFixture attribute applied as a test suite.  Each test method within the class are interpreted as a test case.  However, there are times when a method is interpreted as a test suite, for example, when one or more TestCase attribute is attached to the method and the method has some arguments.  In that case, the class is interpreted as a test suite that has a child test suite represented by the method, and that child test suite contains a test case for each TestCase attribute applied to the method.  The importance of understanding this will become apparent when you are trying to determine when the reusable test logic in attributes will execute during the execution of test suites and test cases.
 
 Any attribute can be an action attribute.  To create an action attribute, create a class that inherits from System.Attribute and implements the ITestAction interface. Alternatively, you may inherit from NUnit's TestActionAttribute, which provides a default
-implemenation of the interface that you can override. The interface and associated Types are defined as follows:
+implementation of the interface that you can override. The interface and associated Types are defined as follows:
 
 ```csharp
 [Flags]
@@ -87,7 +87,7 @@ to reuse, for example, configuring the Thread's CurrentPrincipal in arbitrary
 ways - we could add that to my base class, but the complexity of the
 base class grows very quickly.  We've violated the Single
 Responsibility Principle and suffering for it.  What we really want is
-the ability to separate the different pieces of resuable test logic and compose
+the ability to separate the different pieces of reusable test logic and compose
 them together as our tests need them.
 
 Given this example:

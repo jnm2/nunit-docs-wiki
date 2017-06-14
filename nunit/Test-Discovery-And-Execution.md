@@ -24,7 +24,7 @@ The driver API is only intended to be implemented by drivers and is only used by
 
 #### NUnit Framework API
 
-This is a primitive API implemented by the nunit.framework and nunitlite assemblies. The NUnitFrameworkDriver in the engine uses this API. The API is a bit complicated to use. Since it needs to support multiple versions of the framework, it uses well-known framework class names, which are constructed via reflection. All results are returned as raw XML. 
+This is a primitive API implemented by the nunit.framework and NUnitLite assemblies. The NUnitFrameworkDriver in the engine uses this API. The API is a bit complicated to use. Since it needs to support multiple versions of the framework, it uses well-known framework class names, which are constructed via reflection. All results are returned as raw XML. 
 
 This API is not intended for any use except by NUnit itself. See [[Framework API]] for more info.
 

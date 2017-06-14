@@ -59,7 +59,7 @@ be used by NUnit and each has certain advantages and limitations as well.
 
 #### Syntax
 
-As in NUnit 2.5, Attibutes applied to test methods will provide or point to the data to be used as test arguments. Except as noted below, attributes will not change syntactically and will continue to operate as before even though many of them will now generate test cases dynamically. The following paragraphs describe the impact of the change on each attribute.
+As in NUnit 2.5, Attributes applied to test methods will provide or point to the data to be used as test arguments. Except as noted below, attributes will not change syntactically and will continue to operate as before even though many of them will now generate test cases dynamically. The following paragraphs describe the impact of the change on each attribute.
 
 **TestCaseAttribute** will continue to work as it now does, producing pre-generated test cases. 
 

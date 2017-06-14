@@ -32,7 +32,7 @@ Create a new attribute that inherits from IncludeExcludeAttribute and implement 
 #### 2. Keep Current Approach, but Split PlatformAttribute
 
 ##### How It Would Work
-As mentioned avove, PlatformAttribute actually tests over three different domains. We would create a separate attribute for each domain, for example: PlatformAttribute, RuntimeAttribute and ProcessAttribute.
+As mentioned above, PlatformAttribute actually tests over three different domains. We would create a separate attribute for each domain, for example: PlatformAttribute, RuntimeAttribute and ProcessAttribute.
 
 ##### Pros
 * All the same as for approach #1, plus...

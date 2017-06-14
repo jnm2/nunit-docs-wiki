@@ -7,7 +7,7 @@ Normally, multiple OneTimeSetUp methods are only defined at different levels
 of an inheritance hierarchy, as explained below.
 
 If a OneTimeSetUp method fails or throws an exception, none of the tests
-in the fixure are executed and a failure or error is reported.
+in the fixture are executed and a failure or error is reported.
 
 #### Example:
 

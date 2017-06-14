@@ -13,7 +13,7 @@ We identify the component being built for two reasons:
 2. To distinguish the features supported in different framework builds.
 
 ##### NUNIT_CONSOLE
-Indicates that we are buiding the NUnit console runner.
+Indicates that we are building the NUnit console runner.
 
 ##### NUNIT_ENGINE
 Indicates that we are building the NUnit engine.
@@ -22,7 +22,7 @@ Indicates that we are building the NUnit engine.
 Indicates that we are building the full NUnitFramework.
 
 ##### NUNITLITE
-Indicates that we are buiding the NUnitLite runner.
+Indicates that we are building the NUnitLite runner.
 
 ##### ULTRALITE
 Reserved for future use.
@@ -55,10 +55,10 @@ Indicates that the build targets version 3.5 of the compact framework.
 Indicates that the build targets version 3.9 of the compact framework.
 
 ##### SILVERLIGHT
-Indicates that the build targets Silverlight.
+Indicates that the build targets SilverLight.
 
 ##### SL_5_0
-Indicates that the build targets Silverlight 5.0.
+Indicates that the build targets SilverLight 5.0.
 
 ##### PORTABLE
 Indicates that this is a portable class library build.

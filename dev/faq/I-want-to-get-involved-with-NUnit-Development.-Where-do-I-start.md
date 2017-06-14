@@ -26,6 +26,6 @@ from source and run tests successfully. Ask us for help if you run into problems
 
 #### Joining the Developer List
 
-Discussion of the actual development of NUnit takes place on the [[nunit developer list|https://groups.google.com/forum/#!forum/nunit-developer]]. You should join the
+Discussion of the actual development of NUnit takes place on the [[NUnit developer list|https://groups.google.com/forum/#!forum/nunit-developer]]. You should join the
 list and introduce yourself. Tell us a bit about your background and what you would
 like to work on.

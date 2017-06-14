@@ -36,7 +36,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
     <td>The name (or path) of a FILE containing a list of tests to run or explore, one per line.</td></tr>
 
 <tr><th>--where=EXPRESSION</th>
-    <td>An expression indicating which tests to run. It may specify test names, classes, methods, catgories or properties comparing them to actual values with the operators ==, !=, =~ and !~. See [[Test Selection Language]] for a full description of the syntax.</td></tr>
+    <td>An expression indicating which tests to run. It may specify test names, classes, methods, categories or properties comparing them to actual values with the operators ==, !=, =~ and !~. See [[Test Selection Language]] for a full description of the syntax.</td></tr>
 
 <tr><th>--params|p=PARAMETER</th>
     <td>A test PARAMETER specified in the form NAME=VALUE. Multiple parameters may be specified, separated by semicolons or by repeating the --params option multiple times.</td></tr>

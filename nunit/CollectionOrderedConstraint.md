@@ -51,7 +51,7 @@ The following Modifiers are supported:
 
 ### Ordering on Multiple Properties
 
-An ordering expression may use multiple `By` modifiers, each referring to a different proproperty. The following examples assume a collection of items with proerties named A and B.
+An ordering expression may use multiple `By` modifiers, each referring to a different property. The following examples assume a collection of items with properties named A and B.
 
 ```C#
 Assert.That(collection, Is.Ordered.By("A").Then.By("B"));

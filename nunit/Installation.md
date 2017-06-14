@@ -26,7 +26,7 @@ It's based on https://github.com/nunit/docs/wiki/Visual-Studio-Test-Adapter and 
 
 ### Using NuGet NUnitLite Package
 
-The NUnitLite approach provides a way to run NUnit tests without a full install of the NUnit runner and test engine assemblies. Only the framework and a small runner program are installed. Note that this is currently the only way to run tests under Silverlight 5.0 or the compact framework.
+The NUnitLite approach provides a way to run NUnit tests without a full install of the NUnit runner and test engine assemblies. Only the framework and a small runner program are installed. Note that this is currently the only way to run tests under SilverLight 5.0 or the compact framework.
 
 In Visual Studio, from the Tools menu, select NuGet Package Manager | Manage NuGet packages for solution...
 

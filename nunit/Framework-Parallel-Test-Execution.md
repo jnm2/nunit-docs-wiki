@@ -11,7 +11,7 @@ One Named Property is supported:
 
 #### NonParallelizableAttribute
 
-This Attribute is used to indicate that the test as well as its descendents may __not__ be run in parallel with other tests. Although `[NonParallelizable]` is completely equivalent to `[Parallelizable(ParallelScope.None)]`, we recommend that you use the former for clarity.
+This Attribute is used to indicate that the test as well as its descendants may __not__ be run in parallel with other tests. Although `[NonParallelizable]` is completely equivalent to `[Parallelizable(ParallelScope.None)]`, we recommend that you use the former for clarity.
 
 ##### ParallelScope Enumeration
 

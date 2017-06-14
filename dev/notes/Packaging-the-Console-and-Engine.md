@@ -32,7 +32,7 @@ All work on releases should be done on a branch.
 
       `./build -Target=Test`
 
-4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor. Check on TeamCity once we get that build working again.
+4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and AppVeyor. Check on TeamCity once we get that build working again.
 
 #### Review Milestone Status
 
@@ -132,7 +132,7 @@ Creating the Release
 Testing the Release
 -------------------
 
-The degree to which each package needs testing may vary depending on what has been changed. Usually, you should install all the nuget packages into a test project, verifying that the
+The degree to which each package needs testing may vary depending on what has been changed. Usually, you should install all the NuGet packages into a test project, verifying that the
 
 Archiving the Release
 ---------------------
@@ -162,7 +162,7 @@ Publishing the Release
 
 #### NuGet
 
-1. Sign on to Nuget.org.
+1. Sign on to nuget.org.
 
 2. Select Upload package.
 

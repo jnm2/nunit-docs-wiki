@@ -23,4 +23,4 @@ public void PotentiallyLongRunningTest()
 **Note:** When debugging a unit test - i.e. when a debugger is attached to the process - then the timeout is not enforced.
 
 #### See Also...
- * [[Maxtime Attribute]]
+ * [[MaxTime Attribute]]

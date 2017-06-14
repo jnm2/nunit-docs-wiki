@@ -65,7 +65,7 @@ Hotfix release
 ##### Bug Fixes
 
  * #13 Category attribute not working with TFS test case filter
- * #21 Xamarin.iOS Nunit project causes adapter to throw
+ * #21 Xamarin.iOS NUnit project causes adapter to throw
 
 #### NUnit Test Adapter for Visual Studio (RTM) - Version 1.0 - September 12, 2013
 
@@ -115,7 +115,7 @@ Hotfix release
 
 ##### Features
 
- * #1174925 Add support for installing the adapter from Nuget
+ * #1174925 Add support for installing the adapter from NuGet
 
 ##### Bug Fixes
 
@@ -139,7 +139,7 @@ Hotfix release
  * 1075893 Test execution fails if solution contains native C++ project
  * 1076012 No source information found for async test methods
  * 1087629 TestFixture Category not being recognised as traits in VS2012 update 1
- * 1091020 Adapter doesnt support TFS Build traits/test case filtering 
+ * 1091020 Adapter doesn't support TFS Build traits/test case filtering 
 
 #### NUnit Test Adapter for Visual Studio (Beta 3-2) - Version 0.93.2 - November 2, 2012
 
@@ -177,7 +177,7 @@ Hotfix release
  * 1065225 No display for TestFixtureSetUp/TearDown or SetUpFixture errors
  * 1065254 Cannot open test from Test Explorer for tests in a Parameterized Test Fixture
  * 1065306 Generic Fixtures aren't discovered.
- * 1066393 Unable to display source for testcases with an alternate name set
+ * 1066393 Unable to display source for test cases with an alternate name set
  * 1066518 Executed fast test appears in Not Run category in Test Explorer 
 
 #### NUnit Test Adapter for Visual Studio (Beta 2) - Version 0.92 - May 3, 2012

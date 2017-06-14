@@ -28,7 +28,7 @@ The `IFrameworkDriver` interface is defined as follows:
 ```C#
 public interface IFrameworkDriver
 {
-    // Gets and sets the unique identfier for this driver
+    // Gets and sets the unique identifer for this driver
     string ID { get; set; }
 
     // Loads the tests in an assembly

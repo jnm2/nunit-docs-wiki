@@ -1,10 +1,10 @@
 ### NUnit 3.7.1 - June 6, 2017
 
-This is a hotfix release that addresses occasional hangs when using test parallization and fixes crashes in NCrunch prior to version 3.9.
+This is a hotfix release that addresses occasional hangs when using test parallelization and fixes crashes in NCrunch prior to version 3.9.
 
 #### Issues Resolved
 
- * 2205 Ncrunch: System.Xml.XmlException: Root element is missing, when adding NUnit 3.7.0
+ * 2205 NCrunch: System.Xml.XmlException: Root element is missing, when adding NUnit 3.7.0
  * 2209 NUnit occasionally hangs when parallelizable TestFixture has OneTimeSetUp and OneTimeTearDown
 
 ### NUnit 3.7 - May 29, 2017
@@ -34,7 +34,7 @@ is using the AssertionHelper class, we recommend that you migrate your asserts.
  * [1363](https://github.com/nunit/nunit/issues/1363) Make Timeouts work without running test on its own thread
  * [1474](https://github.com/nunit/nunit/issues/1474) Several SetUpFixtures at the same level may be active at the same time
  * [1819](https://github.com/nunit/nunit/issues/1819) TestContext.Progress.Write writes new line
- * [1830](https://github.com/nunit/nunit/issues/1830) Add --labels switch changes to nunilite and nunitlite tests
+ * [1830](https://github.com/nunit/nunit/issues/1830) Add --labels switch changes to NUnitLite and NUnitLite tests
  * [1859](https://github.com/nunit/nunit/issues/1859) ConcurrentQueue is duplicate with System.Threading.dll package
  * [1877](https://github.com/nunit/nunit/issues/1877) Resolve differences between NUnit Console and NUnitLite implementations of @filename
  * [1885](https://github.com/nunit/nunit/issues/1885) Test parameter containing a semicolon
@@ -61,10 +61,10 @@ is using the AssertionHelper class, we recommend that you migrate your asserts.
  * [2025](https://github.com/nunit/nunit/issues/2025) NullReferenceException using Is.EqualTo on two unequal strings
  * [2030](https://github.com/nunit/nunit/issues/2030) Add method to mark tests as invalid with a reason
  * [2031](https://github.com/nunit/nunit/issues/2031) Limit Language level to C#6
- * [2034](https://github.com/nunit/nunit/issues/2034) Remove silverlight project - no longer used
+ * [2034](https://github.com/nunit/nunit/issues/2034) Remove SilverLight project - no longer used
  * [2035](https://github.com/nunit/nunit/issues/2035) NullReferenceException inside failing Assert.That call
  * [2040](https://github.com/nunit/nunit/issues/2040) Cannot catch AssertionException
- * [2045](https://github.com/nunit/nunit/issues/2045) NUnitlite-runner crashes if no file is provided
+ * [2045](https://github.com/nunit/nunit/issues/2045) NUnitLite-runner crashes if no file is provided
  * [2050](https://github.com/nunit/nunit/issues/2050) Creation of TestExecutionContext should be explicit
  * [2052](https://github.com/nunit/nunit/issues/2052) NullReferenceException with TestCaseSource if a property has no setter
  * [2061](https://github.com/nunit/nunit/issues/2061) TestContext.WorkDirectory not initialized during build process
@@ -80,7 +80,7 @@ is using the AssertionHelper class, we recommend that you migrate your asserts.
  * [2131](https://github.com/nunit/nunit/issues/2131) Remove "Version 3" suffix from NUnitLite NuGet Package
  * [2132](https://github.com/nunit/nunit/issues/2132) TestFixtureTests.CapturesArgumentsForConstructorWithMultipleArgsSupplied assumes order of custom attributes
  * [2143](https://github.com/nunit/nunit/issues/2143) Non-parallel fixture with parallel children runs in parallel with other fixtures
- * [2147](https://github.com/nunit/nunit/issues/2147) Test Assembly using NUnitLite & Nunit 3.6.1 hangs under .NET Core when `--timeout` is supplied on command line
+ * [2147](https://github.com/nunit/nunit/issues/2147) Test Assembly using NUnitLite & NUnit 3.6.1 hangs under .NET Core when `--timeout` is supplied on command line
  * [2150](https://github.com/nunit/nunit/issues/2150) Add portable-slow-tests to Cake file
  * [2152](https://github.com/nunit/nunit/issues/2152) Allow attaching files to TestResults
  * [2154](https://github.com/nunit/nunit/issues/2154) Fix execution of non-parallel test fixtures
@@ -119,17 +119,17 @@ This release of the framework no longer includes builds for Compact Framework or
  * Theories now support Nullable enums
  * Improved assert error messages to help differentiate differences in values
  * Added warnings with Warn.If(), Warn.Unless() and Assert.Warn()
- * Enabled Path, File and Directory Asserts/Contraints for .NET Core testing
+ * Enabled Path, File and Directory Asserts/Constraints for .NET Core testing
  * Added NonTestAssemblyAttribute for use by third-party developers to indicate that their assemblies reference the NUnit framework, but do not contain tests
 
 #### Issues Resolved
 
  * [406](https://github.com/nunit/nunit/issues/406) Warning-level Assertions
  * [890](https://github.com/nunit/nunit/issues/890) Allow file references anywhere in the command line.
- * [1380](https://github.com/nunit/nunit/issues/1380) Appveyor Failures when branch name is too long
+ * [1380](https://github.com/nunit/nunit/issues/1380) AppVeyor Failures when branch name is too long
  * [1589](https://github.com/nunit/nunit/issues/1589) Split the nunit repository into multiple repositories
  * [1599](https://github.com/nunit/nunit/issues/1599) Move Compact Framework to separate project
- * [1601](https://github.com/nunit/nunit/issues/1601) Move Silverlight to a separate project
+ * [1601](https://github.com/nunit/nunit/issues/1601) Move SilverLight to a separate project
  * [1609](https://github.com/nunit/nunit/issues/1609) Upgrade Cake build to latest version
  * [1661](https://github.com/nunit/nunit/issues/1661) Create .NET Standard Framework Build
  * [1668](https://github.com/nunit/nunit/issues/1668) Need implementation-independent way to test number of items in a collection
@@ -144,16 +144,16 @@ This release of the framework no longer includes builds for Compact Framework or
  * [1828](https://github.com/nunit/nunit/issues/1828) Add Retry for failed tests only
  * [1829](https://github.com/nunit/nunit/issues/1829) NUnitLite accepts --params option but does not make any use of it.
  * [1836](https://github.com/nunit/nunit/issues/1836) Support nullable enums in Theories
- * [1837](https://github.com/nunit/nunit/issues/1837) [Request] AfterContraint to support more readable usage
+ * [1837](https://github.com/nunit/nunit/issues/1837) [Request] AfterConstraint to support more readable usage
  * [1840](https://github.com/nunit/nunit/issues/1840) Remove SL and CF #Defined source
  * [1866](https://github.com/nunit/nunit/issues/1866) [Request] More readable way to set polling interval in After constraint
  * [1870](https://github.com/nunit/nunit/issues/1870) EqualConstraint result failure message for DateTime doesn't show sufficient resolution
  * [1872](https://github.com/nunit/nunit/issues/1872) Parameterized method being called with no parameter
  * [1876](https://github.com/nunit/nunit/issues/1876) What should we do about Env.cs
  * [1880](https://github.com/nunit/nunit/issues/1880) AttributeUsage for various Attributes
- * [1889](https://github.com/nunit/nunit/issues/1889) Modify nunitlite to display multiple assert information
+ * [1889](https://github.com/nunit/nunit/issues/1889) Modify NUnitLite to display multiple assert information
  * [1891](https://github.com/nunit/nunit/issues/1891) TestContext.Progress and TestContext.Error silently drop text that is not properly XML encoded
- * [1901](https://github.com/nunit/nunit/issues/1901) Make nunitlite-runner Prefer32Bit option consistent across Debug/Release
+ * [1901](https://github.com/nunit/nunit/issues/1901) Make NUnitLite-runner Prefer32Bit option consistent across Debug/Release
  * [1904](https://github.com/nunit/nunit/issues/1904) Add .NET Standard 1.6 Dependencies to the Nuspec Files
  * [1907](https://github.com/nunit/nunit/issues/1907) Handle early termination of multiple assert block
  * [1911](https://github.com/nunit/nunit/issues/1911) Changing misleading comment that implies that every ICollection<T> is a list

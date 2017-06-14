@@ -34,7 +34,7 @@ to make the program more readable.
 **TestCaseData** supports the following properties
 and methods, which may be appended to an instance in any order.
 
- * **Explicit()** or **Explicit(string)** causes the test case to be marked explicit, optionally specifing the reason for doing so.
+ * **Explicit()** or **Explicit(string)** causes the test case to be marked explicit, optionally specifying the reason for doing so.
 
  * **Ignore(string)** causes the test case to be ignored and specifies the reason, which is required.
 

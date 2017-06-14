@@ -5,7 +5,7 @@ to be generated. See [[Parameterized Tests]] for more info.
 
 The test method may be either an instance or a static method.
    
-Test methods targetting .Net 4.0 or higher may be 
+Test methods targeting .Net 4.0 or higher may be 
 marked as **async** and NUnit will wait for the method to complete 
 before recording the result and moving on to the next test. Async
 test methods must return `Task` if no value is returned,
@@ -38,7 +38,7 @@ namespace NUnit.Tests
     public void Add()
     { /* ... */ }
 
-    // A test with a descripton property
+    // A test with a description property
     [Test(Description="My really cool test")]
     public void Add()
     { /* ... */ }

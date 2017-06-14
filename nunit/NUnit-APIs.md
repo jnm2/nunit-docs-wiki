@@ -8,7 +8,7 @@ NUnit provides three levels of public APIs for discovering and running tests. Fr
 
 #### Test Engine API
 
-The NUnit TestEngine is a separate component, introduced in NUnit 3.0, which knows how to discover and execute tests. It provides an API for both simple batch execution and more complex interaction as needed by Gui test runners. It also provides additional Engine services beyond what the framework provides. This is what we recommend for use by anyone needing to run NUnit tests programatically.
+The NUnit TestEngine is a separate component, introduced in NUnit 3.0, which knows how to discover and execute tests. It provides an API for both simple batch execution and more complex interaction as needed by Gui test runners. It also provides additional Engine services beyond what the framework provides. This is what we recommend for use by anyone needing to run NUnit tests programmatically.
 
 See [[Test Engine API]] for more info.
 

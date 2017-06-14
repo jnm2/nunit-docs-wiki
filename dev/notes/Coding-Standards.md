@@ -211,7 +211,7 @@ Using statements should be sorted as follows:
   * All System namespaces
   * All Other namespaces, including NUnit's
 
-It is permissible, but not required, to place using statements inside the namespace block, in shortened form, for namespaces that are descendents of the namespace itself. Note that the compiler will permit other uses of shortened namespaces within the namespace block, but we prefer to limit ourselves to descendants. Non-descendant namespaces should be listed in full form in the main using block.
+It is permissible, but not required, to place using statements inside the namespace block, in shortened form, for namespaces that are descendants of the namespace itself. Note that the compiler will permit other uses of shortened namespaces within the namespace block, but we prefer to limit ourselves to descendants. Non-descendant namespaces should be listed in full form in the main using block.
 
 ```C#
 using System;

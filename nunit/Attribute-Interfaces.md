@@ -104,7 +104,7 @@ The order in which `ApplyToTest` is called on multiple attributes is indetermina
 The most common example of this is for attributes that change the RunState of a test. If one attribute is trying to set it to `RunState.Ignore`, while the other wants it to be `RunState.NotRunnable`, we would normally expect the 'worst' value to win and for the test to be non-runnable. We can achieve that by code like the following:
 
 ```C#
-// In the attribute setting NotRunable
+// In the attribute setting NotRunnable
 test.RunState = RunState.NotRunnable;
 ...
 

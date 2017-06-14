@@ -61,17 +61,17 @@ AfterAnyFailure=<test-list>
     TestFixture will not be run. 
    
 BeforeAll
-    The Test or TestFixture will be run before all other tests or testfixtures are run.
+    The Test or TestFixture will be run before all other tests or test fixtures are run.
     This dependency can be overridden by a specific Before dependency referencing this
     Test or TestFixture.
 
 AfterAll
-    The Test or TestFixture will be run after all other tests or testfixtures have been
+    The Test or TestFixture will be run after all other tests or test fixtures have been
     run (whether they have completed successfully or not).  This dependency can be
     overridden by a specific Afterxxx dependency referencing this Test or TestFixture.
 
-AfterAllSucess
-    The Test or TestFixture will be run after all other tests or testfixtures have been
+AfterAllSuccess
+    The Test or TestFixture will be run after all other tests or test fixtures have been
     run and completed successfully. If any Test or TestFixture fails, this Test or
     TestFixture will not be run. This dependency can be overridden by a specific
     Afterxxx dependency referencing this Test or TestFixture.
@@ -81,7 +81,7 @@ Note that a single Test or TestFixture may have multiple `<dependency-specificat
 
 Any loops or contradictory references in the dependencies will be discovered, and will result in the specified dependencies being ignored, and a warning being given.  For example, if TestA has Before="TestB" and TestB has Before="TestA", both will be ignored, and a warning given. (An alternative would be to use whichever was specified first  or last).
 
-If multiple tests or testfixtures are in the same relative position in the dependency tree, the order in which they will be run will be the default order.  For example, if multiple tests have a BeforeAll dependency, they will run in the default order, but before all other tests not having that dependency specified.
+If multiple tests or test fixtures are in the same relative position in the dependency tree, the order in which they will be run will be the default order.  For example, if multiple tests have a BeforeAll dependency, they will run in the default order, but before all other tests not having that dependency specified.
 
 
 Items to consider:

@@ -18,5 +18,5 @@
 
 ### Issues with other tools
 
- * Versions of Resharper earlier than the 8.2 version has an issue with the NuGet adapter, which will prevent NUnit tests from running. Make sure you have updated Reshaper to at least version 8.2.
+ * Versions of ReSharper earlier than the 8.2 version has an issue with the NuGet adapter, which will prevent NUnit tests from running. Make sure you have updated Reshaper to at least version 8.2.
 

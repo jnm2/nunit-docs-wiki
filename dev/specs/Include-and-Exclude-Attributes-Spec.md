@@ -16,7 +16,7 @@ We would define two new attributes, **IncludeAttribute** and **ExcludeAttribute*
 
 #### Syntax Options
 
-There are a number of possible alternatives for specifying when a test is to be included or exclueded. Each of them is illustrated in the examples above, from which we need to select a subset.
+There are a number of possible alternatives for specifying when a test is to be included or excluded. Each of them is illustrated in the examples above, from which we need to select a subset.
 
 ##### 1. Named Properties
 

@@ -45,7 +45,7 @@ TestCaseAttribute supports a number of additional named parameters:
 
  * **Description** sets the description property of the test.
 
- * **ExcludePlatform** specifies a comma-deliminted list of platforms on which the test should not run.
+ * **ExcludePlatform** specifies a comma-delimited list of platforms on which the test should not run.
 
  * **ExpectedResult** sets the expected result to be returned from the method, which must have a compatible return type.
 

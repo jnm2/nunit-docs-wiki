@@ -1,7 +1,7 @@
 NUnit development is currently hosted on [[Launchpad|http://launchpad.net/nunit-xtp]] but
 we are in the process of moving it to [[GitHub|https://github.com/nunit/]].
 
-GithHub provides an environment that encourages individuals to work on
+GitHub provides an environment that encourages individuals to work on
 open source projects with a very low entry barrier. No special permission
 is needed to fork any repository and all your changes can be pushed to your fork on GitHub.
 GitHub also makes it easy to merge your changes into the main project using Pull Requests.

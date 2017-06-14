@@ -30,7 +30,7 @@ The version numbers follow the basic principles of [semantic versioning].
 
 The version numbers have to be edited in the following files, and should match:
 
-* **Assemblyinfo.cs**,  found in the NUnitTestAdapter project
+* **AssemblyInfo.cs**,  found in the NUnitTestAdapter project
    -- change both file and assembly version number
 * **source.extensions.vsixmanifest**, found under the NUnitTestAdapterInstall project
    -- change Version tag
@@ -62,11 +62,11 @@ The resulting files can be found in the "package" folder:
 
   * **NUnit3TestAdapter-[VERSION].zip**  This is a zipped package for use with TFS Server Builds when you don't use the NuGet package in your solution. See  [this blog] for more information. 
 
-  * **NUnit3TestAdapter.[VERSION].nupkg** This is the NuGet package, which is uploaded to [Nuget for the adapter]
+  * **NUnit3TestAdapter.[VERSION].nupkg** This is the NuGet package, which is uploaded to [NuGet for the adapter]
 
 #### Testing the Packages
 
-Test both the vsix and nuget packages using each version of Visual Studio you have available, from 2012 through 2015.
+Test both the vsix and NuGet packages using each version of Visual Studio you have available, from 2012 through 2015.
 
 #### Publishing the Release
 
@@ -74,7 +74,7 @@ Test both the vsix and nuget packages using each version of Visual Studio you ha
 
 2. Upload the vsix package to the [Visual Studio Gallery] using the NUnitDeveloper account. If you don't have access to that account, ask one of the committers with access to do the upload for you.
 
-3. Upload the nuget package to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
+3. Upload the NuGet package to nuget.org. You use your own account for this but you must have been pre-authorized in order for it to work. If you are not authorized, ask a committer with access to do it for you.
 
 4. Update the documentation pages in the wiki as needed. Be sure to update the Release Notes page. In order to perform the update quickly after publishing the packages, you may want to clone the wiki repository and prepare the update in advance.
 
@@ -95,6 +95,6 @@ Prerequisites
 
 [semantic versioning]:http://semver.org/
 [Visual Studio Gallery]:https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d
-[Nuget for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
-[Nuget for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
+[NuGet for the adapter]:http://www.nuget.org/packages/NUnitTestAdapter/
+[NuGet for the adapter with framework]:http://www.nuget.org/packages/NUnitTestAdapter.WithFramework/
 [nunit.org repository]:http://github.com/nunit/nunit.org

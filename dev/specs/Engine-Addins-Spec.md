@@ -67,7 +67,7 @@ Assemblies containing Addins and Extensions are stored in one or more locations 
 
 Any assemblies specified in a `.addins` file will be scanned fully, looking for addins and extensions. Any directories specified will be browsed, first looking for any `.addins` files. If one or more files are found, the content of the files will direct all further browsing. If no such file is found, then all `.dll` files in the directory will be scanned, just as if a `.addins` file contained "*.dll."
 
-Assemblies are be examined using Cecil. Any assembly that cannot be opened is be ignored, with a log message generated. This be a normal occurence in cases where the assembly targets a higher level runtime than that which is in use. Info is saved for actual instantiation of extensions on a just-in-time basis.
+Assemblies are be examined using Cecil. Any assembly that cannot be opened is be ignored, with a log message generated. This be a normal occurrence in cases where the assembly targets a higher level runtime than that which is in use. Info is saved for actual instantiation of extensions on a just-in-time basis.
 
 We hope that the combination of specifically indicating which assemblies to scan and the use of Cecil to do the scanning will make this process quite efficient. If that turns out not to be the case, we can use an assembly-level attribute to identify assemblies containing extensions.
 

@@ -1,7 +1,7 @@
 There are two ways of installing the adapter within Visual Studio. See below for info on how to choose.
 
  * Use the Extension Manager
- * Add it as a Nuget package to your solution. (Requires VS 2012 Update 1 or later)
+ * Add it as a NuGet package to your solution. (Requires VS 2012 Update 1 or later)
 
 ##### Installing With the Extension Manager
 
@@ -14,9 +14,9 @@ To install the NUnit Test Adapter using the Extension Manager, follow these step
 
 Use the Extension Manager to ensure that the NUnit 3.0 Test Adapter is enabled.
 
-##### Installing the Nuget Package
+##### Installing the NuGet Package
 
-To add it is a Nuget package, you must have an active solution, then follow these steps:
+To add it is a NuGet package, you must have an active solution, then follow these steps:
 
 1. From Tools menu, use Library Package Manager and select Manage NuGet packages for solution
 2. In the left panel, select Online

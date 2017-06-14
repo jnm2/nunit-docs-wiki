@@ -48,5 +48,5 @@ NUnit currently defines two attributes that derive from `IncludeExcludeAttribute
 * `CultureAttribute`
 * `PlatformAttribute`
 
-These two attributes implement `IApplyToTest` and set the `Runstate` of the test based on interpreting the arguments and the current environment. Custom classes derived from `IncludeExcludeAttribute` should do the same thing.
+These two attributes implement `IApplyToTest` and set the `RunState` of the test based on interpreting the arguments and the current environment. Custom classes derived from `IncludeExcludeAttribute` should do the same thing.
 

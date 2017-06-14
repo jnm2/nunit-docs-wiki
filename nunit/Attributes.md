@@ -15,7 +15,7 @@ This table lists all the attributes supported by NUnit.
 | [[Explicit Attribute]]            | Indicates that a test should be skipped unless explicitly run. |
 | [[Ignore Attribute]]              | Indicates that a test shouldn't be run for some reason. |
 | [[LevelOfParallelism Attribute]]  | Specifies the level of parallelism at assembly level. |
-| [[Maxtime Attribute]]             | Specifies the maximum time in milliseconds for a test case to succeed. |
+| [[MaxTime Attribute]]             | Specifies the maximum time in milliseconds for a test case to succeed. |
 | [[NonParallelizable Attribute]]   | Specifies that the test and its descendants may not be run in parallel. |
 | [[OneTimeSetUp Attribute]]        | Identifies methods to be called once prior to any child tests. |
 | [[OneTimeTearDown Attribute]]     | Identifies methods to be called once after all child tests. |

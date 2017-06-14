@@ -1,13 +1,13 @@
 This note describes how to create release packages for the NUnit Framework. Currently, all the builds and packaging must be done on a single Windows machine. This is likely to change in the future as we add more platforms.
 
-> **Note:** These instructions assume that you are creating releases for Silverlight and the Compact Framework at the same time as the general release. If that's not the case, you may skip the steps marked CF or SL. To release either build separately, perform those steps in sequence.
+> **Note:** These instructions assume that you are creating releases for SilverLight and the Compact Framework at the same time as the general release. If that's not the case, you may skip the steps marked CF or SL. To release either build separately, perform those steps in sequence.
 
 Software Prerequisites
 ----------------------
 
 Various software combinations and environments may be used to build NUnit components. The following software is what we have used and tested for building everything and creating the release packages. We'll add options to the list as we find them.
 
-1. Visual Studio 2012, 2013 or 2015 with the Nuget Package manager.
+1. Visual Studio 2012, 2013 or 2015 with the NuGet Package manager.
 2. Visual Studio 2008 (for the compact framework build).
 
 Preparing for Release
@@ -35,7 +35,7 @@ All work on releases should be done on a branch.
 
       `./build -Target=Test`
 
-4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and Appveyor.
+4. Make sure that the most recent commits of master passed all tests in the CI builds. Check the builds on both Travis and AppVeyor.
 
 #### Review Milestone Status
 
@@ -70,7 +70,7 @@ var version="3.6.0";
 var modifier=""
 ```
 
-The version variables are three-part version numbers that follow the basic principles of [semantic versioning]. Since we publish a number of nuget packages, we use the nuget implementation of semantic versioning. 
+The version variables are three-part version numbers that follow the basic principles of [semantic versioning]. Since we publish a number of NuGet packages, we use the NuGet implementation of semantic versioning. 
 
 For NUnit, the major version is updated only rarely. Normal releases will update the minor version and set the third component to zero. The third component is incremented when "hot fixes" are made to a production release or for builds created for a special purpose. 
 
@@ -183,7 +183,7 @@ Publishing the Release
 
 #### NuGet
 
-1. Sign on to Nuget.org.
+1. Sign on to nuget.org.
 
 2. Select Upload package.
 

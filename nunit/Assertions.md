@@ -31,7 +31,7 @@ Assert.That(array, Has.Exactly(2).GreaterThan(1));
 Assert.That(array, Has.Exactly(3).LessThan(100));
 ```
 
-Where equivalent's do exist, the two approaches will always give the same result,
+Where equivalents do exist, the two approaches will always give the same result,
 because the methods of the classic approach have all been implemented internally
 using constraints. For example...
 

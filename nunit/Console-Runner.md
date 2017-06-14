@@ -1,6 +1,6 @@
 The nunit3-console.exe program is a text-based runner for listing and running
 our tests from the command-line. It is able to run all NUnit 3.0 or higher tests 
-atively and can run NUnit 2.x tests if the v2 driver is installed.
+natively and can run NUnit 2.x tests if the v2 driver is installed.
   
 This runner is useful for automation of tests and integration into other systems.
 It automatically saves its results in XML format, allowing you to produce reports 

@@ -35,9 +35,9 @@ namespace NUnit.Tests
 
 ```VB
 Imports System
-Imports Nunit.Framework
+Imports NUnit.Framework
 
-Namespace Nunit.Tests
+Namespace NUnit.Tests
 
   <TestFixture(), Explicit()>
   Public Class ExplicitTests
@@ -89,9 +89,9 @@ namespace NUnit.Tests
 ##### Visual Basic
 ```vb
 Imports System
-Imports Nunit.Framework
+Imports NUnit.Framework
 
-Namespace Nunit.Tests
+Namespace NUnit.Tests
 
   <TestFixture()> Public Class SuccessTests
     <Test(), Explicit()> Public Sub ExplicitTest()
@@ -103,7 +103,7 @@ End Namespace
 
 ##### C++
 ```c++
-# using <Nunit.Framework.dll>
+# using <NUnit.Framework.dll>
 using namespace System;
 using namespace NUnit::Framework;
 
