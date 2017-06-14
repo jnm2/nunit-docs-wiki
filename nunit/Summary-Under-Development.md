@@ -631,7 +631,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 1223294 	System.NullReferenceException thrown when ExpectedExceptionAttribute is used in a static class
    * 1225542 	Standardize commandline options for test harness
 
-	
+
 ### Earlier Releases
 
 

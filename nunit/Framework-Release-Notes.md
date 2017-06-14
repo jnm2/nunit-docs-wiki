@@ -173,11 +173,8 @@ This release of the framework no longer includes builds for Compact Framework or
  * [1966](https://github.com/nunit/nunit/issues/1966) Xamarin Runner cannot reference NUnit NuGet Package
 
 ### Earlier Releases
-
-<ul>
-<li>Release Notes for [[NUnit 2.9.1 through 3.5|Pre-3.5-Release-Notes]]
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
-<li>Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.2.10">NUnit 2.0 through 2.2.10</a>
-</ul>
+ * Release Notes for [[NUnit 2.9.1 through 3.5|Pre-3.5-Release-Notes]]
+ * Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.6.4">NUnit 2.6 through 2.6.4</a>
+ * Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.5.10">NUnit 2.5 through 2.5.10</a>
+ * Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.4.8">NUnit 2.4 through 2.4.8</a>
+ * Release Notes for <a href="http://www.nunit.org/?p=releaseNotes&r=2.2.10">NUnit 2.0 through 2.2.10</a>

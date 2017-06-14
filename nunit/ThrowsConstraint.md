@@ -45,29 +45,23 @@ Assert.That(() => { throw new ArgumentException(); }, Throws.ArgumentException);
 ```
 
 #### Notes
-<ol>
-    <li>
-        **Throws.Exception** may be followed by further constraints,
-        which are applied to the exception itself as shown in the last two
-        examples above. It may also be used alone to verify that some
-        exception has been thrown, without regard to type. This is
-        not a recommended practice since you should normally know
-        what exception you are expecting.
-    </li>
-    <li>
-        **Throws.TypeOf** and **Throws.InstanceOf** are provided
-        as a shorter syntax for this common test. They work exactly like
-        the corresponding forms following **Throws.Exception**.
-    </li>
-    <li>
-        **Throws.TargetInvocationException**, **Throws.ArgumentException**
-        and **Throws.InvalidOperationException** provide a shortened form
-        for some common exceptions.
-    </li>
-    <li>
-        Used alone, **Throws.InnerException** simply tests the InnerException
-        value of the thrown exception. More commonly, it will be used in
-        combination with a test for the type of the outer exception as shown
-        in the examples above.
-    </li>
-</ol>
+
+ 1. **Throws.Exception** may be followed by further constraints,
+    which are applied to the exception itself as shown in the last two
+    examples above. It may also be used alone to verify that some
+    exception has been thrown, without regard to type. This is
+    not a recommended practice since you should normally know
+    what exception you are expecting.
+
+ 2. **Throws.TypeOf** and **Throws.InstanceOf** are provided
+    as a shorter syntax for this common test. They work exactly like
+    the corresponding forms following **Throws.Exception**.
+
+ 3. **Throws.TargetInvocationException**, **Throws.ArgumentException**
+    and **Throws.InvalidOperationException** provide a shortened form
+    for some common exceptions.
+
+ 4. Used alone, **Throws.InnerException** simply tests the InnerException
+    value of the thrown exception. More commonly, it will be used in
+    combination with a test for the type of the outer exception as shown
+    in the examples above.

@@ -13,14 +13,11 @@ With Visual Studio VS2005 this becomes a bit harder, because that release change
 meaning of the 'Target' macros so they now point to the intermediate 'obj' directories rather
 than the final output in one of the 'bin' directories. Here are some alternatives that
 work in both versions:
-
-<ul>
-<li>**$(ProjectDir)$(ProjectFileName)** to open the VS Project rather than the assembly.
+ * **$(ProjectDir)$(ProjectFileName)** to open the VS Project rather than the assembly.
     If you use this approach, be sure to rename your config file accordingly and put it
 	in the same directory as the VS project file.
-<li>**$(ProjectDir)bin/Debug/$(TargetName)$(TargetExt)** to run the assembly directly.
+ * **$(ProjectDir)bin/Debug/$(TargetName)$(TargetExt)** to run the assembly directly.
     Note that this requires hard-coding part of the path, including the configuration.
-</ul>
 
 If you would like to debug your tests, use the Visual Studio
 Debug | Processes… menu item to attach to NUnit after starting it and set breakpoints in

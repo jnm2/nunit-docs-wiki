@@ -46,13 +46,14 @@ in the base class and another in the derived class. NUnit will call base
 class OneTimeSetUp methods before those in the derived classes.
 
 #### Notes:
-<ol>
-<li>Although it is possible to define multiple OneTimeSetUp methods
-   in the same class, you should rarely do so. Unlike methods defined in
-   separate classes in the inheritance hierarchy, the order in which they
-   are executed is not guaranteed.
-<li>OneTimeSetUp methods may be async if running under .NET 4.0 or higher.
-</ol>
+
+ 1. Although it is possible to define multiple OneTimeSetUp methods
+    in the same class, you should rarely do so. Unlike methods defined in
+    separate classes in the inheritance hierarchy, the order in which they
+    are executed is not guaranteed.
+
+ 2. OneTimeSetUp methods may be async if running under .NET 4.0 or higher.
+
 
 #### See also...
  * [[SetUp Attribute]]

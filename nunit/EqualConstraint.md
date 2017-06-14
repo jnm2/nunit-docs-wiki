@@ -145,10 +145,8 @@ Assert.That( array2x2, Is.EqualTo( array4 ).AsCollection );
 
 Two dictionaries are considered equal if
 
-<ol>
-<li>The list of keys is the same - without regard to ordering.
-<li>The values associated with each key are equal.
-</ol>
+ 1. The list of keys is the same - without regard to ordering.
+ 2. The values associated with each key are equal.
 
 You can use this capability to compare any two objects implementing
 **IDictionary**. Generic and non-generic dictionaries (Hashtables) 
@@ -198,38 +196,44 @@ Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 ```
 
 #### Notes
-<ol>
-<li>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
+
+ 1. When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
     of the **Equals** override on the expected object. If you neglect to either implement **IEquatable&lt;T&gt;** or to
 	override **Equals**, you can expect failures comparing non-identical objects. 
 	In particular, overriding **operator==** without overriding **Equals**
-or implementing the interface has no effect.
-<li>The **Within** modifier was originally designed for use with floating point
+    or implementing the interface has no effect.
+
+ 2. The **Within** modifier was originally designed for use with floating point
     values only. Beginning with NUnit 2.4, comparisons of **DateTime** values 
 	may use a **TimeSpan** as a tolerance. Beginning with NUnit 2.4.2, 
 	non-float numeric comparisons may also specify a tolerance.
-<li>Beginning with NUnit 2.4.4, float and double comparisons for which no
+	
+ 3. Beginning with NUnit 2.4.4, float and double comparisons for which no
 	tolerance is specified use a default, use the value of
 	**GlobalSettings.DefaultFloatingPointTolerance**. If this is not
 	set, a tolerance of 0.0d is used.
-<li>Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
+	
+ 4. Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
     as specified by IEEE floating point standards. The new behavior, was
 	introduced after some discussion becuase it seems more useful in tests. 
 	To avoid confusion, consider using **Is.NaN** where appropriate.
-<li>When an equality test between two strings fails, the relevant portion of
+	
+ 5. When an equality test between two strings fails, the relevant portion of
 	of both strings is displayed in the error message, clipping the strings to
 	fit the length of the line as needed. Beginning with 2.4.4, this behavior
 	may be modified by use of the **NoClip** modifier on the constraint. In
 	addition, the maximum line length may be modified for all tests by setting
 	the value of **TextMessageWriter.MaximumLineLength** in the appropriate
 	level of setup.
-<li>When used with arrays, collections or dictionaries, EqualConstraint
+	
+ 6. When used with arrays, collections or dictionaries, EqualConstraint
     operates recursively. Any modifiers are saved and used as they apply to 
 	individual items.
-<li>A user-specified comparer will not be called by **EqualConstraint**
+	
+ 7. A user-specified comparer will not be called by **EqualConstraint**
     if either or both arguments are null. If both are null, the Constraint
 	succeeds. If only one is null, it fails.
-<li>NUnit has special semantics for comparing **Streams** and
-**DirectoryInfos**. For a **Stream**, the contents are compared.
-For a **DirectoryInfo**, the first-level directory contents are compared.
-</ol>
+	
+8. NUnit has special semantics for comparing **Streams** and
+   **DirectoryInfos**. For a **Stream**, the contents are compared.
+   For a **DirectoryInfo**, the first-level directory contents are compared.

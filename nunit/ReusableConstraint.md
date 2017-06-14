@@ -64,23 +64,22 @@ expression and you'll be safe.
 If you like to take chances, you'll find that you can
 avoid using it in the following cases...
 
-<ol>
-<li> With a simple constraint involving no operators, like...
+ 1. With a simple constraint involving no operators, like...
 
-```C#
-    Constraint myConstraint = Is.Null;
-    Constraint myConstraint = Is.EqualTo(42);
-```
+    ```C#
+        Constraint myConstraint = Is.Null;
+        Constraint myConstraint = Is.EqualTo(42);
+    ```
 
-<li> With any constraint you construct using new, without
-using the "dotted" constraint syntax...
+ 2. With any constraint you construct using new, without
+    using the "dotted" constraint syntax...
 
-```C#
-    Constraint myConstraint = new NotConstraint(new NullConstraint());
-    Constraint myConstraint = new AndConstraint(
-        new GreaterThanConstraint(0), 
-        new LessThanConstraint(100));
-```
+    ```C#
+        Constraint myConstraint = new NotConstraint(new NullConstraint());
+        Constraint myConstraint = new AndConstraint(
+            new GreaterThanConstraint(0),
+            new LessThanConstraint(100));
+    ```
 
 However, there is no significant penalty to using **ReusableConstraint**.
 It makes your intent much clearer and the exceptions listed are accidents of

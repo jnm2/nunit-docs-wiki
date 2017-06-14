@@ -52,35 +52,32 @@ The following values are recognized as platform specifiers.
 They may be expressed in upper, lower or mixed case.
 
 ###### Operating System
-
-<ul>
-<li>Win</li>
-<li>Win32</li>
-<li>Win32S</li>
-<li>Win32Windows</li>
-<li>Win32NT</li>
-<li>WinCE</li>
-<li>Win95</li>
-<li>Win98</li>
-<li>WinMe</li>
-<li>NT3</li>
-<li>NT4</li>
-<li>NT5</li>
-<li>NT6</li>
-<li>Win2K</li>
-<li>WinXP</li>
-<li>Win2003Server</li>
-<li>Vista</li>
-<li>Win2008Server</li>
-<li>Win2008ServerR2</li>
-<li>Windows7</li>
-<li>Win2012Server</li>
-<li>Windows8</li>
-<li>Unix</li>
-<li>Linux</li>
-<li>MacOsX</li>
-<li>XBox</li>
-</ul>
+ * Win
+ * Win32
+ * Win32S
+ * Win32Windows
+ * Win32NT
+ * WinCE
+ * Win95
+ * Win98
+ * WinMe
+ * NT3
+ * NT4
+ * NT5
+ * NT6
+ * Win2K
+ * WinXP
+ * Win2003Server
+ * Vista
+ * Win2008Server
+ * Win2008ServerR2
+ * Windows7
+ * Win2012Server
+ * Windows8
+ * Unix
+ * Linux
+ * MacOsX
+ * XBox
 
 ###### Architecture
 
@@ -92,26 +89,23 @@ They may be expressed in upper, lower or mixed case.
 * 64-Bit-OS (.NET 4.0 and higher only)
 
 ###### Runtime
-
-<ul>
-<li>Net</li>
-<li>Net-1.0</li>
-<li>Net-1.1</li>
-<li>Net-2.0</li>
-<li>Net-3.0 (1)</li>
-<li>Net-3.5 (2)</li>
-<li>Net-4.0</li>
-<li>Net-4.5 (3)</li>
-<li>NetCF</li>
-<li>SSCLI</li>
-<li>Rotor</li>
-<li>Mono</li>
-<li>Mono-1.0</li>
-<li>Mono-2.0</li>
-<li>Mono-3.0 (4)</li>
-<li>Mono-3.5 (5)</li>
-<li>Mono-4.0</li>
-</ul>
+ * Net
+ * Net-1.0
+ * Net-1.1
+ * Net-2.0
+ * Net-3.0 (1)
+ * Net-3.5 (2)
+ * Net-4.0
+ * Net-4.5 (3)
+ * NetCF
+ * SSCLI
+ * Rotor
+ * Mono
+ * Mono-1.0
+ * Mono-2.0
+ * Mono-3.0 (4)
+ * Mono-3.5 (5)
+ * Mono-4.0
 
 #### Notes:
 
