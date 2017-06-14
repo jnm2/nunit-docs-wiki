@@ -129,7 +129,7 @@ public interface ITest : IXmlNodeBuilder
     // Gets the RunState of the test, indicating whether it can be run.
     RunState RunState { get; }
     
-    // Count of the test cases ( 1 if this is a test case )
+    // Count of the test cases (1 if this is a test case)
     int TestCaseCount { get; }
     
     // Gets the properties of the test

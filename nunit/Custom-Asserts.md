@@ -10,8 +10,8 @@ The standard NUnit Asserts create an object known as an **asserter** and
 pass it to the **DoAssert** method, which includes code similar to this...
 
 ```c#
-if ( !asserter.Test() )
-	throw new AssertionException( asserter.Message );
+if (!asserter.Test())
+	throw new AssertionException(asserter.Message);
 ```
 
 **Asserters** encapsulate the comparison to be performed as well as the

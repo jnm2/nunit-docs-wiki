@@ -15,7 +15,7 @@
 #### Examples of Use
 
 ```C#
-   Assert.That( anObject, Is.Null );
-   Assert.That( anObject, Is.Not.Null );
+   Assert.That(anObject, Is.Null);
+   Assert.That(anObject, Is.Not.Null);
 ```
 

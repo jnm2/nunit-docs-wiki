@@ -3,13 +3,13 @@
 #### Constructor
 
 ```C#
-ExactTypeConstraint( Type )
+ExactTypeConstraint(Type)
 ```
 
 #### Syntax
 
 ```C#
-Is.TypeOf( Type )
+Is.TypeOf(Type)
 Is.TypeOf<T>()
 ```
 

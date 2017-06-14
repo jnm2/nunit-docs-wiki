@@ -26,9 +26,9 @@ For example, the following code must use the constraint model. There is no real 
 
 ```C#
 int[] array = new int[] { 1, 2, 3 };
-Assert.That( array, Has.Exactly(1).EqualTo(3) );
-Assert.That( array, Has.Exactly(2).GreaterThan(1) );
-Assert.That( array, Has.Exactly(3).LessThan(100) );
+Assert.That(array, Has.Exactly(1).EqualTo(3));
+Assert.That(array, Has.Exactly(2).GreaterThan(1));
+Assert.That(array, Has.Exactly(3).LessThan(100));
 ```
 
 Where equivalent's do exist, the two approaches will always give the same result,

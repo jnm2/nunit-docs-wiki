@@ -55,7 +55,7 @@ Taking syntax shown on the [[SharpTestsEx homepage|http://sharptestex.codeplex.c
 | ''true.Should().Be.True(); ''                             | ''Assert.That(true).Is.True''   | 
 | ''"something".Should().Contain("some");''                  | ''Assert.That("something").Contains("some") '' |
 | ''"something".Should().StartWith("so").And.EndWith("ing")''| ''Assert.That("something").StartsWith("so").And.EndsWith("ing") ''  |
-| ''new[] {1, 2, 3}.Should().Have.SameSequenceAs(new[] { 1, 2, 3 });'' | ''Assert.That(new[] {1, 2, 3}).Is.EquivalentTo(new[] {1, 2, 3})'' |
+| ''new[] { 1, 2, 3 }.Should().Have.SameSequenceAs(new[] { 1, 2, 3 });'' | ''Assert.That(new[] { 1, 2, 3 }).Is.EquivalentTo(new[] { 1, 2, 3 })'' |
 | ''%%ActionAssert.Throws<ArgumentException>(() => new SillyClass(null))%% ''| ''%%Assert.That(() => new SillyClass(null)).Throws<ArgumentException>()%%'' |
 
 #### Unresolved Issues

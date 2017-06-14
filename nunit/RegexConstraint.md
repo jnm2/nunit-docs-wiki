@@ -24,9 +24,9 @@ Matches(string pattern)
 ```C#
 string phrase = "Make your tests fail before passing!"
 
-Assert.That( phrase, Does.Match( "Make.*tests.*pass" ) );
-Assert.That( phrase, Does.Not.Match( "your.*passing.*tests" ) );
-Expect( phrase, Matches( "Make.*pass" ) );
+Assert.That(phrase, Does.Match("Make.*tests.*pass"));
+Assert.That(phrase, Does.Not.Match("your.*passing.*tests"));
+Expect(phrase, Matches("Make.*pass"));
 ```
 
 #### Notes

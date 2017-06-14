@@ -2,9 +2,9 @@
 does not throw an exception. See [[Assert.DoesNotThrow]] for synchronous code.
 
 ```C#
-void Assert.DoesNotThrowAsync( AsyncTestDelegate code );
-void Assert.DoesNotThrowAsync( AsyncTestDelegate code, 
-                          string message, params object[] parms );
+void Assert.DoesNotThrowAsync(AsyncTestDelegate code);
+void Assert.DoesNotThrowAsync(AsyncTestDelegate code,
+                              string message, params object[] parms);
 ```
 
 #### See also...

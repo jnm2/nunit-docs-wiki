@@ -17,10 +17,11 @@ public class MyTestClass
     [TestCaseSource("DivideCases")]
     public void DivideTest(int n, int d, int q)
     {
-        Assert.AreEqual( q, n / d );
+        Assert.AreEqual(q, n / d);
     }
 
-    static object[] DivideCases = {
+    static object[] DivideCases =
+    {
         new object[] { 12, 3, 4 },
         new object[] { 12, 2, 6 },
         new object[] { 12, 4, 3 }
@@ -49,13 +50,14 @@ public class MyTestClass
     [TestCaseSource(typeof(AnotherClass), "DivideCases")]
     public void DivideTest(int n, int d, int q)
     {
-        Assert.AreEqual( q, n / d );
+        Assert.AreEqual(q, n / d);
     }
 }
 
 class AnotherClass
 {
-    static object[] DivideCases = {
+    static object[] DivideCases =
+    {
         new object[] { 12, 3, 4 },
         new object[] { 12, 2, 6 },
         new object[] { 12, 4, 3 }
@@ -87,7 +89,7 @@ public class MyTestClass
     [TestCaseSource(typeof(DivideCases))]
     public void DivideTest(int n, int d, int q)
     {
-        Assert.AreEqual( q, n / d );
+        Assert.AreEqual(q, n / d);
     }
 }
 
@@ -135,7 +137,7 @@ the enumerator as follows:
    [Test, TestCaseSource("EvenNumbers")]
    public void TestMethod(int num)
    {
-       Assert.IsTrue( num % 2 == 0 );
+       Assert.IsTrue(num % 2 == 0);
    }
    ```
 

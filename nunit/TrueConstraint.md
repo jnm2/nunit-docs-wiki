@@ -15,6 +15,6 @@ Is.True
 #### Example of Use
 
 ```C#
-Assert.That( condition, Is.True );
+Assert.That(condition, Is.True);
 ```
 

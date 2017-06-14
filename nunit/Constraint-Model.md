@@ -6,37 +6,37 @@ method.
 Here's a very simple assert using the constraint model:
 
 ```C#
-      Assert.That( myString, Is.EqualTo("Hello") );
+      Assert.That(myString, Is.EqualTo("Hello"));
 ```
 
 The second argument in this assertion uses one of NUnit's **syntax helpers**
 to create an **EqualConstraint**. The same assertion could also be made in this form:
 
 ```C#
-      Assert.That( myString, new EqualConstraint("Hello") );
+      Assert.That(myString, new EqualConstraint("Hello"));
 ```
 
 Using this model, all assertions are made using one of the forms of the
 `Assert.That()` method, which has a number of overloads...
    
 ```C#
-Assert.That( bool condition );
-Assert.That( bool condition, string message, params object[] parms );
+Assert.That(bool condition);
+Assert.That(bool condition, string message, params object[] parms);
 
-Assert.That( Func<bool> condition );
-Assert.That( Func<bool> condition, string message, params object[] parms );              
-			 
-Assert.That<TActual>( 
-    ActualValueDelegate<TActual> del, IResolveConstraint constraint )
-Assert.That<TActual>( 
+Assert.That(Func<bool> condition);
+Assert.That(Func<bool> condition, string message, params object[] parms);
+
+Assert.That<TActual>(
+    ActualValueDelegate<TActual> del, IResolveConstraint constraint)
+Assert.That<TActual>(
     ActualValueDelegate<TActual> del, IResolveConstraint constraint,
-    string message, object[] parms )
-             
-Assert.That<TActual>( TActual actual, IResolveConstraint constraint )
-Assert.That<TActual>( TActual actual, IResolveConstraint constraint,
-    string message, params object[] parms )
-			 
-Assert.That( TestDelegate del, IResolveConstraint constraint );
+    string message, object[] parms)
+
+Assert.That<TActual>(TActual actual, IResolveConstraint constraint)
+Assert.That<TActual>(TActual actual, IResolveConstraint constraint,
+    string message, params object[] parms)
+
+Assert.That(TestDelegate del, IResolveConstraint constraint);
 ```
 
 The overloads that take a bool work exactly like Assert.IsTrue.

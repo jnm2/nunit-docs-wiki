@@ -34,12 +34,12 @@ Throws.InnerException
 ### Examples of Use
 
 ```C#
-Assert.That( SomeMethod, Throws.TypeOf<ArgumentException>());
-Assert.That( SomeMethod, Throws.Exception.TypeOf<ArgumentException>());
-Assert.That( SomeMethod, Throws.TypeOf<ArgumentException>()
+Assert.That(SomeMethod, Throws.TypeOf<ArgumentException>());
+Assert.That(SomeMethod, Throws.Exception.TypeOf<ArgumentException>());
+Assert.That(SomeMethod, Throws.TypeOf<ArgumentException>()
                     .With.Property("Parameter").EqualTo("myParam"));
-Assert.That( SomeMethod, Throws.ArgumentException );
-Assert.That( SomeMethod, Throws.TargetInvocationException
+Assert.That(SomeMethod, Throws.ArgumentException);
+Assert.That(SomeMethod, Throws.TargetInvocationException
                     .With.InnerException.TypeOf<ArgumentException>());
 Assert.That(() => { throw new ArgumentException(); }, Throws.ArgumentException);
 ```

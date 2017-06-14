@@ -3,19 +3,19 @@
 #### Constructor
 
 ```C#
-CollectionSupersetConstraint( IEnumerable )
+CollectionSupersetConstraint(IEnumerable)
 ```
 
 #### Syntax
 
 ```C#
-Is.SupersetOf( IEnumerable )
+Is.SupersetOf(IEnumerable)
 ```
 
 #### Example of Use
 
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };
-Assert.That( iarray, Is.SupersetOf( new int[] { 1, 3 }) );
+Assert.That(iarray, Is.SupersetOf(new int[] { 1, 3 }));
 ```
 

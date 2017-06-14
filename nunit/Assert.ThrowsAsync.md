@@ -2,17 +2,17 @@ The **Assert.ThrowsAsync** is the async equivalent to [[Assert.Throws]]
 for asynchronous code. See [[Assert.Throws]] for more information.
 
 ```C#
-Exception Assert.ThrowsAsync( Type expectedExceptionType, AsyncTestDelegate code );
-Exception Assert.ThrowsAsync( Type expectedExceptionType, AsyncTestDelegate code, 
-                         string message, params object[] parms);
+Exception Assert.ThrowsAsync(Type expectedExceptionType, AsyncTestDelegate code);
+Exception Assert.ThrowsAsync(Type expectedExceptionType, AsyncTestDelegate code,
+                             string message, params object[] parms);
 
-Exception Assert.ThrowsAsync( IResolveConstraint constraint, AsyncTestDelegate code );
-Exception Assert.ThrowsAsync( IResolveConstraint constraint, AsyncTestDelegate code, 
-                         string message, params object[] parms);
+Exception Assert.ThrowsAsync(IResolveConstraint constraint, AsyncTestDelegate code);
+Exception Assert.ThrowsAsync(IResolveConstraint constraint, AsyncTestDelegate code,
+                             string message, params object[] parms);
 
-TActual Assert.ThrowsAsync<TActual>( AsyncTestDelegate code );
-TActual Assert.ThrowsAsync<TActual>( AsyncTestDelegate code, 
-                  string message, params object[] parms);
+TActual Assert.ThrowsAsync<TActual>(AsyncTestDelegate code);
+TActual Assert.ThrowsAsync<TActual>(AsyncTestDelegate code,
+                                    string message, params object[] parms);
 ```
 
 In the above code **AsyncTestDelegate** is a delegate of the form
@@ -52,8 +52,8 @@ public class UsingReturnValue
   {
     MyException ex = Assert.ThrowsAsync<MyException>(async () => await MethodThatThrows());
 
-    Assert.That( ex.Message, Is.EqualTo( "message" ) );
-    Assert.That( ex.MyParam, Is.EqualTo( 42 ) ); 
+    Assert.That(ex.Message, Is.EqualTo("message"));
+    Assert.That(ex.MyParam, Is.EqualTo(42)); 
   }
 }
 ```

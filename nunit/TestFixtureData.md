@@ -54,9 +54,9 @@ public class MyFixtureData
     {
         get
         {
-            yield return new TestFixtureData( "hello", "hello", "goodbye" );
-            yield return new TestFixtureData( "zip", "zip" );
-            yield return new TestFixtureData( 42, 42, 99 );
+            yield return new TestFixtureData("hello", "hello", "goodbye");
+            yield return new TestFixtureData("zip", "zip");
+            yield return new TestFixtureData(42, 42, 99);
         }
     }  
 }

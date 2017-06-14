@@ -54,13 +54,13 @@ public enum SeverityLevel
 [AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
 public class SeverityAttribute : PropertyAttribute
 {
-    public SeverityAttribute( SeverityLevel level )
-	    : base( level ); 
+    public SeverityAttribute(SeverityLevel level)
+	    : base(level);
 }
 
 ...
 
-[Test, Severity( SeverityLevel.Critical)]
+[Test, Severity(SeverityLevel.Critical)]
 public void MyTest()
 { /*...*/ }
 ```

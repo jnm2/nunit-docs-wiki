@@ -12,11 +12,11 @@ test method itself.
 RangeAttribute supports the following constructors:
 
 ```C#
-public RangeAttribute( int from, int to );
-public RangeAttribute( int from, int to, int step );
-public RangeAttribute( long from, long to, long step );
-public RangeAttribute( float from, float to, float step );
-public RangeAttribute( double from, double to, double step );
+public RangeAttribute(int from, int to);
+public RangeAttribute(int from, int to, int step);
+public RangeAttribute(long from, long to, long step);
+public RangeAttribute(float from, float to, float step);
+public RangeAttribute(double from, double to, double step);
 ```
 
 #### Example
@@ -26,8 +26,8 @@ The following test will be executed nine times.
 ```C#
 [Test]
 public void MyTest(
-    [Values(1,2,3) int x,
-    [Range(0.2,0.6,0.2] double d)
+    [Values(1, 2, 3) int x,
+    [Range(0.2, 0.6, 0.2] double d)
 {
     ...
 }

@@ -15,9 +15,9 @@ Is.Empty
 #### Examples of Use
 
 ```C#
-Assert.That( aString, Is.Empty );
-Assert.That( dirInfo, Is.Empty );
-Assert.That( collection, Is.Empty );
+Assert.That(aString, Is.Empty);
+Assert.That(dirInfo, Is.Empty);
+Assert.That(collection, Is.Empty);
 ```
 
 #### Notes:

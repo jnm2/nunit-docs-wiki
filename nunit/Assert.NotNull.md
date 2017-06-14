@@ -3,11 +3,11 @@ The two forms are provided for compatibility with past versions of NUnit and
 NUnitLite.
 
 ```C#
-Assert.NotNull( object anObject );
-Assert.NotNull( object anObject, string message, params object[] parms );
+Assert.NotNull(object anObject);
+Assert.NotNull(object anObject, string message, params object[] parms);
 
-Assert.IsNotNull( object anObject );
-Assert.IsNotNull( object anObject, string message, params object[] parms );
+Assert.IsNotNull(object anObject);
+Assert.IsNotNull(object anObject, string message, params object[] parms);
 ```
 
 #### See also...

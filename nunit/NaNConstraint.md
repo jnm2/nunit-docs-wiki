@@ -15,7 +15,7 @@ Is.NaN
 #### Examples of Use
 
 ```C#
-Assert.That( aDouble, Is.NaN );
-Assert.That( aDouble, Is.Not.NaN );
+Assert.That(aDouble, Is.NaN);
+Assert.That(aDouble, Is.Not.NaN);
 ```
 

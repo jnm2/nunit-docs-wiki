@@ -4,13 +4,13 @@ the same items, in any order. If the actual value passed does not implement `IEn
 #### Constructor
 
 ```C#
-CollectionEquivalentConstraint( IEnumerable other )
+CollectionEquivalentConstraint(IEnumerable other)
 ```
 
 #### Syntax
 
 ```C#
-Is.EquivalentTo( IEnumerable other )
+Is.EquivalentTo(IEnumerable other)
 ```
 
 #### Examples of Use
@@ -18,8 +18,8 @@ Is.EquivalentTo( IEnumerable other )
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { "a", "b", "c" };
-Assert.That( new string[] { "c", "a", "b" }, Is.EquivalentTo( sarray ) );
-Assert.That( new int[] { 1, 2, 2 }, Is.Not.EquivalentTo( iarray ) );
+Assert.That(new string[] { "c", "a", "b" }, Is.EquivalentTo(sarray));
+Assert.That(new int[] { 1, 2, 2 }, Is.Not.EquivalentTo(iarray));
 ```
 
 #### Notes

@@ -9,7 +9,7 @@ AttributeExistsConstraint(Type type)
 #### Syntax
 
 ```C#
-Has.Attribute( typeof(TestFixtureAttribute) )
+Has.Attribute(typeof(TestFixtureAttribute))
 Has.Attribute<TestFixtureAttribute>()
 ```
 
@@ -18,6 +18,6 @@ Has.Attribute<TestFixtureAttribute>()
 
 
 ```C#
-Assert.That( someObject, Has.Attribute( typeof(TestFixtureAttribute) ));
-Assert.That( someObject, Has.Attribute<TestFixtureAttribute>() );
+Assert.That(someObject, Has.Attribute(typeof(TestFixtureAttribute)));
+Assert.That(someObject, Has.Attribute<TestFixtureAttribute>());
 ```

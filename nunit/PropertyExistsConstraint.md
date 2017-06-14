@@ -9,13 +9,13 @@ PropertyExistsConstraint(string name)
 #### Syntax
 
 ```C#
-Has.Property( string )
+Has.Property(string)
 ```
 
 #### Examples of Use
 
 ```C#
-Assert.That( someObject, Has.Property( "Version" ) );
+Assert.That(someObject, Has.Property("Version"));
 ```
 
 #### See also...

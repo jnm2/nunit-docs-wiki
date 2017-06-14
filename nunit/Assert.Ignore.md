@@ -7,7 +7,7 @@ different assemblies.
 
 ```C#
 Assert.Ignore();
-Assert.Ignore( string message, params object[] parms );
+Assert.Ignore(string message, params object[] parms);
 ```
 
 #### See also...

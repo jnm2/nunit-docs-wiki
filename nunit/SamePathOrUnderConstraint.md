@@ -3,13 +3,13 @@
 #### Constructor
 
 ```C#
-SamePathOrUnderConstraint( string expectedPath )
+SamePathOrUnderConstraint(string expectedPath)
 ```
 
 #### Syntax
 
 ```C#
-Is.SamePathOrUnder( string expectedPath )
+Is.SamePathOrUnder(string expectedPath)
 ```
 
 #### Modifiers
@@ -22,17 +22,17 @@ Is.SamePathOrUnder( string expectedPath )
 #### Examples of Use
 
 ```C#
-Assert.That( "/folder1/./junk/../folder2", 
-	Is.SamePathOrUnder( "/folder1/folder2" ) );
-Assert.That( "/folder1/junk/../folder2/./folder3",
-	Is.SamePathOrUnder( "/folder1/folder2" ) );
-Assert.That( "/folder1/junk/folder2/folder3",
-	Is.Not.SamePathOrUnder( "/folder1/folder2" ) );
+Assert.That("/folder1/./junk/../folder2",
+	Is.SamePathOrUnder("/folder1/folder2"));
+Assert.That("/folder1/junk/../folder2/./folder3",
+	Is.SamePathOrUnder("/folder1/folder2"));
+Assert.That("/folder1/junk/folder2/folder3",
+	Is.Not.SamePathOrUnder("/folder1/folder2"));
 
-Assert.That( @"C:\folder1\folder2\folder3",
-	Is.SamePathOrUnder( @"C:\Folder1\Folder2" ).IgnoreCase );
-Assert.That( "/folder1/folder2/folder3",
-	Is.Not.SamePathOrUnder( "/Folder1/Folder2" ).RespectCase );
+Assert.That(@"C:\folder1\folder2\folder3",
+	Is.SamePathOrUnder(@"C:\Folder1\Folder2").IgnoreCase);
+Assert.That("/folder1/folder2/folder3",
+	Is.Not.SamePathOrUnder("/Folder1/Folder2").RespectCase);
 ```
 
 #### Notes:

@@ -15,7 +15,7 @@ Is.XmlSerializable
 #### Examples of Use
 
 ```C#
-Assert.That( someObject, Is.XmlSerializable ));
+Assert.That(someObject, Is.XmlSerializable));
 ```
 
 #### See also...

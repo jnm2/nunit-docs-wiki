@@ -13,17 +13,17 @@ The Type format is available in both both a non-generic and generic form.
 If the code under test is async, you must use [[Assert.ThrowsAsync]].
 
 ```C#
-Exception Assert.Throws( Type expectedExceptionType, TestDelegate code );
-Exception Assert.Throws( Type expectedExceptionType, TestDelegate code, 
-                         string message, params object[] parms);
+Exception Assert.Throws(Type expectedExceptionType, TestDelegate code);
+Exception Assert.Throws(Type expectedExceptionType, TestDelegate code,
+                        string message, params object[] parms);
 
-Exception Assert.Throws( IResolveConstraint constraint, TestDelegate code );
-Exception Assert.Throws( IResolveConstraint constraint, TestDelegate code, 
-                         string message, params object[] parms);
+Exception Assert.Throws(IResolveConstraint constraint, TestDelegate code);
+Exception Assert.Throws(IResolveConstraint constraint, TestDelegate code,
+                        string message, params object[] parms);
 
-Assert.Throws<T>( TestDelegate code );
-Assert.Throws<T>( TestDelegate code, 
-                  string message, params object[] parms);
+Assert.Throws<T>(TestDelegate code);
+Assert.Throws<T>(TestDelegate code,
+                 string message, params object[] parms);
 ```
 
 In the above code **TestDelegate** is a delegate of the form
@@ -42,15 +42,15 @@ public class AssertThrowsTests
   public void Tests()
   {  
     // Using a method as a delegate
-    Assert.Throws<ArgumentException>( MethodThatThrows );
+    Assert.Throws<ArgumentException>(MethodThatThrows);
 
     // Using an anonymous delegate
     Assert.Throws<ArgumentException>(
-	  delegate { throw new ArgumentException(); } );
+	  delegate { throw new ArgumentException(); });
 
     // Using a Lambda expression
     Assert.Throws<ArgumentException>(
-      () => { throw new ArgumentException(); } );
+      () => { throw new ArgumentException(); });
   }
   
   void MethodThatThrows()
@@ -71,10 +71,10 @@ public class UsingReturnValue
   public void TestException()
   {
     MyException ex = Assert.Throws<MyException>(
-      delegate { throw new MyException( "message", 42 ); } );
+      delegate { throw new MyException("message", 42); });
 
-    Assert.That( ex.Message, Is.EqualTo( "message" ) );
-    Assert.That( ex.MyParam, Is.EqualTo( 42 ) ); 
+    Assert.That(ex.Message, Is.EqualTo("message"));
+    Assert.That(ex.MyParam, Is.EqualTo(42)); 
   }
 }
 ```
@@ -89,10 +89,10 @@ public class UsingConstraint
   [Test]
   public void TestException()
   {
-    Assert.Throws( Is.TypeOf<MyException>()
-                 .And.Message.EqualTo( "message" )
-                 .And.Property( "MyParam" ).EqualTo( 42 ),
-      delegate { throw new MyException( "message", 42 ); } );
+    Assert.Throws(Is.TypeOf<MyException>()
+                 .And.Message.EqualTo("message")
+                 .And.Property("MyParam").EqualTo(42),
+      delegate { throw new MyException("message", 42); });
   }
 }
 ```
@@ -110,18 +110,18 @@ types. See the following code for examples:
 
 ```C#
 // Require an ApplicationException - derived types fail!
-Assert.Throws( typeof(ApplicationException), code );
-Assert.Throws<ApplicationException>()( code );
+Assert.Throws(typeof(ApplicationException), code);
+Assert.Throws<ApplicationException>()(code);
 
 // Allow both ApplicationException and any derived type
-Assert.Throws( Is.InstanceOf( typeof(ApplicationException), code );
-Assert.Throws( Is.InstanceOf<ApplicationException>;(), code );
+Assert.Throws(Is.InstanceOf(typeof(ApplicationException), code);
+Assert.Throws(Is.InstanceOf<ApplicationException>;(), code);
 
 // Allow both ApplicationException and any derived type
-Assert.Catch<ApplicationException>( code );
+Assert.Catch<ApplicationException>(code);
 
 // Allow any kind of exception
-Assert.Catch( code );
+Assert.Catch(code);
 ```
 
 #### See also...

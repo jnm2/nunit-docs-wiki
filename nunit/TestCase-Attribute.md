@@ -4,12 +4,12 @@ invoking that method. Here is an example of a test being run three
 times, with three different sets of data:
    
 ```C#
-[TestCase(12,3,4)]
-[TestCase(12,2,6)]
-[TestCase(12,4,3)]
+[TestCase(12, 3, 4)]
+[TestCase(12, 2, 6)]
+[TestCase(12, 4, 3)]
 public void DivideTest(int n, int d, int q)
 {
-  Assert.AreEqual( q, n / d );
+    Assert.AreEqual(q, n / d);
 }
 ```
 
@@ -25,12 +25,12 @@ By using the named parameter `ExpectedResult` this test set may be simplified
 further:
 
 ```C#
-[TestCase(12,3, ExpectedResult=4)]
-[TestCase(12,2, ExpectedResult=6)]
-[TestCase(12,4, ExpectedResult=3)]
+[TestCase(12, 3, ExpectedResult=4)]
+[TestCase(12, 2, ExpectedResult=6)]
+[TestCase(12, 4, ExpectedResult=3)]
 public int DivideTest(int n, int d)
 {
-  return( n / d );
+    return n / d;
 }
 ```
 

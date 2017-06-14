@@ -24,11 +24,11 @@ Has.Exactly(int expectedCount)...
 ```C#
 int[] array = new int[] { 1, 2, 3 };
 
-Assert.That( array, Has.Exactly(3).Items;
-Assert.That( array, Has.Exactly(2).Items.GreaterThan(1) );
-Assert.That( array, Has.Exactly(3).LessThan(100) );
-Assert.That( array, Has.Exactly(2).Items.EqualTo(1).Or.EqualTo(3);
-Assert.That( array, Has.Exactly(1).EqualTo(1).And.Exactly(1).EqualTo(3);
+Assert.That(array, Has.Exactly(3).Items;
+Assert.That(array, Has.Exactly(2).Items.GreaterThan(1));
+Assert.That(array, Has.Exactly(3).LessThan(100));
+Assert.That(array, Has.Exactly(2).Items.EqualTo(1).Or.EqualTo(3);
+Assert.That(array, Has.Exactly(1).EqualTo(1).And.Exactly(1).EqualTo(3);
 ```
 
 **Note:** The keyword `Items` is optional when used before a constraint but required when  merely counting items with no constraint specified.

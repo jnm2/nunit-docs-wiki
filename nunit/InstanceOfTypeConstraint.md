@@ -3,13 +3,13 @@
 #### Constructor
 
 ```C#
-InstanceOfTypeConstraint( Type )
+InstanceOfTypeConstraint(Type)
 ```
 
 #### Syntax
 
 ```C#
-Is.InstanceOf( Type )
+Is.InstanceOf(Type)
 Is.InstanceOf<T>()
 ```
 

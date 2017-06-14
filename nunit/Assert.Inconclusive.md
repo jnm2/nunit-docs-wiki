@@ -5,7 +5,7 @@ success or failure outcome.
 
 ```C#
 Assert.Inconclusive();
-Assert.Inconclusive( string message, params object[] parms );
+Assert.Inconclusive(string message, params object[] parms);
 ```
 
 #### See also...

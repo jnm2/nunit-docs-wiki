@@ -3,15 +3,15 @@
 #### Constructor
 
 ```C#
-CollectionContainsConstraint( object )
+CollectionContainsConstraint(object)
 ```
 
 #### Syntax
 
 ```C#
-Has.Member( object )
-Contains.Item( object )
-Does.Contain( object )
+Has.Member(object)
+Contains.Item(object)
+Does.Contain(object)
 ```
 
 #### Modifiers
@@ -27,11 +27,11 @@ Does.Contain( object )
 ```C#
 int[] iarray = new int[] { 1, 2, 3 };
 string[] sarray = new string[] { "a", "b", "c" };
-Assert.That( iarray, Has.Member(3) );
-Assert.That( sarray, Has.Member("b") );
-Assert.That( sarray, Contains.Item("c") );
-Assert.That( sarray, Has.No.Member("x") );    
-Assert.That( iarray, Does.Contain(3) );
+Assert.That(iarray, Has.Member(3));
+Assert.That(sarray, Has.Member("b"));
+Assert.That(sarray, Contains.Item("c"));
+Assert.That(sarray, Has.No.Member("x"));
+Assert.That(iarray, Does.Contain(3));
 ```
 
 #### Note

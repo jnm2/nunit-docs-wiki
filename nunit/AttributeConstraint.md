@@ -9,7 +9,7 @@ AttributeConstraint(Type type, IConstraint baseConstraint)
 #### Syntax
 
 ```C#
-Has.Attribute( typeof(TestFixtureAttribute) )...
+Has.Attribute(typeof(TestFixtureAttribute))...
 Has.Attribute<TestFixtureAttribute>()...
 ```
 
@@ -17,10 +17,10 @@ Has.Attribute<TestFixtureAttribute>()...
 
 
 ```C#
-Assert.That( someObject, Has.Attribute( typeof(TestFixtureAttribute) )
-    .Property("Description").EqualTo("My description") );
-Assert.That( someObject, Has.Attribute<TestFixtureAttribute>()
-    .Property("Description").EqualTo("My description") );
+Assert.That(someObject, Has.Attribute(typeof(TestFixtureAttribute))
+    .Property("Description").EqualTo("My description"));
+Assert.That(someObject, Has.Attribute<TestFixtureAttribute>()
+    .Property("Description").EqualTo("My description"));
 ```
 
 #### See also...

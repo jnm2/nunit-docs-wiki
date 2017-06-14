@@ -16,8 +16,8 @@ The following test will be executed three times.
 ```C#
 [Test, Sequential]
 public void MyTest(
-    [Values(1,2,3)] int x,
-    [Values("A","B")] string s)
+    [Values(1, 2, 3)] int x,
+    [Values("A", "B")] string s)
 {
     ...
 }

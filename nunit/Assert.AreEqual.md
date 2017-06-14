@@ -1,13 +1,13 @@
 **Assert.AreEqual** tests whether the two arguments are equal. 
 
 ```C#
-Assert.AreEqual( double expected, double actual, double tolerance );
-Assert.AreEqual( double expected, double actual, double tolerance, 
-                 string message, params object[] parms );
+Assert.AreEqual(double expected, double actual, double tolerance);
+Assert.AreEqual(double expected, double actual, double tolerance,
+                string message, params object[] parms);
 
-Assert.AreEqual( object expected, object actual );
-Assert.AreEqual( object expected, object actual, 
-                 string message, params object[] parms );
+Assert.AreEqual(object expected, object actual);
+Assert.AreEqual(object expected, object actual,
+                string message, params object[] parms);
 ```
 
 #### Comparing Numerics of Different Types
@@ -16,7 +16,7 @@ The method overloads that compare two objects make special provision so that num
 values of different types compare as expected. This assert succeeds:
 
 ```C#
-Assert.AreEqual( 5, 5.0 );
+Assert.AreEqual(5, 5.0);
 ```
 #### Comparing Floating Point Values
 
@@ -28,9 +28,9 @@ used if a third argument is not provided.
 Special values are handled so that the following Asserts succeed:
 
 ```C#
-Assert.AreEqual( double.PositiveInfinity, double.PositiveInfinity );
-Assert.AreEqual( double.NegativeInfinity, double.NegativeInfinity );
-Assert.AreEqual( double.NaN, double.NaN );
+Assert.AreEqual(double.PositiveInfinity, double.PositiveInfinity);
+Assert.AreEqual(double.NegativeInfinity, double.NegativeInfinity);
+Assert.AreEqual(double.NaN, double.NaN);
 ```
 
 #### Comparing Arrays and Collections

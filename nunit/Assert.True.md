@@ -3,11 +3,11 @@ The two forms are provided for compatibility with past versions of NUnit and
 NUnitLite.
 
 ```C#
-Assert.True( bool condition );
-Assert.True( bool condition, string message, params object[] parms );
+Assert.True(bool condition);
+Assert.True(bool condition, string message, params object[] parms);
 
-Assert.IsTrue( bool condition );
-Assert.IsTrue( bool condition, string message, params object[] parms );
+Assert.IsTrue(bool condition);
+Assert.IsTrue(bool condition, string message, params object[] parms);
 ```
 
 You may also use **Assert.That** with a boolean argument to achieve the

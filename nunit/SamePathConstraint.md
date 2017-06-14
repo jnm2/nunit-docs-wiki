@@ -3,13 +3,13 @@
 #### Constructor
 
 ```C#
-SamePathConstraint( string expectedPath )
+SamePathConstraint(string expectedPath)
 ```
 
 #### Syntax
 
 ```C#
-Is.SamePath( string expectedPath )
+Is.SamePath(string expectedPath)
 ```
 
 #### Modifiers
@@ -22,15 +22,15 @@ Is.SamePath( string expectedPath )
 #### Examples of Use
 
 ```C#
-Assert.That( "/folder1/./junk/../folder2", 
-	Is.SamePath( "/folder1/folder2" ) );
-Assert.That( "/folder1/./junk/../folder2/x", 
-	Is.Not.SamePath( "/folder1/folder2" ) );
+Assert.That("/folder1/./junk/../folder2",
+	Is.SamePath("/folder1/folder2"));
+Assert.That("/folder1/./junk/../folder2/x",
+	Is.Not.SamePath("/folder1/folder2"));
 
-Assert.That( @"C:\folder1\folder2",
-	Is.SamePath( @"C:\Folder1\Folder2" ).IgnoreCase );
-Assert.That( "/folder1/folder2",
-	Is.Not.SamePath( "/Folder1/Folder2" ).RespectCase );
+Assert.That(@"C:\folder1\folder2",
+	Is.SamePath(@"C:\Folder1\Folder2").IgnoreCase);
+Assert.That("/folder1/folder2",
+	Is.Not.SamePath("/Folder1/Folder2").RespectCase);
 ```
 
 #### Notes

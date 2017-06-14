@@ -3,20 +3,20 @@
 #### Constructor
 
 ```C#
-AssignableFromConstraint( Type )
+AssignableFromConstraint(Type)
 ```
 
 #### Syntax
 
 ```C#
-Is.AssignableFrom( Type )
+Is.AssignableFrom(Type)
 Is.AssignableFrom<T>()
 ```
 
 #### Examples of Use
 
 ```C#
-Assert.That( "Hello", Is.AssignableFrom(typeof(string)));
-Assert.That( 5, Is.Not.AssignableFrom(typeof(string)));
+Assert.That("Hello", Is.AssignableFrom(typeof(string)));
+Assert.That(5, Is.Not.AssignableFrom(typeof(string)));
 ```
 

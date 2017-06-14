@@ -7,10 +7,10 @@ instances from a data source in a separately defined class.
 [TestFixture]
 public class MyTests
 {
-    [Test,TestCaseSource(typeof(MyDataClass),"TestCases")]
+    [Test, TestCaseSource(typeof(MyDataClass), "TestCases")]
     public int DivideTest(int n, int d)
     {
-        return n/d;
+        return n / d;
     }
 }
 
@@ -20,9 +20,9 @@ public class MyDataClass
     {
         get
         {
-            yield return new TestCaseData( 12, 3 ).Returns( 4 );
-            yield return new TestCaseData( 12, 2 ).Returns( 6 );
-            yield return new TestCaseData( 12, 4 ).Returns( 3 );
+            yield return new TestCaseData(12, 3).Returns(4);
+            yield return new TestCaseData(12, 2).Returns(6);
+            yield return new TestCaseData(12, 4).Returns(3);
         }
     }  
 }

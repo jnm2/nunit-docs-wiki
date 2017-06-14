@@ -30,10 +30,10 @@ By default, the order is expected to be ascending.
 Property-based ordering uses one or more properties that are common to every item in the enumeration. It is used when one or more instances of the `By` modifier appears in the ordering expression.
 
 ```C#
-string[] sarray = new string[] ( "a", "aa", "aaa" );
+string[] sarray = new string[] ("a", "aa", "aaa");
 Assert.That(sarray, Is.Ordered.By("Length"));
 
-string[] sarray2 = new string[] ( "aaa", "aa", "a" );
+string[] sarray2 = new string[] ("aaa", "aa", "a");
 Assert.That(sarray2, Is.Ordered.Descending.By("Length"));
 ```
 

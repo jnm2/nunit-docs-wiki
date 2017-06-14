@@ -2,9 +2,9 @@
 collection.
 
 ```C#
-Assert.Contains( object anObject, ICollection collection );
-Assert.Contains( object anObject, ICollection collection,
-                 string message, params object[] parms );
+Assert.Contains(object anObject, ICollection collection);
+Assert.Contains(object anObject, ICollection collection,
+                string message, params object[] parms);
 ```
 
 #### See also...

@@ -15,6 +15,6 @@ Is.Not...
 #### Examples of Use
 
 ```C#
-Assert.That( collection, Is.Not.Unique );
-Assert.That( 2 + 2, Is.Not.EqualTo(5) );
+Assert.That(collection, Is.Not.Unique);
+Assert.That(2 + 2, Is.Not.EqualTo(5));
 ```

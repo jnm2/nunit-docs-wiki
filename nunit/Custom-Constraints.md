@@ -166,7 +166,7 @@ For its built-in constraints, NUnit includes classes that implement a special
 constraint syntax, allowing you to write things like...
 
 ```C#
-Assert.That(actual, Is.All.InRange(1,100) );
+Assert.That(actual, Is.All.InRange(1, 100));
 ```
 
 Custom constraints can support this syntax by providing a static helper class and
@@ -194,7 +194,7 @@ for each custom constraint).
    any conflicts. This allows you to write things like:
 
    ```C#
-   Assert.That(actual, Is.Custom(x,y) );
+   Assert.That(actual, Is.Custom(x, y));
    ```
    
    with this sample implementation:
@@ -213,7 +213,7 @@ for each custom constraint).
    you to write things like:
 
    ```C#
-   Assert.That(actual, Is.Not.Custom(x,y) );
+   Assert.That(actual, Is.Not.Custom(x, y));
    ```
 
     with this sample implementation:

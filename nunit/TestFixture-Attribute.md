@@ -220,8 +220,8 @@ and which are normal constructor parameters.
    it is at least more cleanly separated from the normal arguments...
 
    ```C#
-   [TestFixture(100.0, 42, TypeArgs=new Type[] {typeof(double), typeof(int) } )]
-   [TestFixture(42, 100.0, TypeArgs=new Type[] {typeof(int), typeof(double) } )]
+   [TestFixture(100.0, 42, TypeArgs=new Type[] { typeof(double), typeof(int) })]
+   [TestFixture(42, 100.0, TypeArgs=new Type[] { typeof(int), typeof(double) })]
    public class SpecifyTypeArgsSeparately<T1, T2>
    {
        T1 t1;

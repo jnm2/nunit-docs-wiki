@@ -16,5 +16,5 @@ Is.Unique
 #### Example of Use
 
 ```C#
-Assert.That( collection, Is.Unique );
+Assert.That(collection, Is.Unique);
 ```

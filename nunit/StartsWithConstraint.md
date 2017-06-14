@@ -24,9 +24,9 @@ StartsWith(string expected)
 ```C#
 string phrase = "Make your tests fail before passing!"
 
-Assert.That( phrase, Does.StartWith( "Make" ) );
-Assert.That( phrase, Does.Not.StartWith( "Break" ) );
-Expect( phrase, StartsWith( "Make" ) );
+Assert.That(phrase, Does.StartWith("Make"));
+Assert.That(phrase, Does.Not.StartWith("Break"));
+Expect(phrase, StartsWith("Make"));
 ```
 
 #### Notes

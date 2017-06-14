@@ -3,19 +3,19 @@
 #### Constructor
 
 ```C#
-CollectionSubsetConstraint( IEnumerable )
+CollectionSubsetConstraint(IEnumerable)
 ```
 
 #### Syntax
 
 ```C#
-Is.SubsetOf( IEnumerable )
+Is.SubsetOf(IEnumerable)
 ```
 
 #### Example of Use
 
 ```C#
 int[] iarray = new int[] { 1, 3 };
-Assert.That( iarray, Is.SubsetOf( new int[] { 1, 2, 3 }) );
+Assert.That(iarray, Is.SubsetOf(new int[] { 1, 2, 3 }));
 ```
 

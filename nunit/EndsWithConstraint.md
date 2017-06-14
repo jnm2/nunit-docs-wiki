@@ -24,9 +24,9 @@ EndsWith(string expected)
 ```C#
 string phrase = "Make your tests fail before passing!"
 
-Assert.That( phrase, Does.EndWith( "!" ) );
-Assert.That( phrase, Does.EndWith( "PASSING!" ).IgnoreCase );
-Expect( phrase, EndsWith( "!" ) );
+Assert.That(phrase, Does.EndWith("!"));
+Assert.That(phrase, Does.EndWith("PASSING!").IgnoreCase);
+Expect(phrase, EndsWith("!"));
 ```
 
 #### Notes

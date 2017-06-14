@@ -15,7 +15,7 @@ Is.BinarySerializable
 #### Examples of Use
 
 ```C#
-Assert.That( someObject, Is.BinarySerializable ));
+Assert.That(someObject, Is.BinarySerializable));
 ```
 
 #### See also...

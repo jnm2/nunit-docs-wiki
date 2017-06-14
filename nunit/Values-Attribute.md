@@ -13,7 +13,7 @@ test method itself.
 
 ```C#
 [Test]
-public void MyTest([Values(1,2,3)] int x, [Values("A","B")] string s)
+public void MyTest([Values(1, 2, 3)] int x, [Values("A", "B")] string s)
 {
     ...
 }

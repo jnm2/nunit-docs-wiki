@@ -12,17 +12,17 @@ test method itself.
 RandomAttribute supports the following constructors:
 
 ```C#
-public Random( int count );
-public Random( int min, int max, int count );
-public Random( uint min, uint max, int count );
-public Random( long min, long max, int count );
-public Random( ulong min, ulong max, int count );
-public Random( short min, short max, int count );
-public Random( ushort min, ushort max, int count );
-public Random( byte min, byte max, int count );
-public Random( sbyte min, sbyte max, int count );
-public Random( double min, double max, int count );
-public Random( float min, float max, int count );
+public Random(int count);
+public Random(int min, int max, int count);
+public Random(uint min, uint max, int count);
+public Random(long min, long max, int count);
+public Random(ulong min, ulong max, int count);
+public Random(short min, short max, int count);
+public Random(ushort min, ushort max, int count);
+public Random(byte min, byte max, int count);
+public Random(sbyte min, sbyte max, int count);
+public Random(double min, double max, int count);
+public Random(float min, float max, int count);
 ```
 
 In the first form, without minimum and maximum values, the attribute automatically generates values of the appropriate numeric Type for the argument provided, using the `Randomizer` object associated with the current context. See [[Randomizer Methods]] for details.
@@ -43,7 +43,7 @@ for each value of x, each combined with 5 random doubles from -1.0 to +1.0.
 ```C#
 [Test]
 public void MyTest(
-    [Values(1,2,3)] int x,
+    [Values(1, 2, 3)] int x,
     [Random(-1.0, 1.0, 5)] double d)
 {
     ...

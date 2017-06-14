@@ -6,14 +6,14 @@ in its constructor.
 
 
 ```C#
-SameAsConstraint( object expected )
+SameAsConstraint(object expected)
 ```
 
 
 #### Syntax
 
 ```C#
-Is.SameAs( object expected )
+Is.SameAs(object expected)
 ```
 
 
@@ -22,7 +22,7 @@ Is.SameAs( object expected )
 ```C#
 Exception ex1 = new Exception();
 Exception ex2 = ex1;
-Assert.That( ex2, Is.SameAs( ex1 ) );
+Assert.That(ex2, Is.SameAs(ex1));
 Exception ex3 = new Exception();
-Assert.That( ex3, Is.Not.SameAs( ex1 ) );
+Assert.That(ex3, Is.Not.SameAs(ex1));
 ```

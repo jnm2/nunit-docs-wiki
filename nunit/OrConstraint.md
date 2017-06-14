@@ -15,7 +15,7 @@ OrConstraint(Constraint left, Constraint right)
 #### Examples of Use
 
 ```C#
-Assert.That( 3, Is.LessThan( 5 ).Or.GreaterThan( 10 ) ); 
+Assert.That(3, Is.LessThan(5).Or.GreaterThan(10));
 ```
 
 #### See also...

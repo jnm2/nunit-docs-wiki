@@ -8,7 +8,7 @@ result of immediately terminating test execution.
 
 ```C#
 Assert.Pass();
-Assert.Pass( string message, params object[] parms );
+Assert.Pass(string message, params object[] parms);
 ```
 
 #### See also...

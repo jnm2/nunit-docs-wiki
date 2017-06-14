@@ -2,17 +2,17 @@
 that is derived from the one specified.
 
 ```C#
-Exception Assert.CatchAsync( AsyncTestDelegate code );
-Exception Assert.CatchAsync( AsyncTestDelegate code, 
-                        string message, params object[] parms );
+Exception Assert.CatchAsync(AsyncTestDelegate code);
+Exception Assert.CatchAsync(AsyncTestDelegate code,
+                            string message, params object[] parms);
 
-Exception Assert.CatchAsync( Type expectedExceptionType, AsyncTestDelegate code );
-Exception Assert.CatchAsync( Type expectedExceptionType, AsyncTestDelegate code, 
-                        string message, params object[] parms );
+Exception Assert.CatchAsync(Type expectedExceptionType, AsyncTestDelegate code);
+Exception Assert.CatchAsync(Type expectedExceptionType, AsyncTestDelegate code,
+                            string message, params object[] parms);
 
-T Assert.CatchAsync<T>( AsyncTestDelegate code );
-T Assert.CatchAsync<T>( AsyncTestDelegate code, 
-                 string message, params object[] parms );
+T Assert.CatchAsync<T>(AsyncTestDelegate code);
+T Assert.CatchAsync<T>(AsyncTestDelegate code,
+                       string message, params object[] parms);
 ```
 
 #### See also...
