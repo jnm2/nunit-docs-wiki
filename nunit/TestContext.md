@@ -26,15 +26,15 @@ Test parameters may be supplied to a run in various ways, depending on the runne
 
 The TestParameters object supports the following properties:
 
- * **Count** - The number of parameters.
- * **Names** - A collection of the names of the supplied parameters.
- * **this[string name]** - The value of a parameter. In Vb, use **Item**.
+ * `Count` - The number of parameters.
+ * `Names` - A collection of the names of the supplied parameters.
+ * `this[string name]` - The value of a parameter. In Vb, use `Item`.
 
 The TestParameters object supports the following methods:
 
- * **Exists(string name)** - Returns true if a parameter of that name exists.
- * **Get(string name)** - Returns the same value as the indexer.
- * **Get&lt;T&gt;(string name, T defaultValue)** - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
+ * `Exists(string name)` - Returns true if a parameter of that name exists.
+ * `Get(string name)`- Returns the same value as the indexer.
+ * `Get<T>(string name, T defaultValue)` - Returns the value of the parameter converted from a string to type T or the specified default if the paramter doesn't exist. Throws an exception if conversion fails.
 
 **Note** that all parameter values are strings. You may convert them to other Types using the generic `Get` method listed above or using your own code. An exception may be thrown if the supplied value cannot be converted correctly.
 

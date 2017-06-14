@@ -1,6 +1,6 @@
 The console command-line allows you to specify a filter, which will select which tests are executed. This is done using the --where option, followed by an expression in NUnit's Test Selection Language (TSL), a simple domain-specific language designed for this purpose.
 
-Some of the characters used in the expression, such as space, | or &amp;, may have a special meaning when entered on the command-line. In such a case, you should place the expression in quotation marks. 
+Some of the characters used in the expression, such as space, | or &, may have a special meaning when entered on the command-line. In such a case, you should place the expression in quotation marks. 
 
 ```
   nunit3-console mytest.dll --where "cat == Urgent || Priority == High"

@@ -165,10 +165,10 @@ Assert.That(new DirectoryInfo(actual), Is.EqualTo(expected));
 
 If the default NUnit or .NET behavior for testing equality doesn't
 meet your needs, you can supply a comparer of your own through the
-**Using** modifier. When used with **EqualConstraint**, you
-may supply an **IEqualityComparer**, **IEqualityComparer&lt;T&gt;**,
-**IComparer**, **IComparer&lt;T&gt**; or **Comparison&lt;T&gt;** 
-as the argument to **Using**.
+`Using` modifier. When used with `EqualConstraint`, you
+may supply an `IEqualityComparer`, `IEqualityComparer<T>`,
+`IComparer`, `IComparer<T>` or `Comparison<T>`
+as the argument to `Using`.
 
 ```C#
 Assert.That( myObj1, Is.EqualTo( myObj2 ).Using( myComparer ));
@@ -198,9 +198,9 @@ Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 #### Notes
 
  1. When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
-    of the **Equals** override on the expected object. If you neglect to either implement **IEquatable&lt;T&gt;** or to
-	override **Equals**, you can expect failures comparing non-identical objects. 
-	In particular, overriding **operator==** without overriding **Equals**
+    of the `Equals` override on the expected object. If you neglect to either implement `IEquatable<T>` or to
+	override `Equals`, you can expect failures comparing non-identical objects. 
+	In particular, overriding `operator ==` without overriding `Equals`
     or implementing the interface has no effect.
 
  2. The **Within** modifier was originally designed for use with floating point

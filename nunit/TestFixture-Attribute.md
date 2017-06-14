@@ -156,7 +156,7 @@ you provide.
 #### Example
 
 The following test fixture would be instantiated by NUnit twice,
-once using an ArrayList and once using a List&lt;int&gt;.
+once using an `ArrayList` and once using a `List<int>`.
    
 ```C#
 [TestFixture(typeof(ArrayList))]
