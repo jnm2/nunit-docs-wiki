@@ -15,5 +15,3 @@
 * **[[NUnit Vision]]**
 * **[[Team Practices]]**
 * **[[Specifications]]**
-* **[[Developer FAQ]]**
-
