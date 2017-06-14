@@ -284,7 +284,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * 270	OneTimeSetUp failure results in too much output
  * 271	Invalid tests should be treated as errors
  * 274	Command line options should be case insensitive
- * 275	NUnitEqualityComparer fails to compare IEquatable<T> where second object is derived from T
+ * 275	NUnitEqualityComparer fails to compare `IEquatable<T>` where second object is derived from `T`
  * 276	NUnit-console should not reference nunit.framework
  * 278	New result states (ChildFailure and SetupFailure) break NUnit2XmlOutputWriter
  * 282	Get tests for NUnit2XmlOutputWriter working
@@ -425,7 +425,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * 687 TestAgency does not launch agent process correctly if runtime type is not specified (i.e. v4.0)
  * 689	The TeamCity service message "testFinished" should have an integer value in the "duration" attribute
  * 692 PlatformAttribute_OperatingSystemBitNess fails when running in 32-bit process
- * 693 Generic Test<T> Method cannot determine type arguments for fixture when passed as IEnumerable<T>
+ * 693 Generic `Test<T>` Method cannot determine type arguments for fixture when passed as `IEnumerable<T>`
  * 698 Require TestCaseSource and ValueSource named members to be static
  * 703 TeamCity non-equal flowid for 'testStarted' and 'testFinished' messages
  * 712 Extensions to RandomAttribute
@@ -434,7 +434,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * 718 RangeConstraint gives error with from and two args of differing types
  * 719	We have no way to configure tests for several assemblies using NUnit project file and the common installation from msi file
  * 723 Does nunit.nuspec require dependency on Microsoft.Bcl.Async? 
- * 724 Adds support for Nullable<bool> to Assert.IsTrue and Assert.IsFalse
+ * 724 Adds support for `Nullable<bool>` to Assert.IsTrue and Assert.IsFalse
  * 728 Missing Assert.That overload
  * 734 Console without parameters doesn't show help
  * 735	Workers number in xml report file cannot be found
@@ -524,7 +524,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 417560 	Merge Assert.Throws and Assert.Catch changes from NUnit 2.5.2
    * 417564 	TimeoutAttribute on Assembly
    * 419411 	Fixture With No Tests Shows as Non-Runnable
-   * 430100 	Assert.Catch<T> should return T
+   * 430100 	`Assert.Catch<T>` should return `T`
    * 432566 	NUnitLite shows empty string as argument
    * 432573 	Mono test should be at runtime
    * 432805 	Some Framework Tests don't run on Linux
@@ -550,7 +550,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 523335 	TestFixtureTearDown in static class not executed
    * 531873 	Feature: Extraction of unit tests from NUnit test assembly and calling appropriate one
    * 532488 	constraints from ConstraintExpression/ConstraintBuilder are not reusable
-   * 556971 	Datapoint(s)Attribute should work on IEnumerable<T> as well as on Arrays
+   * 556971 	Datapoint(s)Attribute should work on `IEnumerable<T>` as well as on Arrays
    * 561436 	SetCulture broken with 2.5.4
    * 563532 	DatapointsAttribute should be allowed on properties and methods
    * 590717 	categorie contains dash or trail spaces is not selectable
@@ -567,10 +567,10 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 655882 	Make CategoryAttribute inherited
    * 664081 	Add Server2008 R2 and Windows 7 to PlatformAttribute
    * 671432 	Upgrade NAnt to Latest Release
-   * 676560 	Assert.AreEqual does not support IEquatable<T>
+   * 676560 	Assert.AreEqual does not support `IEquatable<T>`
    * 691129 	Add Category parameter to TestFixture
    * 697069 	Feature request: dynamic location for TestResult.xml
-   * 708173 	NUnit's logic for comparing arrays - use Comparer<T[]> if it is provided
+   * 708173 	NUnit's logic for comparing arrays - use `Comparer<T[]>` if it is provided
    * 709062 	"System.ArgumentException : Cannot compare" when the element is a list
    * 712156 	Tests cannot use AppDomain.SetPrincipalPolicy
    * 719184 	Platformdependency in src/ClientUtilities/util/Services/DomainManager.cs:40
@@ -578,7 +578,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 735851 	Add detection of 3.0, 3.5 and 4.0 frameworks to PlatformAttribute
    * 736062 	Deadlock when EventListener performs a Trace call + EventPump synchronisation
    * 756843 	Failing assertion does not show non-linear tolerance mode
-   * 766749 	net-2.0\nunit-console-x86.exe.config should have a <startup /> element and also enable loadFromRemoteSources
+   * 766749 	net-2.0\nunit-console-x86.exe.config should have a `<startup />` element and also enable loadFromRemoteSources
    * 770471 	Assert.IsEmpty does not support IEnumerable
    * 785460 	Add Category parameter to TestCaseSourceAttribute
    * 787106 	EqualConstraint provides inadequate failure information for IEnumerables
@@ -598,7 +598,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 896973 	Console output lines are run together under Linux
    * 897289 	Is.Empty constraint has unclear failure message
    * 898192 	Feature Request: Is.Negative, Is.Positive
-   * 898256 	IEnumerable<T> for Datapoints doesn't work
+   * 898256 	`IEnumerable<T>` for Datapoints doesn't work
    * 899178 	Wrong failure message for parameterized tests that expect exceptions
    * 904841 	After exiting for timeout the teardown method is not executed
    * 908829 	TestCase attribute does not play well with variadic test functions
@@ -616,7 +616,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
    * 1041365 	Add MaxOsX and Xbox support to platform attribute
    * 1057981 	C#5 async tests are not supported
    * 1060631 	Add .NET 4.5 build
-   * 1064014 	Simple async tests should not return Task<T>
+   * 1064014 	Simple async tests should not return `Task<T>`
    * 1071164 	Support async methods in usage scenarios of Throws constraints
    * 1071343 	Runner.Load fails on CF if the test assembly contains a generic method
    * 1071861 	Error in Path Constraints

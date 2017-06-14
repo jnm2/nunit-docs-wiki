@@ -77,7 +77,7 @@ AfterAllSucess
     Afterxxx dependency referencing this Test or TestFixture.
 ```
 
-Note that a single Test or TestFixture may have multiple <dependency-specifications> as long as they do not conflict with each other.
+Note that a single Test or TestFixture may have multiple `<dependency-specification>` elements as long as they do not conflict with each other.
 
 Any loops or contradictory references in the dependencies will be discovered, and will result in the specified dependencies being ignored, and a warning being given.  For example, if TestA has Before="TestB" and TestB has Before="TestA", both will be ignored, and a warning given. (An alternative would be to use whichever was specified first  or last).
 
