@@ -2,27 +2,27 @@ Test Filters represent a selection of tests to be displayed, run or loaded. When
 
 #### &lt;filter&gt;
 
-This is the required top-level element for any filter. If it contains no other elements, it represents an empty filter. If it contains just one element, that element is used as the filter for all tests. If it contains multiple elements, it works like an <b>&lt;and&gt;</b> element.
+This is the required top-level element for any filter. If it contains no other elements, it represents an empty filter. If it contains just one element, that element is used as the filter for all tests. If it contains multiple elements, it works like an **&lt;and&gt;** element.
 
-Child elements allowed: <b>&lt;and&gt;</b>, <b>&lt;or&gt;</b>, <b>&lt;not&gt;</b>, <b>&lt;id&gt;</b>, <b>&lt;tests&gt;</b>, <b>&lt;cat&gt;</b>.
+Child elements allowed: **&lt;and&gt;**, **&lt;or&gt;**, **&lt;not&gt;**, **&lt;id&gt;**, **&lt;tests&gt;**, **&lt;cat&gt;**.
 
 #### &lt;and&gt;
 
 Represents an AndFilter. All contained filter elements must pass in order for this filter to pass.
 
-Child elements allowed: <b>&lt;and&gt;</b>, <b>&lt;or&gt;</b>, <b>&lt;not&gt;</b>, <b>&lt;id&gt;</b>, <b>&lt;tests&gt;</b>, <b>&lt;cat&gt;</b>.
+Child elements allowed: **&lt;and&gt;**, **&lt;or&gt;**, **&lt;not&gt;**, **&lt;id&gt;**, **&lt;tests&gt;**, **&lt;cat&gt;**.
 
 #### &lt;or&gt;
 
 Represents an OrFilter. At least one contained filter element must pass in order for this filter to pass.
 
-Child elements allowed: <b>&lt;and&gt;</b>, <b>&lt;or&gt;</b>, <b>&lt;not&gt;</b>, <b>&lt;id&gt;</b>, <b>&lt;tests&gt;</b>, <b>&lt;cat&gt;</b>.
+Child elements allowed: **&lt;and&gt;**, **&lt;or&gt;**, **&lt;not&gt;**, **&lt;id&gt;**, **&lt;tests&gt;**, **&lt;cat&gt;**.
 
 #### &lt;not&gt;
 
 Represents a NotFilter. The single contained filter element must fail in order for this filter to pass.
 
-Child elements allowed: <b>&lt;and&gt;</b>, <b>&lt;or&gt;</b>, <b>&lt;not&gt;</b>, <b>&lt;id&gt;</b>, <b>&lt;tests&gt;</b>, <b>&lt;cat&gt;</b>.
+Child elements allowed: **&lt;and&gt;**, **&lt;or&gt;**, **&lt;not&gt;**, **&lt;id&gt;**, **&lt;tests&gt;**, **&lt;cat&gt;**.
 
 #### &lt;id&gt;
 
@@ -32,7 +32,7 @@ Child elements allowed: None.
 
 #### &lt;tests&gt;
 
-Represents a selection of test names. This element contains one or more <b>&lt;test&gt;</b> elements, each holding the full name of a test as it's inner text.
+Represents a selection of test names. This element contains one or more **&lt;test&gt;** elements, each holding the full name of a test as it's inner text.
 
 Child elements allowed: None.
 

@@ -3,8 +3,8 @@ by default in a process targeted at the appropriate platform as well as
 the targeted runtime. If you run multiple assemblies in the same process,
 you may not mix x86 and x64 assemblies.
 
-On an x64 machine, if your test assembly is compiled x86, you <b>must not</b>
-use <b>/process=Single</b> on the command line. This is because NUnit is already
+On an x64 machine, if your test assembly is compiled x86, you **must not**
+use **/process=Single** on the command line. This is because NUnit is already
 running in a 64-bit process and will  fail when it tries to load your assembly
 into the same process.
 

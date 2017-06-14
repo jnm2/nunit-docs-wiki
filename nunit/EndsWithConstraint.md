@@ -30,6 +30,6 @@ Expect( phrase, EndsWith( "!" ) );
 ```
 
 #### Notes
-1. <b>EndsWith</b> may appear only in the body of a constraint 
+1. **EndsWith** may appear only in the body of a constraint 
    expression or when the inherited syntax is used.
 

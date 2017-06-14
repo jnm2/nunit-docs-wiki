@@ -1,6 +1,6 @@
-Although any object implementing <b>ITestCaseData</b> may be used to
-provide extended test case information, NUnit provides the <b>TestCaseData</b> 
-class for this purpose. The following example returns <b>TestCaseData</b> 
+Although any object implementing **ITestCaseData** may be used to
+provide extended test case information, NUnit provides the **TestCaseData** 
+class for this purpose. The following example returns **TestCaseData** 
 instances from a data source in a separately defined class.
 
 ```C#
@@ -28,7 +28,7 @@ public class MyDataClass
 }
 ```
 
-This example uses the fluent interface supported by <b>TestCaseData</b>
+This example uses the fluent interface supported by **TestCaseData**
 to make the program more readable.
 
 **TestCaseData** supports the following properties

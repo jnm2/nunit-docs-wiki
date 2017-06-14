@@ -50,7 +50,7 @@ namespace NUnit.Tests
 
 ### Custom Category Attributes
 
-Custom attributes that derive from <b>CategoryAttribute</b> will be recognized
+Custom attributes that derive from **CategoryAttribute** will be recognized
 by NUnit. The default protected constructor of CategoryAttribute 
 sets the category name to the name of your class.
 

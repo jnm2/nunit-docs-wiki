@@ -1,5 +1,5 @@
 Some users prefer a shorter form of assertion than is given by Assert.That.
-If you derive your test fixture class from <b>AssertionHelper</b>, the
+If you derive your test fixture class from **AssertionHelper**, the
 Expect() method may be used instead...
 
 ```C#

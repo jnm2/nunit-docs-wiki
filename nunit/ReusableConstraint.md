@@ -29,9 +29,9 @@ Or alternatively..
 ### Technical Explanation
 
 In the original example, the value assigned to myConstraint is
-known as an <b>unresolved</b> constraint. In fact, it's an
+known as an **unresolved** constraint. In fact, it's an
 unresolved NullConstraint, because that was the last constraint 
-encountered in the expression. It's associated with a <b>Not</b>
+encountered in the expression. It's associated with a **Not**
 operator that has not yet been applied.
 
 That's OK for use with Assert.That(), because the method
@@ -41,7 +41,7 @@ original NullConstraint.
 
 Of course, the original reference in myConstraint is left
 unchanged in all of this. But the EqualConstraint it points
-to has now been resolved. It is now a <b>resolved</b> constraint
+to has now been resolved. It is now a **resolved** constraint
 and can't be resolved again by the second Assert.That(), which
 only sees the NullConstraint and not the NotConstraint.
 
@@ -52,7 +52,7 @@ of resolving the constraint, in this case
     NotConstraint => NullConstraint
 ```
 
-That's what <b>ReusableConstraint</b> does for us. It resolves
+That's what **ReusableConstraint** does for us. It resolves
 the full expression and saves the result. Then it passes all
 operations on to that saved result.
 
@@ -82,7 +82,7 @@ using the "dotted" constraint syntax...
         new LessThanConstraint(100));
 ```
 
-However, there is no significant penalty to using <b>ReusableConstraint</b>.
+However, there is no significant penalty to using **ReusableConstraint**.
 It makes your intent much clearer and the exceptions listed are accidents of
 the internal implementation and could disappear in future releases.
 

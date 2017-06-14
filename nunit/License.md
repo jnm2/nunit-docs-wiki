@@ -1,6 +1,6 @@
 ## NUnit License
 
-<p><b>Copyright (c) 2004-2015 Charlie Poole</b></p>
+<p>**Copyright (c) 2004-2015 Charlie Poole**</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

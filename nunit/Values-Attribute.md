@@ -1,4 +1,4 @@
-The <b>ValuesAttribute</b> is used to specify a set of values to be provided
+The **ValuesAttribute** is used to specify a set of values to be provided
 for an individual parameter of a parameterized test method. Since
 NUnit combines the data provided for each parameter into a set of
 test cases, data must be provided for all parameters if it is
@@ -34,7 +34,7 @@ MyTest(3, "B")
 
 The values attribute works in a special way with Enums and Boolean parameters.
 
-When used without any arguments, the <b>[Values]</b> attribute on an enum parameter 
+When used without any arguments, the **[Values]** attribute on an enum parameter 
 will automatically include all possible values of the enumeration.
 
 ```C#
@@ -45,7 +45,7 @@ public void MyEnumTest([Values]MyEnumType myEnumArgument)
 }
 ```
 
-There is the same support for Boolean values. Add the <b>[Values]</b> attribute to a bool
+There is the same support for Boolean values. Add the **[Values]** attribute to a bool
 and the method will be run with true and false.
 
 ```C#

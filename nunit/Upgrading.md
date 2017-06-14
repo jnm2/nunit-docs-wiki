@@ -17,11 +17,11 @@ and an alternate approach may already be available in your current release
 of NUnit. If that is the case, it will probably save you time and effort if
 you modify the code in your current environment before switching to NUnit 3.0.</p>
 
-<p>For example, NUnit 3.0 no longer supports <b>ExpectedExceptionAttribute</b>.
-However, preferred alternatives <b>Assert.Throws</b> and the <b>ThrowsConstraint</b>
+<p>For example, NUnit 3.0 no longer supports **ExpectedExceptionAttribute**.
+However, preferred alternatives **Assert.Throws** and the **ThrowsConstraint**
 have been available for several years. If you remove the attribute from your
 tests and use one of the alternatives instead, you can verify that they work
-in your present environment and they will continue to work after conversion.</b>
+in your present environment and they will continue to work after conversion.**
 
 ### Switch to NUnit 3.0
 

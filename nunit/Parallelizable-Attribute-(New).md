@@ -2,11 +2,11 @@ The **ParallelizableAttribute** is used to indicate that a test and/or its desce
 
 When used without an argument, **Parallelizable** causes the test fixture or method on which it is placed to be queued for execution in parallel with other parallelizable tests. It may be used at the assembly, class or method level.
 
-The constructor takes an optional **ParallelScope** enumeration argument (see below), which indicates whether the attribute applies to the item itself, to its descendants or both. It defaults to **ParallelScope.Self**. The Scope may also be specified using the named property <b>Scope=</b>.
+The constructor takes an optional **ParallelScope** enumeration argument (see below), which indicates whether the attribute applies to the item itself, to its descendants or both. It defaults to **ParallelScope.Self**. The Scope may also be specified using the named property **Scope=**.
 
 #### ParallelScope Enumeration
 
-This is a <b>[Flags]</b> enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. The following values are available to users:
+This is a **[Flags]** enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. The following values are available to users:
 
  Value | Meaning | Valid On
 -------|---------|---------
@@ -17,7 +17,7 @@ This is a <b>[Flags]</b> enumeration used to specify which tests may run in para
 ##### Notes: 
  1. Some values are invalid on certain elements, although they will compile. NUnit will report any tests so marked as invalid and will produce an error message.
  2. The **ParallelScope** enum has additional values, which are used internally but are not visible to users through Intellisense.
- 3. The <b>ParallelizableAttribute</b> may be specified on multiple levels of the tests. Settings at a higher level may affect lower level tests, unless those lower-level tests override the inherited settings.
+ 3. The **ParallelizableAttribute** may be specified on multiple levels of the tests. Settings at a higher level may affect lower level tests, unless those lower-level tests override the inherited settings.
 
 #### See also...
  * [[NonParallelizable Attribute]]

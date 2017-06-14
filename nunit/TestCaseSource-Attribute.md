@@ -165,15 +165,15 @@ the enumerator as follows:
 ### Order of Execution
 
 Individual test cases are 
-executed in the order in which NUnit discovers them. This order does <b>not</b>
+executed in the order in which NUnit discovers them. This order does **not**
 follow the lexical order of the attributes and will often vary between different
 compilers or different versions of the CLR.
    
-As a result, when <b>TestCaseSourceAttribute</b> appears multiple times on a 
+As a result, when **TestCaseSourceAttribute** appears multiple times on a 
 method or when other data-providing attributes are used in combination with 
-<b>TestCaseSourceAttribute</b>, the order of the test cases is undefined.
+**TestCaseSourceAttribute**, the order of the test cases is undefined.
 
-However, when a single <b>TestCaseSourceAttribute</b> is used by itself, 
+However, when a single **TestCaseSourceAttribute** is used by itself, 
 the order of the tests follows exactly the order in which the test cases 
 are returned from the source.
    

@@ -1,4 +1,4 @@
-<p>The <b>PairwiseAttribute</b> is used on a test to specify that NUnit should
+<p>The **PairwiseAttribute** is used on a test to specify that NUnit should
    generate test cases in such a way that all possible pairs of
    values are used. This is a well-known approach for combatting
    the combinatorial explosion of test cases when more than
@@ -7,7 +7,7 @@
 #### Example
 
 <p>Using the Combinatorial attribute, the following test would be executed 12 (3x2x2) times.
-   With <b>Pairwise</b> it is executed only enough times so that each possible pair is covered..
+   With **Pairwise** it is executed only enough times so that each possible pair is covered..
 
 ```C#
 [Test, Pairwise]

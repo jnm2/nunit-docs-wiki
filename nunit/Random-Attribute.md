@@ -1,4 +1,4 @@
-<p>The <b>RandomAttribute</b> is used to specify a set of random values to be provided
+<p>The **RandomAttribute** is used to specify a set of random values to be provided
    for an individual numeric parameter of a parameterized test method. Since
    NUnit combines the data provided for each parameter into a set of
    test cases, data must be provided for all parameters if it is

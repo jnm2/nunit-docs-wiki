@@ -1,6 +1,6 @@
 Normally, NUnit simply runs tests and waits for them to terminate - the test may is allowed to run indefinitely. For certain kinds of tests, however, it may be desired to specify a timeout value.
 
-The <b>TimeoutAttribute</b> is used to specify a timeout value in milliseconds
+The **TimeoutAttribute** is used to specify a timeout value in milliseconds
 for a test case. If the test case runs longer than the time specified it
 is immediately cancelled and reported as a failure, with a message 
 indicating that the timeout was exceeded.

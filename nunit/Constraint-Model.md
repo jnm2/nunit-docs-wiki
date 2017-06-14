@@ -9,8 +9,8 @@ Here's a very simple assert using the constraint model:
       Assert.That( myString, Is.EqualTo("Hello") );
 ```
 
-The second argument in this assertion uses one of NUnit's <b>syntax helpers</b>
-to create an <b>EqualConstraint</b>. The same assertion could also be made in this form:
+The second argument in this assertion uses one of NUnit's **syntax helpers**
+to create an **EqualConstraint**. The same assertion could also be made in this form:
 
 ```C#
       Assert.That( myString, new EqualConstraint("Hello") );
@@ -42,11 +42,11 @@ Assert.That( TestDelegate del, IResolveConstraint constraint );
 The overloads that take a bool work exactly like Assert.IsTrue.
    
 For overloads taking a constraint, the argument must be a object implementing 
-the <b>IResolveConstraint</b> interface, which supports performing a test
+the **IResolveConstraint** interface, which supports performing a test
 on an actual value and generating appropriate messages. This interface
 is described in more detail under [[Custom Constraints]].
    
-NUnit provides a number of constraint classes similar to the <b>EqualConstraint</b>
+NUnit provides a number of constraint classes similar to the **EqualConstraint**
 used in the example above. Generally, these classes may be used directly or
 through a syntax helper. The valid forms are described on the pages related to
 each constraint.

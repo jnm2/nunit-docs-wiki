@@ -71,7 +71,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * Added Throws.ArgumentNullException
  * When checking the equality of DateTimeOffset, you can now use the 
    WithSameOffset modifier
- * A new Constraint, <b>DictionaryContainsKeyConstraint</b>, may be used to test that a specified key is present in a dictionary.
+ * A new Constraint, **DictionaryContainsKeyConstraint**, may be used to test that a specified key is present in a dictionary.
  * Does prefix operator supplies several added constraints.
  * A new FileExistsConstraint has been added.
  * You may now specify a tolerance using Within when testing equality of DateTimeOffset values.
@@ -96,7 +96,7 @@ NUnit 3.0 is based on NUnit version 2, but with substantial redesign and a new c
  * Parallel test execution is supported down to the Fixture level. Use ParallelizableAttribute to indicate types that may be run in parallel.
  * Async tests are supported for .NET 4.0 if the user has installed support for them.
  * The XML output now includes a start and end time for each test.
- * TestContext is now supported and includes an additional property, <b>Random</b>, which may be used to generate repeatable random values for use in a test.
+ * TestContext is now supported and includes an additional property, **Random**, which may be used to generate repeatable random values for use in a test.
  * The external framework API is now stable; internal interfaces are separate from API
  * Tests may be run in parallel on separate threads
  * Created new API for controlling framework

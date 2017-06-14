@@ -6,7 +6,7 @@ to be generated. See [[Parameterized Tests]] for more info.
 The test method may be either an instance or a static method.
    
 Test methods targetting .Net 4.0 or higher may be 
-marked as <b>async</b> and NUnit will wait for the method to complete 
+marked as **async** and NUnit will wait for the method to complete 
 before recording the result and moving on to the next test. Async
 test methods must return `Task` if no value is returned,
 or `Task<T>` if a value of type T is returned.

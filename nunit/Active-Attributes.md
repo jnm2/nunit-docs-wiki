@@ -38,7 +38,7 @@ In almost all cases, it is possible to reverse this logic and have the attribute
 With just a few exceptions, NUnit's current set of attributes inherit from System.Attribute directly. Since we are now switching to use of the standard .NET reflection mechanism via
 attribute Types, it is useful to categorize attributes according to how and when they are used.
 
-For example, at a certain point in the construction of tests, NUnit must scan the attributes on a method to apply all those that provide modifications to the test being built. This is currently done by looking at <b>all</b> attributes of the method but it will be much more convenient to only retrieve TestModificationAttributes.
+For example, at a certain point in the construction of tests, NUnit must scan the attributes on a method to apply all those that provide modifications to the test being built. This is currently done by looking at **all** attributes of the method but it will be much more convenient to only retrieve TestModificationAttributes.
 
 The top levels of the Attribute hierarchy are listed here to the extent that they have been thought out. This will change as we implement it and will not necessarily remain stable in future releases because the hierarchy is considered to be an internal implementation detail.
 

@@ -22,6 +22,6 @@ namespace NUnit.Tests
 }
 ```
 
-<p><b>Note:</b> The Test and TestFixture attributes continue to support an 
+<p>**Note:** The Test and TestFixture attributes continue to support an 
 optional Description property. The Description attribute should be used for 
 new applications. If both are used, the Description attribute takes precedence.</p>

@@ -1,23 +1,23 @@
-The <b>DatapointSource</b> attribute is used
-to provide data for <b>Theories</b> and is ignored for ordinary
+The **DatapointSource** attribute is used
+to provide data for **Theories** and is ignored for ordinary
 tests - including tests with parameters.
    
-Collections of datapoints may be provided by use of the <b>DatapointSourceAttribute</b>.
+Collections of datapoints may be provided by use of the **DatapointSourceAttribute**.
 This attribute may be placed on methods or
 properties in addition to fields. The returned value must be
-either an array of the required type or an <b>IEnumerable<T></b> returning an enumeration
+either an array of the required type or an **IEnumerable<T>** returning an enumeration
 of the required type. The data Type must exactly match the argument 
 for which data is being supplied.
    
-> In earlier versions of NUnit, the obsolete <b>DatapointsAttribute</b>
-> was used in place of <b>DatapointSourceAttribute</b>.
+> In earlier versions of NUnit, the obsolete **DatapointsAttribute**
+> was used in place of **DatapointSourceAttribute**.
    
 #### Automatically Supplied Datapoints
 
 It is normally not necessary to specify datapoints for 
-<b>boolean</b> or <b>enum</b> arguments.
-NUnit automatically supplies values of <b>true</b> 
-and <b>false</b> for <b>boolean</b> arguments and will supply all 
+**boolean** or **enum** arguments.
+NUnit automatically supplies values of **true** 
+and **false** for **boolean** arguments and will supply all 
 defined values of any enumeration.
    
 If for some reason you don't wish to use all possible values, you

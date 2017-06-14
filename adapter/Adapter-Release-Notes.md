@@ -237,7 +237,7 @@ This release was issued to correct a problem with locking of assemblies in ctp-2
 
 ##### Features
 
- * Initial release of the test adapter using NUnit 3.0. Note that the adapter may <b>not</b> be used to run tests written against earlier versions of NUnit. The original adapter is still available for that purpose and both adapters may be installed if necessary.
+ * Initial release of the test adapter using NUnit 3.0. Note that the adapter may **not** be used to run tests written against earlier versions of NUnit. The original adapter is still available for that purpose and both adapters may be installed if necessary.
 
 #### NUnit Test Adapter for Visual Studio - Version 2.0 - April 1, 2015
 

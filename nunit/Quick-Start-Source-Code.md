@@ -100,6 +100,6 @@ namespace Bank
 }</pre>
 </div>
 <div style="width: 34em; text-align:center;">
-<b>Listing - QuickStart Example</b>
+**Listing - QuickStart Example**
 </div>
 

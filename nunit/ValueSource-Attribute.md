@@ -7,13 +7,13 @@ ValueSourceAttribute(Type sourceType, string sourceName);
 ValueSourceAttribute(string sourceName);
 ```
 
-If <b>sourceType</b> is specified, it represents the class that provides
+If **sourceType** is specified, it represents the class that provides
 the data. It must have a default constructor.
 
-If <b>sourceType</b> is not specified, the class containing the test
+If **sourceType** is not specified, the class containing the test
 method is used.
 
-The <b>sourceName</b>, represents the name of the source that will 
+The **sourceName**, represents the name of the source that will 
 provide the arguments. It should have the following characteristics:
  * It may be a field, a non-indexed property or a method taking no arguments.
  * It must be a static member.
@@ -24,14 +24,14 @@ provide the arguments. It should have the following characteristics:
 #### Order of Execution
 
 Individual test cases are executed in the order in which NUnit discovers them.
-This order does <b>not</b> follow the lexical order of the attributes and will 
+This order does **not** follow the lexical order of the attributes and will 
 often vary between different compilers or different versions of the CLR.
    
-As a result, when <b>ValueSourceAttribute</b> appears multiple times on a 
+As a result, when **ValueSourceAttribute** appears multiple times on a 
 parameter or when other data-providing attributes are used in combination with 
-<b>ValueSourceAttribute</b>, the order of the arguments is undefined.
+**ValueSourceAttribute**, the order of the arguments is undefined.
 
-However, when a single <b>ValueSourceAttribute</b> is used by itself, 
+However, when a single **ValueSourceAttribute** is used by itself, 
 the order of the arguments follows exactly the order in which the data 
 is returned from the source.
    
@@ -44,7 +44,7 @@ time and is destroyed after all tests are loaded.
 
 If the data source is in the test fixture itself, the object is created
 using the appropriate constructor for the fixture parameters provided on
-the <b>TestFixtureAttribute</b>, or
+the **TestFixtureAttribute**, or
 the default constructor if no parameters were specified. Since this object
 is destroyed before the tests are run, no communication is possible between
 these two phases - or between different runs - except through the parameters

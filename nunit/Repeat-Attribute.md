@@ -1,4 +1,4 @@
-<b>RepeatAttribute</b> is used on a test method to specify that it should be
+**RepeatAttribute** is used on a test method to specify that it should be
 executed multiple times. If any repetition fails, the remaining ones are
 not run and a failure is reported.
 

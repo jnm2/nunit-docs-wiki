@@ -15,10 +15,10 @@ than the final output in one of the 'bin' directories. Here are some alternative
 work in both versions:
 
 <ul>
-<li><b>$(ProjectDir)$(ProjectFileName)</b> to open the VS Project rather than the assembly.
+<li>**$(ProjectDir)$(ProjectFileName)** to open the VS Project rather than the assembly.
     If you use this approach, be sure to rename your config file accordingly and put it
 	in the same directory as the VS project file.
-<li><b>$(ProjectDir)bin/Debug/$(TargetName)$(TargetExt)</b> to run the assembly directly.
+<li>**$(ProjectDir)bin/Debug/$(TargetName)$(TargetExt)** to run the assembly directly.
     Note that this requires hard-coding part of the path, including the configuration.
 </ul>
 

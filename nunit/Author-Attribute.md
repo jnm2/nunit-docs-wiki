@@ -27,4 +27,4 @@ public class MyOtherTests
 }
 ```
 
-<p><strong>Note:</strong> you can currently only have one Author attribute per fixture or test.
+<p>**Note:** you can currently only have one Author attribute per fixture or test.

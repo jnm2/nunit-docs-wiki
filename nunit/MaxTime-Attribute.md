@@ -1,4 +1,4 @@
-The <b>MaxtimeAttribute</b> is used on test methods to specify a maximum time 
+The **MaxtimeAttribute** is used on test methods to specify a maximum time 
 in milliseconds for a test case. If the test case takes longer than the 
 specified time to complete, it is reported as a failure.
    

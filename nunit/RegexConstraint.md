@@ -30,5 +30,5 @@ Expect( phrase, Matches( "Make.*pass" ) );
 ```
 
 #### Notes
-1. <b>Matches</b> may appear only in the body of a constraint 
+1. **Matches** may appear only in the body of a constraint 
    expression or when the inherited syntax is used.

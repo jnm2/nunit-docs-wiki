@@ -1,5 +1,5 @@
-Although any object implementing <b>IFixtureData</b> may be used to
-provide specific instance information for a parameterized fixture, NUnit provides the <b>TestFixtureData</b> 
+Although any object implementing **IFixtureData** may be used to
+provide specific instance information for a parameterized fixture, NUnit provides the **TestFixtureData** 
 class for this purpose. 
 
 The following example varies the example shown under [[TestFixture Attribute]] by using

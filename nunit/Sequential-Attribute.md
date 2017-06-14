@@ -1,12 +1,12 @@
-<p>The <b>SequentialAttribute</b> is used on a test to specify that NUnit should
+<p>The **SequentialAttribute** is used on a test to specify that NUnit should
    generate test cases by selecting individual data items provided
    for the parameters of the test, without generating additional
    combinations.
    
-<p><b>Note:</b> If parameter data is provided by multiple attributes,
+<p>**Note:** If parameter data is provided by multiple attributes,
 the order in which NUnit uses the data items is not guaranteed. However,
 it can be expected to remain constant for a given runtime and operating
-system. For best results with <b>SequentialAttribute</b> use only one
+system. For best results with **SequentialAttribute** use only one
 data attribute on each parameter.
    
 #### Example

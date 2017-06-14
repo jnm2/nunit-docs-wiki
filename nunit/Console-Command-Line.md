@@ -2,8 +2,8 @@
 
 <pre>    NUNIT3-CONSOLE [inputfiles] [options]</pre>
 
-<p>where <b>inputfiles</b> is one or more assemblies or test projects of 
-a type that NUnit can process and <b>options</b> is zero or more options.
+<p>where **inputfiles** is one or more assemblies or test projects of 
+a type that NUnit can process and **options** is zero or more options.
 Input files and options may be mixed in any order.</p>
 
 ### Input Files
@@ -146,7 +146,7 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 ### Description
 
 <p>By default, this command runs the tests contained in the
-assemblies and projects specified. If the <b>--explore</b> option
+assemblies and projects specified. If the **--explore** option
 is used, no tests are executed but a description of the tests
 is saved in the specified or default format.</p>
 

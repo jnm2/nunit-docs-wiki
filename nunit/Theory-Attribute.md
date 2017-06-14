@@ -1,6 +1,6 @@
 A Theory is a special type of test, used to verify a general
 statement about the system under development. Normal tests are
-<em>example-based</em>. That is, the developer supplies one or
+_example-based_. That is, the developer supplies one or
 more examples of inputs and expected outputs either within the
 code of the test or - in the case of [[Parameterized Tests]] -
 as arguments to the test method. A theory, on the other hand,
@@ -8,8 +8,8 @@ makes a general statement that all of its assertions will pass
 for all arguments satisfying certain assumptions.
    
 Theories are implemented in NUnit as non-generic
-methods within a <b>TestFixture</b>, which are annotated
-with the <b>TheoryAttribute</b>. Theory methods must always have 
+methods within a **TestFixture**, which are annotated
+with the **TheoryAttribute**. Theory methods must always have 
 arguments and therefore appears quite similar to [[Parameterized Tests]]
 at first glance. However, a Theory incorporates additional data sources 
 for its arguments and allows special processing for assumptions
@@ -18,7 +18,7 @@ make general statements and are more than just a set of examples.
    
 #### Data for Theories
 
-The primary source of data for a <b>Theory</b> is the
+The primary source of data for a **Theory** is the
 [[Datapoint Attribute]] or [[DatapointSource Attribute]]. 
 NUnit will use any class members of the required types, which are annotated
 with one of these attributes, to provide data for each parameter
@@ -33,7 +33,7 @@ to the distinction between a test based on examples and a
 theory. However, it may be useful in order to guarantee that
 a specific test case is included.
 
-For <b>boolean</b> and <b>enum</b> arguments, NUnit can supply the 
+For **boolean** and **enum** arguments, NUnit can supply the 
 data without any action by the user. All possible values are supplied
 to the argument. This feature is disabled if the user supplies any 
 values for the argument.
@@ -47,19 +47,19 @@ values for the argument.
 
 The theory itself is responsible for ensuring that all data supplied
 meets its assumptions. It does this by use of the
-<b>Assume.That(...)</b> construct, which works just like
-<b>Assert.That(...)</b> but does not cause a failure. If
+**Assume.That(...)** construct, which works just like
+**Assert.That(...)** but does not cause a failure. If
 the assumption is not satisfied for a particular test case, that case
 returns an Inconclusive result, rather than a Success or Failure. 
    
 The overall result of executing a Theory over a set of test cases is 
 determined as follows:
    
- * If the assumptions are violated for <b>all</b> test cases, then the Theory itself is marked as a failure.
+ * If the assumptions are violated for **all** test cases, then the Theory itself is marked as a failure.
    
  * If any Assertion fails, the Theory itself fails.
    
- * If at least <b>some</b> cases pass the stated assumptions, and there are <b>no</b> assertion failures or exceptions, then the Theory passes.
+ * If at least **some** cases pass the stated assumptions, and there are **no** assertion failures or exceptions, then the Theory passes.
 
 Since the user does not generally care about inconclusive cases under
 a theory, they are not normally displayed in the Gui. For situations

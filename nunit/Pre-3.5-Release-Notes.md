@@ -616,8 +616,8 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 #### Framework
 
  * We no longer create a separate framework build for .NET 3.5. The 2.0 and 3.5 builds were essentially the same, so the former should now be used under both runtimes.
- * A new Constraint, <b>DictionaryContainsKeyConstraint</b>, may be used to test that a specified key is present in a dictionary.
- * <b>LevelOfParallelizationAttribute</b> has been renamed to <b>LevelOfParallelismAttribute</b>.
+ * A new Constraint, **DictionaryContainsKeyConstraint**, may be used to test that a specified key is present in a dictionary.
+ * **LevelOfParallelizationAttribute** has been renamed to **LevelOfParallelismAttribute**.
  * The Silverlight runner now displays output in color and includes any text output created by the tests.
  * The class and method names of each test are included in the output xml where applicable.
  * String arguments used in test case names are now truncated to 40 rather than 20 characters.
@@ -1047,7 +1047,7 @@ use the NUnit NuGet packages for the framework, but a ZIP file with the binaries
 <ul>
   <li>Separate projects for nunit-console and nunit.engine
   <li>New builds for .NET 4.5 and Silverlight
-  <li>TestContext is now supported and includes an additional property, <b>Random</b>, which may be used to generate repeatable random values for use in a test.
+  <li>TestContext is now supported and includes an additional property, **Random**, which may be used to generate repeatable random values for use in a test.
   <li>The external framework API is now stable; internal interfaces are separate from API
   <li>Tests may be run in parallel on separate threads
   <li>Solutions and projects now use VS2012 (except for Compact framework)

@@ -47,7 +47,7 @@ Assert.That(() => { throw new ArgumentException(); }, Throws.ArgumentException);
 #### Notes
 <ol>
     <li>
-        <b>Throws.Exception</b> may be followed by further constraints,
+        **Throws.Exception** may be followed by further constraints,
         which are applied to the exception itself as shown in the last two
         examples above. It may also be used alone to verify that some
         exception has been thrown, without regard to type. This is
@@ -55,17 +55,17 @@ Assert.That(() => { throw new ArgumentException(); }, Throws.ArgumentException);
         what exception you are expecting.
     </li>
     <li>
-        <b>Throws.TypeOf</b> and <b>Throws.InstanceOf</b> are provided
+        **Throws.TypeOf** and **Throws.InstanceOf** are provided
         as a shorter syntax for this common test. They work exactly like
-        the corresponding forms following <b>Throws.Exception</b>.
+        the corresponding forms following **Throws.Exception**.
     </li>
     <li>
-        <b>Throws.TargetInvocationException</b>, <b>Throws.ArgumentException</b>
-        and <b>Throws.InvalidOperationException</b> provide a shortened form
+        **Throws.TargetInvocationException**, **Throws.ArgumentException**
+        and **Throws.InvalidOperationException** provide a shortened form
         for some common exceptions.
     </li>
     <li>
-        Used alone, <b>Throws.InnerException</b> simply tests the InnerException
+        Used alone, **Throws.InnerException** simply tests the InnerException
         value of the thrown exception. More commonly, it will be used in
         combination with a test for the type of the outer exception as shown
         in the examples above.

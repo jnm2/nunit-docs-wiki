@@ -30,10 +30,10 @@ are provided:
 ### Order of Execution
 
 The individual test cases are executed in the order in which NUnit discovers them. 
-This order does <b>not</b> necessarily follow the lexical order of the attributes 
+This order does **not** necessarily follow the lexical order of the attributes 
 and will often vary between different compilers or different versions of the CLR.
    
 The following specific rules for ordering apply:
- * If all arguments are specified in a <b>single TestCaseSource</b> attribute, the ordering of the cases provided will be maintained.
- * If each parameter has a single <b>Values</b>, <b>ValueSource</b> or <b>Range</b> attribute and the <b>Sequential</b> combining strategy is used - or there is only one argument - the ordering will be maintained.
- * In all other cases, including using multiple <b>TestCase</b> attributes or a combination of different types of attributes, the ordering of the test cases is undefined.
+ * If all arguments are specified in a **single TestCaseSource** attribute, the ordering of the cases provided will be maintained.
+ * If each parameter has a single **Values**, **ValueSource** or **Range** attribute and the **Sequential** combining strategy is used - or there is only one argument - the ordering will be maintained.
+ * In all other cases, including using multiple **TestCase** attributes or a combination of different types of attributes, the ordering of the test cases is undefined.

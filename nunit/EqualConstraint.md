@@ -42,7 +42,7 @@ Is.Zero // Equivalent to Is.EqualTo(0)
 Numerics are compared based on their values. Different types
 may be compared successfully if their values are equal.
    
-Using the <b>Within</b> modifier, numerics may be tested
+Using the **Within** modifier, numerics may be tested
 for equality within a fixed or percent tolerance.
 
 ```C#
@@ -57,7 +57,7 @@ Assert.That( 5.5, Is.EqualTo( 5 ).Within(1.5).Percent);
 
 #### Comparing Floating Point Values
 Values of type float and double are normally compared using a tolerance
-specified by the <b>Within</b> modifier. The special values PositiveInfinity, 
+specified by the **Within** modifier. The special values PositiveInfinity, 
 NegativeInfinity and NaN compare
 as equal to themselves.
 
@@ -76,7 +76,7 @@ Assert.That( 20000000000000004.0, Is.EqualTo(20000000000000000.0).Within(1).Ulps
 
 #### Comparing Strings
 
-String comparisons normally respect case. The <b>IgnoreCase</b> modifier 
+String comparisons normally respect case. The **IgnoreCase** modifier 
 causes the comparison to be case-insensitive. It may also be used when 
 comparing arrays or collections of strings.
 
@@ -90,13 +90,13 @@ string[] actual = new string[] { "HELLO", "world" };
 
 #### Comparing DateTimes and TimeSpans
 
-<b>DateTimes</b> and <b>TimeSpans</b> may be compared either with or without
-a tolerance. A tolerance is specified using <b>Within</b> with either a 
-<b>TimeSpan</b> as an argument or with a numeric value followed by a one of 
-the time conversion modifiers: <b>Days</b>, <b>Hours</b>, <b>Minutes</b>,
-<b>Seconds</b>, <b>Milliseconds</b> or <b>Ticks</b>.
+**DateTimes** and **TimeSpans** may be compared either with or without
+a tolerance. A tolerance is specified using **Within** with either a 
+**TimeSpan** as an argument or with a numeric value followed by a one of 
+the time conversion modifiers: **Days**, **Hours**, **Minutes**,
+**Seconds**, **Milliseconds** or **Ticks**.
 
-When comparing <b>DateTimeOffsets</b> you can use the optional <b>WithSameOffset</b>
+When comparing **DateTimeOffsets** you can use the optional **WithSameOffset**
 modifier to check the offset along with the date and time.
 
 ```C#
@@ -117,7 +117,7 @@ Two arrays, collections or IEnumerables are considered equal if they have the
 the same dimensions and if each of the corresponding elements is equal.
 	
 If you want to treat two arrays of different shapes as simple collections 
-for purposes of comparison, use the <b>AsCollection</b> modifier, which causes 
+for purposes of comparison, use the **AsCollection** modifier, which causes 
 the comparison to be made element by element, without regard for the rank or 
 dimensions of the array. Note that jagged arrays (arrays of arrays) do not
 have a single underlying collection. The modifier would be applied
@@ -151,7 +151,7 @@ Two dictionaries are considered equal if
 </ol>
 
 You can use this capability to compare any two objects implementing
-<b>IDictionary</b>. Generic and non-generic dictionaries (Hashtables) 
+**IDictionary**. Generic and non-generic dictionaries (Hashtables) 
 may be successfully compared.
 
 #### Comparing DirectoryInfo
@@ -167,10 +167,10 @@ Assert.That(new DirectoryInfo(actual), Is.EqualTo(expected));
 
 If the default NUnit or .NET behavior for testing equality doesn't
 meet your needs, you can supply a comparer of your own through the
-<b>Using</b> modifier. When used with <b>EqualConstraint</b>, you
-may supply an <b>IEqualityComparer</b>, <b>IEqualityComparer&lt;T&gt;</b>,
-<b>IComparer</b>, <b>IComparer&lt;T&gt</b>; or <b>Comparison&lt;T&gt;</b> 
-as the argument to <b>Using</b>.
+**Using** modifier. When used with **EqualConstraint**, you
+may supply an **IEqualityComparer**, **IEqualityComparer&lt;T&gt;**,
+**IComparer**, **IComparer&lt;T&gt**; or **Comparison&lt;T&gt;** 
+as the argument to **Using**.
 
 ```C#
 Assert.That( myObj1, Is.EqualTo( myObj2 ).Using( myComparer ));
@@ -200,36 +200,36 @@ Assert.That( list1, Is.EqualTo(list2).Using( myComparer ));
 #### Notes
 <ol>
 <li><p>When checking the equality of user-defined classes, NUnit first examines each class to determine whether it implements `IEquatable<T>` (unless the `AsCollection` modifier is used). If either object implements the interface for the type of the other object, then that implementation is used in making the comparison. If neither class implements the appropriate interface, NUnit makes use 
-    of the <b>Equals</b> override on the expected object. If you neglect to either implement <b>IEquatable&lt;T&gt;</b> or to
-	override <b>Equals</b>, you can expect failures comparing non-identical objects. 
-	In particular, overriding <b>operator==</b> without overriding <b>Equals</b>
+    of the **Equals** override on the expected object. If you neglect to either implement **IEquatable&lt;T&gt;** or to
+	override **Equals**, you can expect failures comparing non-identical objects. 
+	In particular, overriding **operator==** without overriding **Equals**
 or implementing the interface has no effect.
-<li><p>The <b>Within</b> modifier was originally designed for use with floating point
-    values only. Beginning with NUnit 2.4, comparisons of <b>DateTime</b> values 
-	may use a <b>TimeSpan</b> as a tolerance. Beginning with NUnit 2.4.2, 
+<li><p>The **Within** modifier was originally designed for use with floating point
+    values only. Beginning with NUnit 2.4, comparisons of **DateTime** values 
+	may use a **TimeSpan** as a tolerance. Beginning with NUnit 2.4.2, 
 	non-float numeric comparisons may also specify a tolerance.
 <li><p>Beginning with NUnit 2.4.4, float and double comparisons for which no 
 	tolerance is specified use a default, use the value of
-	<b>GlobalSettings.DefaultFloatingPointTolerance</b>. If this is not
+	**GlobalSettings.DefaultFloatingPointTolerance**. If this is not
 	set, a tolerance of 0.0d is used.
 <li><p>Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
     as specified by IEEE floating point standards. The new behavior, was
 	introduced after some discussion becuase it seems more useful in tests. 
-	To avoid confusion, consider using <b>Is.NaN</b> where appropriate.
+	To avoid confusion, consider using **Is.NaN** where appropriate.
 <li><p>When an equality test between two strings fails, the relevant portion of
 	of both strings is displayed in the error message, clipping the strings to
 	fit the length of the line as needed. Beginning with 2.4.4, this behavior
-	may be modified by use of the <b>NoClip</b> modifier on the constraint. In
+	may be modified by use of the **NoClip** modifier on the constraint. In
 	addition, the maximum line length may be modified for all tests by setting
-	the value of <b>TextMessageWriter.MaximumLineLength</b> in the appropriate
+	the value of **TextMessageWriter.MaximumLineLength** in the appropriate
 	level of setup.
 <li><p>When used with arrays, collections or dictionaries, EqualConstraint 
     operates recursively. Any modifiers are saved and used as they apply to 
 	individual items.
-<li><p>A user-specified comparer will not be called by <b>EqualConstraint</b>
+<li><p>A user-specified comparer will not be called by **EqualConstraint**
     if either or both arguments are null. If both are null, the Constraint
 	succeeds. If only one is null, it fails.
-<li><p>NUnit has special semantics for comparing <b>Streams</b> and
-<b>DirectoryInfos</b>. For a <b>Stream</b>, the contents are compared.
-For a <b>DirectoryInfo</b>, the first-level directory contents are compared.
+<li><p>NUnit has special semantics for comparing **Streams** and
+**DirectoryInfos**. For a **Stream**, the contents are compared.
+For a **DirectoryInfo**, the first-level directory contents are compared.
 </ol>

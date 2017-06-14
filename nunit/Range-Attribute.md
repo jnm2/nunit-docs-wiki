@@ -1,4 +1,4 @@
-The <b>RangeAttribute</b> is used to specify a range of values to be provided
+The **RangeAttribute** is used to specify a range of values to be provided
 for an individual parameter of a parameterized test method. Since
 NUnit combines the data provided for each parameter into a set of
 test cases, data must be provided for all parameters if it is

@@ -10,16 +10,16 @@ In all cases, NUnit will attempt to honor the options given, issuing an
 error message if the assembly cannot be loaded.
 See [[Console Command Line]] for more information.
 
- * The <b>/framework</b> option of console runner allows you to specify
+ * The **/framework** option of console runner allows you to specify
    the framework type and version to be used for a test run. When this option
    is used, NUnit will attempt to run the tests under the framework specified
    even if the assembly targets a different runtime.
 
- * The <b>/process:Single</b> command-line option indicates that tests should
+ * The **/process:Single** command-line option indicates that tests should
    be run in the NUnit process itself. This forces usage of the runtime under which
    NUnit is already running.
   
- * The <b>process:Separate</b> causes a single separate process to be used
+ * The **process:Separate** causes a single separate process to be used
    for all assemblies. In this case, NUnit will use the highest level runtime targeted
    by any of the assemblies, if it is available.
 
