@@ -41,7 +41,7 @@ Don't spend any time on the `<returns>` or `<value>` tags since the contents are
 
 ### Empty tags
 
-Do not leave any empty tags. Either remove them or fill them out. This includes the compiler's all-or-none `<param>` tag enforcement.
+Do not leave any empty tags. Either remove them or fill them out. This includes the compiler's all-or-none `<param>` and `<typeparam>` tag enforcement.
 
 
 ### `<exception>`
