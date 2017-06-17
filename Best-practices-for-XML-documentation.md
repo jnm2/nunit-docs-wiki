@@ -31,7 +31,7 @@ Add a `<param>` tag for each parameter describing what *effect* it has (rather t
 
 However, prefer to give each parameter a really communicative name. If those names end up covering all the user could need to know about *all* the parameters, remove all the `<param>` tags to avoid super redundant documentation. If they do not, add relevant details to each `<param>` to the extent possible.
 
-The same applies to `<typeparam>` tags. They are shown by intellisense as the user enters type parameter lists exactly the way `<param>` descriptions are shown as the user enters parameter lists. `<typeparam>` are just as important on generic methods as they are on generic type definitions.
+The same applies to `<typeparam>` tags. They are shown by intellisense as the user enters type parameter lists exactly the way `<param>` descriptions are shown as the user enters method parameter lists. `<typeparam>` elements are just as important on generic methods as they are on generic type definitions.
 
 
 ### `<returns>` and `<value>`
