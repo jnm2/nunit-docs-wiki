@@ -11,5 +11,5 @@ This wiki contains the documentation for all active NUnit projects as well as de
 
 #### Developer Documentation
  * [[NUnit Vision]] covers our vision for NUnit and its future.
- * [[Team Practices]] describes how we work on NUnit and the standards we follow.
+ * [[Team Practices]] helps getting started and describes how we work on NUnit and the standards we follow.
  * [[Specifications]] are descriptions of features we plan to add.
