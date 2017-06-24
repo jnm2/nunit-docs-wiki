@@ -18,6 +18,5 @@
 
 ### Developer Docs
 
-* **[[NUnit Vision]]**
 * **[[Team Practices]]**
 * **[[Specifications]]**
