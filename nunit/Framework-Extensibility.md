@@ -2,9 +2,9 @@ The NUnit Framework is the part of NUnit that is referenced by user tests. It co
 
 In this documentation, we refer to four different types of Framework extension:
 
-[[Action Attributes]] are designed to better enable composability of test logic by creating attributes that encapsulate specific actions to be taken before or after a test is run.
+[[Custom Attributes]] allow creation of new types of tests and suites, new sources of data and modification of the environment in which a test runs as well as its final result.
 
-[[Custom Attributes]] go beyond simple before/after logic and allow creation of new types of tests and suites, new sources of data and modification of the environment in which a test runs as well as its final result.
+[[Action Attributes]] are an NUnit V2 feature, still supported in NUnit 3. They were designed to better enable composability of test logic by creating attributes that encapsulate specific actions to be taken before or after a test is run. For most work, [[Custom Attributes]] are the way to go, but [[Action Attributes]] continue to be the only way to apply an attribute at a higher level and have it apply to many tests.
 
 [[Custom Constraints]] allow the user to define new constraints for use in tests along with the associated fluent syntax that allows them to be used with `Assert.That`.
 
