@@ -26,7 +26,7 @@ The following interfaces are called at execution time.
 
 | Interface              | Used By |
 |------------------------|---------|
-| [[IApplyToContext|IApplyToContext-Interface | Attributes that set up the context prior to execution
+| [[IApplyToContext|IApplyToContext-Interface]] | Attributes that set up the context prior to execution
 | [[ICommandDecoratorSource]]
 | [[ICommandDecorator]]
 
