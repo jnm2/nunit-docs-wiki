@@ -11,6 +11,7 @@ Custom fixture builders should examine the provided `ITypeInfo` and return an ap
 
 The following NUnit attributes currently implement this interface:
 * `TestFixtureAttribute`
+* `TestFixtureSourceAttribute`
 * `SetUpFixtureAttribute`
 
 **Notes:**
