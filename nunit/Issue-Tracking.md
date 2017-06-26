@@ -62,7 +62,8 @@ Labels starting with **closed:** indicate the status of the bug at closing and s
 * **confirm** Somebody should verify that the issue actually exists and then remove the label. In some cases, a bug may have been reported against an older version of NUnit and needs to be checked out using the current code.
 * **blocked** The issue cannot be worked on until something else happens, external to the project. There should be a comment on the issue indicating what that something is.
 * **design** Some design decisions need to be made before this can really be worked on. Sometimes this label may be applied before anything happens and other times the work may have started but reached a point where design decisions need to be made involving others in the team.
-* **easyfix** Indicates an issue that might be a good place for a new contributor to start. Whoever adds the label should couple it with a comment suggesting what code to look at and a general approach to working the issue.
+* **up-for-grabs** Indicates a backlog issue ready for implementation where we would love for the wider community to jump in and be assigned! Whoever adds this label should couple it with a comment suggesting what code to look at and a general approach to working the issue.
+* **easyfix** Indicates an issue that is expected to take no more than a few nights' work.
 
 ### Epics
 Where appropriate, we make use of the [ZenHub](www.zenhub.com) **Epic** feature to create issues that include a number of sub-issues. For example, when we split the original NUnit repository into separate framework and engine repositories, we created an epic that included a number of separate issues that had to be completed in order to accomplish the split smoothly.
