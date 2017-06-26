@@ -31,6 +31,7 @@ The following NUnit attributes implement `IApplyToTest`:
 * `CultureAttribute`
 * `ExplicitAttribute`
 * `IgnoreAttribute`
+* `OrderAttribute`
 * `PlatformAttribute`
 * `PropertyAttribute` (and, through it, a large number of derived attributes)
 * `RequiresThreadAttribute`
