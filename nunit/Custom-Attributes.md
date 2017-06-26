@@ -13,6 +13,7 @@ The following interfaces are called at load time.
 | [[IFixtureBuilder|IFixtureBuilder-Interface]]       | Attributes that know how to build a fixture from a test class
 | [[ITestBuilder|ITestBuilder-Interface]]              | Attributes that know how to build one or more parameterized test cases for a method
 | [[ISimpleTestBuilder|ISimpleTestBuilder-Interface]] | Attributes that know how to build a single non-parameterized test case for a method
+| [[IParameterDataSource|IParameterDataSource-Interface | Attributes that supply values for a single parameter for use in generating test cases
 | [[IImplyFixture|IImplyFixture-Interface]]           | Attributes used on a method to signal that the defining class should be treated as a fixture
 | [[IApplyToTest|IApplyToTest-Interface]]             | Attributes that make modifications to a test immediately after it is constructed
 
