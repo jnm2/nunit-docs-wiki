@@ -13,8 +13,10 @@ An example of the use of the context may be helpful. One item in the `TestExecut
 Custom attributes that implement `IApplyToContext` should modify the TestExecutionContext in accordance with the arguments supplied to them. They are not called after the test is run and have no cleanup to perform.
 
 The NUnit attributes that implement `IApplyToContext` are as follows:
+* `DefaultFloatingPointToleranceAttribute`
 * `ParallelizableAttribute`
 * `SetCultureAttribute`
 * `SetUICultureAttribute`
+* `SingleThreadedAttribute`
 * `TimeoutAttribute`
 
