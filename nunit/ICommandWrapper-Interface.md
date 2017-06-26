@@ -19,4 +19,11 @@ public interface IWrapSetUpTearDown : ICommandWrapper
 
 Attributes should __not__ implement the `ICommandWrapper` interface directly but should select one of the derived attributes. NUnit applies the `IWrapSetUpTearDown` interface before SetUp and after TearDown. It applies the `IWrapTestMethod` interface after SetUp and before the test is run.
 
-The `Wrap` should return an appropriate command in which the original command has been nested. For an example, see the implementation of MaxTimeAttribute.
+The `Wrap` should return an appropriate command in which the original command has been nested. For an example, see the implementation of `MaxTimeAttribute`.
+
+The following NUnit attributes implement the `IWrapSetUpTearDown` interface:
+* `MaxTimeAttribute`
+* `RepeatAttribute`
+* `RetryAttribute`
+
+The `IWrapTestMethod`interface is not currently used by any NUnit attributes.
