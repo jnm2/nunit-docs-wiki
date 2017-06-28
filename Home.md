@@ -7,7 +7,7 @@ This wiki contains the documentation for all active NUnit projects as well as de
  * [[Test Adapter|Visual-Studio-Test-Adapter]] covers the NUnit Visual Studio test adapters for both NUnit V2 and V3.
  * [[Test Generator|Visual-Studio-Test-Generator]] covers the NUnit Visual Studio test generator for both NUnit V2 and V3.
 
-#### Related Projects
+#### Related Project Links
  * [NUnit Gui](https://github.com/CharliePoole/nunit-gui/wiki) covers the new NUnit 3 GUI.
  * [Project Editor](http://github.com/CharliePoole/nunit-project-editor/wiki/Project-Editor) covers the Windows program for creating and editing `.nunit` project files.
 
