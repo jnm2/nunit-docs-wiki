@@ -6,8 +6,8 @@
 * **[[VS Test Generator|Visual-Studio-Test-Generator]]**
 
 ### Related Projects
-* **[[NUnit Gui]]**
-* **[[NUnit Project Editor]]**
+* **[NUnit Gui](https://github.com/CharliePoole/nunit-gui/wiki)**
+* **[NUnit Project Editor](https://github.com/CharliePoole/nunit-project-editor/wiki/Project-Editor)**
 
 ### Developer Info
 
