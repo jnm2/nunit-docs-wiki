@@ -1,16 +1,15 @@
-### User Docs
+### NUnit Project Docs
 
 * **[[NUnit|NUnit-Documentation]]**
 * **[[NUnit Xamarin Runners|NUnit-Xamarin-Runners]]**
-* **Visual Studio**
-  * **[[Test Adapter|Visual-Studio-Test-Adapter]]**
-  * **[[Test Generator|Visual-Studio-Test-Generator]]**
+* **[[VS Test Adapter|Visual-Studio-Test-Adapter]]**
+* **[[VS Test Generator|Visual-Studio-Test-Generator]]**
 
-### Related Applications
+### Related Projects
 * **[[NUnit Gui]]**
-* **[[Project Editor]]**
+* **[[NUnit Project Editor]]**
 
-### Developer Docs
+### Developer Info
 
 * **[[Team Practices]]**
 * **[[Specifications]]**
