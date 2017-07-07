@@ -4,8 +4,8 @@ This page lists all the constraints available in NUnit.
 
 #### Alphabetical List of Constraints
 
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      | 
+-------------------------------------|
 [[AllItemsConstraint]]               |
 [[AndConstraint]]                    |
 [[AssignableFromConstraint]]         |
@@ -61,8 +61,8 @@ Constraint Name                      | Purpose
 
 ##### Collection Constraints
   
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      | 
+-------------------------------------|
 [[AllItemsConstraint]]               |
 [[CollectionContainsConstraint]]     |
 [[CollectionEquivalentConstraint]]   |
@@ -76,8 +76,8 @@ Constraint Name                      | Purpose
 [[UniqueItemsConstraint]]            |
 
 ##### Comparison Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      |
+-------------------------------------|
 [[GreaterThanConstraint]]            |
 [[GreaterThanOrEqualConstraint]]     |
 [[LessThanConstraint]]               |
@@ -85,15 +85,15 @@ Constraint Name                      | Purpose
 [[RangeConstraint]]                  |
 
 ##### Compound Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      |
+-------------------------------------|
 [[AndConstraint]]                    |
 [[NotConstraint]]                    |
 [[OrConstraint]]                     |
 
 ##### Condition Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      | 
+-------------------------------------|
 [[EmptyConstraint]]                  |
 [[FalseConstraint]]                  |
 [[NaNConstraint]]                    |
@@ -101,8 +101,8 @@ Constraint Name                      | Purpose
 [[TrueConstraint]]                   |
 
 ##### File and Directory Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      |
+-------------------------------------|
 [[EmptyDirectoryConstraint]]         |
 [[FileOrDirectoryExistsConstraint]]  |
 [[SamePathConstraint]]               |
@@ -110,8 +110,8 @@ Constraint Name                      | Purpose
 [[SubPathConstraint]]                |
 
 ##### String Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      |
+-------------------------------------|
 [[EmptyStringConstraint]]            |
 [[EndsWithConstraint]]               |
 [[RegexConstraint]]                  |
@@ -119,8 +119,8 @@ Constraint Name                      | Purpose
 [[SubstringConstraint]]              |
 
 ##### Type Constraints
-Constraint Name                      | Purpose
--------------------------------------|--------
+Constraint Name                      |
+-------------------------------------|
 [[AssignableFromConstraint]]         |
 [[AssignableToConstraint]]           |
 [[ExactTypeConstraint]]              |
