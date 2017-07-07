@@ -268,4 +268,4 @@ and which are normal constructor parameters.
            Assert.That(t2, Is.TypeOf<T2>());
        }
    }
-```
+   ```
