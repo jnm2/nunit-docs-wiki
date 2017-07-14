@@ -144,7 +144,7 @@ switch (name)
 
 Methods and Properties should be separated by one blank line. Private member variables should have no blank lines.
 
-Blocks of related code should have not have any blank lines. Blank lines can be used to visually group sections of code, but their should never be multiple blank lines.
+Blocks of related code should have not have any blank lines. Blank lines can be used to visually group sections of code, but there should never be multiple blank lines.
 
 If brackets are not used on a control flow statement with a single line, a blank line should follow.
 
