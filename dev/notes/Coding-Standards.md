@@ -163,7 +163,7 @@ public static double GetAttribute(XmlNode result, string name, double defaultVal
 
 ### Naming
 
-The following table shows our naming standard for various types of names. All names should clear enough that somebody unfamiliar with the code can learn about the code by reading them, rather than having to understand the code in order to figure out the names. We don't use any form of "Hungarian" notation.
+The following table shows our naming standard for various types of names. All names should be clear enough that somebody unfamiliar with the code can learn about the code by reading them, rather than having to understand the code in order to figure out the names. We don't use any form of "Hungarian" notation.
 
 <table>
 <tr><th>Named Item</th><th>Naming Standard</th><th>Notes</th></tr>
