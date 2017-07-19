@@ -1,3 +1,23 @@
+#### NUnit3 Test Adapter for Visual Studio - Version 3.8 - July 19, 2017
+
+##### Features
+
+ * The adapter now support running .net core projects. See [this post](http://www.alteridem.net/2017/05/04/test-net-core-nunit-vs2017/) for details.  Note: Only supported by the nuget adapter, not the vsix. 
+ * The adapter now uses version 3.7 of the engine to run tests ([360](https://github.com/nunit/nunit3-vs-adapter/issues/360))
+ * Attachments can be added to tests ([358](https://github.com/nunit/nunit3-vs-adapter/issues/358))
+ * Prepared for new  upcoming Test Explorer functionality, as documented in this [RFC](https://github.com/Microsoft/vstest-docs/blob/master/RFCs/0010-Source-Information-For-Discovered-Tests.md)  ([351](https://github.com/nunit/nunit3-vs-adapter/issues/351))
+
+
+##### Resolved Issues
+
+* [298](https://github.com/nunit/nunit3-vs-adapter/issues/298) $RANDOM_SEED$ is appearing in non-test project build output
+* [259](https://github.com/nunit/nunit3-vs-adapter/issues/259) An exception occurred while invoking executor 'executor://nunit3testexecutor/'
+* [314](https://github.com/nunit/nunit3-vs-adapter/issues/314) Any TestFixture deriving from a base-class which defines unit-tests will fail when the base-class is from another class-library
+* [231](https://github.com/nunit/nunit3-vs-adapter/issues/231) Improved message on failed loading. See also [PR 309](https://github.com/nunit/nunit3-vs-adapter/pull/309)
+* [338](https://github.com/nunit/nunit3-vs-adapter/issues/338) Unhandled Exception when running through vstest.console.exe /listtests
+
+
+
 #### NUnit3 Test Adapter for Visual Studio - Version 3.7 - January 25, 2017
 
 ##### Features
