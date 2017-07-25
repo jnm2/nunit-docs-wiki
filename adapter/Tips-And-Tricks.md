@@ -1,4 +1,4 @@
-> ﻿####NOTE:
+> ﻿NOTE:
 > As of the 3.0 final release, these registry settings are no longer recognized. Instead, use settings in the `.runsettings` file. 
 
 
