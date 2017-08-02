@@ -96,6 +96,20 @@ Adds a formatter for values based on some criterion, such as the Type of the val
 
 Both `ValueFormatter` and `ValueFormatterFactory` are delegates. `ValueFormatter` takes a single object as an argument and returns its string representation. The `AddFormatter` overload that takes a ValueFormatter is intended for use in most cases that arise.
 
+#### AddTestAttachment (3.7+)
+
+Attaches a file, with optional description, to the current test.
+
+```C#
+    AddTestAttachment(string filePath, string description = null);
+```
+
+The file will be attached to the test result in the xml report. Test runners, such as the NUnit 3 VS Adapter, may also present the file to the user.
+
+Notes:
+1. The file must exist at the time of attachment.
+1. File paths will be resolved as fully rooted paths, relative to `TestContext.CurrentContext.WorkDirectory`, which can be set by the user.
+
 ### Properties of the CurrentContext
 
 #### Test
