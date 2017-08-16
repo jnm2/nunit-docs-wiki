@@ -8,6 +8,7 @@
   * **Getting Started**
     * [[Installation]]
     * [[Upgrading]]
+    * [[.NET Core|Net-Core]]
     * [[Samples]]
     * [[Breaking Changes]]
   * **Writing Tests**
