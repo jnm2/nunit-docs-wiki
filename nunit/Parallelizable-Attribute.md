@@ -2,8 +2,6 @@ This attribute is used to indicate whether the test and/or its descendants may b
 
 The constructor takes an optional **ParallelScope** enumeration argument (see below), which defaults to **ParallelScope.Self**. The attribute may be used at the assembly, class or method level and the word "test" in the rest of this description refers to the suite or test case that corresponds to the item on which the attribute appears.
 
-The Scope may also be specified using the named property **Scope=**.
-
 #### ParallelScope Enumeration
 
 This is a **[Flags]** enumeration used to specify which tests may run in parallel. It applies to the test upon which it appears and any subordinate tests. It is defined as follows:
