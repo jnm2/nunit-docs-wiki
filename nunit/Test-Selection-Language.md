@@ -18,12 +18,14 @@ Simple Expressions are essentially comparisons, consisting of a key word or prop
   method == SomeMethodName
   cat != Slow
   Priority == High
+  namespace == My.Name.Space
 ```
 
 The following key words are recognized on the left-hand side of the comparison:
   * `test` - The fully qualified test name as assigned by NUnit, e.g. My.Name.Space.TestFixture.TestMethod(5)
   * `name` - The test name assigned by NUnit, e.g. TestMethod(5)
   * `class` - The fully qualified name of the class containing the test, e.g. My.Name.Space.TestFixture
+  * `namespace` - The fully qualified name of the namespace containing the test(s), e.g. My.Name.Space
   * `method` - The name of the method, e.g. TestMethod
   * `cat` - A category assigned to the test, e.g. SmokeTests
 
@@ -49,6 +51,11 @@ For matching regular expressions, NUnit users .NET's `Regex.IsMatch` method. For
 
 For specifying qualified names, the same format as used for reflection should be used.   
 For example `My.Name.Space.TestFixture+NestedFixture` can be used to select a nested fixture. For detailed information see: [Specifying Special Characters](https://msdn.microsoft.com/en-us/library/yfsftwz6(v=vs.110).aspx#Anchor_1)
+
+#### Filtering By Namespace
+Using the `namespace` keyword with `==` will _not_ match on sub-namespaces. For example by using the filter `namespace == My.Name.Space`, a test `My.Name.Space.MyFixture` will be selected but a test `My.Name.Space.SubNamespace.MyFixture` will not.
+
+In order to inclusively select namespaces, a regular expression can be used. For example to match _all_ namespaces under the root namespace `My.Name.Space`, the following filter can be used `namespace =~ ^My\.Name\.Space($|\.)`
 
 #### Filtering Based on Properties
 
