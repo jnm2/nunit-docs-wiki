@@ -53,7 +53,7 @@ For specifying qualified names, the same format as used for reflection should be
 For example `My.Name.Space.TestFixture+NestedFixture` can be used to select a nested fixture. For detailed information see: [Specifying Special Characters](https://msdn.microsoft.com/en-us/library/yfsftwz6(v=vs.110).aspx#Anchor_1)
 
 #### Filtering By Namespace
-Using the `namespace` keyword with `==` will _not_ match on sub-namespaces. For example by using the filter `namespace == My.Name.Space`, a test `My.Name.Space.MyFixture` will be selected but a test `My.Name.Space.SubNamespace.MyFixture` will not.
+Using the `namespace` keyword with `==` will _not_ match on sub-namespaces. For example by using the filter `namespace == My.Name.Space`, a test `My.Name.Space.MyFixture` will be selected but a test `My.Name.Space.SubNamespace.MyFixture` will not, since its namespace is not __equal__ to the namespace provided.
 
 In order to inclusively select namespaces, a regular expression can be used. For example to match _all_ namespaces under the root namespace `My.Name.Space`, the following filter can be used `namespace =~ ^My\.Name\.Space($|\.)`
 
