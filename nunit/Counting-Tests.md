@@ -6,21 +6,21 @@ Counting tests sounds simple but there are a few issues. This page documents how
 
 3. Tests are categorized in one of four statuses: Passed, Failed, Inconclusive and Skipped.
 
-  3.1. Passed tests currently only have one ResultState, Success.
+    1. Passed tests currently only have one ResultState, Success.
 
-  3.2. Failed tests are caused by any of the following:
-     * Failure of an assertion (ResultState.Failure)
-     * An unexpected exception (ResultState.Error)
-     * An invalid test (ResultState.NotRunnable)
-     * User cancellation (ResultState.Cancelled)
+    2. Failed tests are caused by any of the following:
+        * Failure of an assertion (ResultState.Failure)
+        * An unexpected exception (ResultState.Error)
+        * An invalid test (ResultState.NotRunnable)
+        * User cancellation (ResultState.Cancelled)
 
-  3.3. Inconclusive tests currently only have one ResultState, Inconclusive
+    3. Inconclusive tests currently only have one ResultState, Inconclusive
 
-  3.4. Skipped tests are caused by
-     * Ignoring the test (ResultState.Ignored)
-     * The test was marked explicit (ResultState.Skipped)
-       * Note: this may change to ResultState.Explicit in the future
-     * A Platform, Culture or UICulture attribute test failed (ResultState.Skipped)
+    4. Skipped tests are caused by
+        * Ignoring the test (ResultState.Ignored)
+        * The test was marked explicit (ResultState.Skipped)
+        * Note: this may change to ResultState.Explicit in the future
+        * A Platform, Culture or UICulture attribute test failed (ResultState.Skipped)
 
 4. Users may define new ResultStates in any of the four statuses.
 
