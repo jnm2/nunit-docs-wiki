@@ -18,7 +18,7 @@
     * [[Assumptions]]
     * [[Warnings]]
     * [[Constraints]]
-    * [[SetUp-and-TearDown]]
+    * [[SetUp and TearDown]]
     * [[TestCaseData]]
     * [[TestFixtureData]]
     * [[TestContext]]
