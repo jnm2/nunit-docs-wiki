@@ -1,4 +1,4 @@
-The **OrderAttribute** may be placed on a test method to specify the order in which tests are run. Ordering is given by the required `order` argument to the attribute, an `int`.
+The **OrderAttribute** may be placed on a test method or fixture to specify the order in which tests are run. Ordering is given by the required `order` argument to the attribute, an `int`.
 
 #### Example
 
