@@ -20,15 +20,15 @@ For NUnit 3.0 we standardized the use of attributes for setup and teardown and r
 
 #### Attribute Usage
 
-  * **SetUpAttribute** is now used exclusively for per-test setup.
+  * [SetUpAttribute](../SetUp-Attribute) is now used exclusively for per-test setup.
 
-  * **TearDownAttribute** is now used exclusively for per-test teardown. 
+  * [TearDownAttribute](../TearDown-Attribute) is now used exclusively for per-test teardown. 
 
-  * **OneTimeSetUpAttribute** is used for one-time setup per test-run. If you run _n_ tests, this event will only occur once.
+  * [OneTimeSetUpAttribute](../OneTimeSetUp-Attribute) is used for one-time setup per test-run. If you run _n_ tests, this event will only occur once.
 
-  * **OneTimeTearDownAttribute** is used for one-time teardown per test-run. If you run _n_ tests, this event will only occur once
+  * [OneTimeTearDownAttribute](../OneTimeTearDown-Attribute) is used for one-time teardown per test-run. If you run _n_ tests, this event will only occur once
 
-  * **SetUpFixtureAttribute** continues to be used as at before, but with changed method attributes.
+  * [SetUpFixtureAttribute](../SetUpFixture-Attribute) continues to be used as at before, but with changed method attributes.
 
 #### Attribute Usage by Fixture Type
 
