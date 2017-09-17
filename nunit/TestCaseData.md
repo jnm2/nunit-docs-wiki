@@ -1,7 +1,4 @@
-Although any object implementing **ITestCaseData** may be used to
-provide extended test case information, NUnit provides the **TestCaseData** 
-class for this purpose. The following example returns **TestCaseData** 
-instances from a data source in a separately defined class.
+The `TestCaseData` class provides extended test case information for a parameterized test, although any object deriving from `TestCaseParameters` may be used. Unlike NUnit 2, you cannot implement `ITestCaseData`, you must derive from `TestCaseParameters`. 
 
 ```C#
 [TestFixture]
