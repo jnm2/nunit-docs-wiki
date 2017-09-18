@@ -111,8 +111,8 @@ Without the V2 driver, only version 3.0 and higher tests may be run.
 <tr><th>--noresult</th>
     <td>Don't save any test results.</td></tr>
     
-<tr><th>--labels=VALUE</th>
-    <td>Specify whether to write test case names to the output. Values: Off, On, All</td></tr>
+<tr><th>--trace=LEVEL</th>
+   <td>Set internal trace LEVEL. Values: Off, Error, Warning, Info, Verbose (Debug)</td></tr>
 
 <tr><th>--labels=VALUE</th>
     <td>Specify whether to write test case names to the output. Values: Off, On, All</td></tr>
