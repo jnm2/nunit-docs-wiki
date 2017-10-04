@@ -4,6 +4,10 @@ When used at the assembly level, its only effect is that execution begins on the
 
 When used on a test fixture or method, that test will be queued on the non-parallel queue and will not run while other tests marked as Parallelizable are being run.
 
+#### Platform Support
+
+Parallel execution is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
+
 #### See also...
  * [[Parallelizable Attribute]]
  * [[LevelOfParallelism Attribute]]
