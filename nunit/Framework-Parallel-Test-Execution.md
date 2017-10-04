@@ -2,6 +2,11 @@ The NUnit 3.0 framework can run tests in parallel within an assembly. This is a 
 
 By default, no parallel execution takes place. Attributes are used to indicate which tests may run in parallel and how they relate to other tests.
 
+
+#### Platform Support
+
+Parallel execution is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
+
 #### ParallelizableAttribute
 
 This attribute is used to indicate whether the test and/or its descendants may be run in parallel with other tests. The constructor takes an optional `ParallelScope` enumeration argument (see below), which defaults to `ParallelScope.Self`. The attribute may be used at the assembly, class or method level and the word "test" in the rest of this description refers to the suite or test case that corresponds to the item on which the attribute appears.
@@ -64,7 +69,3 @@ For efficiency, each queue is created when the first test is added to it. At the
 Whenever a non-parallel fixture begins execution, an entirely new set of queues is created so that the child tests of that fixture may be run without any conflict from other tests that are already in the main set of queues.
 
 If the command line specifies zero workers, all use of the dispatcher and its queues is bypassed and tests are run sequentially on a single thread.
-
-#### Platform Support
-
-Parallel execution is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
