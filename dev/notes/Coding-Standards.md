@@ -171,6 +171,7 @@ The following table shows our naming standard for various types of names. All na
 <tr><td>Types</td><td>PascalCasing</td><td>For framework types with a special C# name, we use the C# name. So... <code>int</code> rather than <code>System.Int32</code>.</td></tr>
 <tr><td>Methods</td><td>PascalCasing</td><td></td></tr>
 <tr><td>Properties</td><td>PascalCasing</td><td></td></tr>
+<tr><td>Events</td><td>PascalCasing</td><td></td></tr>
 <tr><td>Public Fields</td><td>PascalCasing</td><td>But these should be avoided</td></tr>
 <tr><td>Private, Protected and Internal Fields</td><td>_camelCasing</td><td>Do not use <code>this</code> with fields designated by a leading underscore. **Note that our old standard did not use the underscore.** Keep each file to the same standard, renaming when changes are made.</td></tr>
 <tr><td>Parameters</td><td>camelCasing</td><td></td></tr>
