@@ -208,10 +208,9 @@ Assert.That(list1, Is.EqualTo(list2).Using(myComparer));
 	may use a **TimeSpan** as a tolerance. Beginning with NUnit 2.4.2, 
 	non-float numeric comparisons may also specify a tolerance.
 	
- 3. Beginning with NUnit 2.4.4, float and double comparisons for which no
-	tolerance is specified use a default, use the value of
-	**GlobalSettings.DefaultFloatingPointTolerance**. If this is not
-	set, a tolerance of 0.0d is used.
+ 3. Float and double comparisons for which no
+	tolerance is specified use a default value, which can be specified with **DefaultFloatingPointToleranceAttribute**. If this is not
+	in place, a tolerance of 0.0d is used. (Prior to NUnit 3.7, default tolerance was instead set via `GlobalSettings.DefaultFloatingPointTolerance`.)
 	
  4. Prior to NUnit 2.2.3, comparison of two NaN values would always fail,
     as specified by IEEE floating point standards. The new behavior, was
