@@ -1,3 +1,28 @@
+#### NUnit3 Test Adapter for Visual Studio - Version 3.9 - October 29, 2017
+
+##### Change in supported versions
+
+This version supports Visual Studio from version 2012, Update 1 and upwards, and all subsequent versions in 2013, 2015 and 2017.  Visual Studio 2012 RTM is then no longer supported.
+
+
+##### Features
+
+
+* [390](https://github.com/nunit/nunit3-vs-adapter/issues/390) Pass DisableAppDomain and DisableParallelization settings to the Engine
+* [392](https://github.com/nunit/nunit3-vs-adapter/issues/392) Improve performance of discovery (Thanks to [Navin (Microsoft)](https://github.com/navin22) for [PR 393](https://github.com/nunit/nunit3-vs-adapter/pull/393), [PR 406](https://github.com/nunit/nunit3-vs-adapter/pull/406) )
+* [394](https://github.com/nunit/nunit3-vs-adapter/issues/394) Update to use NUnit 3.8.1 
+
+
+
+##### Resolved Issues
+
+
+* [372](https://github.com/nunit/nunit3-vs-adapter/issues/372) netcoreapp + CultureInfo.CurrentCulture = bad time  (Thanks to [Aaron Housh (Dispersia)](https://github.com/Dispersia)  for [PR 380](https://github.com/nunit/nunit3-vs-adapter/pull/380) )
+* [386](https://github.com/nunit/nunit3-vs-adapter/issues/386) DateTime.Parse issue during test discovery with certain cultures  (Also fixed by  [PR 380](https://github.com/nunit/nunit3-vs-adapter/pull/380) )
+* [302](https://github.com/nunit/nunit3-vs-adapter/issues/302) BadImageFormatException building solution with unmanaged projects
+
+
+
 #### NUnit3 Test Adapter for Visual Studio - Version 3.8 - July 19, 2017
 
 ##### Features
