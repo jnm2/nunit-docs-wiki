@@ -10,7 +10,7 @@ This version supports Visual Studio from version 2012, Update 1 and upwards, and
 
 * [390](https://github.com/nunit/nunit3-vs-adapter/issues/390) Pass DisableAppDomain and DisableParallelization settings to the Engine
 * [392](https://github.com/nunit/nunit3-vs-adapter/issues/392) Improve performance of discovery (Thanks to [Navin (Microsoft)](https://github.com/navin22) for [PR 393](https://github.com/nunit/nunit3-vs-adapter/pull/393), [PR 406](https://github.com/nunit/nunit3-vs-adapter/pull/406) )
-* [394](https://github.com/nunit/nunit3-vs-adapter/issues/394) Update to use NUnit 3.8.1 
+* [394](https://github.com/nunit/nunit3-vs-adapter/issues/394) The adapter tests are updated to use NUnit 3.8.1
 
 
 
