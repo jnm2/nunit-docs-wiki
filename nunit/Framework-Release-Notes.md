@@ -54,6 +54,7 @@ This release addresses numerous parallelization issues that were introduced in 3
  * [2533](https://github.com/nunit/nunit/issues/2533) Matches<T>(Predicate<T>) throws ArgumentException or Fails when actual is null
  * [2534](https://github.com/nunit/nunit/issues/2534) SetUpFixture causes NUnit to lock with Apartment( STA )
  * [2551](https://github.com/nunit/nunit/issues/2551) CollectionItemsEqualConstraint is missing Using(Func<T, T, bool>)
+ * [2554](https://github.com/nunit/nunit/issues/2554) Made TestFixtureData.SetName internal for 3.9
 
 ### NUnit 3.8.1 - August 28, 2017
 
