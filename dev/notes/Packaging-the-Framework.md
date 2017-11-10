@@ -7,8 +7,8 @@ Software Prerequisites
 
 Various software combinations and environments may be used to build NUnit components. The following software is what we have used and tested for building everything and creating the release packages. We'll add options to the list as we find them.
 
-1. Visual Studio 2012, 2013 or 2015 with the NuGet Package manager.
-2. Visual Studio 2008 (for the compact framework build).
+1. Visual Studio 2017 with the NuGet Package manager.
+2. .NET Core 1.1.4
 
 Preparing for Release
 ---------------------
