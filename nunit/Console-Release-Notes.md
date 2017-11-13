@@ -6,35 +6,35 @@
  * Fixes several issues that caused the runner to exit with a SocketException
 #### Issues Resolved
 
- * [10](https://github.com/nunit-console/nunit-console/issues/10) Create a .NET Standard version of the Engine
- * [11](https://github.com/nunit-console/nunit-console/issues/11) insufficient info on driver reflection exception
- * [12](https://github.com/nunit-console/nunit-console/issues/12) Upgrade Cake build to latest version
- * [24](https://github.com/nunit-console/nunit-console/issues/24) Update --labels switch with option to show real-time pass/fail results in console runner
- * [31](https://github.com/nunit-console/nunit-console/issues/31) Nunit 3.4.1 NUnit.Engine.Runners
- * [72](https://github.com/nunit-console/nunit-console/issues/72) TestContext.Progress.Write writes new line
- * [82](https://github.com/nunit-console/nunit-console/issues/82) Remove unused repository paths from repositories.config
- * [99](https://github.com/nunit-console/nunit-console/issues/99) Remove unused --verbose and --full command line options
- * [126](https://github.com/nunit-console/nunit-console/issues/126) Resolve differences between NUnit Console and NUnitLite implementations of @filename
- * [162](https://github.com/nunit-console/nunit-console/issues/162) Add namespace keyword to Test Selection Language
- * [171](https://github.com/nunit-console/nunit-console/issues/171) Socket Exception when stopping Remote Agent
- * [172](https://github.com/nunit-console/nunit-console/issues/172) Limit Language level to C#6
- * [193](https://github.com/nunit-console/nunit-console/issues/193) Settings are stored with invariant culture but retrieved with CurrentCulture
- * [194](https://github.com/nunit-console/nunit-console/issues/194) Better logging or error handling in SettingsStore.SaveSettings
- * [196](https://github.com/nunit-console/nunit-console/issues/196) Allow comments in @FILE files
- * [200](https://github.com/nunit-console/nunit-console/issues/200) Remove obsolete warnings from build script
- * [206](https://github.com/nunit-console/nunit-console/issues/206) Remove reference to removed noxml option
- * [207](https://github.com/nunit-console/nunit-console/issues/207)  Create Chocolatey package(s) for the console
- * [208](https://github.com/nunit-console/nunit-console/issues/208) Explore flags test update
- * [213](https://github.com/nunit-console/nunit-console/issues/213) Master build failing after merging .NET Standard Engine
- * [216](https://github.com/nunit-console/nunit-console/issues/216) Compiling mock-assembly in Visual Studio 2017 fails
- * [217](https://github.com/nunit-console/nunit-console/issues/217) NUnit .NET Standard NuGet package missing some values
- * [219](https://github.com/nunit-console/nunit-console/issues/219) Runtime.Remoting.RemotingException in NUnit.Engine.Runners.ProcessRunner.Dispose
- * [221](https://github.com/nunit-console/nunit-console/issues/221) Added missing nuget package info
- * [222](https://github.com/nunit-console/nunit-console/issues/222) Improve missing agent error message
- * [225](https://github.com/nunit-console/nunit-console/issues/225) SocketException thrown by nunit3-console.exe --explore option
- * [248](https://github.com/nunit-console/nunit-console/issues/248) Agent TestEngine contains duplicate services
- * [252](https://github.com/nunit-console/nunit-console/issues/252) Console crashes when specifying both format and transform for result
- * [254](https://github.com/nunit-console/nunit-console/issues/254) Correct misprint ".con" -> ".com"
+ * [10](https://github.com/nunit/nunit-console/issues/10) Create a .NET Standard version of the Engine
+ * [11](https://github.com/nunit/nunit-console/issues/11) insufficient info on driver reflection exception
+ * [12](https://github.com/nunit/nunit-console/issues/12) Upgrade Cake build to latest version
+ * [24](https://github.com/nunit/nunit-console/issues/24) Update --labels switch with option to show real-time pass/fail results in console runner
+ * [31](https://github.com/nunit/nunit-console/issues/31) Nunit 3.4.1 NUnit.Engine.Runners
+ * [72](https://github.com/nunit/nunit-console/issues/72) TestContext.Progress.Write writes new line
+ * [82](https://github.com/nunit/nunit-console/issues/82) Remove unused repository paths from repositories.config
+ * [99](https://github.com/nunit/nunit-console/issues/99) Remove unused --verbose and --full command line options
+ * [126](https://github.com/nunit/nunit-console/issues/126) Resolve differences between NUnit Console and NUnitLite implementations of @filename
+ * [162](https://github.com/nunit/nunit-console/issues/162) Add namespace keyword to Test Selection Language
+ * [171](https://github.com/nunit/nunit-console/issues/171) Socket Exception when stopping Remote Agent
+ * [172](https://github.com/nunit/nunit-console/issues/172) Limit Language level to C#6
+ * [193](https://github.com/nunit/nunit-console/issues/193) Settings are stored with invariant culture but retrieved with CurrentCulture
+ * [194](https://github.com/nunit/nunit-console/issues/194) Better logging or error handling in SettingsStore.SaveSettings
+ * [196](https://github.com/nunit/nunit-console/issues/196) Allow comments in @FILE files
+ * [200](https://github.com/nunit/nunit-console/issues/200) Remove obsolete warnings from build script
+ * [206](https://github.com/nunit/nunit-console/issues/206) Remove reference to removed noxml option
+ * [207](https://github.com/nunit/nunit-console/issues/207)  Create Chocolatey package(s) for the console
+ * [208](https://github.com/nunit/nunit-console/issues/208) Explore flags test update
+ * [213](https://github.com/nunit/nunit-console/issues/213) Master build failing after merging .NET Standard Engine
+ * [216](https://github.com/nunit/nunit-console/issues/216) Compiling mock-assembly in Visual Studio 2017 fails
+ * [217](https://github.com/nunit/nunit-console/issues/217) NUnit .NET Standard NuGet package missing some values
+ * [219](https://github.com/nunit/nunit-console/issues/219) Runtime.Remoting.RemotingException in NUnit.Engine.Runners.ProcessRunner.Dispose
+ * [221](https://github.com/nunit/nunit-console/issues/221) Added missing nuget package info
+ * [222](https://github.com/nunit/nunit-console/issues/222) Improve missing agent error message
+ * [225](https://github.com/nunit/nunit-console/issues/225) SocketException thrown by nunit3-console.exe --explore option
+ * [248](https://github.com/nunit/nunit-console/issues/248) Agent TestEngine contains duplicate services
+ * [252](https://github.com/nunit/nunit-console/issues/252) Console crashes when specifying both format and transform for result
+ * [254](https://github.com/nunit/nunit-console/issues/254) Correct misprint ".con" -> ".com"
 
 ### NUnit Console 3.6.1 - March 6, 2017
 
