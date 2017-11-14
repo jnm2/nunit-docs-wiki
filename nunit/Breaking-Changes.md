@@ -49,7 +49,7 @@ Other breaking changes are grouped in the following tables.
 | Is.StringMatching                | Deprecated. Use `Does.Match` |
 | NullOrEmptyStringConstraint      | No longer supported. See `Assert.IsNullOrEmpty` above   |
 | SubDirectoryContainsConstraint   | No longer supported. Various alternatives are available.    |
-| Text.All                         | No longer supported. Use `Does.All` |
+| Text.All                         | No longer supported. Use `Has.All` or `Is.All` |
 | Text.Contains                    | No longer supported. Use `Does.Contain` or `Contains.Substring` |
 | Text.DoesNotContain              | No longer supported. Use `Does.Not.Contain` |
 | Text.StartsWith                  | No longer supported. Use `Does.StartWith` |
