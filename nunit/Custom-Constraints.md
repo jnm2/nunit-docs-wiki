@@ -185,7 +185,7 @@ public static class CustomConstraintExtensions
 ```
     
 To fully utilize your custom constraint the same way built-in constraints are used, you'll
-need to implement three additional classes (which can cover all your constraints, not
+need to implement two additional classes (which can cover all your constraints, not
 for each custom constraint).
 
 1. Provide a static class patterned after NUnit's `Is` class, with properties
