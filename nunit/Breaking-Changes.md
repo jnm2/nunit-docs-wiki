@@ -1,3 +1,7 @@
+## NUnit 3.7
+
+* The AssertionHelper class has now been deprecated. Users can use the [NUnit.StaticExpect](https://github.com/fluffynuts/NUnit.StaticExpect) library as a near drop-in replacement.
+
 ## NUnit 3.4
 
 Breaking changes introduced in NUnit 3.4

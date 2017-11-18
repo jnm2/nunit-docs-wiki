@@ -26,7 +26,6 @@ string phrase = "Make your tests fail before passing!"
 
 Assert.That(phrase, Does.EndWith("!"));
 Assert.That(phrase, Does.EndWith("PASSING!").IgnoreCase);
-Expect(phrase, EndsWith("!"));
 ```
 
 #### Notes

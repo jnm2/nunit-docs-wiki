@@ -230,21 +230,3 @@ for each custom constraint).
     }    
     ```
     
-3. Optionally, provide your own base class that inherits from `AssertionHelper`* that additionally
-   provides helpers for your custom constraints.
-   
-   ```C#
-   Expect(actual, Custom(expected));
-   ```
-   
-    ```C#
-    public class CustomHelper : AssertionHelper
-    {
-        public CustomConstraint Custom(object expected)
-        {
-            return new CustomConstraint(expected);
-        }
-    }
-    ```
-   
-   \* Note that AssertionHelper is currently being evaluated for possible removal from the NUnit framework.

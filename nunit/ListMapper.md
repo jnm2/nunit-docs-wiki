@@ -17,8 +17,5 @@ Assert.That(List.Map(strings).Property("Length"),
 	   
 Assert.That(new ListMapper(strings).Property("Length"),
        Is.EqualTo(lengths));
-
-// Assuming inheritance from AssertionHelper
-Expect(Map(strings).Property("Length"), EqualTo(lengths));
 ```
 
