@@ -10,7 +10,7 @@ The following options are available:
 
 |Key|Type|Options| Default|
 |---|----|-------|--------------|
-|InternalTraceLevel| string |  Off, Error, Warning, Info, Verbose,  Debug| ?|
+|InternalTraceLevel| string |  Off, Error, Warning, Info, Verbose,  Debug| Nothing => Off|
 |NumberOfTestWorkers| int | nr of workers | -1|
 |ShadowCopyFiles| bool |True, False | False|
 |Verbosity| int | 0-5 ? | 0|
@@ -23,7 +23,40 @@ The following options are available:
 See https://github.com/nunit/nunit3-vs-adapter/blob/8a9b8a38b7f808a4a78598542ddaf557950c6790/demo/demo.runsettings
 
 ### NUnit .runsettings implementation
+
 https://github.com/nunit/nunit3-vs-adapter/blob/master/src/NUnitTestAdapter/AdapterSettings.cs#L143
+
+
+### Details
+
+#### InternalTraceLevel
+This setting is a diagnostic setting forwarded to NUnit, and not used by the adapter itself.  For further information see the [NUnit Tracelevel documentation](https://github.com/nunit/docs/wiki/Internal-Trace)
+
+#### NumberOfTestWorkers
+This  setting is sent to NUnit to determine how  [parallelization](https://github.com/nunit/docs/wiki/Parallelizable-Attribute) should be performed.  
+
+#### ShadowCopyFiles
+This setting is sent to NUnit to enable/disable shadow-copying. 
+
+#### Verbosity
+This controls the outputs from the adapter to the Visual Studio Output/Tests window.
+A higher number includes the information from the lower numbers.
+It now has the following actual levels:
+
+0 : Default, lowest verbosity
+
+1-3: Some more information from setting are output (in particular regarding parallelization)
+
+4: Outputs the values from the  runsettings it has discovered.
+
+5: Outputs all debug statements in the adapter
+
+
+
+#### UseVsKeepEngineRunning
+This setting is used by the adapter to signal to the VSTest.Execution engine to keep running after the tests have finished running.  This can speed up execution of subsequent test runs, as the execution engine already is loaded, but running the risks of either holding onto test assemblies and having some tests not properly cleaned out.   The settings is the same as using the Visual Studio  Test/Test Settings/Keep Test Execution Engine running. 
+
+
 
 
 ## NUnit 2.x
