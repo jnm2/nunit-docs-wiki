@@ -2,7 +2,6 @@
 
 <table>
 <tr><td>[[Issue Tracking]]</td><td>How we track bugs, enhancements and features on GitHub.</td></tr>
-<tr><td>[[Pull Requests]]</td><td>How we use Pull Requests on GitHub to manage what gets into master.</td></tr>
 <tr><td>[[Contributions]]</td><td>Explains how to review and merge code submitted by other developers.</td></tr>
 </table>
 
@@ -11,7 +10,6 @@
 <tr><td>Building and testing</td><td>See BUILD.md in each repository.</td></tr>
 <tr><td>[[Coding Standards]]</td><td>Describes coding standards used in NUnit.</td></tr>
 <tr><td>[[Best practices for XML documentation]]</td><td>Guidelines to consider when dealing with public APIs.</td></tr>
-<tr><td>[[Standard Defines]]</td><td>Lists standard defines used in building the NUnit projects.</td></tr>
 <tr><td>[[Adding New Projects]]</td><td>How to add new projects to the NUnit solutions.</td></tr>
 <tr><td>[[Packaging the Framework]]</td><td>How to create the packages for a new NUnit Framework release.</td></tr>
 <tr><td>[[Packaging the Console and Engine]]</td><td>How to create the packages for a new NUnit Console and Engine release.</td></tr>
