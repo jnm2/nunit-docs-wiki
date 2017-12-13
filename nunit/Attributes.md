@@ -9,8 +9,8 @@ This table lists all the attributes supported by NUnit.
 | [[Category Attribute]]            | Specifies one or more categories for the test. |
 | [[Combinatorial Attribute]]       | Generates test cases for all possible combinations of the values provided. |
 | [[Culture Attribute]]             | Specifies cultures for which a test or fixture should be run. |
-| [[Datapoint Attribute]]           | Provides data for [[Theories|Theory-Attribute]]. |
-| [[DatapointSource Attribute]]     | Provides data for [[Theories|Theory-Attribute]]. |
+| [[Datapoint Attribute]]           | Provides data for [Theories](../Theory-Attribute). |
+| [[DatapointSource Attribute]]     | Provides data for [Theories](../Theory-Attribute). |
 | [[Description Attribute]]         | Applies descriptive text to a Test, TestFixture or Assembly. |
 | [[Explicit Attribute]]            | Indicates that a test should be skipped unless explicitly run. |
 | [[Ignore Attribute]]              | Indicates that a test shouldn't be run for some reason. |
