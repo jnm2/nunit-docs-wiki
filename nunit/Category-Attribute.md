@@ -62,9 +62,7 @@ system might make use of the attribute to provide special reports.
 ```C#
 [AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
 public class CriticalAttribute : CategoryAttribute 
-{ 
-    public CriticalAttribute() : base("Critical") { }
-}
+{ }
 
 ```
 ```
