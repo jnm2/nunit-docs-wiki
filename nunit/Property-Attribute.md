@@ -16,7 +16,7 @@ namespace NUnit.Tests
   public class MathTests
   {
     [Test, Property("Severity", "Critical")]
-	public void AdditionTest()
+    public void AdditionTest()
     { /* ... */ }
   }
 }
