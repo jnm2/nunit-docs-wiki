@@ -59,7 +59,7 @@ In order to inclusively select namespaces, a regular expression can be used. For
 
 #### Filtering Based on Properties
 
-Although the syntax will accept any property name - including names that don't actually exist - filtering is only useful for existing, string-valued properties.  The following properties are created by NUnit and have string values:
+Although the syntax will accept any property name - including names that don't actually exist - filtering will only work on existing, string-valued properties.  The following properties are created by NUnit and have string values:
 
 * Author
 * Category
