@@ -28,7 +28,7 @@ The PropertyAttribute is not currently used for any purpose by NUnit itself, oth
 than to display them in the XML output file and in the Test Properties
 dialog of the gui. You may also use use properties with the `--where` option on the
 command-line in order to select tests to run. See [[Test Selection Language]]. Note 
-that his filtering will only work with properties where the values have type string.
+that his filtering will only work for properties where the values have type string.
 
 User tests may access properties through the [[TestContext]] or by reflection.
    
