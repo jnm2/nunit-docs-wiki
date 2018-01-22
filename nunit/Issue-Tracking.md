@@ -50,6 +50,17 @@ Labels starting with **pri:** indicate the priority of an issue. Pick just one, 
 * **pri:normal** Standard priority - implement when we can.
 * **pri:low** Low priority - implement later or not at all.
 
+#### PRs and issues that need attention
+The goal with these is to keep team members from having to do tedious rescanning to figure out the state of each long-lived PR or issue as well as increasing awareness.
+- **awaiting:contributor**  
+  Blocked until the contributor responds to the team's request for changes.
+- **awaiting:team**  
+  Blocked until a team member responds to a question or problem.
+- **awaiting:discussion**  
+  Blocked until the team comes to consensus on a design question.
+- **awaiting:review**  
+  Blocked until an additional team member approves or requests changes.
+
 #### Close Reason
 Labels starting with **closed:** indicate the status of the bug at closing and should only appear on closed bugs. Please remember to apply one of these when closing a bug as it makes it easier to review the list of closed bugs without opening each one to see what the disposition was.
 * **closed:done** The work called for is done, i.e. the bug is fixed or the feature/enhancement is implemented.
