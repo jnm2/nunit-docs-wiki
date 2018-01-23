@@ -10,7 +10,8 @@
   * [[Tips and Tricks]]
   * [[Release Notes V3|Adapter Release Notes]]
   * [[Release Notes V2|AdapterV2 Release Notes]]
-  * [[License|Adapter License]]
+  * [NUnit 2 Adapter License](https://github.com/nunit/nunit-vs-adapter/blob/master/LICENSE.txt)
+  * [NUnit 3 Adapter License](https://github.com/nunit/nunit3-vs-adapter/blob/master/LICENSE.txt)
 * **[[VS Test Generator|Visual-Studio-Test-Generator]]**
 
 ### Related Project Links

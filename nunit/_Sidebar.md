@@ -4,7 +4,8 @@
   * **Release Notes**<br/>
     * [[Framework|Framework-Release-Notes]]
     * [[Console and Engine|Console-Release-Notes]]
-  * **[[License]]**<br/>
+  * **[Framework License](https://github.com/nunit/nunit/blob/master/LICENSE.txt)**
+  * **[Console License](https://github.com/nunit/nunit-console/blob/master/LICENSE.txt)**
   * **Getting Started**
     * [[Installation]]
     * [[Upgrading]]

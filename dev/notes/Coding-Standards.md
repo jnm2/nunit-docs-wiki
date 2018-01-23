@@ -18,7 +18,7 @@ Visual Studio can be set up to match the coding standards by importing the [nuni
 
 ### Copyright
 
-NUnit is licensed under the MIT / X11 license. Each file is prefixed by the [[NUnit Copyright Notice]] enclosed in appropriate comment characters for the language of the file.
+NUnit is licensed under the MIT / X11 license. Each file is prefixed by the repository's root LICENSE file ([example](https://github.com/nunit/nunit/blob/master/LICENSE.txt)), enclosed in appropriate comment characters for the language of the file.
 
 ##### Notes:
 
