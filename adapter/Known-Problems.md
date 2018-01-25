@@ -12,7 +12,9 @@
 
    Workaround: Make sure you have upgraded VSIX adapter to latest version, or uninstalled it if you have the NuGet adapter in a solution. The adapter will display its version number in the Output window under Tests.
    
- 6. Visual Studio 2017 Live Unit Testing require NUnit3.  The NUnit2 adapter doesn't support Live Unit Testing.
+6. Visual Studio 2017 Live Unit Testing require NUnit3.  The NUnit2 adapter doesn't support Live Unit Testing.
+
+7. `Exception: Could not load file or assembly 'nunit.engine'` - Is caused by an incomplete copy of the adapter in the Visual Studio cache. Close Visual Studio and delete `C:\Users\username\AppData\Local\Temp\VisualStudioTestExplorerExtensions\NUnit3TestAdapter.{{version}}`
 
 
 
