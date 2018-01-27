@@ -5,7 +5,7 @@ This note describes how to create release packages for the NUnit console runner 
 Software Prerequisites
 ----------------------
 
-Various software combinations and environments may be used to build the NUnit 3 console runner and engine. Our standard environment is Visual Studio 2015 Community Edition but it may be built with Vs 2012, 2013 or 2015 as well as MonoDevelop. 
+Various software combinations and environments may be used to build the NUnit 3 console runner and engine. Our standard environment is Visual Studio 2017 Community Edition.
 
 Preparing for Release
 ---------------------
