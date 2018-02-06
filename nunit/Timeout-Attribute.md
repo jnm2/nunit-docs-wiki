@@ -1,3 +1,5 @@
+> Not currently available in the .NET Standard builds of the framework.
+
 Normally, NUnit simply runs tests and waits for them to terminate - the test may is allowed to run indefinitely. For certain kinds of tests, however, it may be desired to specify a timeout value.
 
 The **TimeoutAttribute** is used to specify a timeout value in milliseconds
