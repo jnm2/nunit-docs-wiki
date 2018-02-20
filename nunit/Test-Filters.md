@@ -4,7 +4,7 @@ Test Filters represent a selection of tests to be displayed, run or loaded. When
 
 This is the required top-level element for any filter. If it contains no other elements, it represents an empty filter. If it contains just one element, that element is used as the filter for all tests. If it contains multiple elements, it works like an `<and>` element.
 
-Child elements allowed: `<and>`, `<or>`, `<not>`, `<id>`, `<tests>`, `<cat>`.
+Child elements allowed: `<and>`, `<or>`, `<not>`, `<id>`, `<test>`, `<cat>`.
 
 #### `<and>`
 
@@ -30,15 +30,15 @@ Represents an IdFilter. The text of the element contains a single test id or mul
 
 Child elements allowed: None.
 
-#### `<tests>`
+#### `<test>`
 
-Represents a selection of test names. This element contains one or more `<test>` elements, each holding the full name of a test as its inner text.
+Represents a selection by test name. The full name of the test is used as its inner text.
 
 Child elements allowed: None.
 
 #### `<cat>`
 
-Represents a CategoryFilter. The text of the element contains a single category or multiple categories separated by commas.
+Represents a CategoryFilter. The text of the element contains a single category.
 
 Child elements allowed: None.
 
