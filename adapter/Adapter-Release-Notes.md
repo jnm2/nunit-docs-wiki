@@ -1,3 +1,27 @@
+#### NUnit3 Test Adapter for Visual Studio - Version 3.10 - March 5, 2018
+
+#####  Features
+
+* [461](https://github.com/nunit/nunit3-vs-adapter/issues/461)  Publish symbols with the adapter for debugging into the adapter and nunit, see 
+
+##### Resolved Issues
+* [47](https://github.com/nunit/nunit3-vs-adapter/issues/47)  Adapter runs explicit tests when TFS TestCaseFilter is used
+* [296](https://github.com/nunit/nunit3-vs-adapter/issues/296) Mono.Cecil causes OutOfMemoryException with new .csproj PDBs  
+* [310](https://github.com/nunit/nunit3-vs-adapter/issues/310) Consistent Category Display in Test Explorer Window 
+* [365](https://github.com/nunit/nunit3-vs-adapter/issues/365) An exception occurred while invoking executor: Could not load file or assembly System.Runtime.InteropServices.RuntimeInformation (Thanks to [halex2005](https://github.com/halex2005) for [PR 418](https://github.com/nunit/nunit3-vs-adapter/pull/418))
+* [419](https://github.com/nunit/nunit3-vs-adapter/issues/419)  Test result is Skipped when an exception has been thrown and the only warning is in TearDown
+* [444](https://github.com/nunit/nunit3-vs-adapter/issues/444)  Dump file is not created when the test crashes
+* [452](https://github.com/nunit/nunit3-vs-adapter/issues/452) Adapter does not seem to respect any TestCategory filtering 
+* [460](https://github.com/nunit/nunit3-vs-adapter/issues/460)  Failure to load dependency assembly causes hang
+
+Also see [Release Readiness Review](https://github.com/nunit/nunit3-vs-adapter/issues/472)  
+
+#####  Special thanks
+Special thanks to :  [Joseph Musser](https://github.com/jnm2) for awesome work on this release,
+
+and to [Loren Halvorsen](https://www.linkedin.com/in/lorenhalvorson/) for the workaround for VSTest [issue 261](https://github.com/nunit/nunit3-vs-adapter/issues/261#issuecomment-259970442).  
+
+
 #### NUnit3 Test Adapter for Visual Studio - Version 3.9 - October 29, 2017
 
 ##### Change in supported versions
