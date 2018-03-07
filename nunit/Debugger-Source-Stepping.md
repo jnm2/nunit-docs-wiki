@@ -4,13 +4,13 @@ If you’re getting ready to report a bug in NUnit, figuring out how to create a
 
 ## How to step into NUnit source in the Visual Studio debugger
 
-The PDBs are source-indexed with [GitLink](https://github.com/GitTools/GitLink#gitlink) and work with Visual Studio 2005 or later.
+The NUnit framework PDBs are source-indexed with [GitLink](https://github.com/GitTools/GitLink#gitlink) and work with Visual Studio 2005 or later.
 
  1. Turn **off** Debug > Options > ‘Enable Just My Code.’
 
     ℹ️ This is something you’ll want to leave on and only turn off when you want to step into source that isn’t contained in your solution.
 
-    <img src="nunit/images/disable-just-my-code.png" width="50%" />
+    <img src="images/disable-just-my-code.png" width="50%" />
 
     (Next time you can make this faster by installing the excellent extension
     [Just My Code Toggle](https://marketplace.visualstudio.com/items?itemName=SamHarwell.JustMyCodeToggle).
@@ -18,7 +18,7 @@ The PDBs are source-indexed with [GitLink](https://github.com/GitTools/GitLink#g
 
  2. If needed, turn **on** Debug > Options > ‘Enable source server support.’ This can usually be left on.
 
-    <img src="nunit/images/enable-source-server-support.png" width="50%" />
+    <img src="images/enable-source-server-support.png" width="50%" />
 
  3. Make sure your project has `nunit.framework.pdb` copied to the output directory beside `nunit.framework.dll`. If you are **not** using the new-SDK .csproj format, you can probably skip this section.
 

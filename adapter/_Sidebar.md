@@ -8,6 +8,7 @@
   * [[Resources]]
   * [[Known Problems]]
   * [[Tips and Tricks]]
+  * [[Debugger Source-Stepping|Adapter Source-Stepping]]
   * [[Release Notes V3|Adapter Release Notes]]
   * [[Release Notes V2|AdapterV2 Release Notes]]
   * [[License|Adapter License]]
