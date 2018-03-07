@@ -1,5 +1,8 @@
 #### NUnit3 Test Adapter for Visual Studio - Version 3.10 - March 5, 2018
 
+#####  Features
+
+* [461](https://github.com/nunit/nunit3-vs-adapter/issues/461)  Publish symbols with the adapter for debugging into the adapter and nunit, see 
 
 ##### Resolved Issues
 * [47](https://github.com/nunit/nunit3-vs-adapter/issues/47)  Adapter runs explicit tests when TFS TestCaseFilter is used
@@ -12,6 +15,12 @@
 * [460](https://github.com/nunit/nunit3-vs-adapter/issues/460)  Failure to load dependency assembly causes hang
 
 Also see [Release Readiness Review](https://github.com/nunit/nunit3-vs-adapter/issues/472)  
+
+#####  Special thanks
+Special thanks to :  [Joseph Musser](https://github.com/jnm2) for awesome work on this release,
+
+and to [Loren Halvorsen](https://www.linkedin.com/in/lorenhalvorson/) for the workaround for VSTest [issue 261](https://github.com/nunit/nunit3-vs-adapter/issues/261#issuecomment-259970442).  
+
 
 #### NUnit3 Test Adapter for Visual Studio - Version 3.9 - October 29, 2017
 
