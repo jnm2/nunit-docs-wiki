@@ -1,1 +1,1 @@
-<div style="width: 100%; text-align: center">Copyright (c) 2018 The NUnit Project</div>
+<p align="center">Copyright (c) 2018 The NUnit Project - Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
