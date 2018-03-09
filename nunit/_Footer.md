@@ -1,1 +1,0 @@
-<p align="center">Copyright © 2017 NUnit Software</p>
