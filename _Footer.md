@@ -1,1 +1,1 @@
-<div style="text-align: center">Copyright (c) 2018 The NUnit Project</div>
+<div style="width: 100%; text-align: center">Copyright (c) 2018 The NUnit Project</div>
