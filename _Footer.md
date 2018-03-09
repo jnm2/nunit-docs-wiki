@@ -1,1 +1,1 @@
-                          Copyright (c) 2018 The NUnit Project
+<div style="text-align: center">Copyright (c) 2018 The NUnit Project</div>
