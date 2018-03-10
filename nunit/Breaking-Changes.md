@@ -1,3 +1,7 @@
+## NUnit 3.10
+
+* `NUnit.Framework.Constraints.NUnitEqualityComparer.Default` was deprecated in favor of `new NUnitEqualityComparer()`.
+
 ## NUnit 3.7
 
 * The AssertionHelper class has now been deprecated. Users can use the [NUnit.StaticExpect](https://github.com/fluffynuts/NUnit.StaticExpect) library as a near drop-in replacement.
