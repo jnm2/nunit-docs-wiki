@@ -14,7 +14,6 @@ of the .NET Framework back to 2.0. For contributors, NUnit can now compile all
 supported targets on Windows, Linux and Mac using the Cake command line build.
 
 #### Issues Resolved
-
                                                                                                                                                                
  * [1212](https://github.com/nunit/nunit/issues/1212) Separate AssertionHelper project or assembly                                                             
  * [1373](https://github.com/nunit/nunit/issues/1373) Setting with a null value                                                                                
