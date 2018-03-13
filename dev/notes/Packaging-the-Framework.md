@@ -18,9 +18,10 @@ Preparing for Release
 All work on releases should be done on a branch.
 
 1. Fetch and pull latest from master
-2. Create a branch in the form release/3.6
-3. As you make the changes below, push the branch to GitHub and create a Pull Request to allow other team members to review your changes.
-4. **Do not merge this branch/PR**, we will create a separate PR to merge the changes back into master.
+2. Check out the release branch
+3. Merge latest into the release branch
+4. As you make the changes below, push the branch to GitHub and create a Pull Request to allow other team members to review your changes.
+5. **Do not merge the release branch or PR**, we will create a separate PR to merge the changes back into master.
 
 #### Make Sure it Works!
 
@@ -80,7 +81,7 @@ For pre-release versions, a non-empty modifier is specified. This is a suffix ad
 
 #### Update CHANGES File
 
-The CHANGES.txt file in the project root contains all relevant changes for each release. It contains the same information as the release notes in the project documentation, in text format. Because the CHANGES file includes the **date** of the release, you must know when the release is coming out in order to edit it. Otherwise, it will be necessary to make a final change to the file at the point of making the release.
+The `CHANGES.md` file in the project root contains all relevant changes for each release. It contains the same information as the release notes in the project documentation, in text format. Because the CHANGES file includes the **date** of the release, you must know when the release is coming out in order to edit it. Otherwise, it will be necessary to make a final change to the file at the point of making the release.
 
 Create new sections in the CHANGES file to match those for prior releases. To ensure that all changes are included, review closed issues in the current and any future milestones. If an issue for a previous milestone was actually completed and closed, move it to the current milestone, since that's where it is being released. Include all issues resolved as closed:done in the issues section of the file. Significant feature additions and changes should be documented, even if they are also listed with issue numbers. Reviewing commits and merged pull requests may help in catching additional changes.
 
