@@ -31,10 +31,7 @@ following options may be specified:
     
 <tr><th>--wait</th>
     <td>Wait for input before closing console window.</td></tr>
-    
-<tr><th>--pause</th>
-    <td>Pause before run to allow debugging.</td>
-    </tr>
+
 <tr><th>--work=PATH</th>
     <td>PATH of the directory to use for output files.</td></tr>
 
