@@ -9,7 +9,7 @@ Contains global settings that apply to all configurations in the project. May be
  * **Containing Element:** [`<NUnitProject>`](#nunitproject)
  * **Contained Elements:** None
  * **Attributes:**
-    * **activeConfig** The name of the config to use if none is specified by the user. Using `nunit-console`, you may override this through the `--config` command-line option.
+    * **activeconfig** The name of the config to use if none is specified by the user. Using `nunit-console`, you may override this through the `--config` command-line option.
     * **appbase** The application base to use in loading and running tests. Defaults to the location of the .nunit project file. If the path is relative, as it normally is, it is taken as relative to the location of the project file.
     * **processModel** Specifies how NUnit should create processes for executing test assemblies. Possible values are: Default, Single (no separate processes are created), Separate (tests are run in a single, separate process) and Multiple (each assembly is run in its own separate process). The default value is Multiple, provided there are multiple assemblies, otherwise Separate.
     * **domainUsage** Specifies how NUnit should create AppDomains within each process for running tests. Possible values are: Default, None (no domain is created), Single (a single domain is created) and Multiple (a separate domain is created for each assembly). The default is Multiple if multiple assemblies are run in the same process, Single if only one assembly is run in a process.
