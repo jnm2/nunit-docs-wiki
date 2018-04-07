@@ -2,6 +2,20 @@
 
 * `NUnit.Framework.Constraints.NUnitEqualityComparer.Default` was deprecated in favor of `new NUnitEqualityComparer()`.
 
+## NUnit 3.8
+
+* Removed some deprecated attributes:
+  - TestFixtureSetUpAttribute (use OneTimeSetUpAttribute)
+  - TestFixtureTearDownAttribute (use OneTimeTearDownAttribute)
+  - RequiresSTAAttribute (use ApartmentAttribute)
+  - RequiresMTAAttribute (use ApartmentAttribute)
+
+* Removed deprecated Is.StringXxxx syntax elements:
+  - Is.StringStarting (use Does.StartWith)
+  - Is.StringEnding (use Does.EndWith)
+  - Is.StringContaining (use Does.Contain)
+  - Is.StringMatching (use Does.Match)
+
 ## NUnit 3.7
 
 * The AssertionHelper class has now been deprecated. Users can use the [NUnit.StaticExpect](https://github.com/fluffynuts/NUnit.StaticExpect) library as a near drop-in replacement.
