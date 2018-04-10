@@ -6,7 +6,7 @@ When used on a test fixture or method, that test will be queued on the non-paral
 
 #### Platform Support
 
-Parallel execution is supported by the NUnit framework on desktop .NET runtimes. It is not supported in our Portable or .NET Standard builds at this time, although the attributes are recognized without error in order to allow use in projects that build against multiple targets.
+Parallel execution is not supported by all builds of the NUnit Framework, although the attributes are recognized without error in order to allow use in projects that build against multiple targets. Currently, only the .NET Standard 1.6 build does not support parallelization.
 
 #### See also...
  * [[Parallelizable Attribute]]
