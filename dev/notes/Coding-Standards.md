@@ -165,6 +165,8 @@ public static double GetAttribute(XmlNode result, string name, double defaultVal
 
 The following table shows our naming standard for various types of names. All names should be clear enough that somebody unfamiliar with the code can learn about the code by reading them, rather than having to understand the code in order to figure out the names. We don't use any form of "Hungarian" notation.
 
+For items that may vary by project, the project’s root .editorconfig and solution DotSettings may provide the defaults and diagnostics expected for PRs in that project.
+
 <table>
 <tr><th>Named Item</th><th>Naming Standard</th><th>Notes</th></tr>
 <tr><td>Namespaces</td><td>PascalCasing</td><td></td></tr>
@@ -172,8 +174,8 @@ The following table shows our naming standard for various types of names. All na
 <tr><td>Methods</td><td>PascalCasing</td><td></td></tr>
 <tr><td>Properties</td><td>PascalCasing</td><td></td></tr>
 <tr><td>Events</td><td>PascalCasing</td><td></td></tr>
-<tr><td>Public Fields</td><td>PascalCasing</td><td>But these should be avoided</td></tr>
-<tr><td>Private, Protected and Internal Fields</td><td>_camelCasing</td><td><p>Do not use <code>this</code> with fields designated by a leading underscore. **Note that our old standard did not use the underscore.** Keep each file to the same standard, renaming when changes are made.</p><p>Use `readonly` wherever appropriate for private fields.</p></td></tr>
+<tr><td>Public and Protected Fields</td><td>PascalCasing<br/>(with allowance for API compatibility)</td><td><p>Includes constant fields.</p><p>Public and protected variable fields should be avoided.</p></td></tr>
+<tr><td>Private and Internal Fields</td><td>(may vary by project)</td><td><p>Includes constant fields.</p><p>Do not use <code>this</code> with fields designated by a leading underscore. Keep each file to the same standard, renaming when changes are made.</p><p>Use `readonly` wherever appropriate for private fields.</p></td></tr>
 <tr><td>Parameters</td><td>camelCasing</td><td></td></tr>
 <tr><td>Local Variables</td><td>camelCasing</td><td></td></tr>
 </table>
